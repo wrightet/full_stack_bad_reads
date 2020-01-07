@@ -20,5 +20,24 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "webpack --mode=production",
     "start": "webpack --watch --mode=development"
-  }
+  },
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wrightet/full_stack_bad_reads.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wrightet/full_stack_bad_reads/issues"
+  },
+  "homepage": "https://github.com/wrightet/full_stack_bad_reads#readme"
 }
