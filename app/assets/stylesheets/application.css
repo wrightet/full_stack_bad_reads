@@ -33,3 +33,29 @@
  body{
      background: #EAE7DE;
  }
+
+ .greeting-header {
+     
+    
+    display: flex;
+    justify-content: flex-end;
+ 
+     
+ }
+ header {
+     background: #f4f1ea;
+     border: 1px solid black;
+     height: 50px;
+     width: 100%;
+ }
+
+ .logout-button-header {
+   
+    border-radius: 25%;
+    height: 20px;
+ }
+
+ .web-title {
+     display: flex;
+     justify-content: left;
+ }

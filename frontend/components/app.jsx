@@ -15,9 +15,9 @@ import GreetingContainer from './greeting/greeting_container'
 
 const App = () => (
     <div>
-        <header>
+        <header >
             <Link to="/" className="header-link">
-                <h4>Bad Reads Home</h4>
+                <h3>Bad Reads</h3>
             </Link>
             <GreetingContainer/>
        
