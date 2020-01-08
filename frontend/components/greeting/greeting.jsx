@@ -9,10 +9,11 @@ const Greeting = ({ currentUser, logout}) => {
             <Link to="/signup">Sign Up</Link>
         </nav>
     )
-
+        window.currentUser = currentUser
     const personalGreeting = () => (
         <div className="greeting-header">
-            <h4 className="header-username">Welcome, {currentUser.firstName} {currentUser.lastName}</h4>
+            
+            <h4 className="header-username">Welcome, {currentUser.firstName}</h4>
             <button className="logout-button-header" onClick={logout}>Log out</button>
         </div>
     )
