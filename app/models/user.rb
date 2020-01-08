@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    validates :username, :session_token, :password_digest, :email, :first_name,
+    validates  :session_token, :password_digest, :email, :first_name,
      :last_name, presence: true
     validates :password, length: {minimum: 6, allow_nil: true}
     after_initialize :ensure_session_token
@@ -32,6 +32,6 @@ class User < ApplicationRecord
 
     private
     def ensure_session_token
-        self.session_token ||= SecureRandom.urlsafe_base6
+        self.session_token ||= SecureRandom.urlsafe_base64
     end
 end
