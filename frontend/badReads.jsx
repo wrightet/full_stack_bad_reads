@@ -4,9 +4,29 @@ import configureStore from './store/store'
 import Root from './components/root'
 
 
+// document.addEventListener('DOMContentLoaded', () => {
+//     const root = document.getElementById('root');
+//     const store = configureStore();
+//     window.store = store;
+//     window.getState = store.getState;
+//     window.dispatch = store.dispatch;
+//     ReactDOM.render(<Root store={store}/>, root)
+// })
+
 document.addEventListener('DOMContentLoaded', () => {
+    let store;
+    if (window.currentUser) {
+        const preloadedState = {
+            session: { id: window.currentUser.id },
+            entities: {
+                users: { [window.currentUser.id]: window.currentUser }
+            }
+        };
+        store = configureStore(preloadedState);
+        delete window.currentUser;
+    } else {
+        store = configureStore();
+    }
     const root = document.getElementById('root');
-    const store = configureStore();
-    window.getState = store.getState;
-    ReactDOM.render(<Root store={store}/>, root)
-})
+    ReactDOM.render(<Root store={store} />, root);
+});
