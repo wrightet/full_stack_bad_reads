@@ -16,10 +16,15 @@
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
   },
+  "engines": {
+    "node": "10.13.0",
+    "npm": "6.4.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "webpack --mode=production",
-    "start": "webpack --watch --mode=development"
+    "production": "webpack --mode=production",
+    "start": "webpack --watch --mode=development",
+    "postinstall": "webpack"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",
