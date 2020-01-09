@@ -34,23 +34,17 @@
      background: #EAE7DE;
  }
 
- .greeting-header {
-     
-    
-    display: flex;
-    justify-content: flex-end;
  
-     
- }
- header {
+ header > .greeting-header{
      background: #f4f1ea;
      border: 1px solid black;
      height: 50px;
      width: 100%;
+     position: relative;
  }
 
  .logout-button-header {
-   
+   display: inline;
     border-radius: 25%;
     height: 20px;
  }
@@ -58,4 +52,38 @@
  .web-title {
      display: flex;
      justify-content: left;
+ }
+
+ .header-link {
+     font-family: 'Ibarra Real Nova', serif; 
+ }
+
+ .header-left {
+     list-style: none;
+ }
+
+ #header-el {
+     position: relative;
+     display:inline;
+     padding: 5px;
+ }
+ #header-el-name {
+     display: inline;
+    float: right;
+     font-weight: bold;
+    
+ }
+
+ 
+ #header-el-name > ul {
+      list-style: none;
+      /* display: none; */
+ }
+
+ #header-el-name:hover > ul > li {
+     display: block;
+ }
+
+ .greeting-container {
+     display: block;
  }

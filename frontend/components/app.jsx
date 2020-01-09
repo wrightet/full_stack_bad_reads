@@ -19,7 +19,7 @@ const App = () => (
             <Link to="/" className="header-link">
                 <h3>Bad Reads</h3>
             </Link>
-            <GreetingContainer/>
+            <GreetingContainer />
        
         </header>
         <Switch>
