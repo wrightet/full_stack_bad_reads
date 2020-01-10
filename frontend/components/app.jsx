@@ -17,7 +17,7 @@ const App = () => (
     <div>
         <header className="nav-bar">
             <Link to="/" className="header-link">
-                <img src={window.logoURL} className="logo" />
+                <img src={window.images.logoURL} className="logo" />
             </Link>
             <GreetingContainer />
        <Switch>
@@ -26,7 +26,7 @@ const App = () => (
         </Switch>
         </header>
         <div className="book-fire">
-            <img src={window.bookfireUrl} />
+            <img src={window.images.bookfireURL} />
         </div>
        
     </div>

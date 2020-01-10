@@ -25,6 +25,7 @@ class SessionForm extends React.Component {
     }
 
     renderErrors() {
+        
         return (
             <ul>
                 {this.props.errors.map((error, i) => (
@@ -47,7 +48,7 @@ class SessionForm extends React.Component {
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                    
-         
+                    {this.renderErrors()}
                    <h3 id='signin-login-form-title'>{this.props.formType}</h3>
                     <div className="login-form">
                         
