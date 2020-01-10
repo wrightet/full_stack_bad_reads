@@ -17,7 +17,7 @@ const App = () => (
     <div>
         <header className="nav-bar">
             <Link to="/" className="header-link">
-                <img src="assets/logo.png" alt="" className="logo"/>
+                <img src={window.logoURL} className="logo" />
             </Link>
             <GreetingContainer />
        <Switch>
@@ -25,9 +25,15 @@ const App = () => (
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
         </Switch>
         </header>
-        <div className="book-fire"><img src="assets/book_fire.gif" alt="" /></div>
-        
+        <div className="book-fire">
+            <img src={window.bookfireUrl} />
+        </div>
+       
     </div>
 );
 
 export default App;
+
+{/*> */ }
+{/* <img src="assets/logo.png" alt="" className="logo"/> */ }  
+{/* <div className="book-fire"><img src="assets/book_fire.gif" alt="" /></div> */}
