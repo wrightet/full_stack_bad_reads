@@ -85,7 +85,7 @@ class SessionForm extends React.Component {
                        
                         <input className="session-submit" type="submit" value={this.props.formType} />
                     </div>
-                    <img src="assets/book_fire.gif" alt=""/>
+                   
                 </form>
             </div>
         );

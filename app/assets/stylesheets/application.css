@@ -114,10 +114,66 @@ body {
 
 .greeting-header > ul {
     display: flex;
+    
 }
 
-.greeting-header > ul > li {
-    padding: 5px;
+.greeting-header > ul > li{
+    padding: 5px 15px 5px 15px;
 }
+
+
+.greeting-header > ul > li > ul {
+    padding: 5px;
+   
+   
+}
+
+#user-dropdown {
+    padding: 50px;
+    display:none;
+    position: absolute;
+    right: 0px;
+    width: 125px;
+    background:white;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    border-radius: 0% 0% 2% 2%;
+}
+
+#user-dropdown:hover  {
+    
+    display:block;
+    
+}
+
+
+#user-dropdown > li {
+    padding: 0px 10px 10px 10px;
+}
+.header-el-name:hover > #user-dropdown {
+    display: block;
+    
+
+}
+
+.header-el-name {
+    position: relative;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+}
+
+.book-fire {
+    display: flex;
+    justify-content: center;
+    left: 100px;
+}
+
+
+
+
+
+
+
 
 

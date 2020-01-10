@@ -17,7 +17,7 @@ const App = () => (
     <div>
         <header className="nav-bar">
             <Link to="/" className="header-link">
-                <h3>Bad Reads</h3>
+                <img src="assets/logo.png" alt="" className="logo"/>
             </Link>
             <GreetingContainer />
        <Switch>
@@ -25,7 +25,7 @@ const App = () => (
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
         </Switch>
         </header>
-        
+        <img src="assets/book_fire.gif" alt="" className="book-fire"/>
     </div>
 );
 
