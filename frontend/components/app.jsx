@@ -25,7 +25,8 @@ const App = () => (
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
         </Switch>
         </header>
-        <img src="assets/book_fire.gif" alt="" className="book-fire"/>
+        <div className="book-fire"><img src="assets/book_fire.gif" alt="" /></div>
+        
     </div>
 );
 

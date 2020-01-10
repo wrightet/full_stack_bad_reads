@@ -167,8 +167,14 @@ body {
     display: flex;
     justify-content: center;
     left: 100px;
+    border: 1px solid black;
+    background: #EFE5C4;
 }
 
+.book-fire > img {
+    height: 200px;
+    width: 250px;
+}
 
 
 
