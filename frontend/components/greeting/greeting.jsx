@@ -27,12 +27,13 @@ const Greeting = ({ currentUser, logout}) => {
       const personalGreeting = () => (
         <div className="greeting-header">
             <ul className="header-left">
-                <li id="header-el"><Link to="/">Home</Link></li>
-                <li id="header-el">My Books</li>
-                <li id="header-el">Browse</li>
-                <li id="header-el-name">
+                <li class="header-el"><Link to="/">Home</Link></li>
+                <li class="header-el">My Books</li>
+                <li class="header-el">Browse</li>
+                <li class="header-el-name"> 
+                 User
                     <ul id="user-dropdown" >
-                        <li onClick={handleDropDown}>User</li>
+                       
                         <li id={hide}>Welcome, {currentUser.firstName}</li>
                         <li id={hide}><button className="logout-button-header" onClick={logout}>Log out</button></li>
                     </ul>
