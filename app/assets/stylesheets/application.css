@@ -13,51 +13,6 @@
  *= require_tree .
  *= require_self
  */
-
-
-
- 
-
- #login {
-     display: none;
- }
- 
- 
-.login-form{
-    display: flex;
-    justify-content: flex-start ;
-}
-#hidden {
-    display: none;
-   
-}
- 
-#shown {
-    display: block;
-    background: #ffffff;
-   
-}
-#user-dropdown > li{
-    list-style: none;
-}
-
-.nav-bar{
-    border: 1px solid black;
-    background: #ffffff; 
-    display: flex;
-    position: relative;
-    justify-content: flex-end;
-}
-body {
-    background: #EAE7DE;
-}
-
-.login-form-box {
-   
-    
-}
-
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -101,70 +56,68 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/* .login-form-box {
-    display: flex;
-    flex-flow: column wrap-reverse;
-    align-items: center;
-    align-content: space-between;
-    justify-content: flex-start;
- }
 
- body{
-     background: #EAE7DE;
- }
 
- header {
-     border: 1px solid black;
-     background: #ffffff;
-     width: 100%;
-     height: 75px;
+#login {
+     display: none;
  }
- header > .greeting-header{
-     height: 50px;
-     width: 100%;
-     position: relative;
- }
-
- .logout-button-header {
-   display: inline;
-    border-radius: 25%;
-    height: 20px;
- }
-
  
+ 
+.login-form-container{
+  
+   justify-content: flex-end;
 
- .header-link {
-     font-family: 'Ibarra Real Nova', serif; 
- }
+}
 
- .header-left {
-     list-style: none;
- }
+.login-signup{
+    justify-content: flex-end;
+}
+#hidden {
+    display: none;
+   
+}
+ 
+#shown {
+    display: block;
+    background: #ffffff;
+   
+}
+#user-dropdown > li{
+    list-style: none;
+}
 
- #header-el {
-     position: relative;
-     display:inline;
-     padding: 5px;
- }
- #header-el-name {
-     display: inline;
-    float: right;
-     font-weight: bold;
+.nav-bar{
+    border: 1px solid black;
+    background: #ffffff; 
+    display:flex;
+    position: relative;
+    box-sizing: border-box;
+    justify-content: space-between;
     
- }
+}
+body {
+    background: #EAE7DE;
+}
 
- #signin-login-form-title {
-     display: flex;
-     
-     flex-direction: row
- }
+.header-link{
+   
+    align-self: flex-start;
+}
 
-.web-title {
-     display: flex;
-     justify-content: left;
- }
+.greeting-header {
+   display: block;
+   
+   justify-content: flex-end;
 
- .login-form-container {
-     display: flex;
-     flex-flow: column wrap;
- } */
+  
+}
+
+.greeting-header > ul {
+    display: flex;
+}
+
+.greeting-header > ul > li {
+    padding: 5px;
+}
+
+
