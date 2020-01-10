@@ -36,17 +36,22 @@ class SessionForm extends React.Component {
         );
     }
 
+
+
     render() {
+        let hide = 'signup';
+        if (this.props.formType === 'login'){
+            hide = 'login';
+        }
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                   <h4 className='login-title'>Bad Reads</h4>
+                   
          
-                    Please {this.props.formType} or {this.props.navLink}
-                    {this.renderErrors()}
+                   <h3 id='signin-login-form-title'>{this.props.formType}</h3>
                     <div className="login-form">
                         
-                        <label>First Name:
+                        <label id={hide}>First Name:
                             <input type="text"
                                 value={this.state.firstName}
                                 onChange={this.update('first_name')}
@@ -54,7 +59,7 @@ class SessionForm extends React.Component {
                             />
                         </label>
                         
-                        <label>Last Name:
+                        <label id={hide}>Last Name:
                             <input type="text"
                                 value={this.state.lastName}
                                 onChange={this.update('last_name')}
