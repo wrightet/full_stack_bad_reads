@@ -6,9 +6,13 @@ class User < ApplicationRecord
     after_initialize :ensure_session_token
     attr_reader :password
 
-    has_many :books
+    has_many :books,
+        through: :shelves,
+        source: :books
     has_many :reviews
-    has_many :book_shelves
+    has_many :book_shelves,
+        foreign_key: :shelf_id,
+        class_name: 'BookShelf'
 
     def self.find_by_credentials(email, password)
         user = User.find_by(email: email)
