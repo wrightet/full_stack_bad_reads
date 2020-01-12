@@ -6,22 +6,10 @@ import { Link } from 'react-router-dom';
 
 
 const Greeting = ({ currentUser, logout}) => {
-    // Element = <FontAweSomeIcon icon={faUserCircle}/>
-    let hide = "shown"
-    const handleDropDown = () => {
-        console.log('hello')
-        if( hide === 'hidden'){
-            hide = 'shown';
-
-        } else { hide = 'hidden'}
-        }
     
     const sessionLinks = () => (
-        <nav className="login-signup">
-            <Link to="/login">Login</Link>
-            &nbsp;or&nbsp;
-            <Link to="/signup">Sign Up</Link>
-        </nav>
+       
+        <div></div>
     )
         window.currentUser = currentUser
       const personalGreeting = () => (
@@ -34,8 +22,8 @@ const Greeting = ({ currentUser, logout}) => {
                  User
                     <ul id="user-dropdown" >
                        
-                        <li id={hide}>Welcome, {currentUser.firstName}</li>
-                        <li id={hide}><button className="logout-button-header" onClick={logout}>Log out</button></li>
+                        <li >Welcome, {currentUser.firstName}</li>
+                        <li ><button className="logout-button-header" onClick={logout}>Log out</button></li>
                     </ul>
                 </li>
             </ul>

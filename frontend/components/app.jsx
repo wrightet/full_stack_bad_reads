@@ -12,21 +12,21 @@ import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 
 import GreetingContainer from './greeting/greeting_container'
-
+import HomePageSignIn from './session_form/signup_login'
 const App = () => (
     <div>
+
         <header className="nav-bar">
             <Link to="/" className="header-link">
                 <img src={window.images.logoURL} className="logo" />
             </Link>
             <GreetingContainer />
-       <Switch>
-            <AuthRoute exact path="/login" component={LogInFormContainer} />
-            <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-        </Switch>
+            <AuthRoute exact path="/" component={LogInFormContainer} className="login" />
         </header>
+        
         <div className="book-fire">
             <img src={window.images.bookfireURL} />
+         <AuthRoute exact path="/" component={SignUpFormContainer} className="signup" />
         </div>
        
     </div>
@@ -34,6 +34,6 @@ const App = () => (
 
 export default App;
 
-{/*> */ }
+{/*> <AuthRoute exact path="/signup" component={HomePageSignIn} /> */ }
 {/* <img src="assets/logo.png" alt="" className="logo"/> */ }  
 {/* <div className="book-fire"><img src="assets/book_fire.gif" alt="" /></div> */}

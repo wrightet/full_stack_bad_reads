@@ -64,31 +64,24 @@ table {
  
  
 .login-form-container{
-  
+    position: relative;
+   font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
    justify-content: flex-end;
+   right: 200px;
 
 }
 
 .login-signup{
     justify-content: flex-end;
 }
-#hidden {
-    display: none;
-   
-}
- 
-#shown {
-    display: block;
-    background: #ffffff;
-   
-}
+
 #user-dropdown > li{
     list-style: none;
 }
 
 .nav-bar{
     border: 1px solid black;
-    background: #ffffff; 
+    background: #f4f2e9; 
     display:flex;
     position: relative;
     box-sizing: border-box;
@@ -166,15 +159,110 @@ body {
 .book-fire {
     display: flex;
     justify-content: center;
-    left: 100px;
+    /* right: 1000px; */
     border: 1px solid black;
     background: #EFE5C4;
 }
 
 .book-fire > img {
-    height: 200px;
-    width: 250px;
+    height: 295px;
+    width: 350px;
+    
 }
+
+.login-submit-button{
+    cursor: pointer;
+    margin: 2px;
+    background-color: #382110;
+    border: 1px solid #382110;
+    color: white;
+    font-weight:normal;
+    border-radius: 3px;
+    width: 60px;
+    height: 36px;
+}
+
+.login-form{
+    position:relative;
+    height: 30px;
+    width: 50%;
+    top: 15px;
+    
+}
+
+.login-input {
+    
+     border-radius: 3px;
+    width: 130px;
+    height: 26px;
+    padding: 5px;
+    background-color: white;
+    font-size: 13px;
+  
+    
+}
+
+.login-list {
+    display: flex;
+}
+
+::placeholder{
+    color:lightgrey;
+}
+
+.session-form-div {
+    
+    width: 280px;
+    margin: 0px 8px 0 0;
+    background: #f4f2e9;
+    position: sticky;
+    border-top: 1px solid #d8d8d8;
+    padding: 12px;
+    height: 270px;
+   left: 900px;
+    
+}
+
+.session-form-ul > li {
+    display: flex;
+    padding: 7px 5px;
+    align-items: center;
+    width: 270px;
+    font-size: 16px;
+    font-weight: lighter;
+    
+
+
+}
+
+.session-form-ul > li > input[type="text"]{
+    border-radius: 3px;
+    width: 270px;
+    height: 33px;
+
+}
+.session-form-ul > li > input[type="password"]{
+    border-radius: 3px;
+     width: 270px;
+    height: 33px;
+}
+
+.signup-title{
+    font-size: 18px;
+
+}
+
+.session-submit-button {
+    padding: 8px;
+    border: 0px;
+    border-radius: 4px;
+    background-color: #fdd05f;
+    font-size: 18px;
+    line-height: 22px;
+    width: 85px;
+    cursor: pointer;
+}
+
 
 
 
