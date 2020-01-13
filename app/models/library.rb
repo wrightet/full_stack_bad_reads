@@ -1,6 +1,9 @@
 class Library < ApplicationRecord
-    has_many :books
-    has_many :shelves,
+    
+    belongs_to :book,
+        foreign_key: :book_id,
+        class_name: 'Book'
+    belongs_to :book_shelf,
         foreign_key: :shelf_id,
         class_name: 'BookShelf'
         
