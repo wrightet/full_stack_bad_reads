@@ -3,8 +3,10 @@ class BookShelf < ApplicationRecord
    
 
     belongs_to :user
-    belongs_to :library
+   has_many :libraries,
+        foreign_key: :shelf_id,
+        class_name: 'Library'
     has_many :books,
         through: :library,
-        source: :books
+        source: :book
 end
