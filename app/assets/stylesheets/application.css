@@ -263,6 +263,40 @@ body {
     cursor: pointer;
 }
 
+.books-table {
+    display: flex;
+    justify-content:  center;
+    padding: 10px;
+   
+}
+
+.book-listed-elements{
+    padding: 10px;
+}
+
+.book-row {
+    border: 1px solid black;
+  
+}
+
+.book-row > td {
+    padding: 5px;
+}
+
+.book-index-column-list {
+    height: 20px;
+    display: relative;
+    position: fixed;
+    
+}
+
+
+
+.books-list-body {
+    display: flex;
+    flex-direction: column;
+}
+
 
 
 

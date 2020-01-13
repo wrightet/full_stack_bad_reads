@@ -8,10 +8,9 @@ const booksReducer = (oldState = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_ALL_BOOKS:
-            return Object.assign({}, oldState, action.book)
+            return action.books
         case RECEIVE_BOOK:
-            book = action.payload.books
-            return Object.assign({}, oldState, { [book.id]: book});
+            return Object.assign({}, oldState, { [action.book.id]: action.book});
         default:
             return oldState;
             
