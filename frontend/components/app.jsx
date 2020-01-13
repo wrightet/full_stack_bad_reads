@@ -10,7 +10,7 @@ import {
 import {AuthRoute} from '../util/route_util'
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
-
+import BookIndexContainer from './books/book_index_container'
 import GreetingContainer from './greeting/greeting_container'
 import HomePageSignIn from './session_form/signup_login'
 const App = () => (
@@ -26,8 +26,9 @@ const App = () => (
         
         <div className="book-fire">
             <img src={window.images.bookfireURL} />
-         <AuthRoute exact path="/" component={SignUpFormContainer} className="signup" />
+            <AuthRoute exact path="/" component={SignUpFormContainer} className="signup" />
         </div>
+        <BookIndexContainer/>
        
     </div>
 );

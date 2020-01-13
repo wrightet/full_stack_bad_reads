@@ -6,9 +6,9 @@ export const fetchAllBooks = () => (
 );
 export const createBook = (book) => (
     $.ajax({
-        method: 'GET',
+        method: 'POST',
         url: 'api/books',
-        data = { book }
+        data: { book }
     })
 );
 export const fetchBook = id => (
