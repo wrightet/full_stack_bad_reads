@@ -90,6 +90,7 @@ table {
 }
 body {
     background: #EAE7DE;
+
 }
 
 .header-link{
@@ -273,6 +274,9 @@ body {
 }
 .books-table {
  border-collapse: collapse;
+ border-spacing: 2px;
+ border-color:grey;
+ /* box-shadow: 0 5px 10px rgba(0,0,0,0.15); */
    
 }
 
@@ -280,10 +284,34 @@ body {
 .book-index-column-list {
     display: table-header-group;
     vertical-align: middle;
+    border-color: inherit;
+   border: 2px solid green;
+   
 }
 
-.book-listed-elements{
-  display: table-header-group;
+.table-header-row {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 20px;
+    margin: 5px; 
+    border: 1px solid red;
+   
+}
+
+.book-table-header-column-cover{
+  vertical-align: bottom;
+  float: left;
+ 
+}
+.book-table-header-column-name{
+  vertical-align: bottom;
+  float:none;
+ 
+}
+.book-table-header-column-genre{
+  vertical-align: bottom;
+  float: left;
+ 
 }
 .books-table > tr {
     vertical-align: middle;
@@ -293,18 +321,22 @@ tr{
 }
 .books-list-body {
    
-    position: absolute;
-    top: 450px;
+    display: table-row-group;
+    vertical-align: middle;
+   
 }
 .book-row {
-    border: 1px solid black;
+    border: 2px solid transparent;
+     border: 1px solid red;
   
 }
 
 .book-row > td {
-    padding: 10px 60px 10px 60px;
-    display: table;
-   
+    padding: 12px 5px 12px 0;
+    vertical-align: top;
+    border: 1px solid blue;
+    text-align: center;
+  
 }
 
 

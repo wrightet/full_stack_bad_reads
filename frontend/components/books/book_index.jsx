@@ -9,7 +9,9 @@ class BookIndex extends React.Component {
     componentDidMount(){
         this.props.requestAllBooks();
     }
-
+    componentWillUnmount(){
+       
+    }
     render(){
         const {books} = this.props;
         if (!books){return null;}
@@ -18,11 +20,11 @@ class BookIndex extends React.Component {
         <div className="book-table-div">
             <table className="books-table">
                 <thead className="book-index-column-list">
-                    <tr>
-                        <th className="book-listed-elements">cover</th>
-                        <th className="book-listed-elements">title</th>
-                        <th className="book-listed-elements">author</th>
-                        <th className="book-listed-elements">genre</th>
+                    <tr className="table-header-row">
+                        <th className="book-table-header-column-cover">Cover</th>
+                        <th className="book-table-header-column-name">Title</th>
+                        <th className="book-table-header-column-name">Author</th>
+                        <th className="book-table-header-column-genre">Genre</th>
                     </tr>
                  
                 </thead> 

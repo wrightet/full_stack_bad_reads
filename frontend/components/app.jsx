@@ -7,7 +7,7 @@ import {
     Link,
     HashRouter
 } from 'react-router-dom';
-import {AuthRoute} from '../util/route_util'
+import {AuthRoute, ProtectedRoute} from '../util/route_util'
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import BookIndexContainer from './books/book_index_container'
@@ -28,8 +28,9 @@ const App = () => (
             <img src={window.images.bookfireURL} />
             <AuthRoute exact path="/" component={SignUpFormContainer} className="signup" />
         </div>
-        <Route exact path="/api/books" component={BookIndexContainer}/>
-       
+        
+        <ProtectedRoute exact path="/api/books" component={BookIndexContainer}/>
+        
     </div>
 );
 
