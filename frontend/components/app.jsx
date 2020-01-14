@@ -28,7 +28,7 @@ const App = () => (
             <img src={window.images.bookfireURL} />
             <AuthRoute exact path="/" component={SignUpFormContainer} className="signup" />
         </div>
-        <BookIndexContainer/>
+        <Route exact path="/api/books" component={BookIndexContainer}/>
        
     </div>
 );

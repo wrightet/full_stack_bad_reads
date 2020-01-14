@@ -16,7 +16,7 @@ const Greeting = ({ currentUser, logout}) => {
         <div className="greeting-header">
             <ul className="header-left">
                 <li className="header-el"><Link to="/">Home</Link></li>
-                <li className="header-el">My Books</li>
+                <li className="header-el"><Link to="/api/books">My Books</Link></li>
                 <li className="header-el">Browse</li>
                 <li className="header-el-name"> 
                  User

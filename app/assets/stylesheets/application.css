@@ -161,7 +161,7 @@ body {
     justify-content: center;
     /* right: 1000px; */
     border: 1px solid black;
-    background: #EFE5C4;
+    background: #f6e7c6;
 }
 
 .book-fire > img {
@@ -263,43 +263,56 @@ body {
     cursor: pointer;
 }
 
+
+.book-table-div {
+    float: right;
+    height: 50%;
+    width:  75%;
+    margin-top: 2%;
+    display: block;
+}
 .books-table {
-    display: flex;
-    justify-content:  center;
-    padding: 10px;
+ border-collapse: collapse;
    
 }
 
-.book-listed-elements{
-    padding: 10px;
+
+.book-index-column-list {
+    display: table-header-group;
+    vertical-align: middle;
 }
 
+.book-listed-elements{
+  display: table-header-group;
+}
+.books-table > tr {
+    vertical-align: middle;
+}
+tr{
+    display: table-row;
+}
+.books-list-body {
+   
+    position: absolute;
+    top: 450px;
+}
 .book-row {
     border: 1px solid black;
   
 }
 
 .book-row > td {
-    padding: 20px;
-    display: inline-flex;
-   justify-content: center;
+    padding: 10px 60px 10px 60px;
+    display: table;
+   
 }
 
-.book-index-column-list {
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    position: relative;
+
+.book-photo {
+    width: 25%;
+    height: 60px;
     
-}
-
-
-
-.books-list-body {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 450px;
+   
 }
 
 

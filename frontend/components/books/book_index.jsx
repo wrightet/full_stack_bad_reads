@@ -15,7 +15,7 @@ class BookIndex extends React.Component {
         if (!books){return null;}
        
         return(
-        <div>
+        <div className="book-table-div">
             <table className="books-table">
                 <thead className="book-index-column-list">
                     <tr>
