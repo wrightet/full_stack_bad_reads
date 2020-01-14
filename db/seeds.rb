@@ -59,6 +59,10 @@ ActiveRecord::Base.transaction do
         Library.create(book_id: book.id, shelf_id: shelf.id)
     end
     # BookShelf.create(user_id: 1, book_id: 1, name: "read")
-    
+    demo = User.create(
+            first_name: 'Demo',
+            last_name: 'Demo',
+            email: 'demo',
+            password: '123456')
 
 end
