@@ -12,7 +12,7 @@ class BookIndexItem extends React.Component {
         const book = this.props.book;
         return (
             <tr className="book-row">
-                <td><img src={window.images.openbookURL} alt=""/></td>
+                <td><img src={window.images.openbookURL} alt="" className="book-photo"/></td>
                 <td>{book.title}</td>
                 <td>{book.author}</td>
                 <td>{book.genre}</td>
