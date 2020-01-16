@@ -12,6 +12,7 @@ import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import BookIndexContainer from './books/book_index_container'
 import GreetingContainer from './greeting/greeting_container'
+import Splash from './splash/splash'
 
 const App = () => (
     <div>
@@ -25,6 +26,14 @@ const App = () => (
         </header>
         <AuthRoute exact path="/" component={SignUpFormContainer} className="signup" />
         <ProtectedRoute exact path="/" component={BookIndexContainer}/>
+        <AuthRoute exact path='/' component={Splash}/>
+        <footer>
+            <ul>
+                <li><a href="https://www.linkedin.com/feed/"><img src={window.images.linkedinURL} /></a></li>
+                <li><a href="https://github.com/wrightet?tab=repositories"><img src={window.images.githubURL} /></a></li>
+                <li><h6>creator: Ethan Wright</h6></li>
+            </ul> 
+        </footer>
        
     </div>
 );
