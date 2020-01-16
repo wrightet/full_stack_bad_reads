@@ -7,15 +7,16 @@ import {
     Link,
     HashRouter
 } from 'react-router-dom';
-import {AuthRoute, ProtectedRoute} from '../util/route_util'
+import {AuthRoute, ProtectedRoute} from '../util/route_util';
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
-import BookIndexContainer from './books/book_index_container'
-import GreetingContainer from './greeting/greeting_container'
-import Splash from './splash/splash'
+import BookIndexContainer from './books/book_index_container';
+import GreetingContainer from './greeting/greeting_container';
+import BookShowContainer from './books/book_show_container';
+import Splash from './splash/splash';
 
 const App = () => (
-    <div>
+    <div className="App">
 
         <header className="nav-bar">
             <Link to="/" className="header-link">
@@ -26,6 +27,7 @@ const App = () => (
         </header>
         <AuthRoute exact path="/" component={SignUpFormContainer} className="signup" />
         <ProtectedRoute exact path="/" component={BookIndexContainer}/>
+        <ProtectedRoute exact path="/books/:id" component={BookShowContainer}/>
         <AuthRoute exact path='/' component={Splash}/>
         <footer>
             <ul>

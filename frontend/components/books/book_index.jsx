@@ -1,7 +1,7 @@
 import React from 'react';
 import BookIndexItem from './book_index_item';
 import BookIndexContainer from './book_index_container'
-
+import {Link} from 'react-router-dom'
 class BookIndex extends React.Component {
     constructor(props){
         super(props)
@@ -9,9 +9,7 @@ class BookIndex extends React.Component {
     componentDidMount(){
         this.props.requestAllBooks();
     }
-    componentWillUnmount(){
-       
-    }
+    
     render(){
         const {books} = this.props;
         if (!books){return null;}
