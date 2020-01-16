@@ -402,8 +402,73 @@ tr{
    
 }
 
-.header-left > :nth-child(3){
+.header-left > :nth-child(2){
      display: flex;
     align-content: center;
     align-items: center;
+}
+.splash{
+    display: block;
+    margin: 0% 2% 0% 2%;
+    padding: 2px;
+}
+
+.left-content {
+    display: block;
+    justify-content: flex-start;
+    background: #F4F2E9;
+    float: left;
+    margin: 1% 5% 1% 10%;
+    width: 30%;
+    /* text-align: center; */
+
+}
+
+.left-content > p {
+    font-size: 20px;
+}
+.right-content{
+    display: flex;
+    padding: 10px;
+    justify-content: flex-end;
+}
+.right-content > div > img {
+    width: 200px;
+    height: 150px;
+
+    
+}
+footer {
+   
+    border: 1px solid black;
+    position: relative;
+    /* left: 0; */
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    height: 6%;
+    margin-top: 100vh;
+    
+}
+
+footer > ul > li > a > img{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    padding: 5px;
+    
+}
+
+footer > ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer > ul > li > h6 {
+    font-size: 12px;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    
+
 }
