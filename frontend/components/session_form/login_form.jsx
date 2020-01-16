@@ -28,7 +28,7 @@ class LoginForm extends React.Component {
     renderErrors() {
 
         return (
-            <ul>
+            <ul className='errors'>
                 {this.props.errors.map((error, i) => (
                     <li key={`error-${i}`}>
                         {error}
@@ -47,10 +47,11 @@ class LoginForm extends React.Component {
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
 
-                    {this.renderErrors()}
+                    
                   
                     <div className="login-form">
                         <ul className="login-list">
+                            <li>{this.renderErrors()}</li>
                             <li>     <input type="text"              
                         name="email"
                         placeholder="Email"
