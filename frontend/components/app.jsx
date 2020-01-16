@@ -23,14 +23,9 @@ const App = () => (
             <GreetingContainer />
             <AuthRoute exact path="/" component={LogInFormContainer} className="login" />
         </header>
-        
-        <div className="book-fire">
-            <img src={window.images.bookfireURL} />
-            <AuthRoute exact path="/" component={SignUpFormContainer} className="signup" />
-        </div>
-        
-        <ProtectedRoute exact path="/api/books" component={BookIndexContainer}/>
-        
+        <AuthRoute exact path="/" component={SignUpFormContainer} className="signup" />
+        <ProtectedRoute exact path="/" component={BookIndexContainer}/>
+       
     </div>
 );
 
