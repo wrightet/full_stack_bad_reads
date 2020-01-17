@@ -12,7 +12,7 @@ class BookIndexItem extends React.Component {
         const book = this.props.book;
         return (
             <tr className="book-row">
-                <td><Link to={`/books/${book.id}`}><img src={window.images.openbookURL} alt="" className="book-photo"/></Link></td>
+                <td><Link to={`/books/${book.id}`}><h1 className="book-photo">Show Page</h1></Link></td>
                 <td>{book.title}</td>
                 <td>{book.author}</td>
                 <td>{book.genre}</td>
@@ -22,3 +22,4 @@ class BookIndexItem extends React.Component {
 }
 
 export default BookIndexItem;
+{/* <img src={window.images.openbookURL} className="book-photo"/> */}
