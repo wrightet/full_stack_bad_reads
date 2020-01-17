@@ -7,7 +7,7 @@ class BookShow extends React.Component {
     constructor(props){
         super(props);
         this.state = {book: this.props.book};
-        this.booleanFlip = this.booleanFlip.bind(this);
+        // this.booleanFlip = this.booleanFlip.bind(this);
     }
 
     componentDidMount() {
@@ -16,43 +16,43 @@ class BookShow extends React.Component {
        
     }
 
-    booleanFlip(e){
-        // debugger
-        let book = this.props.book;
+    // booleanFlip(e){
+    //     // debugger
+    //     let book = this.props.book;
 
-        if (book[e.target.value] === false) {
-            book[e.target.value] = true;
-            const formData = new formData();
-            formData.append('book[id]', book.id);
-            formData.append('book[title]', book.title);
-            formData.append('book[author]', book.author);
-            formData.append('book[genre]', book.genre); 
-            formData.append('book[read]', false);
-            formData.append('book[currently_reading]', false);
-            formData.append('book[want_to_read]', false);
+    //     if (book[e.target.value] === false) {
+    //         book[e.target.value] = true;
+    //         const formData = new formData();
+    //         formData.append('book[id]', book.id);
+    //         formData.append('book[title]', book.title);
+    //         formData.append('book[author]', book.author);
+    //         formData.append('book[genre]', book.genre); 
+    //         formData.append('book[read]', false);
+    //         formData.append('book[currently_reading]', false);
+    //         formData.append('book[want_to_read]', false);
 
-            formData.append(`book[${e.target.value}]`, true);
+    //         formData.append(`book[${e.target.value}]`, true);
             
-            this.props.updateBook(formData)
-        } 
-        else {
-            book[e.target.value] = false;
-            const formData = new formData();
-            formData.append('book[id]', book.id);
-            formData.append('book[title]', book.title);
-            formData.append('book[author]', book.author);
-            formData.append('book[genre]', book.genre);
-            formData.append('book[read]', true);
-            formData.append('book[currently_reading]', true);
-            formData.append('book[want_to_read]', true);
+    //         this.props.updateBook(formData)
+    //     } 
+    //     else {
+    //         book[e.target.value] = false;
+    //         const formData = new formData();
+    //         formData.append('book[id]', book.id);
+    //         formData.append('book[title]', book.title);
+    //         formData.append('book[author]', book.author);
+    //         formData.append('book[genre]', book.genre);
+    //         formData.append('book[read]', true);
+    //         formData.append('book[currently_reading]', true);
+    //         formData.append('book[want_to_read]', true);
 
-            formData.append(`book[${e.target.value}]`, false);
+    //         formData.append(`book[${e.target.value}]`, false);
 
-            this.props.updateBook(formData)
-        }
+    //         this.props.updateBook(formData)
+    //     }
         
 
-    }
+    // }
 
     render(){
         let book = this.props.book;
@@ -68,7 +68,7 @@ class BookShow extends React.Component {
             <p>{`This book is about ${faker.name.findName()}. They said, "
              ${faker.hacker.verb()} ${faker.hacker.phrase()}". It was utter nonsense. Though that did not stop them. `}</p>
             
-            <select name="" id="read-selector" onChange={this.booleanFlip}>
+            <select name="" id="read-selector" >
 
                 <option value="haveNotRead">Have Not Read</option>
                 <option value="read">Read</option>
