@@ -36,11 +36,14 @@ class BookShow extends React.Component {
             <h1>by {book.author}</h1>
             <h1>{book.genre}</h1>
             <p>{`This book is about ${faker.name.findName()}. They said, " ${faker.hacker.verb()} ${faker.hacker.phrase()}". It was utter nonsense.`}</p>
-            <ul className="boolean-buttons">
-                <li>{`${book.read}`}<button onClick={this.booleanFlip} className="boolean-button">read</button></li>
-                <li>{`${book.wantToRead}`}<button className="boolean-button">Want to read</button></li>
-                <li>{`${book.currentlyReading}`}<button className="boolean-button">Currently Reading</button></li>
-            </ul>
+        
+            <select name="" id="">
+
+                <option value="haveNotRead">Have Not Read</option>
+                <option value="read">Read</option>
+                <option value="currentlyReading">Currently Reading</option>
+                <option value="wantToRead">Want To Read</option>
+            </select>
             </div>
            
         </div>
