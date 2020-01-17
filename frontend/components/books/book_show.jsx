@@ -2,7 +2,7 @@ import React from 'react';
 // import BookShowContainer from './book_index_container';
 
 import { Link, withRouter } from 'react-router-dom';
-var faker = require('faker');
+// var faker = require('faker');
 class BookShow extends React.Component {
     constructor(props){
         super(props);
@@ -65,8 +65,8 @@ class BookShow extends React.Component {
             <h1>{book.title}</h1>
             <h1>by {book.author}</h1>
             <h1>{book.genre}</h1>
-            <p>{`This book is about ${faker.name.findName()}. They said, "
-             ${faker.hacker.verb()} ${faker.hacker.phrase()}". It was utter nonsense. Though that did not stop them. `}</p>
+            {/* <p>{`This book is about ${faker.name.findName()}. They said, "
+             ${faker.hacker.verb()} ${faker.hacker.phrase()}". It was utter nonsense. Though that did not stop them. `}</p> */}
             
             <select name="" id="read-selector" >
 
