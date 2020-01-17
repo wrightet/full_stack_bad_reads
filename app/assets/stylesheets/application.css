@@ -478,3 +478,37 @@ footer > ul > li > h6 {
 .App {
     position: relative;
 }
+
+.book-content{
+    display: flex;
+    min-height: 100vh;
+}
+
+.book-content > img {
+    height: 300px;
+    width: 350px;
+    padding: 3%;
+}
+
+
+.book-show-content {
+    display: inline-block;
+    justify-content: flex-end;
+}
+
+.book-show-content > :nth-child(n){
+    padding: 4%;
+}
+
+.boolean-buttons {
+    display: flex;
+}
+.boolean-buttons > li {
+    padding: 1%;
+}
+.boolean-button {
+    width: 60px;
+    height: 30px;
+    /* padding: 1%; */
+
+}
