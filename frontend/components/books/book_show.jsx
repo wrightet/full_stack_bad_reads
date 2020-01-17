@@ -6,7 +6,8 @@ var faker = require('faker');
 class BookShow extends React.Component {
     constructor(props){
         super(props);
-        this.state = {book: this.props.book}
+        this.state = {book: this.props.book};
+        this.booleanFlip = this.booleanFlip.bind(this);
     }
 
     componentDidMount() {
@@ -15,16 +16,33 @@ class BookShow extends React.Component {
        
     }
 
+    booleanFlip(e){
+        let book = this.props.book;
+
+        if (book.e === false) {return true}
+        else {return false}
+
+    }
+
     render(){
         let book = this.props.book;
         if (!book) {return null;}
+        
         return (
-        <div>
+        <div className="book-content">
             <img src={window.images.openbookURL}/>
+            <div className="book-show-content">
             <h1>{book.title}</h1>
-            <h1>{book.author}</h1>
+            <h1>by {book.author}</h1>
             <h1>{book.genre}</h1>
-            <p>{`This book is about ${faker.name.findName()}. They go on a quest to ${faker.hacker.verb()} cheese.`}</p>
+            <p>{`This book is about ${faker.name.findName()}. They said, " ${faker.hacker.verb()} ${faker.hacker.phrase()}". It was utter nonsense.`}</p>
+            <ul className="boolean-buttons">
+                <li>{`${book.read}`}<button onClick={this.booleanFlip} className="boolean-button">read</button></li>
+                <li>{`${book.wantToRead}`}<button className="boolean-button">Want to read</button></li>
+                <li>{`${book.currentlyReading}`}<button className="boolean-button">Currently Reading</button></li>
+            </ul>
+            </div>
+           
         </div>
         )
      
