@@ -24,6 +24,10 @@ export const createBook = book => dispatch => {
     return APIUtil.createBook(book).then(book => dispatch(receiveBook(book)));
    
 }
+export const updateBook = book => dispatch => {
+    return APIUtil.updateBook(book).then(book => dispatch(receiveBook(book)));
+   
+}
 
 
   

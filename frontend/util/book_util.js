@@ -17,3 +17,13 @@ export const fetchBook = id => (
         url: `api/books/${id}`
     })
 );
+
+export const updateBook = book => (
+    $.ajax({
+        method: 'Patch',
+        url: `api/books/${book.id}`,
+        data: {book},
+        contentType: false,
+        processData: false
+    })
+)
