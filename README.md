@@ -14,6 +14,10 @@ Welcome to Bad Reads, a website thats allows you to find the baddest books out t
 ## Link to the live site
 * http://bad-reads.herokuapp.com/#/
 
+## Getting started
+* Run npm install and bundle install.
+* To run Bad Reads locally run npm start and rails s to get the server going. Then open localhost:3000 in browser.
+
 ## Technologies used
 * Ruby v 2.5.1
 * React v 16.12.0
@@ -35,6 +39,3 @@ Welcome to Bad Reads, a website thats allows you to find the baddest books out t
 * Allow users to create book selves.
 * Review and rate books.
 * See all reviews on each book.
-
-
-
