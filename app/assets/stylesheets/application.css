@@ -500,15 +500,3 @@ footer > ul > li > h6 {
     padding: 4%;
 }
 
-.boolean-buttons {
-    display: flex;
-}
-.boolean-buttons > li {
-    padding: 1%;
-}
-.boolean-button {
-    width: 60px;
-    height: 30px;
-    /* padding: 1%; */
-
-}
