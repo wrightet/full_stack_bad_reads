@@ -44,6 +44,7 @@ ActiveRecord::Base.transaction do
             book_id: rand(1..100),
             rating: rand(1..5),
             body: Faker::Quote.most_interesting_man_in_the_world
+            url: 'book.jpeg'
         )
     end
     # User.create(first_name: 'Todd', last_name: 'McTodd', email: 'toddsonoftodd@todd.com', password: '123456')

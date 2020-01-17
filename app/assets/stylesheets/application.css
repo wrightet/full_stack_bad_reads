@@ -485,7 +485,7 @@ footer > ul > li > h6 {
     
 }
 
-.book-content > img {
+.book-show-image {
     height: 300px;
     width: 350px;
     padding: 3%;
@@ -498,7 +498,9 @@ footer > ul > li > h6 {
 }
 
 .book-show-content > :nth-child(n){
-    padding: 4%;
+    padding: 3%;
+    width: 200px;
+    font-style: ;
 }
 
 #read-selector{
