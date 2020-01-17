@@ -13,14 +13,26 @@ class Api::BooksController < ApplicationController
         if @book.save
             render :show
         else
-            reder json: @book.errors.full_messages, status: 422
+            render json: @book.errors.full_messages, status: 422
         end
 
     end
 
+    def update
+        @book = Book.find(params[:id])
+        if @book.update(book_params)
+            render :show
+        else
+             render json: @book.errors.full_messages, status: 422
+        end
+
+
+    end
+
+
     private
     def book_params
-        params.require(:book).permit(:title, :author, :genre, :read, :currently_reading,
+        params.require(:book).permit(:id, :title, :author, :genre, :read, :currently_reading,
         :want_to_read)
     end
 end

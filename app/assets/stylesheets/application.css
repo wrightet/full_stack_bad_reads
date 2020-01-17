@@ -482,6 +482,7 @@ footer > ul > li > h6 {
 .book-content{
     display: flex;
     min-height: 100vh;
+    background: #;
 }
 
 .book-content > img {
@@ -500,3 +501,10 @@ footer > ul > li > h6 {
     padding: 4%;
 }
 
+#read-selector{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 2%;
+}
