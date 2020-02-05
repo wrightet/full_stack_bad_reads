@@ -434,6 +434,9 @@ tr{
     display: flex;
     padding: 10px;
     justify-content: flex-end;
+    background-color: #F4F2E9;
+    width: 25%;
+   
 }
 .right-content > div > img {
     width: 200px;
