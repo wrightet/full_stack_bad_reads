@@ -23,7 +23,8 @@ class Splash extends React.Component {
                 <p>So save a book, and a life, write a review today!</p>
             </div>
             <div className='right-content'>
-                
+                <p>Deciding what not to read next? We can help you! 
+                    Come browse our inventory of bad books </p>
             </div>
             
         </div>
