@@ -31,8 +31,8 @@ const App = () => (
         <AuthRoute exact path='/' component={Splash}/>
         <footer>
             <ul>
-                <li><a href="https://www.linkedin.com/feed/"><img src={window.images.linkedinURL} /></a></li>
-                <li><a href="https://github.com/wrightet?tab=repositories"><img src={window.images.githubURL} /></a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/in/ethan-wright-91a75270/"><img src={window.images.linkedinURL} /></a></li>
+                <li><a target="_blank" href="https://github.com/wrightet?tab=repositories"><img src={window.images.githubURL} /></a></li>
                 <li><h6>creator: Ethan Wright</h6></li>
             </ul> 
         </footer>

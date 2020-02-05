@@ -46,9 +46,6 @@ class LoginForm extends React.Component {
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-
-                    
-                  
                     <div className="login-form">
                         <ul className="login-list">
                             <li>{this.renderErrors()}</li>
