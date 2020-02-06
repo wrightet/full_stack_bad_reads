@@ -432,10 +432,11 @@ tr{
 }
 .right-content{
     display: flex;
-    padding: 10px;
+    padding: 5px;
     justify-content: flex-end;
     background-color: #F4F2E9;
     width: 25%;
+   
    
 }
 .right-content > div > img {
@@ -446,7 +447,7 @@ tr{
 }
 footer {
     width: 100%;
-    height: 5%;
+    height: 200px;
     color: #000000; 
     background-color: #F4F2E9;
     overflow: auto;
