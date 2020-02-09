@@ -41,9 +41,9 @@ class Splash extends React.Component {
                     <p>
                         Anything Shakespeare? Of course!
                         <ul className="shakespeare-splash">
-                            <li><img src={window.images.romeoURL} className="splash-book" /></li>
-                            <li><img src={window.images.midsummerURL} className="splash-book" /></li>
-                            <li><img src={window.images.tempestURL} className="splash-book" /></li>
+                            <li><img src={window.images.romeoURL} className='shakespeare-book'/></li>
+                            <li><img src={window.images.midsummerURL} className='shakespeare-book' /></li>
+                            <li><img src={window.images.tempestURL} className='shakespeare-book' /></li>
                         </ul>
                     </p>
                     <p>
