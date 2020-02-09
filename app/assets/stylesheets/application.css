@@ -415,6 +415,17 @@ tr{
     min-height: 100vh;
 }
 
+.splash-book {
+    width: 20%;
+    height: 30%;
+}
+.shakespeare-splash{
+    display: inline-flex;
+    flex-direction: row;
+    height: 30%;
+
+}
+
 .left-content {
   
     background: #F4F2E9;
