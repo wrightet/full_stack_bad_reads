@@ -416,13 +416,15 @@ tr{
 }
 
 .splash-book {
-    width: 20%;
-    height: 30%;
+    width: 50%;
+    height: 70%;
+
 }
 .shakespeare-splash{
     display: inline-flex;
     flex-direction: row;
-    height: 30%;
+    height: 50%;
+    border: 1px solid blue;
 
 }
 
