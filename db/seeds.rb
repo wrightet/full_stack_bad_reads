@@ -17,6 +17,104 @@ ActiveRecord::Base.transaction do
     User.destroy_all
     Review.destroy_all
 
+    Book.create!(
+        title: 'Romeo and Juliet',
+        author: 'William Shakespeare',
+        genre: 'Romance',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: 'romeo.jpeg',
+
+    )
+
+    Book.create!(
+        title: 'The Tempest',
+        author: 'William Shakespeare',
+        genre: 'Comedy',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: 'tempest.jpeg',
+
+    )
+
+    Book.create!(
+        title: 'A Midsummer Nights Dream',
+        author: 'William Shakespeare',
+        genre: 'Romance',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: 'midsummer.jpeg',
+
+    )
+
+    Book.create!(
+        title: 'The Great Gatsby',
+        author: 'F. Scott Fitzgerald',
+        genre: 'Fiction',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: 'gatsby.jpeg',
+
+    )
+
+    Book.create!(
+        title: 'Moby Dick',
+        author: 'Herman Melville',
+        genre:'Nautical Fiction',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: 'moby.jpeg',
+
+    )
+
+      Book.create!(
+        title: 'The Catcher in the Rye',
+        author: 'J.D. Salinger',
+        genre: 'Fiction',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: 'catcher.jpeg',
+
+    )
+
+      Book.create!(
+        title: 'Twilight',
+        author: 'Stephenie Meyer',
+        genre: 'Romance/Fantasy',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: 'Twilight.jpeg',
+
+    )
+
+      Book.create!(
+        title: 'Eragon',
+        author: 'Christopher Paolini',
+        genre: 'Fantasy',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: 'eragon.jpeg',
+
+    )
+
+      Book.create!(
+        title: 'Fifty Shades of Grey',
+        author: 'E.L. James',
+        genre:'Erotic Romance Novel',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: 'fifty.jpeg',
+
+    )
     10.times do
         User.create(
             first_name: Faker::Name.unique.first_name,
