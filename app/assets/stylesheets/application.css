@@ -415,25 +415,32 @@ tr{
     min-height: 100vh;
 }
 
+.splash-greet {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
 .splash-book {
-    width: 50%;
-    height: 70%;
-    padding: 5 px;
+  
+    padding: 30px;
     display: flex;
     position: relative;
+    width: 200px;
+    height: 300px;
 
 
 }
-.shakespeare-book{
- width: 50%;
- height: 90%;
-}
-.shakespeare-splash{
+
+.books-list-splash{
     display: inline-flex;
     flex-direction: row;
     height: 50%;
-    
+}
 
+.books-list-splash > li {
+    width: 100%;
 }
 
 .left-content {
