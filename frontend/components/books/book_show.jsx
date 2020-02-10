@@ -7,6 +7,7 @@ class BookShow extends React.Component {
     constructor(props){
         super(props);
         this.state = {book: this.props.book};
+        this.keyFinder = this.keyFinder.bind(this);
         // this.booleanFlip = this.booleanFlip.bind(this);
     }
 
@@ -14,6 +15,26 @@ class BookShow extends React.Component {
         
         this.props.requestBook(this.props.match.params.id)
        
+    }
+
+    keyFinder(url) {
+        let val = url.split('.')[0];
+        let keys = Object.keys(window.images)
+        let newKeys = keys.map(key => {
+            return key.split('URL')[0];
+        })
+        let values = Object.values(window.images)
+
+        for (let i = 0; i < keys.length; i++) {
+            if (val === newKeys[i]) {
+                return window.images[keys[i]]
+            }
+
+
+
+        }
+        return window.images.openbookURL;
+
     }
 
     // booleanFlip(e){
@@ -62,7 +83,7 @@ class BookShow extends React.Component {
         <div className="book-content">
            
             <div className="book-show-image">
-            <img src={window.images.openbookURL}/>
+            <img src={this.keyFinder(book.url)}/>
             </div>
 
             <div className="book-show-content">
