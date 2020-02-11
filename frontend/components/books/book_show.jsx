@@ -29,9 +29,6 @@ class BookShow extends React.Component {
             if (val === newKeys[i]) {
                 return window.images[keys[i]]
             }
-
-
-
         }
         return window.images.openbookURL;
 
@@ -90,16 +87,16 @@ class BookShow extends React.Component {
                 <h1>{book.title}</h1>
                 <h1>by {book.author}</h1>
                 <h1>{book.genre}</h1>
-                <p>{`This book is about ${faker.name.findName()}. They said, "
-                ${faker.hacker.verb()} ${faker.hacker.phrase()}". It was utter nonsense. Though that did not stop them. `}</p>
-                
+                <span>{book.description}</span>
+                {console.log(book.description)}
                 <select name="" id="read-selector" >
 
                     <option value="haveNotRead">Have Not Read</option>
                     <option value="read">Read</option>
                     <option value="currently_reading">Currently Reading</option>
                     <option value="want_to_read">Want To Read</option>
-                </select>  {`${book.read}`}
+                </select>  
+                {/* {`${book.read}`} */}
             </div>
             
             

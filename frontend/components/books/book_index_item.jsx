@@ -17,14 +17,9 @@ class BookIndexItem extends React.Component {
         
     
        for (let i = 0; i < keys.length; i++) {
-           console.log('val:',val)
-           console.log('url',newKeys[i])
            if (val === newKeys[i]){
                return window.images[keys[i]]
-           } 
-               
-           
-           
+           }    
        }
         return window.images.openbookURL;
        
