@@ -87,10 +87,11 @@ class BookShow extends React.Component {
                 <h1>{book.title}</h1>
                 <h1>by {book.author}</h1>
                 <h1>{book.genre}</h1>
-                <span>{book.description}</span>
-                {console.log(book.description)}
+                <div className='book-description'>
+                    <span>{book.description}</span>
+                </div>
+                
                 <select name="" id="read-selector" >
-
                     <option value="haveNotRead">Have Not Read</option>
                     <option value="read">Read</option>
                     <option value="currently_reading">Currently Reading</option>
