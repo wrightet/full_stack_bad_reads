@@ -239,7 +239,7 @@ ActiveRecord::Base.transaction do
     end
 
     100.times do 
-        Book.create(
+        book = Book.create(
             title: Faker::Book.title,
             author: Faker::Book.author,
             genre: Faker::Book.genre,
@@ -249,17 +249,18 @@ ActiveRecord::Base.transaction do
             url: 'book.jpeg',
             description: Faker::Hipster.paragraph
         )
+         5.times do
+            Review.create!(
+                user_id: rand(users),
+                book_id: book.id,
+                rating: 4,
+                body: Faker::Quote.most_interesting_man_in_the_world,
+                
+            )
+        end
     end
 
-    100.times do
-        Review.create(
-            user_id: rand(1..10),
-            book_id: rand(1..100),
-            rating: rand(1..5),
-            body: Faker::Quote.most_interesting_man_in_the_world,
-            
-        )
-    end
+   
     # User.create(first_name: 'Todd', last_name: 'McTodd', email: 'toddsonoftodd@todd.com', password: '123456')
     # Book.create(title: 'Harry Potter', author: 'J.K. Rowling', genre: 'Fantasy', read: true, currently_reading: false, want_to_read: false )
     # Review.create(user_id: 1, book_id: 1, rating: 3, body: 'An ok book about a wizard boy with no parents ')

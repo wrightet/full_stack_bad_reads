@@ -1,6 +1,6 @@
 class Review < ApplicationRecord
   
-    validates :rating, inclusion: {in: [1..5], allow_nil: true}
+    # validates :rating, inclusion: {in: %w(1..5), allow_nil: true}
     # validates :body, allow_nil: true
     # validates :body, allow_blank: true
     
