@@ -1,5 +1,5 @@
 import React from 'react';
-// import BookShowContainer from './book_index_container';
+
 
 import { Link, withRouter } from 'react-router-dom';
 var faker = require('faker');
