@@ -14,7 +14,7 @@ class BookIndexItem extends React.Component {
         let newKeys = keys.map(key => {
             return key.split('URL')[0];
         })
-        let values = Object.values(window.images)
+        
     
        for (let i = 0; i < keys.length; i++) {
            if (val === newKeys[i]){
