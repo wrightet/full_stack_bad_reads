@@ -4,7 +4,7 @@ import configureStore from './store/store'
 import Root from './components/root'
 import {login, logout} from './util/session_api_util'
 import {requestAllReviews, createReview, updateReview} from './actions/review_actions'
-import {fetchAllReviews} from './util/review_util';
+import { fetchAllReviews} from './util/review_util';
 
 document.addEventListener('DOMContentLoaded', () => {
     let store;
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.login = login;
     window.logout = logout;
     window.requestAllReviews = requestAllReviews();
-    window.fetchAllReviews = fetchAllReviews();
+    window.fetchAllReviews = fetchAllReviews;
     const root = document.getElementById('root');
     ReactDOM.render(<Root store={store} />, root);
 });

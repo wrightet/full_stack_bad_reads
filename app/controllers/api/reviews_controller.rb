@@ -1,6 +1,7 @@
-class ReviewsController < ApplicationController
+class Api::ReviewsController < ApplicationController
     def index
         @reviews = Review.all
+        puts @reviews
     end
 
     def create
