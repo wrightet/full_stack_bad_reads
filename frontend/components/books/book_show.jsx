@@ -83,7 +83,7 @@ class BookShow extends React.Component {
         <div className="book-content">
            
             <div className="book-show-image">
-            <img src={this.keyFinder(book.url)}/>
+            <img src={this.keyFinder(book.url)} className='book-show-photo'/>
             </div>
 
             <div className="book-show-content">
@@ -111,4 +111,3 @@ class BookShow extends React.Component {
 }
 
 export default withRouter(BookShow);
-//  <img src={window.images.openbookURL}/>
