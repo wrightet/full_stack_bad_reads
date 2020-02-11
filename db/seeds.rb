@@ -90,7 +90,7 @@ ActiveRecord::Base.transaction do
         read: false,
         currently_reading: false, 
         want_to_read: false,
-        url: 'Twilight.jpeg',
+        url: 'twilight.jpeg',
 
     )
 

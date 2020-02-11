@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import BookIndexContainer from './book_index_container';
+
 
 class BookIndexItem extends React.Component {
     constructor(props){
@@ -17,6 +17,8 @@ class BookIndexItem extends React.Component {
         
     
        for (let i = 0; i < keys.length; i++) {
+           console.log('val:',val)
+           console.log('url',newKeys[i])
            if (val === newKeys[i]){
                return window.images[keys[i]]
            } 
@@ -42,4 +44,3 @@ class BookIndexItem extends React.Component {
 }
 
 export default BookIndexItem;
-{/* <img src={window.images.openbookURL} className="book-photo"/> */}
