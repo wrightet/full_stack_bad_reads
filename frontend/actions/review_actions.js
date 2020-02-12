@@ -14,16 +14,17 @@ const receiveReview = (review) => ({
     review
 });
 
-export const requestAllReviews = (bookId) => dispatch => {
+export const requestAllReviews = bookId => dispatch => {
+    debugger
     return APIUtil.fetchAllReviews(bookId).then(reviews => 
-        dispatch(receiveReviews(reviews)));
-}
+        dispatch(receiveReviews(reviews)))
+};
 
 export const createReview = (bookId, review) => dispatch => {
     return APIUtil.createReview(bookId, review).then(review =>
-        dispatch(receiveReview(review)));
-}
+        dispatch(receiveReview(review)))
+};
 export const updateReview = (bookId, review) => dispatch => {
     return APIUtil.updateReview(bookId, review).then(review =>
-        dispatch(receiveReview(review)));
-}
+        dispatch(receiveReview(review)))
+};

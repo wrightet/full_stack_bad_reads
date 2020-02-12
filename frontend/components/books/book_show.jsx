@@ -1,5 +1,5 @@
 import React from 'react';
-
+import ReviewsContainer from '../reviews/reviews_container';
 
 import { Link, withRouter } from 'react-router-dom';
 var faker = require('faker');
@@ -99,7 +99,9 @@ class BookShow extends React.Component {
                 </select>  
                 {/* {`${book.read}`} */}
             </div>
-            
+            <div>
+                <ReviewsContainer reviews={book.reviews} />
+            </div>
             
            
         </div>
