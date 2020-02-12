@@ -3,7 +3,9 @@ class Book < ApplicationRecord
     validates :read, :currently_reading, :want_to_read, 
     inclusion: {in: [true, false], message: "value must be true or false"}
 
-   has_many :reviews
+   has_many :reviews,
+        foreign_key: :book_id,
+        class_name: 'Review'
    has_many :libraries,
         foreign_key: :book_id,
         class_name: 'Library'

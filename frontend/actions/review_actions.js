@@ -15,7 +15,7 @@ const receiveReview = (review) => ({
 });
 
 export const requestAllReviews = bookId => dispatch => {
-    debugger
+  
     return APIUtil.fetchAllReviews(bookId).then(reviews => 
         dispatch(receiveReviews(reviews)))
 };
