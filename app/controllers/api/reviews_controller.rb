@@ -1,14 +1,14 @@
 class Api::ReviewsController < ApplicationController
     def index
         @reviews = Review.all
-        puts @reviews
+        
     end
 
     def create
         @review = Review.new(review_params)
 
         if @review.save
-            render :index
+            redirect_to :index
         else
             render json: @review.errors.full_messages, status: 422
         end
