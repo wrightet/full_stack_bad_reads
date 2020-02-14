@@ -85,8 +85,9 @@ class BookShow extends React.Component {
             <div className="book-show-image">
             <img src={this.keyFinder(book.url)} className='book-show-photo'/>
             </div>
-
-            <div className="book-show-content">
+            <ul>
+                <li>
+                    <div className="book-show-content">
                 <h1>{book.title}</h1>
                 <h1>by {book.author}</h1>
                 <h1>{book.genre}</h1>
@@ -102,7 +103,10 @@ class BookShow extends React.Component {
                 </select>  
                 {/* {`${book.read}`} */}
             </div>
-            <div className='review-content'>
+                </li>
+                <li>
+                              
+             <div className='review-content'>
                 <Link to='/review/new'>Create Review</Link>
                 <h1>Reviews</h1>
                     { book.reviews ? book.reviews.map(review => (
@@ -111,8 +115,11 @@ class BookShow extends React.Component {
                         
                     }  
             </div>
-            
            
+                </li>
+            </ul>
+            
+ 
         </div>
         )
         } 

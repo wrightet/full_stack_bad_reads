@@ -509,8 +509,8 @@ footer > ul > li > h6 {
 
 
 .book-show-content {
-    display: inline-block;
-    justify-content: flex-end;
+    display: block;
+    justify-content: flex-start;
     height: 75vh;
 }
 
@@ -529,11 +529,13 @@ footer > ul > li > h6 {
 }
 
 .review-content{
-    display: block;
+    display: flex;
     position: relative;
     flex-direction: column;
     justify-content: flex-end;
     height: 20vh;
+    /* margin-top: 75vh; */
+    margin-right: 50vh;
     
 }
 
