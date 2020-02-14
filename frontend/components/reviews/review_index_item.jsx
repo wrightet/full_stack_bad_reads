@@ -17,7 +17,7 @@ class ReviewIndexItem extends React.Component{
                 <ul>
                     <li>User: {review.user_id}</li>
                     <li>Rating: {review.rating}/ 5</li>
-                    <li><p>{review.body}</p></li>
+                    <li><span>{review.body}</span></li>
                 </ul>
             </div>
         )

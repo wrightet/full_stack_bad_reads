@@ -88,26 +88,26 @@ class BookShow extends React.Component {
             <ul>
                 <li>
                     <div className="book-show-content">
-                <h1>{book.title}</h1>
-                <h1>by {book.author}</h1>
-                <h1>{book.genre}</h1>
-                <div className='book-description'>
-                    <span>{book.description}</span>
-                </div>
-                
-                <select name="" id="read-selector" >
-                    <option value="haveNotRead">Have Not Read</option>
-                    <option value="read">Read</option>
-                    <option value="currently_reading">Currently Reading</option>
-                    <option value="want_to_read">Want To Read</option>
-                </select>  
-                {/* {`${book.read}`} */}
-            </div>
+                        <h1>{book.title}</h1>
+                        <h1>by {book.author}</h1>
+                        <h1>{book.genre}</h1>
+                        <div className='book-description'>
+                            <span>{book.description}</span>
+                        </div>
+                        
+                        <select name="" id="read-selector" >
+                            <option value="haveNotRead">Have Not Read</option>
+                            <option value="read">Read</option>
+                            <option value="currently_reading">Currently Reading</option>
+                            <option value="want_to_read">Want To Read</option>
+                        </select>  
+                        {/* {`${book.read}`} */}
+                    </div>
                 </li>
                 <li>
                               
              <div className='review-content'>
-                <Link to='/review/new'>Create Review</Link>
+                <Link to='/review/new' className="create-review">Create Review</Link>
                 <h1>Reviews</h1>
                     { book.reviews ? book.reviews.map(review => (
                         <ReviewIndexItem review={review} key={review.id}/>

@@ -497,6 +497,7 @@ footer > ul > li > h6 {
 
 .book-content{
     display: flex;
+    background-color: #ffffff;
     min-height: 100vh;
     
 }
@@ -534,11 +535,28 @@ footer > ul > li > h6 {
     flex-direction: column;
     justify-content: flex-end;
     height: 20vh;
+    float: left;
     /* margin-top: 75vh; */
-    margin-right: 50vh;
+    /* margin-right: 50vh; */
     
 }
 
 .indv-review{
     padding: 1vh;
+}
+
+.create-review{
+
+    width: 6vw;
+    font-size: 14px;
+    background-color: #F4F1EA;
+    color: #000000;
+    border-radius: 5px;
+    text-decoration: none;
+    padding-bottom: 0.5vh;
+    padding-top: 0.5vh;
+}
+
+.create-review:hover{
+    background-color: #EDE6D6;
 }
