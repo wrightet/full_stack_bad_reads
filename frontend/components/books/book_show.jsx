@@ -104,14 +104,12 @@ class BookShow extends React.Component {
             </div>
             <div className='review-content'>
                 <Link to='/review/new'>Create Review</Link>
-                <h1>reviews!!!</h1>
+                <h1>Reviews</h1>
                     { book.reviews ? book.reviews.map(review => (
                         <ReviewIndexItem review={review} key={review.id}/>
                     )) : ""
                         
-                    }
-                    
-               
+                    }  
             </div>
             
            

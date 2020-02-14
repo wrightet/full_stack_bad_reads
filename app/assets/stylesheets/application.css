@@ -511,6 +511,7 @@ footer > ul > li > h6 {
 .book-show-content {
     display: inline-block;
     justify-content: flex-end;
+    height: 75vh;
 }
 
 .book-show-content > :nth-child(n){
@@ -525,4 +526,17 @@ footer > ul > li > h6 {
     align-content: center;
     align-items: center;
     padding: 2%;
+}
+
+.review-content{
+    display: block;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 20vh;
+    
+}
+
+.indv-review{
+    padding: 1vh;
 }

@@ -24,12 +24,10 @@ class BookIndex extends React.Component {
                         <th className="book-table-header-column-name">Author</th>
                         <th className="book-table-header-column-genre">Genre</th>
                     </tr>
-                 
                 </thead> 
                  <tbody className='books-list-body'>
                      { 
                             books.map(book => (
-                                
                                 <BookIndexItem
                                 book = {book}
                                 key = {book.id}
@@ -37,14 +35,9 @@ class BookIndex extends React.Component {
                             ))
                         }
                  </tbody>
-                        
-                       
-                        
-                    
             </table>
         </div>
         )
-   
     }
 }
 
