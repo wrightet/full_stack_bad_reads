@@ -13,7 +13,7 @@ const mSTP = (state,ownProps) => ({
 const mDTP = dispatch => ({
     requestBook: id => dispatch(requestBook(id)),
     updateBook: book => dispatch(updateBook(book)),
-    requestReviews: id => dispatch(requestAllReviews(id))
+    requestAllReviews: id => dispatch(requestAllReviews(id))
 })
 
 export default connect(mSTP, mDTP)(BookShow);

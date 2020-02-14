@@ -3,32 +3,19 @@ import ReviewsContainer from '../reviews/reviews_container';
 import CreateReviewContainer from '../reviews/create_review_container'
 import { Link, withRouter } from 'react-router-dom';
 import ReviewIndexItem from '../reviews/review_index_item';
-var faker = require('faker');
+
 class BookShow extends React.Component {
     constructor(props){
         super(props);
         this.state = {book: this.props.book};
         this.keyFinder = this.keyFinder.bind(this);
         // this.booleanFlip = this.booleanFlip.bind(this);
-        this.reviewFinder = this.reviewFinder.bind(this);
+  
+   
     }
 
     componentDidMount() {
-        
-        this.props.requestBook(this.props.match.params.id);
-        this.props.requestReviews(this.props.match.params.id);
-       
-    }
-
-    reviewFinder(reviews){
-        let arr = [];
-
-        reviews.forEach( review => {
-            if(review.bookId === this.props.book.id){
-                arr.push(review)
-            }
-        })
-        return arr
+        this.props.requestBook(this.props.match.params.id)
     }
 
     keyFinder(url) {
@@ -89,10 +76,9 @@ class BookShow extends React.Component {
     render(){
        
         let book = this.props.book;
-        // let reviews = reviewFinder(book.reviews);
         console.log(book)
         if (!book) {return null;}
-        // if (!book.reviews){return null;}
+        else  {
         return (
         <div className="book-content">
            
@@ -119,16 +105,19 @@ class BookShow extends React.Component {
             <div className='review-content'>
                 <Link to='/review/new'>Create Review</Link>
                 <h1>reviews!!!</h1>
-                    {/* {book.reviews.map(review => {
-                 <ReviewIndexItem reviews={review} />
-            })}  */}
+                    { book.reviews ? book.reviews.map(review => (
+                        <ReviewIndexItem review={review} key={review.id}/>
+                    )) : ""
+                        
+                    }
+                    
                
             </div>
             
            
         </div>
         )
-     
+        } 
     }
 }
 
