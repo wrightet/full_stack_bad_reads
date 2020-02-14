@@ -17,7 +17,7 @@ ActiveRecord::Base.transaction do
     User.destroy_all
     Review.destroy_all
 
-    Book.create!(
+    book_1 = Book.create!(
         title: 'Romeo and Juliet',
         author: 'William Shakespeare',
         genre: 'Romance',
@@ -30,9 +30,17 @@ ActiveRecord::Base.transaction do
 
     )
 
+        5.times do 
+            Review.create(
+            user_id: rand(1..10),
+            book_id: book_1.id,
+            rating: rand(1..5),
+            body: Faker::Quote.most_interesting_man_in_the_world,
+            
+        )
+        end
 
-
-    Book.create!(
+    book_2 = Book.create!(
         title: 'The Tempest',
         author: 'William Shakespeare',
         genre: 'Comedy',
@@ -47,7 +55,17 @@ ActiveRecord::Base.transaction do
 
     )
 
-    Book.create!(
+            5.times do 
+            Review.create(
+            user_id: rand(1..10),
+            book_id: book_2.id,
+            rating: rand(1..5),
+            body: Faker::Quote.most_interesting_man_in_the_world,
+            
+        )
+        end
+
+    book_3 = Book.create!(
         title: 'A Midsummer Nights Dream',
         author: 'William Shakespeare',
         genre: 'Romance',
@@ -72,7 +90,7 @@ ActiveRecord::Base.transaction do
 
     )
 
-    Book.create!(
+    book_4 = Book.create!(
         title: 'The Great Gatsby',
         author: 'F. Scott Fitzgerald',
         genre: 'Fiction',
@@ -91,7 +109,7 @@ ActiveRecord::Base.transaction do
 
     )
 
-    Book.create!(
+    book_5 = Book.create!(
         title: 'Moby Dick',
         author: 'Herman Melville',
         genre:'Nautical Fiction',
@@ -125,7 +143,7 @@ ActiveRecord::Base.transaction do
 
     )
 
-      Book.create!(
+      book_6 = Book.create!(
         title: 'The Catcher in the Rye',
         author: 'J.D. Salinger',
         genre: 'Fiction',
@@ -159,7 +177,7 @@ ActiveRecord::Base.transaction do
 
     )
 
-      Book.create!(
+     book_7 = Book.create!(
         title: 'Twilight',
         author: 'Stephenie Meyer',
         genre: 'Romance/Fantasy',
@@ -175,7 +193,7 @@ ActiveRecord::Base.transaction do
 
     )
 
-      Book.create!(
+      book_8 = Book.create!(
         title: 'Eragon',
         author: 'Christopher Paolini',
         genre: 'Fantasy',
@@ -204,7 +222,7 @@ ActiveRecord::Base.transaction do
 
     )
 
-      Book.create!(
+      book_9 = Book.create!(
         title: 'Fifty Shades of Grey',
         author: 'E.L. James',
         genre:'Erotic Romance Novel',
@@ -252,12 +270,21 @@ ActiveRecord::Base.transaction do
             description: Faker::Hipster.paragraph
         )
         id = book.id  
+        5.times do 
+            Review.create(
+            user_id: rand(1..10),
+            book_id: id,
+            rating: rand(1..5),
+            body: Faker::Quote.most_interesting_man_in_the_world,
+            
+        )
+        end
     end
 
-    100.times do
+    50.times do
         Review.create(
             user_id: rand(1..10),
-            book_id: rand(1..100),
+            book_id: rand(1..10),
             rating: rand(1..5),
             body: Faker::Quote.most_interesting_man_in_the_world,
             
