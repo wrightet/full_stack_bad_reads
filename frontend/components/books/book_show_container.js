@@ -5,6 +5,7 @@ import BookShow from './book_show';
 
 const mSTP = (state,ownProps) => ({
     book: state.entities.books[ownProps.match.params.id]
+    
 })
 
 

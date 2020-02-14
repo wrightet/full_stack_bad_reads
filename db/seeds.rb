@@ -241,7 +241,7 @@ ActiveRecord::Base.transaction do
     end
 
     100.times do 
-        Book.create(
+       book = Book.create(
             title: Faker::Book.title,
             author: Faker::Book.author,
             genre: Faker::Book.genre,
@@ -251,6 +251,7 @@ ActiveRecord::Base.transaction do
             url: 'book.jpeg',
             description: Faker::Hipster.paragraph
         )
+        id = book.id  
     end
 
     100.times do

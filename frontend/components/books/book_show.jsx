@@ -87,11 +87,12 @@ class BookShow extends React.Component {
     // }
 
     render(){
+       
         let book = this.props.book;
         // let reviews = reviewFinder(book.reviews);
         console.log(book)
         if (!book) {return null;}
-        if (!book.reviews){return null;}
+        // if (!book.reviews){return null;}
         return (
         <div className="book-content">
            
@@ -118,9 +119,9 @@ class BookShow extends React.Component {
             <div className='review-content'>
                 <Link to='/review/new'>Create Review</Link>
                 <h1>reviews!!!</h1>
-                    {book.reviews.map(review => {
+                    {/* {book.reviews.map(review => {
                  <ReviewIndexItem reviews={review} />
-            })} 
+            })}  */}
                
             </div>
             
