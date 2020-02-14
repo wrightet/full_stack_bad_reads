@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 import ReviewConatiner from './reviews_container';
 import reviews_container from './reviews_container';
 
