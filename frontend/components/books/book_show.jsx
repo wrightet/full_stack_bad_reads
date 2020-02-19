@@ -85,7 +85,7 @@ class BookShow extends React.Component {
             <div className="book-show-image">
             <img src={this.keyFinder(book.url)} className='book-show-photo'/>
             </div>
-            <ul>
+            <ul className='book-content-list'>
                 <li>
                     <div className="book-show-content">
                         <h1>{book.title}</h1>

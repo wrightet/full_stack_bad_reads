@@ -511,12 +511,14 @@ footer > ul > li > h6 {
 
 .book-show-content {
     display: block;
+    position: relative;
     justify-content: flex-start;
-    height: 75vh;
+    height: 50vh;
+    margin: 10px;
 }
 
 .book-show-content > :nth-child(n){
-    padding: 3%;
+    padding-top: 5%;
     width: 400px;
     
 }
@@ -524,9 +526,7 @@ footer > ul > li > h6 {
 #read-selector{
     display: flex;
     justify-content: center;
-    align-content: center;
-    align-items: center;
-    padding: 2%;
+    margin-top: 1vh;
 }
 
 .review-content{
@@ -536,15 +536,26 @@ footer > ul > li > h6 {
     justify-content: flex-end;
     height: 20vh;
     float: left;
-    /* margin-top: 75vh; */
-    /* margin-right: 50vh; */
-    
 }
 
 .indv-review{
-    padding: 1vh;
+    padding-top: 1vh;
+    float: left;
 }
 
+.indv-review > ul > li {
+  list-style-type: none;
+}
+
+.indv-review > ul {
+    list-style-type: none;
+    margin: auto;
+}
+
+.book-content-list {
+    list-style-type: none;
+    padding: 0;
+}
 .create-review{
 
     width: 6vw;
