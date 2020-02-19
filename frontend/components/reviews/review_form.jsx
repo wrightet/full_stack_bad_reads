@@ -20,7 +20,7 @@ class ReviewForm extends React.Component {
         return(
             <div className='reveiw-form-div'>
                 <h1>{this.props.formType}</h1>
-                <form action="">
+                <form onSubmit={this.handleSubmit}>
                     <label> Rating
                         <select value={this.state.rating} name="" id="rating-selector" 
                             onChange={this.update('rating')}

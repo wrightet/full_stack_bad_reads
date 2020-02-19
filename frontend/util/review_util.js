@@ -5,13 +5,18 @@ export const fetchAllReviews = (bookId) => (
     })
 )
 
-export const createReview = (bookId, review) => (
-    $.ajax({
-        method: 'POST',
-        url: ` /api/books/${bookId}/reviews`,
-        data: {review}
-    })
-)
+export const createReview = (bookId, review) => {
+    debugger
+    return ($.ajax({
+            method: 'POST',
+            url: ` /api/books/${bookId}/reviews`,
+            data: {review}
+        }))
+
+}
+    
+   
+
 
 export const updateReview = (bookId, review) => (
     $.ajax({

@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.requestAllReviews = requestAllReviews();
     window.fetchAllReviews = fetchAllReviews;
     window.requestAllBooks = requestAllBooks();
-    // window.createReview = createReview();
+    window.createReview = createReview();
     const root = document.getElementById('root');
     ReactDOM.render(<Root store={store} />, root);
 });
