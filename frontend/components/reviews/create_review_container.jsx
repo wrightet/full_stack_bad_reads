@@ -13,7 +13,7 @@ const mSTP = state => ({
 })
 
 const mDTP = dispatch => ({
-    action: review => dispatch(createReview(review))
+    action: (bookId, review) => dispatch(createReview(bookId,review))
 })
 
 export default connect(mSTP, mDTP)(ReviewForm);

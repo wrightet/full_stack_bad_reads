@@ -76,7 +76,6 @@ class BookShow extends React.Component {
     render(){
        
         let book = this.props.book;
-        console.log(book)
         if (!book) {return null;}
         else  {
         return (
@@ -107,10 +106,10 @@ class BookShow extends React.Component {
                 <li>
                               
              <div className='review-content'>
-                <Link to='/review/new' className="create-review">Create Review</Link>
+                <Link to='/review/new' className="create-review" >Create Review</Link>
                 <h1>Reviews</h1>
                     { book.reviews ? book.reviews.map(review => (
-                        <ReviewIndexItem review={review} key={review.id}/>
+                        <ReviewIndexItem bookId={this.props.book.id} review={review} key={review.id}/>
                     )) : ""
                         
                     }  
