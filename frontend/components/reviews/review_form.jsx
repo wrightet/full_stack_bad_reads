@@ -17,10 +17,8 @@ class ReviewForm extends React.Component {
         return e => this.setState({[field]: e.target.value})
     }
     handleSubmit(e){
-        
         e.preventDefault();
         this.props.action(this.props.bookId, this.state)
-        debugger
     }
     render(){
         this.state.book_id = this.book_id;

@@ -7,7 +7,7 @@ class Api::ReviewsController < ApplicationController
         @review = Review.new(review_params)
 
         if @review.save
-            redirect_to :index
+            render :index
         else
             render json: @review.errors.full_messages, status: 422
         end
@@ -33,8 +33,4 @@ class Api::ReviewsController < ApplicationController
         params.require(:review).permit(:user_id, :book_id, :rating, :body)
     end
 
-    def book_params
-        params.require(:book).permit(:id, :title, :author, :genre, :url, :description, :read, :currently_reading,
-        :want_to_read)
-    end
 end

@@ -109,7 +109,7 @@ class BookShow extends React.Component {
                 <li>
                               
              <div className='review-content'>
-                <Link to='/review/new' className="create-review" >Create Review</Link>
+                
                 <h1>Reviews</h1>
                     <CreateReviewContainer bookId={book.id} userId={user} />
                     { book.reviews ? book.reviews.map(review => (

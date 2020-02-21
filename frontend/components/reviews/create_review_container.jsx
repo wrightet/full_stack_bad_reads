@@ -6,7 +6,7 @@ const mSTP = state => {
     // console.log('thing',state)
     return{
     review: {
-        rating:'',
+        rating: 3,
         body: '',
         user_id: state.session.id,
         book_id: state.entities.books.id

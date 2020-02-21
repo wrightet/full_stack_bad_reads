@@ -511,10 +511,13 @@ footer > ul > li > h6 {
 
 .book-show-content {
     display: block;
-    position: relative;
+    position: static;
     justify-content: flex-start;
     height: 50vh;
     margin: 10px;
+    padding-bottom: 10vh;
+    border: 1px solid blue;
+
 }
 
 .book-show-content > :nth-child(n){
@@ -530,15 +533,18 @@ footer > ul > li > h6 {
 }
 
 .review-content{
-    display: flex;
-    position: relative;
+    display: inline-flex;
+    /* position: relative; */
     flex-direction: column;
     justify-content: flex-end;
-    height: 20vh;
+    height: 45vh;
     float: left;
+    padding-top: 15vh;
+    border: 1px solid red;
 }
 
 .indv-review{
+    display: block;
     padding-top: 1vh;
     float: left;
 }
@@ -555,17 +561,6 @@ footer > ul > li > h6 {
 .book-content-list {
     list-style-type: none;
     padding: 0;
-}
-.create-review{
-
-    width: 6vw;
-    font-size: 14px;
-    background-color: #F4F1EA;
-    color: #000000;
-    border-radius: 5px;
-    text-decoration: none;
-    padding-bottom: 0.5vh;
-    padding-top: 0.5vh;
 }
 
 .create-review:hover{
