@@ -1,15 +1,6 @@
 class Api::ReviewsController < ApplicationController
     def index
         @reviews = Review.all
-        # old_reviews = Reviews.all
-        # @book = Book.find(params[:id])
-        # @reviews = []
-        # old_reviews.each do |review|
-        #     if review.book.id == @book.id
-        #         @reviews << review
-        #     end
-        # end
-        # return @reviews
     end
 
     def create

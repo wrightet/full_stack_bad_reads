@@ -7,15 +7,16 @@ import ReviewIndexItem from '../reviews/review_index_item';
 class BookShow extends React.Component {
     constructor(props){
         super(props);
-        this.state = {book: this.props.book};
+        // this.state = {book: this.props.book};
         this.keyFinder = this.keyFinder.bind(this);
         // this.booleanFlip = this.booleanFlip.bind(this);
   
-   
+        // console.log('state',this.state)
     }
 
     componentDidMount() {
         this.props.requestBook(this.props.match.params.id)
+        
     }
 
     keyFinder(url) {
@@ -76,6 +77,8 @@ class BookShow extends React.Component {
     render(){
        
         let book = this.props.book;
+        let user = this.props.currentUser;
+        console.log('props', this.props)
         if (!book) {return null;}
         else  {
         return (
@@ -108,6 +111,7 @@ class BookShow extends React.Component {
              <div className='review-content'>
                 <Link to='/review/new' className="create-review" >Create Review</Link>
                 <h1>Reviews</h1>
+                    <CreateReviewContainer bookId={book.id} userId={user} />
                     { book.reviews ? book.reviews.map(review => (
                         <ReviewIndexItem bookId={this.props.book.id} review={review} key={review.id}/>
                     )) : ""
@@ -116,6 +120,7 @@ class BookShow extends React.Component {
             </div>
            
                 </li>
+                
             </ul>
             
  

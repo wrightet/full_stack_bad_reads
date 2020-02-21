@@ -3,19 +3,27 @@ import React from 'react';
 class ReviewForm extends React.Component {
     constructor(props) {
         super(props);
+        this.user_id = this.props.userId;
+        this.book_id = this.props.bookId;
         this.state = this.props.review;
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    componentDidMount(){
+        console.log('review',this.props)
     }
 
     update(field){
         return e => this.setState({[field]: e.target.value})
     }
     handleSubmit(e){
+        
         e.preventDefault();
-        this.props.action(this.props.book_id, this.state.review)
+        this.props.action(this.props.bookId, this.state)
+        debugger
     }
     render(){
-
+        this.state.book_id = this.book_id;
         return(
             <div className='reveiw-form-div'>
                 <h1>{this.props.formType}</h1>
