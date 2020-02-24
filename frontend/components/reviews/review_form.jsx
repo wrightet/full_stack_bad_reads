@@ -29,6 +29,7 @@ class ReviewForm extends React.Component {
                     <label> Rating
                         <select value={this.state.rating} id="rating-selector" 
                             onChange={this.update('rating')}
+                            className='rating-selector'
                         >
                             <option value="1">1</option>
                             <option value="2">2</option>

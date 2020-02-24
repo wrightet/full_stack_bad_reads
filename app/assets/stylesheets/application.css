@@ -583,3 +583,7 @@ footer > ul > li > h6 {
     width: 50vw;
     height: 10vh;
 }
+
+.rating-selector {
+    display: flex;
+}
