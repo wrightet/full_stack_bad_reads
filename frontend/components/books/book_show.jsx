@@ -146,8 +146,8 @@ class BookShow extends React.Component {
                         <ReviewIndexItem bookId={this.props.book.id} review={review} key={review.id}/>
                     )) : "" 
                     } 
-                    <button onClick={() => this.handleBack(start, end)} className='review-buttons'>Back</button>
-                    <button onClick={() => this.handleForward(start, end, book.reviews.length)} className='review-buttons' >More Reviews</button>
+                    <button onClick={() => this.handleBack(start, end)} className='review-buttons'>Previous</button>
+                    <button onClick={() => this.handleForward(start, end, book.reviews.length)} className='review-buttons' >Next</button>
 
             </div>
            

@@ -591,5 +591,6 @@ footer > ul > li > h6 {
 .review-buttons{
     display: flex;
     justify-content: center;
-    width: 7vw;
+    width: 5vw;
+
 }
