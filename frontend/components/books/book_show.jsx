@@ -7,10 +7,16 @@ import ReviewIndexItem from '../reviews/review_index_item';
 class BookShow extends React.Component {
     constructor(props){
         super(props);
-        // this.state = {book: this.props.book};
+        this.state = {
+            props: this.props,
+            start: 0,
+            end: 6
+        };
         this.keyFinder = this.keyFinder.bind(this);
+        this.handleBack = this.handleBack.bind(this);
+        this.handleForward = this.handleForward.bind(this);
         // this.booleanFlip = this.booleanFlip.bind(this);
-  
+        // this.state = {book: this.props.book};
         // console.log('state',this.state)
     }
 
@@ -34,6 +40,29 @@ class BookShow extends React.Component {
         }
         return window.images.openbookURL;
 
+    }
+
+    handleBack(start, end) {
+        let newStart = start - 6;
+        let newEnd = end - 6;
+        if (newStart < 0) {
+            newStart = 0;
+            newEnd = 6;
+        }
+
+        this.setState({ start: newStart, end: newEnd })
+
+    }
+
+    handleForward(start, end, length) {
+        let newStart = start + 6;
+        let newEnd = end + 6
+        if (newStart >= length) {
+            newStart = length - 6;
+            newEnd = length;
+        }
+
+        this.setState({ start: newStart, end: newEnd })
     }
 
     // booleanFlip(e){
@@ -78,7 +107,8 @@ class BookShow extends React.Component {
        
         let book = this.props.book;
         let user = this.props.currentUser;
-        console.log('props', this.props)
+        let start = this.state.start;
+        let end = this.state.end;
         if (!book) {return null;}
         else  {
         return (
@@ -112,11 +142,13 @@ class BookShow extends React.Component {
                 
                 <h1>Reviews</h1>
                     <CreateReviewContainer bookId={book.id} userId={user} />
-                    { book.reviews ? book.reviews.map(review => (
+                    { book.reviews ? book.reviews.slice(start,end).map(review => (
                         <ReviewIndexItem bookId={this.props.book.id} review={review} key={review.id}/>
-                    )) : ""
-                        
-                    }  
+                    )) : "" 
+                    } 
+                    <button onClick={() => this.handleBack(start, end)} className='review-buttons'>Back</button>
+                    <button onClick={() => this.handleForward(start, end, book.reviews.length)} className='review-buttons' >More Reviews</button>
+
             </div>
            
                 </li>
