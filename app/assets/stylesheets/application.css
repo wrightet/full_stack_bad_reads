@@ -566,3 +566,20 @@ footer > ul > li > h6 {
 .create-review:hover{
     background-color: #EDE6D6;
 }
+
+.review-form-div {
+    height: 15vh;
+    width: 1vw;
+    display: block;
+
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.review-text-area {
+    width: 50vw;
+    height: 10vh;
+}

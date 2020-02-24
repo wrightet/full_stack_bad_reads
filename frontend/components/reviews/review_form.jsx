@@ -25,7 +25,7 @@ class ReviewForm extends React.Component {
         return(
             <div className='reveiw-form-div'>
                 <h1>{this.props.formType}</h1>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit} className='review-form'>
                     <label> Rating
                         <select value={this.state.rating} id="rating-selector" 
                             onChange={this.update('rating')}
@@ -39,7 +39,8 @@ class ReviewForm extends React.Component {
                     </label>
                     <label> 
                         <textarea value={this.state.body} placeholder='Write a review' 
-                        onChange={this.update('body')}/>
+                        onChange={this.update('body')}
+                        className='review-text-area'/>
                     </label>
                     <input type="submit" value={this.props.formType}/>
                 </form>
