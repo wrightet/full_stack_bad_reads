@@ -544,7 +544,7 @@ footer > ul > li > h6 {
     height: 55vh;
     float: left;
     padding-top: 15vh;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .indv-review{
