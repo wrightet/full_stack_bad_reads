@@ -515,7 +515,7 @@ footer > ul > li > h6 {
     height: 45vh;
     padding-bottom: 10vh;
     border-bottom: .1em solid #DDDDDD;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     width: 70%;
 }
 
@@ -539,7 +539,7 @@ footer > ul > li > h6 {
     height: 55vh;
     float: left;
     padding-top: 15vh;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .indv-review{
