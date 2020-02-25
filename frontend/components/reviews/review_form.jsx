@@ -1,4 +1,5 @@
 import React from 'react';
+import { createReview, requestAllReviews } from '../../actions/review_actions';
 
 class ReviewForm extends React.Component {
     constructor(props) {
@@ -18,7 +19,16 @@ class ReviewForm extends React.Component {
     }
     handleSubmit(e){
         e.preventDefault();
-        this.props.action(this.props.bookId, this.state)
+        // const {review} = this.state;
+        // this.props.action(this.book_id, review)
+        // .then(this.props.requestAllReviews(this.book_id))
+        // .then(this.setState({
+        //     rating: 3,
+        //     book_id: this.book_id,
+        //     user_id: this.user_id,
+        //     body: ''
+        // }))
+        this.props.action(this.book_id, this.state)
     }
     render(){
         this.state.book_id = this.book_id;
