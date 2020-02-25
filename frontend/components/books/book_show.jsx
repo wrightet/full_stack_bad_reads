@@ -25,6 +25,10 @@ class BookShow extends React.Component {
         
     }
 
+    componentDidUpdate(){
+        this.props.requestAllReviews(this.props.match.params.id)
+    }
+
     keyFinder(url) {
         let val = url.split('.')[0];
         let keys = Object.keys(window.images)
@@ -137,19 +141,22 @@ class BookShow extends React.Component {
                     </div>
                 </li>
                 <li>
-                              
-             <div className='review-content'>
-                
-                <h1>Reviews</h1>
-                    <CreateReviewContainer bookId={book.id} userId={user} />
-                    { book.reviews ? book.reviews.slice(start,end).map(review => (
-                        <ReviewIndexItem bookId={this.props.book.id} review={review} key={review.id}/>
-                    )) : "" 
-                    } 
-                    <button onClick={() => this.handleBack(start, end)} className='review-buttons'>Previous</button>
-                    <button onClick={() => this.handleForward(start, end, book.reviews.length)} className='review-buttons' >Next</button>
+                                    
+                    <div className='review-content'>
+                        
+                        <h1>Reviews</h1>
+                            <CreateReviewContainer bookId={book.id} userId={user} />
+                            { book.reviews ? book.reviews.slice(start,end).map(review => (
+                                <ReviewIndexItem bookId={this.props.book.id} review={review} key={review.id}/>
+                            )) : "" 
+                            } 
+                            <div className='review-button-div'>
+                                <button onClick={() => this.handleBack(start, end)} className='review-buttons'>Previous</button>
+                                <button onClick={() => this.handleForward(start, end, book.reviews.length)} className='review-buttons' >Next</button>
+                            </div>
+                            
 
-            </div>
+                    </div>
            
                 </li>
                 
