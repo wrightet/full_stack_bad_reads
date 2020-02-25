@@ -22,12 +22,16 @@ class BookShow extends React.Component {
 
     componentDidMount() {
         this.props.requestBook(this.props.match.params.id)
+        this.props.requestAllReviews(this.props.match.params.id).then(
+            review => this.setState({reviews: review.reviews.data})
+        )
         
     }
 
-    componentDidUpdate(){
-        this.props.requestAllReviews(this.props.match.params.id)
-    }
+    // componentDidUpdate(){
+    //     this.props.requestAllReviews(this.props.match.params.id)
+    //     .then(review => this.setState({reviews: review.reviews.data}))
+    // }
 
     keyFinder(url) {
         let val = url.split('.')[0];
@@ -145,6 +149,7 @@ class BookShow extends React.Component {
                     <div className='review-content'>
                         
                         <h1>Reviews</h1>
+
                             <CreateReviewContainer bookId={book.id} userId={user} />
                             { book.reviews ? book.reviews.slice(start,end).map(review => (
                                 <ReviewIndexItem bookId={this.props.book.id} review={review} key={review.id}/>
