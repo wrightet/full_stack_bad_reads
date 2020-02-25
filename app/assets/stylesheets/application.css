@@ -502,10 +502,15 @@ footer > ul > li > h6 {
     
 }
 
-.book-show-image {
-    height: 300px;
-    width: 350px;
-    padding: 5%;
+.book-show-image{
+    padding-top: 3%;
+    padding-right: 2%;
+    padding-left: 2%;
+}
+
+.book-show-photo {
+    height: 30vh;
+    width: 15vw;
 }
 
 
