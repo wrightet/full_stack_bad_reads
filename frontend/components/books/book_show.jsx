@@ -116,11 +116,14 @@ class BookShow extends React.Component {
     render(){
        
         let book = this.props.book;
+        console.log('book.reviews:',book)
         let user = this.props.currentUser;
         let start = this.state.start;
         let end = this.state.end;
         if (!book) {return null;}
+       
         else  {
+
         return (
         <div className="book-content">
            

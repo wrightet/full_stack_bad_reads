@@ -67,7 +67,7 @@ table {
     position: relative;
    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
    justify-content: flex-end;
-   right: 200px;
+   right: 10vw;
 
 }
 
@@ -80,7 +80,7 @@ table {
 }
 
 .nav-bar{
-    border: 1px solid black;
+    border-bottom: 1px solid black;
     background: #f4f2e9; 
     display:flex;
     position: relative;
@@ -112,22 +112,22 @@ body {
 }
 
 .greeting-header > ul > li{
-    padding: 5px 15px 5px 15px;
+    padding: 1vh 2vw 1vh 2vw;
 }
 
 
 .greeting-header > ul > li > ul {
-    padding: 5px;
+    padding: 1vw 1vh;
    
    
 }
 
 #user-dropdown {
-    padding: 50px;
+    padding: 5vw;
     display:none;
     position: absolute;
     right: 0px;
-    width: 125px;
+    width: 10vw;
     background:white;
     box-shadow: 0 5px 10px rgba(0,0,0,0.15);
     border-radius: 0% 0% 2% 2%;
@@ -142,7 +142,7 @@ body {
 
 
 #user-dropdown > li {
-    padding: 0px 10px 10px 10px;
+    padding: 1vh 1vw;
 }
 .header-el-name:hover > #user-dropdown {
     display: block;
