@@ -11,7 +11,7 @@ class ReviewForm extends React.Component {
     }
 
     componentDidMount(){
-        console.log('review',this.props)
+        this.props.requestAllReviews(this.book_id)
     }
 
     update(field){

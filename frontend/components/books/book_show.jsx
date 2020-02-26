@@ -22,9 +22,11 @@ class BookShow extends React.Component {
 
     componentDidMount() {
         this.props.requestBook(this.props.match.params.id)
+        .then(book => this.props.requestAllReviews(book.id))
         // this.props.requestAllReviews(this.props.match.params.id).then(
         //     review => this.setState({reviews: review.reviews.data})
         // )
+        console.log('props;',this.props)
         
     }
 
