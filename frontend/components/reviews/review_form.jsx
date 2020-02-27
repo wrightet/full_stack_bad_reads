@@ -8,6 +8,7 @@ class ReviewForm extends React.Component {
         this.book_id = this.props.bookId;
         this.state = this.props.review;
         this.handleSubmit = this.handleSubmit.bind(this);
+        // this.test = this.test.bind(this)
     }
 
     componentDidMount(){
@@ -16,19 +17,21 @@ class ReviewForm extends React.Component {
         
     }
 
+
     update(field){
         return e => this.setState({[field]: e.target.value})
     }
     handleSubmit(e){
         e.preventDefault();
-        this.props.action(this.book_id, this.state).then(
+        this.props.action(this.book_id, this.state)
+        .then(
            book => this.props.requestAllReviews(book.id) 
         ).then(this.setState({
             rating: 3,
             book_id: this.book_id,
             user_id: this.user_id,
             body: ''
-        }))
+        })).then(window.location.reload())
     }
     render(){
         this.state.book_id = this.book_id;

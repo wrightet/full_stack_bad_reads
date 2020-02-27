@@ -22,19 +22,10 @@ class BookShow extends React.Component {
         
     }
 
-    // shouldComponentUpdate(){
-    //     setInterval(() => {
-    //         this.setState(() => {
-    //             console.log('reset')
-    //             return null
-    //         });
-          
-    //     }, 1000);
-    // }
-
     componentDidMount() {
         this.props.requestBook(this.props.match.params.id)
         .then(book => this.props.requestAllReviews(book.id))
+
         this.props.requestAllReviews(this.props.match.params.id)
         .then(
             // review => console.log('review', review)
@@ -43,14 +34,6 @@ class BookShow extends React.Component {
        
         
     }
-
-    // componentDidUpdate(prevProps, prevState){
-    //     if (prevProps.reviews.length !== this.props.reviews){
-    //          this.props.requestAllReviews(this.props.match.params.id)
-    //     .then(review => this.setState(review))
-    //     }
-       
-    // }
 
     keyFinder(url) {
         let val = url.split('.')[0];

@@ -5,9 +5,14 @@ class ReviewIndexItem extends React.Component{
         super(props);
         
     }
-    // componentDidMount(){
-    //     this.props.requestAllReviews(this.props.match.params);
-    // }
+   
+    componentDidUpdate(){
+        console.log('test')
+    }
+
+    componentDidMount(){
+        console.log('props index', this.props)
+    }
     render(){
         
         let review = this.props.review;
