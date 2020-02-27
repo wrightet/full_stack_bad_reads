@@ -1,5 +1,5 @@
 import React from 'react';
-import { createReview, requestAllReviews } from '../../actions/review_actions';
+// import { createReview, requestAllReviews, requestReview } from '../../actions/review_actions';
 
 class ReviewForm extends React.Component {
     constructor(props) {
