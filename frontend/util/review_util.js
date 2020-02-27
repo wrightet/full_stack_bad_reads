@@ -14,6 +14,13 @@ export const createReview = (bookId, review) => {
         }))
 
 }
+
+export const fetchReview = (bookId) => (
+    $.ajax({
+        method: 'GET',
+        url: `/api/books/${bookId}/reviews`
+    })
+)
     
    
 
