@@ -17,22 +17,39 @@ class BookShow extends React.Component {
         this.handleForward = this.handleForward.bind(this);
         // this.booleanFlip = this.booleanFlip.bind(this);
         // this.state = {book: this.props.book};
+        console.log('state', this.state);
+        console.log('props', this.props)
         
     }
+
+    // shouldComponentUpdate(){
+    //     setInterval(() => {
+    //         this.setState(() => {
+    //             console.log('reset')
+    //             return null
+    //         });
+          
+    //     }, 1000);
+    // }
 
     componentDidMount() {
         this.props.requestBook(this.props.match.params.id)
         .then(book => this.props.requestAllReviews(book.id))
-        // this.props.requestAllReviews(this.props.match.params.id).then(
-        //     review => this.setState({reviews: review.reviews.data})
-        // )
+        this.props.requestAllReviews(this.props.match.params.id)
+        .then(
+            // review => console.log('review', review)
+            reviews => this.setState({reviews: reviews})
+        )
        
         
     }
 
-    // componentDidUpdate(){
-    //     this.props.requestAllReviews(this.props.match.params.id)
+    // componentDidUpdate(prevProps, prevState){
+    //     if (prevProps.reviews.length !== this.props.reviews){
+    //          this.props.requestAllReviews(this.props.match.params.id)
     //     .then(review => this.setState(review))
+    //     }
+       
     // }
 
     keyFinder(url) {
