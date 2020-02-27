@@ -17,7 +17,7 @@ class BookShow extends React.Component {
         this.handleForward = this.handleForward.bind(this);
         // this.booleanFlip = this.booleanFlip.bind(this);
         // this.state = {book: this.props.book};
-        // console.log('state',this.state)
+        
     }
 
     componentDidMount() {
@@ -26,7 +26,7 @@ class BookShow extends React.Component {
         // this.props.requestAllReviews(this.props.match.params.id).then(
         //     review => this.setState({reviews: review.reviews.data})
         // )
-        console.log('props;',this.props)
+       
         
     }
 
@@ -116,7 +116,6 @@ class BookShow extends React.Component {
     render(){
        
         let book = this.props.book;
-        console.log('book.reviews:',book)
         let user = this.props.currentUser;
         let start = this.state.start;
         let end = this.state.end;
