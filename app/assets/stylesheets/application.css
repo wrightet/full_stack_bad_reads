@@ -155,14 +155,10 @@ body {
     font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
     display: flex;
     justify-content: center;
-    height: 30px;
-    margin: 10px 8px;
-    /* vertical-align: middle; */
+    height: 2vh;
+    margin: 2vh 1vw;
     align-items: center;
-    width: 60px;
-    /* float: none; */
-    
-    
+    width: 1vw;
 }
 
 .header-el > :first-child {
@@ -183,8 +179,8 @@ body {
 
 .header-el-name > :first-child{
     position: relative;
-    height: 30px;
-    width: 30px;
+    height: 5vh;
+    width: 5vw;
     font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
 
 }
@@ -194,51 +190,52 @@ body {
     align-items: center;
 }
 .logo{
-    width: 100px;
-    height: 60px;
+    width: 8vw;
+    height: 8vh;
     padding-left: 30%;
 }
 
 .book-fire {
     display: flex;
     justify-content: center;
-    /* right: 1000px; */
     border: 1px solid black;
     background: #f6e7c6;
 }
 
 .book-fire > img {
-    height: 295px;
-    width: 350px;
+    height: 40vh;
+    width: 30vw;
     
 }
 
 .login-submit-button{
     cursor: pointer;
-    margin: 2px;
+    margin: .1vw;
     background-color: #382110;
     border: 1px solid #382110;
     color: white;
     font-weight:normal;
     border-radius: 3px;
-    width: 60px;
-    height: 36px;
+    width: 5vw;
+    height: 4.5vh;
+   
 }
 
 .login-form{
     position:relative;
-    height: 30px;
+    height: 1vh;
     width: 50%;
-    top: 15px;
+    top: 2vh;
+    right: 2vw;
     
 }
 
 .login-input {
     
-     border-radius: 3px;
-    width: 130px;
-    height: 26px;
-    padding: 5px;
+    border-radius: 3px;
+    width: 10vw;
+    height: 3.5vh;
+    padding: .3vw;
     background-color: white;
     font-size: 13px;
   
@@ -254,44 +251,41 @@ body {
 }
 
 .session-form-div {
-    
-    width: 280px;
-    margin: 0px 8px 0 0;
+    width: 20vw;
     background: #f4f2e9;
     position: sticky;
     border-top: 1px solid #d8d8d8;
-    padding: 12px;
-    height: 270px;
-   left: 900px;
+    padding: 1vw;
+    height: 36.2vh;
+    left: 60vw;
     
 }
 
 .session-form-ul > li {
     display: flex;
-    padding: 7px 5px;
+    padding: 1vh 1vw;
     align-items: center;
-    width: 270px;
+    width: 20vw;
     font-size: 16px;
     font-weight: lighter;
-    
-
-
 }
 
 .session-form-ul > li > input[type="text"]{
     border-radius: 3px;
-    width: 270px;
-    height: 33px;
+    width: 18vw;
+    height: 4vh;
 
 }
 .session-form-ul > li > input[type="password"]{
     border-radius: 3px;
-     width: 270px;
-    height: 33px;
+    width: 18vw;
+    height: 4vh;
 }
 
 .signup-title{
-    font-size: 18px;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
 
 }
 
