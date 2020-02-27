@@ -11,7 +11,8 @@ class ReviewForm extends React.Component {
     }
 
     componentDidMount(){
-        this.props.requestReview(this.book_id)
+        this.props.requestAllReviews(this.book_id)
+        
     }
 
     update(field){
@@ -19,16 +20,14 @@ class ReviewForm extends React.Component {
     }
     handleSubmit(e){
         e.preventDefault();
-        // const {review} = this.state;
-        // this.props.action(this.book_id, review)
-        // .then(this.props.requestAllReviews(this.book_id))
-        // .then(this.setState({
-        //     rating: 3,
-        //     book_id: this.book_id,
-        //     user_id: this.user_id,
-        //     body: ''
-        // }))
-        this.props.action(this.book_id, this.state)
+        this.props.action(this.book_id, this.state).then(
+           book => this.props.requestReview(book.id) 
+        ).then(this.setState({
+            rating: 3,
+            book_id: this.book_id,
+            user_id: this.user_id,
+            body: ''
+        }))
     }
     render(){
         this.state.book_id = this.book_id;
