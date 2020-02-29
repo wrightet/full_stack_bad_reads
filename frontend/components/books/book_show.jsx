@@ -16,23 +16,13 @@ class BookShow extends React.Component {
         this.handleBack = this.handleBack.bind(this);
         this.handleForward = this.handleForward.bind(this);
         // this.booleanFlip = this.booleanFlip.bind(this);
-        // this.state = {book: this.props.book};
-        console.log('state', this.state);
-        console.log('props', this.props)
-        
     }
 
     componentDidMount() {
         this.props.requestBook(this.props.match.params.id)
         .then(book => this.props.requestAllReviews(book.id))
 
-        this.props.requestAllReviews(this.props.match.params.id)
-        .then(
-            // review => console.log('review', review)
-            reviews => this.setState({reviews: reviews})
-        )
-       
-        
+        this.props.requestAllReviews(this.props.match.params.id) 
     }
 
     keyFinder(url) {

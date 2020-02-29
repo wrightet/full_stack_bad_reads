@@ -1,5 +1,5 @@
 import React from 'react';
-// import { createReview, requestAllReviews, requestReview } from '../../actions/review_actions';
+
 
 class ReviewForm extends React.Component {
     constructor(props) {
@@ -8,13 +8,10 @@ class ReviewForm extends React.Component {
         this.book_id = this.props.bookId;
         this.state = this.props.review;
         this.handleSubmit = this.handleSubmit.bind(this);
-        // this.test = this.test.bind(this)
     }
 
     componentDidMount(){
-        this.props.requestAllReviews(this.book_id)
-        .then(reviews => this.setState({reviews: reviews}))
-        
+        this.props.requestAllReviews(this.book_id) 
     }
 
 
