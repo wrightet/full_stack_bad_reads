@@ -30,15 +30,22 @@ class SessionForm extends React.Component {
     }
 
     renderErrors() {
-        
+        // this.setState({
+        //     first_name: '',
+        //     last_name: '',
+        //     email: '',
+        //     password: ''})
         return (
-            <ul className='errors'>
-                {this.props.errors.map((error, i) => (
+            <div className='errors'>
+                <ul >
+                    {this.props.errors.map((error, i) => (
                     <li key={`error-${i}`}>
                         {error}
                     </li>
                 ))}
-            </ul>
+                </ul>
+            </div>
+          
         );
     }
 
@@ -68,15 +75,16 @@ class SessionForm extends React.Component {
                                 
                             /></li>
                             <li>
-                                  <input type="text"
-                            placeholder="Email"
+                                <input type="text"
+                                placeholder='Email'
                                 value={this.state.email}
                                 onChange={this.update('email')}
                                 
                             />
                             </li>
-                            <li>     <input type="password"
-                            placeholder="Password"
+                            <li>     
+                                <input type="password"
+                                placeholder='Password'
                                 value={this.state.password}
                                 onChange={this.update('password')}
                                 

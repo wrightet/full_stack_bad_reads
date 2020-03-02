@@ -388,6 +388,12 @@ tr{
 .errors {
     font-size:10px;
     padding: 2px;
+    display: flex;
+    color: red;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-end ;
+
 }
 
 .books-search {
