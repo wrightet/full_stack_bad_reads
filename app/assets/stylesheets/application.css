@@ -90,25 +90,19 @@ table {
 }
 body {
     background: #EAE7DE;
-
 }
 
 .header-link{
-   
     align-self: flex-start;
 }
 
 .greeting-header {
    display: block;
-   
    justify-content: flex-end;
-
-  
 }
 
 .greeting-header > ul {
     display: flex;
-    
 }
 
 .greeting-header > ul > li{
@@ -118,8 +112,6 @@ body {
 
 .greeting-header > ul > li > ul {
     padding: 1vw 1vh;
-   
-   
 }
 
 #user-dropdown {
@@ -198,7 +190,7 @@ body {
 .book-fire {
     display: flex;
     justify-content: center;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
     background: #f6e7c6;
 }
 
