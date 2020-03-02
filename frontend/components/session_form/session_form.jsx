@@ -94,13 +94,17 @@ class SessionForm extends React.Component {
                                 <button className="login-submit-button" onClick={this.handleDemo}>Demo</button>
                                 
                             </li>
+                         
                         </ul>
-                        {this.renderErrors()}
+                      
                     </div>
 
                         
                 </form>
-            </div>  </div>
+                    {this.renderErrors()}
+            </div> 
+            
+        </div>
         );
     }
 }

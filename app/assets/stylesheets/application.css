@@ -388,7 +388,7 @@ tr{
 .errors {
     font-size:10px;
     padding: 2px;
-    display: flex;
+    display: block;
     color: red;
     position: relative;
     flex-direction: column;

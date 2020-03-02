@@ -48,22 +48,23 @@ class LoginForm extends React.Component {
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                     <div className="login-form">
                         <ul className="login-list">
-                            <li>{this.renderErrors()}</li>
-                            <li>     <input type="text"              
-                        name="email"
-                        placeholder="Email"
-                        value={this.state.email}
-                        onChange={this.update('email')}
-                        className="login-input"
+                          
+                            <li>     
+                            <input type="text"              
+                            name="email"
+                            placeholder="Email"
+                            value={this.state.email}
+                            onChange={this.update('email')}
+                            className="login-input"
                                                 />
                             </li>
                             <li>
-                                     <input type="password"
-                        name="password"
-                        placeholder="Password"
-                        value={this.state.password}
-                        onChange={this.update('password')}
-                        className="login-input"
+                                <input type="password"
+                                name="password"
+                                placeholder="Password"
+                                value={this.state.password}
+                                onChange={this.update('password')}
+                                className="login-input"
                                                 />
                             </li>
                             <li>
@@ -71,6 +72,7 @@ class LoginForm extends React.Component {
                                 
                             </li>
                         </ul> 
+                        {this.renderErrors()}
                     </div>
 
                 </form>
