@@ -23,10 +23,10 @@ class Api::ReviewsController < ApplicationController
         end
     end
 
-    # def destroy
-    #     @review.destroy
+    def destroy
+        @review.destroy
 
-    # end
+    end
 
     private
     def review_params

@@ -145,7 +145,9 @@ class BookShow extends React.Component {
 
                             <CreateReviewContainer bookId={book.id} userId={user} />
                             { book.reviews ? book.reviews.reverse().slice(start,end).map(review => (
-                                <ReviewIndexItem bookId={this.props.book.id} review={review} key={review.id}/>
+                                <ReviewIndexItem bookId={this.props.book.id} 
+                                review={review} key={review.id} 
+                                deleteReview={this.props.deleteReview}/>
                             )) : "" 
                             } 
                             <div className='review-button-div'>
