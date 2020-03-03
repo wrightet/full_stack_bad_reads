@@ -13,6 +13,7 @@ import LogInFormContainer from './session_form/login_form_container';
 import BookIndexContainer from './books/book_index_container';
 import GreetingContainer from './greeting/greeting_container';
 import BookShowContainer from './books/book_show_container';
+import EditReviewContainer from './reviews/edit_review_container';
 import CreateReviewContainer from './reviews/create_review_container';
 import Splash from './splash/splash';
 
@@ -30,6 +31,7 @@ const App = () => (
         <ProtectedRoute exact path="/" component={BookIndexContainer}/>
         <ProtectedRoute exact path="/books/:id" component={BookShowContainer}/>
         <ProtectedRoute exact path="/review/new" component={CreateReviewContainer}/>
+        <ProtectedRoute exact path="/review/:id/edit" component={EditReviewContainer}/>
         <AuthRoute exact path='/' component={Splash}/>
         <footer>
             <ul>

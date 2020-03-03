@@ -1,5 +1,6 @@
 import React from 'react';
-
+import EditReviewContainer from './edit_review_container'
+import {Link} from 'react-router-dom';
 class ReviewIndexItem extends React.Component{
     constructor(props) {
         super(props);
@@ -16,6 +17,7 @@ class ReviewIndexItem extends React.Component{
                     <li>User: {review.user_id}</li>
                     <li>Rating: {review.rating}/ 5</li>
                     <li><span>{review.body}</span></li>
+                    <li><Link to={`review/${review.id}/edit`}>Edit</Link></li>
                 </ul>
             </div>
         )
