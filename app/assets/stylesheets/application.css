@@ -574,3 +574,7 @@ footer > ul > li > h6 {
     width: 5vw;
     padding-right: 1vw;
 }
+
+.review-delete{
+    padding: 2%;
+}
