@@ -23,12 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
         store = configureStore();
     } 
     window.getState = store.getState;
-    window.login = login;
-    window.logout = logout;
-    window.requestAllReviews = requestAllReviews();
-    window.fetchAllReviews = fetchAllReviews;
-    window.requestAllBooks = requestAllBooks();
-    window.createReview = createReview();
     const root = document.getElementById('root');
     ReactDOM.render(<Root store={store} />, root);
 });

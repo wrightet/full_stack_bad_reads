@@ -18,6 +18,7 @@ class ReviewForm extends React.Component {
     update(field){
         return e => this.setState({[field]: e.target.value})
     }
+
     handleSubmit(e){
         e.preventDefault();
         this.props.action(this.book_id, this.state)
@@ -30,12 +31,13 @@ class ReviewForm extends React.Component {
             body: ''
         })).then(window.location.reload())
     }
+    
     render(){
         this.state.book_id = this.book_id;
         return(
             <div className='reveiw-form-div'>
                 <h1>{this.props.formType}</h1>
-                <form onSubmit={this.handleSubmit} className='review-form'>
+                <form onSubmit={() => this.handleSubmit} className='review-form'>
                     <label> Rating
                         <select value={this.state.rating} id="rating-selector" 
                             onChange={this.update('rating')}
