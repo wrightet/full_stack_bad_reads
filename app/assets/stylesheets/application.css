@@ -366,6 +366,8 @@ tr{
 .book-photo {
     width: 25%;
     height: 12vh;
+    border-radius: 5%;
+    
 
 }
 .book-show-photo{
@@ -481,11 +483,13 @@ footer > ul > li > h6 {
     padding-top: 3%;
     padding-right: 2%;
     padding-left: 2%;
+    border-radius: 5%;
 }
 
 .book-show-photo {
     height: 30vh;
     width: 15vw;
+    border-radius: 5%;
 }
 
 
