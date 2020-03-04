@@ -24,7 +24,9 @@ class ReviewForm extends React.Component {
         this.props.action(this.book_id, this.state)
         .then(
            book => this.props.requestAllReviews(book.id) 
-        ).then(this.setState({
+        )
+        .then(
+            this.setState({
             rating: 3,
             book_id: this.book_id,
             user_id: this.user_id,
@@ -37,7 +39,7 @@ class ReviewForm extends React.Component {
         return(
             <div className='reveiw-form-div'>
                 <h1>{this.props.formType}</h1>
-                <form onSubmit={() => this.handleSubmit} className='review-form'>
+                <form onSubmit={this.handleSubmit} className='review-form'>
                     <label> Rating
                         <select value={this.state.rating} id="rating-selector" 
                             onChange={this.update('rating')}
