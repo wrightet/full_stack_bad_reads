@@ -498,7 +498,7 @@ footer > ul > li > h6 {
     position: static;
     height: 45vh;
     padding-bottom: 10vh;
-    border-bottom: .1em solid #DDDDDD;
+    /* border-bottom: .1em solid #DDDDDD; */
     width: 70%;
 }
 

@@ -6,7 +6,7 @@ class ReviewIndexItem extends React.Component{
         super(props);
         
     }
-   
+
     render(){
         
         let review = this.props.review;
