@@ -18,7 +18,7 @@ class ReviewIndexItem extends React.Component{
                     <li>Rating: {review.rating}/ 5</li>
                     <li><span>{review.body}</span></li>
                     <li><Link to={`review/${review.id}/edit`}>Edit</Link>
-                    <a href ='' onClick={this.props.deleteReview(this.props.bookId, review)} className='review-delete'>Delete</a></li>
+                    <a href ='' onClick={() => this.props.deleteReview(this.props.bookId, review)} className='review-delete'>Delete</a></li>
                     
                 </ul>
             </div>
