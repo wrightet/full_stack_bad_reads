@@ -579,9 +579,10 @@ footer > ul > li > h6 {
   background: none!important;
   border: none;
   padding-left: 1%;
-  color: #069;
-  font-size: .8em;
+  color: #1A00EE;
+  font-size: 1em;
   text-decoration: underline;
   cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
   
 }
