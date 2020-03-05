@@ -4,12 +4,16 @@ import { requestReview, updateReview } from '../../actions/review_actions';
 import ReviewForm from './review_form';
 
 class EditReviewForm extends React.Component {
+    constructor(props){
+        super(props)
+    }
     componentDidMount(){
         this.props.requestReview(this.props.match.params.bookId)
     }
 
-    render(){
+    render() {
         console.log('hi')
+        // debugger
         const {action, formType, review} = this.props;
 
         if (!review) return null;

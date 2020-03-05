@@ -31,7 +31,7 @@ const App = () => (
         <ProtectedRoute exact path="/" component={BookIndexContainer}/>
         <ProtectedRoute exact path="/books/:id" component={BookShowContainer}/>
         <ProtectedRoute exact path="/review/new" component={CreateReviewContainer}/>
-        <ProtectedRoute exact path="books/review/:id/edit" component={EditReviewContainer}/>
+        <ProtectedRoute exact path="/books/review/:id/edit" component={EditReviewContainer}/>
         <AuthRoute exact path='/' component={Splash}/>
         <footer>
             <ul>

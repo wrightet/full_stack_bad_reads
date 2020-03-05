@@ -10,9 +10,9 @@ class ReviewForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    componentDidMount(){
-        this.props.requestAllReviews(this.book_id) 
-    }
+    // componentDidMount(){
+    //     this.props.requestAllReviews(this.book_id) 
+    // }
 
 
     update(field){
@@ -23,7 +23,7 @@ class ReviewForm extends React.Component {
         e.preventDefault();
         this.props.action(this.book_id, this.state)
         .then(
-           book => this.props.requestAllReviews(book.id) 
+            book => this.props.requestAllReviews(book.id) 
         )
         .then(
             this.setState({

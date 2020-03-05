@@ -15,6 +15,7 @@ class BookShow extends React.Component {
         this.keyFinder = this.keyFinder.bind(this);
         this.handleBack = this.handleBack.bind(this);
         this.handleForward = this.handleForward.bind(this);
+        
         // this.booleanFlip = this.booleanFlip.bind(this);
     }
 
@@ -147,7 +148,9 @@ class BookShow extends React.Component {
                             { book.reviews ? book.reviews.reverse().slice(start,end).map(review => (
                                 <ReviewIndexItem bookId={this.props.book.id} 
                                 review={review} key={review.id} 
-                                deleteReview={this.props.deleteReview}/>
+                                deleteReview={this.props.deleteReview}
+                                requestAllReviews={this.props.requestAllReviews}/>
+                                
                             )) : "" 
                             } 
                             <div className='review-button-div'>
