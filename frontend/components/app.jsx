@@ -45,7 +45,3 @@ const App = () => (
 );
 
 export default App;
-
-{/*> <AuthRoute exact path="/signup" component={HomePageSignIn} /> */ }
-{/* <img src="assets/logo.png" alt="" className="logo"/> */ }  
-{/* <div className="book-fire"><img src="assets/book_fire.gif" alt="" /></div> */}
