@@ -18,20 +18,21 @@ class EditReviewForm extends React.Component {
         const {action, formType, review} = this.props;
         // debugger
         if (!review) return null;
-        console.log(this.props.review)
+        console.log('review',this.props.review)
+        console.log('props',this.props)
+        console.log('bookId', review.bookId)
         return (
             <ReviewForm
                 action={action}
                 formType={formType}
                 review={review}
+                bookId={review.bookId}
             />
         )
     }
 }
 
 const mSTP = (state, ownProps) => {
-    console.log(ownProps)
-    console.log('test', ownProps.match.params.id)
     return {
     review: state.entities.reviews[ownProps.match.params.id],
     reviewId: ownProps.match.params.id,

@@ -10,7 +10,6 @@ class ReviewIndexItem extends React.Component{
     render(){
         
         let review = this.props.review;
-        console.log('props',this.props)
         if(!review) {return null}
         return (
             <div className='indv-review'>
