@@ -20,7 +20,6 @@ class ReviewForm extends React.Component {
     }
 
     handleSubmit(e){
-        console.log('this.props.bookId', this.props.bookId)
         e.preventDefault();
         this.props.action(this.book_id, this.state)
         .then(

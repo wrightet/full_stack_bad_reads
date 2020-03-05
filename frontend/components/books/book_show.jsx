@@ -67,7 +67,7 @@ class BookShow extends React.Component {
     }
 
     // booleanFlip(e){
-    //     // debugger
+    // 
     //     let book = this.props.book;
 
     //     if (book[e.target.value] === false) {

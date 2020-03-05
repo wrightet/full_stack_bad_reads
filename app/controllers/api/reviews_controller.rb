@@ -1,6 +1,5 @@
 class Api::ReviewsController < ApplicationController
     def index
-        # debugger
         @reviews = Review.all
     end
 

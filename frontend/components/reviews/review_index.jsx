@@ -8,7 +8,7 @@
 //     }
 
 //     componentDidMount(){
-//         console.log('index', this.props)
+//         
 //     }
 //     render(){
 //         const {reviews} = this.props;
