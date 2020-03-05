@@ -22,7 +22,7 @@ class Api::ReviewsController < ApplicationController
     def update
         @review = Review.find(params[:id])
         if @review.update(review_params)
-            render :show
+            render :index
         else
             render json: @review.errors.full_messages, status: 422
         end
@@ -31,6 +31,7 @@ class Api::ReviewsController < ApplicationController
     def destroy
         @review = Review.find(params[:id])
         @review.destroy
+        render :show
 
     end
 

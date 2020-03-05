@@ -1,9 +1,16 @@
 import React from 'react';
 import EditReviewContainer from './edit_review_container'
 import {Link} from 'react-router-dom';
+import { requestAllReviews } from '../../actions/review_actions';
 class ReviewIndexItem extends React.Component{
     constructor(props) {
         super(props);
+        this.handleDelete = this.handleDelete.bind(this);
+        
+    }
+
+    handleDelete(bookId, review){
+        this.props.deleteReview(bookId, review).then(bookId => requestAllReviews(bookId))
         
     }
 
