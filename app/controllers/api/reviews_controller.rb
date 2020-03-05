@@ -1,5 +1,6 @@
 class Api::ReviewsController < ApplicationController
     def index
+        # debugger
         @reviews = Review.all
     end
 
@@ -33,5 +34,7 @@ class Api::ReviewsController < ApplicationController
     def review_params
         params.require(:review).permit(:user_id, :book_id, :rating, :body)
     end
+
+  
 
 end

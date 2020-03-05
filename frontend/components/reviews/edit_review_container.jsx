@@ -8,16 +8,17 @@ class EditReviewForm extends React.Component {
         super(props)
     }
     componentDidMount(){
-        this.props.requestReview(this.props.match.params.bookId)
+        
+        this.props.requestReview(this.props.match.params.bookId, this.props.reviewId)
     }
 
     render() {
-        console.log('hi')
-        // debugger
+        
+        
         const {action, formType, review} = this.props;
-
+        // debugger
         if (!review) return null;
-
+        console.log(this.props.review)
         return (
             <ReviewForm
                 action={action}
@@ -28,13 +29,21 @@ class EditReviewForm extends React.Component {
     }
 }
 
-const mSTP = (state, ownProps) => ({
-    review: state.entities.reviews[ownProps.match.params.reviewId],
-    formType: 'Edit Review'
-})
+const mSTP = (state, ownProps) => {
+    console.log(ownProps)
+    console.log('test', ownProps.match.params.id)
+    return {
+    review: state.entities.reviews[ownProps.match.params.id],
+    reviewId: ownProps.match.params.id,
+
+        formType: 'Edit Review'
+    }
+}
+    
+
 
 const mDTP = dispatch => ({
-    requestReview: bookId => dispatch(requestReview(bookId)),
+    requestReview: (bookId, reviewId) => dispatch(requestReview(bookId, reviewId)),
     action: (bookId, review) => dispatch(updateReview(bookId, review))
 })
 

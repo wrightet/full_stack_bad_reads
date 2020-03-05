@@ -25,8 +25,8 @@ export const requestAllReviews = bookId => dispatch => {
         dispatch(receiveReviews(reviews)))
 };
 
-export const requestReview = bookId => dispatch => {
-    return APIUtil.fetchReview(bookId).then(review => 
+export const requestReview = (bookId, reviewId) => dispatch => {
+    return APIUtil.fetchReview(bookId, reviewId).then(review => 
         dispatch(receiveReview(review)))
 }
 export const createReview = (bookId, review) => dispatch => {

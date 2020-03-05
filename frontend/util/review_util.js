@@ -1,7 +1,8 @@
 export const fetchAllReviews = (bookId) => (
     $.ajax({
         method: 'GET',
-        url: `/api/books/${bookId}/reviews`
+        url: `/api/books/${bookId}/reviews`,
+        data: {bookId}
     })
 )
 
@@ -14,10 +15,11 @@ export const createReview = (bookId, review) => {
         }))
 }
 
-export const fetchReview = (bookId) => (
+export const fetchReview = (bookId,reviewId) => (
     $.ajax({
         method: 'GET',
-        url: `/api/books/${bookId}/reviews`
+        url: `/api/books/${bookId}/reviews/${reviewId}`,
+        data: {bookId}
     })
 )
     
@@ -25,7 +27,7 @@ export const updateReview = (bookId, review) => (
     $.ajax({
         method:'PATCH',
         url: `/api/books/${bookId}/reviews/${review.id}`,
-        data: {review},
+        data: {bookId, review},
         contentType: false,
         processType: false
     })

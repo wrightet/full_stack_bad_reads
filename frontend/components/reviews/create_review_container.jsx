@@ -17,7 +17,7 @@ const mSTP = state => {
 const mDTP = dispatch => ({
     action: (bookId, review) => dispatch(createReview(bookId,review)),
     requestAllReviews: bookId => dispatch(requestAllReviews(bookId)),
-    requestReview: bookId => dispatch(requestReview(bookId))
+    requestReview: (bookId, reviewId)=> dispatch(requestReview(bookId, reviewId))
 })
 
 export default connect(mSTP, mDTP)(ReviewForm);
