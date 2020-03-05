@@ -17,7 +17,7 @@ class Api::ReviewsController < ApplicationController
     def update
         @review = Review.find(params[:id])
         if @review.update(review_params)
-            render :index
+            render :edit
         else
             render json: @review.errors.full_messages, status: 422
         end
