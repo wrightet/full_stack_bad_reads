@@ -25,7 +25,8 @@ class SessionForm extends React.Component {
         this.props.processForm(user);
     }
     handleDemo() {
-        this.props.login({ first_name:'Demo', last_name:'Demo', email: 'demo', password: '123456' });
+        this.props.login({ first_name:'Demo', last_name:'Demo', email: 'demo', password: '123456' })
+        .then(() => this.props.history.push('/') );
         // this.props.login({  email: 'demo', password: '123456' });
         
     }
@@ -97,7 +98,7 @@ class SessionForm extends React.Component {
 
                         
                 </form>
-                    {this.renderErrors()}
+                    {this.props.errors.length > 0 ? this.renderErrors(): null}
             </div> 
             
         </div>
