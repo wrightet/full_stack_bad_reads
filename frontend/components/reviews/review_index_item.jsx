@@ -6,13 +6,23 @@ class ReviewIndexItem extends React.Component{
     constructor(props) {
         super(props);
         this.handleDelete = this.handleDelete.bind(this);
+        console.log('review-props',props)
         
+    }
+
+    componentWillUnmount(){
+        this.props.requestBook(this.props.bookId)
+        .then(book => this.props.requestAllReviews(book.id))
+        .then(book => this.props.history.push( `books/${book.id}`))
+    
+      
     }
 
     handleDelete(bookId, review){
         this.props.deleteReview(bookId, review)
         // .then(bookId => requestBook(bookId))
         .then(bookId => this.props.history.push(`/book/${bookId}`))
+        window.location.reload()
         
     }
 

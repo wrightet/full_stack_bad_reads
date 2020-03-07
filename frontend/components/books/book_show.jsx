@@ -154,7 +154,8 @@ class BookShow extends React.Component {
                                 <ReviewIndexItem bookId={this.props.book.id} 
                                 review={review} key={review.id} 
                                 deleteReview={this.props.deleteReview}
-                                requestAllReviews={this.props.requestAllReviews}/>
+                                requestAllReviews={this.props.requestAllReviews}
+                                requestBook={this.props.requestBook}/>
                                
                                 
                             )) : "" 
