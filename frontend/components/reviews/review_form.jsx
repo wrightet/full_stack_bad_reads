@@ -59,7 +59,7 @@ class ReviewForm extends React.Component {
                         onChange={this.update('body')}
                         className='review-text-area'/>
                     </label>
-                    <input type="submit" value={this.props.formType}/>
+                    <input type="submit" value={this.props.formType} className='review-submit'/>
                 </form>
             </div>
         )

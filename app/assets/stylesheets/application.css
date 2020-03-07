@@ -590,3 +590,8 @@ footer > ul > li > h6 {
   font-family: 'Times New Roman', Times, serif;
   
 }
+
+.review-submit{
+    width: 8vw;
+    display: flex;
+}
