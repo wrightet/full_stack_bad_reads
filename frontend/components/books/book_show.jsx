@@ -21,8 +21,6 @@ class BookShow extends React.Component {
 
     componentDidMount() {
         this.props.requestBook(this.props.match.params.id)
-        .then(book => this.props.requestAllReviews(book.id))
-
         this.props.requestAllReviews(this.props.match.params.id) 
     }
 
@@ -155,7 +153,8 @@ class BookShow extends React.Component {
                                 review={review} key={review.id} 
                                 deleteReview={this.props.deleteReview}
                                 requestAllReviews={this.props.requestAllReviews}
-                                requestBook={this.props.requestBook}/>
+                                requestBook={this.props.requestBook}
+                                currentUser={this.props.currentUser}/>
                                
                                 
                             )) : "" 
@@ -165,7 +164,6 @@ class BookShow extends React.Component {
                                 <button onClick={() => this.handleForward(start, end, book.reviews.length)} className='review-buttons' >Next</button>
                             </div>
                             
-
                     </div>
            
                 </li>

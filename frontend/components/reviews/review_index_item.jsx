@@ -5,6 +5,10 @@ import { requestAllReviews } from '../../actions/review_actions';
 class ReviewIndexItem extends React.Component{
     constructor(props) {
         super(props);
+        this.state = {
+            props: this.props.review,
+            deleted: false
+        };
         this.handleDelete = this.handleDelete.bind(this);
         console.log('review-props',props)
         
@@ -24,9 +28,12 @@ class ReviewIndexItem extends React.Component{
         console.log('mount')
     }
     handleDelete(bookId, review){
-        this.props.deleteReview(bookId, review)
+    //    console.log('delete')
         // .then(bookId => requestBook(bookId))
-        .then(bookId => this.props.history.push(`/book/${bookId}`))
+        // .then(bookId => this.props.history.push(`/book/${bookId}`))
+        // this.setState({id: null, user_id: this.props.currentUser, rating: 0, body: ''})
+        // this.setState({deleted: true})
+        this.props.deleteReview(bookId, review)
         window.location.reload()
         
     }
@@ -43,7 +50,7 @@ class ReviewIndexItem extends React.Component{
                     <li><span>{review.body}</span></li>
                     <li>
                         <Link to={`/books/review/${review.id}/edit`}>Edit</Link>
-                        <button onClick={() => this.props.deleteReview(this.props.bookId, review)} 
+                        <button onClick={() => this.handleDelete(this.props.bookId, review)} 
                         className='review-delete'>Delete</button>
                     </li>
                     
