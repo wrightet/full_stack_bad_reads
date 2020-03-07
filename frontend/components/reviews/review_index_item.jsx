@@ -10,25 +10,10 @@ class ReviewIndexItem extends React.Component{
             deleted: false
         };
         this.handleDelete = this.handleDelete.bind(this);
-        console.log('review-props',props)
         
     }
 
-    componentWillUnmount(){
-        console.log('unmount')
-        // this.props.requestBook(this.props.bookId)
-        // .then(book => this.props.requestAllReviews(book.id))
-        // .then(book => this.props.history.push( `books/${book.id}`))
-    
-      
-    }
-
- 
-    componentDidMount(){
-        console.log('mount')
-    }
     handleDelete(bookId, review){
-    //    console.log('delete')
         // .then(bookId => requestBook(bookId))
         // .then(bookId => this.props.history.push(`/book/${bookId}`))
         // this.setState({id: null, user_id: this.props.currentUser, rating: 0, body: ''})
