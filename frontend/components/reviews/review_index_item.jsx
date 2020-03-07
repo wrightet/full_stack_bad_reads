@@ -11,13 +11,18 @@ class ReviewIndexItem extends React.Component{
     }
 
     componentWillUnmount(){
-        this.props.requestBook(this.props.bookId)
-        .then(book => this.props.requestAllReviews(book.id))
-        .then(book => this.props.history.push( `books/${book.id}`))
+        console.log('unmount')
+        // this.props.requestBook(this.props.bookId)
+        // .then(book => this.props.requestAllReviews(book.id))
+        // .then(book => this.props.history.push( `books/${book.id}`))
     
       
     }
 
+ 
+    componentDidMount(){
+        console.log('mount')
+    }
     handleDelete(bookId, review){
         this.props.deleteReview(bookId, review)
         // .then(bookId => requestBook(bookId))
