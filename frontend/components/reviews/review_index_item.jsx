@@ -10,7 +10,9 @@ class ReviewIndexItem extends React.Component{
     }
 
     handleDelete(bookId, review){
-        this.props.deleteReview(bookId, review).then(bookId => requestAllReviews(bookId))
+        this.props.deleteReview(bookId, review)
+        // .then(bookId => requestBook(bookId))
+        .then(bookId => this.props.history.push(`/book/${bookId}`))
         
     }
 
