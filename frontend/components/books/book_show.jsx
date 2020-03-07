@@ -15,7 +15,7 @@ class BookShow extends React.Component {
         this.keyFinder = this.keyFinder.bind(this);
         this.handleBack = this.handleBack.bind(this);
         this.handleForward = this.handleForward.bind(this);
-        
+        this.handleDelete = this.handleDelete.bind(this);
         // this.booleanFlip = this.booleanFlip.bind(this);
     }
 
@@ -52,6 +52,11 @@ class BookShow extends React.Component {
         }
 
         this.setState({ start: newStart, end: newEnd })
+
+    }
+
+    handleDelete(bookId, review) {
+        this.props.deleteReview(bookId, review).then(bookId => requestAllReviews(bookId))
 
     }
 
@@ -150,6 +155,7 @@ class BookShow extends React.Component {
                                 review={review} key={review.id} 
                                 deleteReview={this.props.deleteReview}
                                 requestAllReviews={this.props.requestAllReviews}/>
+                               
                                 
                             )) : "" 
                             } 
