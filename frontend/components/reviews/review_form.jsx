@@ -20,12 +20,13 @@ class ReviewForm extends React.Component {
     }
 
     handleSubmit(e){
+        console.log('book_id', this.book_id)
         e.preventDefault();
         this.props.action(this.book_id, this.state)
         .then(
             book => this.props.requestAllReviews(book.id) 
-        )
-        .then(
+        ).then(window.location.reload())
+        // .then(
             
             this.setState({
             rating: 3,
@@ -33,7 +34,8 @@ class ReviewForm extends React.Component {
             user_id: this.user_id,
             body: ''
         })
-        ).then(window.location.reload())
+        // )
+      
     }
     
     render(){
