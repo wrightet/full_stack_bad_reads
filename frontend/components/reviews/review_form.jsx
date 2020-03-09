@@ -1,4 +1,5 @@
 import React from 'react';
+import { updateReview } from '../../util/review_util';
 
 
 class ReviewForm extends React.Component {
@@ -20,13 +21,21 @@ class ReviewForm extends React.Component {
     }
 
     handleSubmit(e){
-        console.log('book_id', this.book_id)
+        console.log('form', this.props.formType)
+        console.log('state', this.state)
         e.preventDefault();
-        this.props.action(this.book_id, this.state)
-        .then(
-            book => this.props.requestAllReviews(book.id) 
-        ).then(window.location.reload())
-        // .then(
+        if (this.props.formType === 'Edit Review'){
+            this.props.action(this.state).then(
+                book => this.props.requestAllReviews(book.id)
+            )
+            // .then(window.location.reload())
+        }else{
+            this.props.action(this.book_id, this.state).then(
+                book => this.props.requestAllReviews(book.id)
+            ).then(window.location.reload())
+        }
+       
+   
             
             this.setState({
             rating: 3,

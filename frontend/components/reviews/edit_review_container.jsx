@@ -16,7 +16,7 @@ class EditReviewForm extends React.Component {
         
         
         const {action, formType, review} = this.props;
-       
+       console.log(review)
         if (!review) return null;
  
         return (
@@ -24,7 +24,7 @@ class EditReviewForm extends React.Component {
                 action={action}
                 formType={formType}
                 review={review}
-                bookId={review.bookId}
+                // bookId={review.bookId}
             />
         )
     }
@@ -43,8 +43,8 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = dispatch => ({
     requestReview: (bookId, reviewId) => dispatch(requestReview(bookId, reviewId)),
-    deleteReview: (bookId, review) => dispatch(deleteReview(bookId, review)),
-    action: (bookId, review) => dispatch(updateReview(bookId, review))
+    deleteReview: (bookId, review) => dispatch(deleteReview(bookId, review)), 
+    action: (review) => dispatch(updateReview(review))
 })
 
 export default connect(mSTP, mDTP)(EditReviewForm);
