@@ -23,15 +23,16 @@ export const fetchReview = (bookId,reviewId) => (
     })
 )
     
-export const updateReview = (review) => (
-    $.ajax({
+export const updateReview = (review) => {
+    console.log('ajax', review)
+    return ($.ajax({
         method:'PATCH',
         url: `/api/reviews/${review.id}`,
         data: {review},
-        contentType: false,
-        processType: false
-    })
-)
+        // contentType: false,
+        // processType: false 
+    }))
+}
 
 export const deleteReview = (bookId, review) => (
     $.ajax({

@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { requestReview, updateReview } from '../../actions/review_actions';
+import { requestReview, updateReview, requestAllReviews} from '../../actions/review_actions';
 import ReviewForm from './review_form';
 
 class EditReviewForm extends React.Component {
@@ -43,6 +43,7 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = dispatch => ({
     requestReview: (bookId, reviewId) => dispatch(requestReview(bookId, reviewId)),
+    requestAllReviews: (bookId) => dispatch(requestAllReviews(bookId)),
     deleteReview: (bookId, review) => dispatch(deleteReview(bookId, review)), 
     action: (review) => dispatch(updateReview(review))
 })
