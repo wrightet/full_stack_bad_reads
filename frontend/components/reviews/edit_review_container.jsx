@@ -43,6 +43,7 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = dispatch => ({
     requestReview: (bookId, reviewId) => dispatch(requestReview(bookId, reviewId)),
+    deleteReview: (bookId, review) => dispatch(deleteReview(bookId, review)),
     action: (bookId, review) => dispatch(updateReview(bookId, review))
 })
 

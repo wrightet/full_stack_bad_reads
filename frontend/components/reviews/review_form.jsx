@@ -35,6 +35,9 @@ class ReviewForm extends React.Component {
             body: ''
         })
         // )
+        // e.preventDefault();
+        // const review = Object.assign({}, this.state);
+        // this.props.deleteReview(this.props.bookId, review).then(() => this.props.requestBook(this.state.book_id));
       
     }
     

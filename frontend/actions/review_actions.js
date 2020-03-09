@@ -33,8 +33,8 @@ export const createReview = (bookId, review) => dispatch => {
     return APIUtil.createReview(bookId, review).then(review =>
         dispatch(receiveReview(review)))
 };
-export const updateReview = (bookId, review) => dispatch => {
-    return APIUtil.updateReview(bookId, review).then(review =>
+export const updateReview = (review) => dispatch => {
+    return APIUtil.updateReview(review).then(review =>
         dispatch(receiveReview(review)))
 };
 export const deleteReview = (bookId, review) => dispatch => {
