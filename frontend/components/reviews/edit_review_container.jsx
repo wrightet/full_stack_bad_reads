@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { requestReview, updateReview, requestAllReviews} from '../../actions/review_actions';
+import {requestBook} from '../../actions/book_actions'
 import ReviewForm from './review_form';
 
 class EditReviewForm extends React.Component {
@@ -15,7 +16,7 @@ class EditReviewForm extends React.Component {
     render() {
         
         
-        const {action, formType, review} = this.props;
+        const {action, formType, review, requestBook, requestAllReviews} = this.props;
        console.log(review)
         if (!review) return null;
  
@@ -24,6 +25,8 @@ class EditReviewForm extends React.Component {
                 action={action}
                 formType={formType}
                 review={review}
+                requestBook={requestBook}
+                requestAllReviews={requestAllReviews}
                 // bookId={review.bookId}
             />
         )
@@ -45,6 +48,7 @@ const mDTP = dispatch => ({
     requestReview: (bookId, reviewId) => dispatch(requestReview(bookId, reviewId)),
     requestAllReviews: (bookId) => dispatch(requestAllReviews(bookId)),
     deleteReview: (bookId, review) => dispatch(deleteReview(bookId, review)), 
+    requestBook: (bookId) => dispatch(requestBook(bookId)),
     action: (review) => dispatch(updateReview(review))
 })
 
