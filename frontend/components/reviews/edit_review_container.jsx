@@ -17,7 +17,7 @@ class EditReviewForm extends React.Component {
         
         
         const {action, formType, review, requestBook, requestAllReviews} = this.props;
-       console.log(review)
+       
         if (!review) return null;
  
         return (

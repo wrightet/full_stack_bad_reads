@@ -3,7 +3,6 @@ import { createReview, requestAllReviews, requestReview, deleteReview} from '../
 import ReviewForm from './review_form';
 
 const mSTP = state => {
-    
     return{
     review: {
         rating: 3,

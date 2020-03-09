@@ -21,7 +21,6 @@ class ReviewForm extends React.Component {
     }
 
     handleSubmit(e){
-      console.log('props', this.props)
         e.preventDefault();
         if (this.props.formType === 'Edit Review'){
             this.props.action(this.state)
@@ -31,7 +30,11 @@ class ReviewForm extends React.Component {
             .then(
                 book => this.props.requestAllReviews(book.id)
             )
-            // .then(window.location.reload())
+            // .then(
+                
+            //      history.push(`/books/${this.props.review.bookId}`)
+            //     )
+        
         }else{
             this.props.action(this.book_id, this.state).then(
                 book => this.props.requestAllReviews(book.id)

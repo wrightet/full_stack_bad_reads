@@ -14,13 +14,8 @@ class ReviewIndexItem extends React.Component{
     }
 
     handleDelete(bookId, review){
-        // .then(bookId => requestBook(bookId))
-        // .then(bookId => this.props.history.push(`/book/${bookId}`))
-        // this.setState({id: null, user_id: this.props.currentUser, rating: 0, body: ''})
-        // this.setState({deleted: true})
         this.props.deleteReview(bookId, review)
-        window.location.reload()
-        
+        window.location.reload()  
     }
 
     render(){
@@ -37,8 +32,7 @@ class ReviewIndexItem extends React.Component{
                         <Link to={`/books/review/${review.id}/edit`}>Edit</Link>
                         <button onClick={() => this.handleDelete(this.props.bookId, review)} 
                         className='review-delete'>Delete</button>
-                    </li>
-                    
+                    </li> 
                 </ul>
             </div>
         )
