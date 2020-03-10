@@ -32,7 +32,7 @@ class ReviewForm extends React.Component {
             )
             .then(
                 
-                 Redirect(`/books/${this.props.review.bookId}`)
+                 <Redirect to={`/books/${this.props.review.bookId}`}/>
                 )
         
         }else{
