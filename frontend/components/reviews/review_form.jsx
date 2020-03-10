@@ -1,6 +1,6 @@
 import React from 'react';
 import { updateReview } from '../../util/review_util';
-
+import { Redirect } from 'react-router-dom'
 
 class ReviewForm extends React.Component {
     constructor(props) {
@@ -30,10 +30,10 @@ class ReviewForm extends React.Component {
             .then(
                 book => this.props.requestAllReviews(book.id)
             )
-            // .then(
+            .then(
                 
-            //      history.push(`/books/${this.props.review.bookId}`)
-            //     )
+                 Redirect(`/books/${this.props.review.bookId}`)
+                )
         
         }else{
             this.props.action(this.book_id, this.state).then(
