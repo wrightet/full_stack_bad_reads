@@ -533,7 +533,7 @@ footer > ul > li > h6 {
     padding: 0;
 }
 .book-content-list > li {
-    padding-top: 10vh;
+    margin-bottom: 25vh;
 }
 
 .create-review:hover{
