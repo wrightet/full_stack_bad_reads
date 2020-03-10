@@ -27,12 +27,14 @@ class ReviewForm extends React.Component {
             .then(
                 () => this.props.requestBook(this.props.review.bookId)
             )
-            .then(
-                book => this.props.requestAllReviews(book.id)
-            )
-            return(
-                <Redirect to={`/books/${this.props.review.bookId}`}/>
-            )
+            setTimeout(() => this.props.history.push(`/books/${this.props.review.bookId}`), 1000)
+            
+            // .then(
+            //     book => this.props.requestAllReviews(book.id)
+            // )
+            // return(
+            //     <Redirect to={`/books/${this.props.review.bookId}`}/>
+            // )
                 
                  
                 

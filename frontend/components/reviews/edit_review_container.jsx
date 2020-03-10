@@ -27,6 +27,7 @@ class EditReviewForm extends React.Component {
                 review={review}
                 requestBook={requestBook}
                 requestAllReviews={requestAllReviews}
+                history={this.props.history}
                 // bookId={review.bookId}
             />
         )
