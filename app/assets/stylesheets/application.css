@@ -577,6 +577,12 @@ footer > ul > li > h6 {
     justify-content: center;
     width: 5vw;
     padding-right: 1vw;
+    height: 3vh;
+    background-color: #F4F1EA;
+    display: flex;
+    justify-content: center;
+    border-radius: 3%;
+    margin-right: 1vw;
 }
 
 .review-delete{

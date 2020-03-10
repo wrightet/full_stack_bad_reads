@@ -133,12 +133,12 @@ class BookShow extends React.Component {
                             <span>{book.description}</span>
                         </div>
                         
-                        <select name="" id="read-selector" >
+                        {/* <select name="" id="read-selector" >
                             <option value="haveNotRead">Have Not Read</option>
                             <option value="read">Read</option>
                             <option value="currently_reading">Currently Reading</option>
                             <option value="want_to_read">Want To Read</option>
-                        </select>  
+                        </select>   */}
                     </div>
                 </li>
                 <li>
