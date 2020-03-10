@@ -27,37 +27,18 @@ class ReviewForm extends React.Component {
             .then(
                 () => this.props.requestBook(this.props.review.bookId)
             )
-            setTimeout(() => this.props.history.push(`/books/${this.props.review.bookId}`), 1000)
-            
-            // .then(
-            //     book => this.props.requestAllReviews(book.id)
-            // )
-            // return(
-            //     <Redirect to={`/books/${this.props.review.bookId}`}/>
-            // )
-                
-                 
-                
-        
+            this.props.history.push(`/books/${this.props.review.bookId}`)
         }else{
             this.props.action(this.book_id, this.state).then(
                 book => this.props.requestAllReviews(book.id)
             ).then(window.location.reload())
         }
-       
-   
-            
             this.setState({
             rating: 3,
             book_id: this.props.bookId,
             user_id: this.user_id,
             body: ''
         })
-        // )
-        // e.preventDefault();
-        // const review = Object.assign({}, this.state);
-        // this.props.deleteReview(this.props.bookId, review).then(() => this.props.requestBook(this.state.book_id));
-      
     }
     
     render(){

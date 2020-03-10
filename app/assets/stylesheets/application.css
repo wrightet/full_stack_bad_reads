@@ -486,6 +486,7 @@ footer > ul > li > h6 {
     height: 45vh;
     padding-bottom: 10vh;
     width: 70%;
+    margin-bottom: 1vh;
 }
 
 .book-show-content > :nth-child(n){
@@ -505,6 +506,8 @@ footer > ul > li > h6 {
     height: 55vh;
     float: left;
     padding-top: 15vh;
+    position: relative;
+    margin-top: 1vh;
 }
 
 .indv-review{
