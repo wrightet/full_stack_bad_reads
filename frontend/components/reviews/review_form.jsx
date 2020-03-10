@@ -30,10 +30,12 @@ class ReviewForm extends React.Component {
             .then(
                 book => this.props.requestAllReviews(book.id)
             )
-            .then(
+            return(
+                <Redirect to={`/books/${this.props.review.bookId}`}/>
+            )
                 
-                 <Redirect to={`/books/${this.props.review.bookId}`}/>
-                )
+                 
+                
         
         }else{
             this.props.action(this.book_id, this.state).then(
