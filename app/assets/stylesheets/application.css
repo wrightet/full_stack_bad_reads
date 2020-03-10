@@ -128,19 +128,14 @@ body {
 }
 
 #user-dropdown:hover  {
-    
     display:block;
-    
 }
-
 
 #user-dropdown > li {
     padding: 1vh 1vw;
 }
 .header-el-name:hover > #user-dropdown {
     display: block;
-    
-
 }
 
 .header-el {
@@ -175,11 +170,10 @@ body {
     height: 5vh;
     width: 5vw;
     font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
-
 }
 
 .header-el-name {
-        display: flex;
+    display: flex;
     align-items: center;
 }
 .logo{
@@ -198,7 +192,6 @@ body {
 .book-fire > img {
     height: 40vh;
     width: 30vw;
-    
 }
 
 .login-submit-button{
@@ -211,7 +204,6 @@ body {
     border-radius: 3px;
     width: 5vw;
     height: 4.5vh;
-   
 }
 
 .login-form{
@@ -220,19 +212,15 @@ body {
     width: 50%;
     top: 2vh;
     right: 2vw;
-    
 }
 
 .login-input {
-    
     border-radius: 3px;
     width: 10vw;
     height: 3.5vh;
     padding: .3vw;
     background-color: white;
     font-size: 13px;
-  
-    
 }
 
 .login-list {
@@ -251,7 +239,6 @@ body {
     padding: 1vw;
     height: 36.2vh;
     left: 60vw;
-    
 }
 
 .session-form-ul > li {
@@ -267,8 +254,8 @@ body {
     border-radius: 3px;
     width: 18vw;
     height: 4vh;
-
 }
+
 .session-form-ul > li > input[type="password"]{
     border-radius: 3px;
     width: 18vw;
@@ -279,7 +266,6 @@ body {
     font-size: 1.2em;
     display: flex;
     justify-content: center;
-
 }
 
 .session-submit-button {
@@ -293,7 +279,6 @@ body {
     cursor: pointer;
 }
 
-
 .book-table-div {
     float: right;
     height: 50%;
@@ -302,6 +287,7 @@ body {
     display: block;
     
 }
+
 .books-table {
  border-collapse: collapse;
  border-spacing: 2px;
@@ -322,31 +308,31 @@ body {
     border-collapse: collapse;
     font-size: 20px;
     margin: 0vw; 
-  
-   
 }
 
 .book-table-header-column-cover{
   vertical-align: bottom;
   float: none;
- 
 }
+
 .book-table-header-column-name{
   vertical-align: bottom;
   float:none;
- 
 }
+
 .book-table-header-column-genre{
   vertical-align: bottom;
   float: none;
- 
 }
+
 .books-table > tr {
     vertical-align: middle;
 }
+
 tr{
     display: table-row;
 }
+
 .books-list-body {
     display: table-row-group;
     vertical-align: middle;
@@ -362,14 +348,12 @@ tr{
     text-align: center;
 }
 
-
 .book-photo {
     width: 25%;
     height: 12vh;
     border-radius: 5%;
-    
-
 }
+
 .book-show-photo{
     width: 70%;
     height: 100%;
@@ -382,7 +366,6 @@ tr{
 
 .errors {
     font-size:.7em;
-    /* padding: 20px; */
     display: block;
     color: red;
     position: relative;
@@ -390,7 +373,6 @@ tr{
     justify-content: flex-end ;
     width: 100%;
     background-color: #f4f2e9;
-
 }
 
 .books-search {
@@ -400,11 +382,10 @@ tr{
     padding: 1vh;
     background-color: white;
     font-size: 13px;
-   
 }
 
 .header-left > :nth-child(2){
-     display: flex;
+    display: flex;
     align-content: center;
     align-items: center;
 }
@@ -419,8 +400,8 @@ tr{
     display: flex;
     justify-content: center;
     padding-top: 2vh;
-    
 }
+
 .splash-book {
     padding: 5vw;
     width: 20vw;
@@ -437,7 +418,6 @@ tr{
     width: 100%;
 }
 
-
 footer {
     width: 100%;
     height: 10vh;
@@ -447,7 +427,6 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    
 }
 
 footer > ul > li > a > img{
@@ -492,13 +471,11 @@ footer > ul > li > h6 {
     border-radius: 5%;
 }
 
-
 .book-show-content {
     display: block;
     position: static;
     height: 45vh;
     padding-bottom: 10vh;
-    /* border-bottom: .1em solid #DDDDDD; */
     width: 70%;
 }
 
@@ -594,7 +571,6 @@ footer > ul > li > h6 {
   text-decoration: underline;
   cursor: pointer;
   font-family: 'Times New Roman', Times, serif;
-  
 }
 
 .review-submit{
