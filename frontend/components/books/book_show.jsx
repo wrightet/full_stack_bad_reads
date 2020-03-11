@@ -74,6 +74,7 @@ class BookShow extends React.Component {
         let user = this.props.currentUser;
         let start = this.state.start;
         let end = this.state.end;
+       
         if (!book) {return null;}
        
         else  {
@@ -131,7 +132,6 @@ class BookShow extends React.Component {
                 
             </ul>
             
- 
         </div>
         )
         } 
