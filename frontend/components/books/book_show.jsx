@@ -71,9 +71,7 @@ class BookShow extends React.Component {
     }
 
     showMore(){
-        // let el = document.getElementsByClassName('more-less').innerHTML;
-        // el === '...more' ? el = '...less' : el = '...more';
-      return( this.state.name === 'more' ? this.setState({name: 'show'}) :  this.setState({name: 'more'}))
+      return( this.state.name === 'more' ? this.setState({name: 'less'}) :  this.setState({name: 'more'}))
     }
 
     render(){
@@ -102,8 +100,9 @@ class BookShow extends React.Component {
                         <h1>{book.genre}</h1>
                         <div className='book-description'>
                             <span className='book-des-start'>{book.description.slice(0, book.description.length/3)}</span>
-                            <button onClick={() => this.showMore()} className='more-less'>...more</button>
+                            
                                 <span className={this.state.name}>{book.description.slice(book.description.length / 3, book.description.length)}</span>
+                                <button onClick={() => this.showMore()} className='more-less'>...{this.state.name}</button>
                         </div>
                         
                         {/* <select name="" id="read-selector" >
