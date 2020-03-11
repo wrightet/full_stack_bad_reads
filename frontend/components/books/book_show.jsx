@@ -92,8 +92,9 @@ class BookShow extends React.Component {
             <div className="book-show-image">
             <img src={this.keyFinder(book.url)} className='book-show-photo'/>
             </div>
-            <ul className='book-content-list'>
-                <li>
+            {/* <ul className='book-content-list'> */}
+                {/* <li> */}
+                <div className='book-review-combine'>
                     <div className="book-show-content">
                         <h1>{book.title}</h1>
                         <h1>by {book.author}</h1>
@@ -103,18 +104,15 @@ class BookShow extends React.Component {
                             
                                 <span className={this.state.name}>{book.description.slice(book.description.length / 3, book.description.length)}</span>
                                 <button onClick={() => this.showMore()} className='more-less'>...{this.state.name}</button>
-                        </div>
-                        
-                        {/* <select name="" id="read-selector" >
+                        </div>      
+                         {/* <select name="" id="read-selector" >
                             <option value="haveNotRead">Have Not Read</option>
                             <option value="read">Read</option>
                             <option value="currently_reading">Currently Reading</option>
                             <option value="want_to_read">Want To Read</option>
                         </select>   */}
-                    </div>
-                </li>
-                <li>
-                                    
+                    </div> 
+
                     <div className='review-content'>
                         
                         <h1>Reviews</h1>
@@ -137,10 +135,19 @@ class BookShow extends React.Component {
                             </div>
                             
                     </div>
+                </div>
+                    
+                        
+                   
+                  
+                {/* </li> */}
+                {/* <li> */}
+                                    
+                   
            
-                </li>
+                {/* </li> */}
                 
-            </ul>
+            {/* </ul> */}
             
         </div>
         )

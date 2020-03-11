@@ -483,11 +483,8 @@ footer > ul > li > h6 {
 .book-show-content {
     display: block;
     position: static;
-    height: 45vh;
-    padding-bottom: 10vh;
+    max-height: 45vh;
     width: 70%;
-    margin-bottom: 1vh;
-    /* border: 1px solid red; */
 }
 
 .book-show-content > :nth-child(n){
