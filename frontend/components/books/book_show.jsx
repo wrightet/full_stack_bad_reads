@@ -116,7 +116,7 @@ class BookShow extends React.Component {
                     <div className='review-content'>
                         
                         <h1>Reviews</h1>
-
+                            <Link>Write a review</Link>
                             <CreateReviewContainer bookId={book.id} userId={user} />
                             { book.reviews ? book.reviews.reverse().slice(start,end).map(review => (
                                 <ReviewIndexItem bookId={this.props.book.id} 
