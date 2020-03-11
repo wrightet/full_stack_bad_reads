@@ -21,6 +21,9 @@ class ReviewIndexItem extends React.Component{
     render(){
         
         let review = this.props.review;
+        console.log('user',review.user_id)
+        console.log('current', this.props.currentUser)
+        console.log('props', this.props)
         if(!review) {return null}
         return (
             <div className='indv-review'>
@@ -29,9 +32,15 @@ class ReviewIndexItem extends React.Component{
                     <li>Rating: {review.rating}/ 5</li>
                     <li><span>{review.body}</span></li>
                     <li>
-                        <Link to={`/books/review/${review.id}/edit`}>Edit</Link>
-                        <button onClick={() => this.handleDelete(this.props.bookId, review)} 
-                        className='review-delete'>Delete</button>
+                        {this.props.currentUser === review.user_id ? 
+                        <div>
+                             <Link to={`/books/review/${review.id}/edit`}>Edit</Link>
+                            <button onClick={() => this.handleDelete(this.props.bookId, review)} 
+                            className='review-delete'>Delete</button>
+                        </div>
+                        
+                         :''}
+                       
                     </li> 
                 </ul>
             </div>
