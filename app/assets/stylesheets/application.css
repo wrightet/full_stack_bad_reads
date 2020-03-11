@@ -606,3 +606,11 @@ footer > ul > li > h6 {
     justify-content: center;
     border-radius: 3%;
 }
+
+.more{
+    display: none
+}
+
+.show{
+    display: block;
+}  

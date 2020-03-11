@@ -10,12 +10,14 @@ class BookShow extends React.Component {
         this.state = {
             props: this.props,
             start: 0,
-            end: 6
+            end: 6,
+            name: 'more'
         };
         this.keyFinder = this.keyFinder.bind(this);
         this.handleBack = this.handleBack.bind(this);
         this.handleForward = this.handleForward.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
+        this.showMore = this.showMore.bind(this)
     }
 
     componentDidMount() {
@@ -68,12 +70,17 @@ class BookShow extends React.Component {
         this.setState({ start: newStart, end: newEnd })
     }
 
+    showMore(){
+      return( this.state.name === 'more' ? this.setState({name: 'show'}):  this.setState({name: 'more'}))
+    }
+
     render(){
        
         let book = this.props.book;
         let user = this.props.currentUser;
         let start = this.state.start;
         let end = this.state.end;
+       
        
         if (!book) {return null;}
        
@@ -92,7 +99,9 @@ class BookShow extends React.Component {
                         <h1>by {book.author}</h1>
                         <h1>{book.genre}</h1>
                         <div className='book-description'>
-                            <span>{book.description}</span>
+                            <span className='book-des-start'>{book.description.slice(0, book.description.length/3)}</span>
+                            <button onClick={() => this.showMore()}>...more</button>
+                                <span className={this.state.name}>{book.description.slice(book.description.length / 3, book.description.length)}</span>
                         </div>
                         
                         {/* <select name="" id="read-selector" >
