@@ -11,9 +11,9 @@ class ReviewForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    // componentDidMount(){
-    //     this.props.requestAllReviews(this.book_id) 
-    // }
+    componentDidMount(){
+        this.props.requestAllReviews(this.book_id) 
+    }
 
 
     update(field){

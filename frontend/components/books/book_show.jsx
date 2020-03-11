@@ -11,18 +11,20 @@ class BookShow extends React.Component {
             props: this.props,
             start: 0,
             end: 6,
-            name: 'more'
+            name: 'more',
+            toggle: false
         };
         this.keyFinder = this.keyFinder.bind(this);
         this.handleBack = this.handleBack.bind(this);
         this.handleForward = this.handleForward.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
-        this.showMore = this.showMore.bind(this)
+        this.showMore = this.showMore.bind(this);
+        this.setToggle = this.setToggle.bind(this);
     }
 
     componentDidMount() {
-        this.props.requestBook(this.props.match.params.id)
-        this.props.requestAllReviews(this.props.match.params.id) 
+        this.props.requestBook(this.props.match.params.id);
+        this.props.requestAllReviews(this.props.match.params.id);
     }
 
     keyFinder(url) {
@@ -74,6 +76,11 @@ class BookShow extends React.Component {
       return( this.state.name === 'more' ? this.setState({name: 'less'}) :  this.setState({name: 'more'}))
     }
 
+    setToggle(e){
+        e.preventDefault();
+        return(this.state.toggle === false ? this.setState({ toggle: true }) : this.setState({ toggle: false }))
+    }
+
     render(){
        
         let book = this.props.book;
@@ -92,8 +99,7 @@ class BookShow extends React.Component {
             <div className="book-show-image">
             <img src={this.keyFinder(book.url)} className='book-show-photo'/>
             </div>
-            {/* <ul className='book-content-list'> */}
-                {/* <li> */}
+           
                 <div className='book-review-combine'>
                     <div className="book-show-content">
                         <h1>{book.title}</h1>
@@ -116,7 +122,7 @@ class BookShow extends React.Component {
                     <div className='review-content'>
                         
                         <h1>Reviews</h1>
-                            <Link>Write a review</Link>
+                            {/* <button onClick={this.setToggle()}>Write a review</button> */}
                             <CreateReviewContainer bookId={book.id} userId={user} />
                             { book.reviews ? book.reviews.reverse().slice(start,end).map(review => (
                                 <ReviewIndexItem bookId={this.props.book.id} 
@@ -136,18 +142,6 @@ class BookShow extends React.Component {
                             
                     </div>
                 </div>
-                    
-                        
-                   
-                  
-                {/* </li> */}
-                {/* <li> */}
-                                    
-                   
-           
-                {/* </li> */}
-                
-            {/* </ul> */}
             
         </div>
         )
