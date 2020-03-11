@@ -622,3 +622,19 @@ footer > ul > li > h6 {
   cursor: pointer;
   font-family: 'Times New Roman', Times, serif;
 }
+
+.shown {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.write-review {
+    background-color:#F4F1EA;
+    color: #333333;
+    width: 8vw;
+    height: 4vh;
+    border-radius: 3%;
+}

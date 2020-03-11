@@ -12,7 +12,7 @@ class BookShow extends React.Component {
             start: 0,
             end: 6,
             name: 'more',
-            toggle: false
+            toggle: 'hidden'
         };
         this.keyFinder = this.keyFinder.bind(this);
         this.handleBack = this.handleBack.bind(this);
@@ -20,6 +20,7 @@ class BookShow extends React.Component {
         this.handleDelete = this.handleDelete.bind(this);
         this.showMore = this.showMore.bind(this);
         this.setToggle = this.setToggle.bind(this);
+       
     }
 
     componentDidMount() {
@@ -76,9 +77,9 @@ class BookShow extends React.Component {
       return( this.state.name === 'more' ? this.setState({name: 'less'}) :  this.setState({name: 'more'}))
     }
 
-    setToggle(e){
-        e.preventDefault();
-        return(this.state.toggle === false ? this.setState({ toggle: true }) : this.setState({ toggle: false }))
+    setToggle(){
+       
+        return(this.state.toggle === 'hidden' ? this.setState({ toggle: 'shown' }) : this.setState({ toggle: 'hidden' }))
     }
 
     render(){
@@ -118,12 +119,15 @@ class BookShow extends React.Component {
                             <option value="want_to_read">Want To Read</option>
                         </select>   */}
                     </div> 
-
+                           
                     <div className='review-content'>
                         
                         <h1>Reviews</h1>
-                            {/* <button onClick={this.setToggle()}>Write a review</button> */}
-                            <CreateReviewContainer bookId={book.id} userId={user} />
+                        
+                             <button onClick={() => this.setToggle()} className='write-review'>Write a review</button>
+                            <div className={this.state.toggle}>
+                                <CreateReviewContainer bookId={book.id} userId={user} />
+                            </div>
                             { book.reviews ? book.reviews.reverse().slice(start,end).map(review => (
                                 <ReviewIndexItem bookId={this.props.book.id} 
                                 review={review} key={review.id} 
