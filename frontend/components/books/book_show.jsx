@@ -16,7 +16,6 @@ class BookShow extends React.Component {
         this.handleBack = this.handleBack.bind(this);
         this.handleForward = this.handleForward.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
-        // this.booleanFlip = this.booleanFlip.bind(this);
     }
 
     componentDidMount() {
@@ -68,44 +67,6 @@ class BookShow extends React.Component {
 
         this.setState({ start: newStart, end: newEnd })
     }
-
-    // booleanFlip(e){
-    // 
-    //     let book = this.props.book;
-
-    //     if (book[e.target.value] === false) {
-    //         book[e.target.value] = true;
-    //         const formData = new formData();
-    //         formData.append('book[id]', book.id);
-    //         formData.append('book[title]', book.title);
-    //         formData.append('book[author]', book.author);
-    //         formData.append('book[genre]', book.genre); 
-    //         formData.append('book[read]', false);
-    //         formData.append('book[currently_reading]', false);
-    //         formData.append('book[want_to_read]', false);
-
-    //         formData.append(`book[${e.target.value}]`, true);
-            
-    //         this.props.updateBook(formData)
-    //     } 
-    //     else {
-    //         book[e.target.value] = false;
-    //         const formData = new formData();
-    //         formData.append('book[id]', book.id);
-    //         formData.append('book[title]', book.title);
-    //         formData.append('book[author]', book.author);
-    //         formData.append('book[genre]', book.genre);
-    //         formData.append('book[read]', true);
-    //         formData.append('book[currently_reading]', true);
-    //         formData.append('book[want_to_read]', true);
-
-    //         formData.append(`book[${e.target.value}]`, false);
-
-    //         this.props.updateBook(formData)
-    //     }
-        
-
-    // }
 
     render(){
        
