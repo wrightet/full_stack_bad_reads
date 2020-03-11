@@ -41,7 +41,7 @@ class BookShow extends React.Component {
 
     }
 
-    handleBack(start, end) {
+    handleForward(start, end) {
         let newStart = start - 6;
         let newEnd = end - 6;
         if (newStart < 0) {
@@ -58,7 +58,7 @@ class BookShow extends React.Component {
 
     }
 
-    handleForward(start, end, length) {
+    handleBack(start, end, length) {
         let newStart = start + 6;
         let newEnd = end + 6
         if (newStart >= length) {
@@ -160,8 +160,8 @@ class BookShow extends React.Component {
                             )) : "" 
                             } 
                             <div className='review-button-div'>
-                                <button onClick={() => this.handleBack(start, end)} className='review-buttons'>Previous</button>
-                                <button onClick={() => this.handleForward(start, end, book.reviews.length)} className='review-buttons' >Next</button>
+                                <button onClick={() => this.handleForward(start, end)} className='review-buttons'>Previous</button>
+                                <button onClick={() => this.handleBack(start, end, book.reviews.length)} className='review-buttons' >Next</button>
                             </div>
                             
                     </div>
