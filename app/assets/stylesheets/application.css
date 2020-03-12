@@ -371,6 +371,13 @@ tr{
 .book-description{
  display: block;
  width: 100%;
+ font-family: "Merriweather", "Georgia", serif;
+ font-size: 14px;
+ line-height: 1em;
+}
+
+.book-des-start{
+    line-height: 1.5em;
 }
 
 .errors {
@@ -613,6 +620,7 @@ footer > ul > li > h6 {
     font-size: 14px;
     min-height: 10vh;
     margin-bottom: 1vh;
+     line-height: 1.5em;
 }  
 
 .more-less {
