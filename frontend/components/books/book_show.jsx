@@ -20,12 +20,23 @@ class BookShow extends React.Component {
         this.handleDelete = this.handleDelete.bind(this);
         this.showMore = this.showMore.bind(this);
         this.setToggle = this.setToggle.bind(this);
+        this.avgRating = this.avgRating.bind(this);
        
     }
 
     componentDidMount() {
         this.props.requestBook(this.props.match.params.id);
         this.props.requestAllReviews(this.props.match.params.id);
+    }
+
+    avgRating(){
+        let count = 0;
+        let length = this.props.book.reviews.length;
+        this.props.book.reviews.map(review => {
+            count += review.rating
+        }
+            );
+            return parseFloat(count/length)
     }
 
     keyFinder(url) {
@@ -106,6 +117,7 @@ class BookShow extends React.Component {
                         <h1>{book.title}</h1>
                         <h1>by {book.author}</h1>
                         <h1>{book.genre}</h1>
+                        <h1>Rating {this.avgRating()}/5</h1>
                         <div className='book-description'>
                             <span className='book-des-start'>{book.description.slice(0, book.description.length/3)}</span>
                             
