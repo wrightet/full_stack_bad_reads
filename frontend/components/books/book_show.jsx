@@ -30,13 +30,15 @@ class BookShow extends React.Component {
     }
 
     avgRating(){
-        let count = 0;
+        if(this.props.book.reviews){ let count = 0;
         let length = this.props.book.reviews.length;
         this.props.book.reviews.map(review => {
             count += review.rating
         }
             );
-            return parseFloat(count/length)
+            return parseFloat(count/length)}
+            else{ return null}
+       
     }
 
     keyFinder(url) {
