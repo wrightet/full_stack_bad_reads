@@ -624,7 +624,8 @@ footer > ul > li > h6 {
 }
 
 .shown {
-    display: block;
+    display: flex;
+    margin-top: 0vh
 }
 
 .hidden {
