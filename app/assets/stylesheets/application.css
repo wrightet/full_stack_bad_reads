@@ -370,7 +370,7 @@ tr{
 
 .book-description{
  display: block;
- width: 50%;
+ width: 100%;
 }
 
 .errors {
@@ -609,6 +609,10 @@ footer > ul > li > h6 {
 
 .less{
     display: block;
+    font-family: "Merriweather", "Georgia", serif;
+    font-size: 14px;
+    min-height: 10vh;
+    margin-bottom: 1vh;
 }  
 
 .more-less {
