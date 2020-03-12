@@ -119,7 +119,7 @@ class BookShow extends React.Component {
                     <div className="book-show-content">
                         <h1 className='book-title'>{book.title}</h1>
                         <h1 className ='author-name'>by {book.author}</h1>
-                        <h1 className='genre'>{book.genre}</h1>
+                        <h1 className='genre'>Genre: {book.genre}</h1>
                         <h1 className='rating'>Rating {this.avgRating()}/5</h1>
                         <div className='book-description'>
                             <span className='book-des-start'>{book.description.slice(0, book.description.length/3)}</span>

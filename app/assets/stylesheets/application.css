@@ -658,4 +658,19 @@ footer > ul > li > h6 {
     width: 100%;
     font-weight: bold;
     font-family: "Merriweather", "Georgia", serif;
+    font-size: 2em;
+}
+
+.author-name {
+    color: #333333;
+    font-size: 1.5em;
+    font-family: "Merriweather", "Georgia", serif;
+}
+
+.genre {
+    font-family: "Merriweather", "Georgia", serif;
+}
+
+.rating {
+    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
 }
