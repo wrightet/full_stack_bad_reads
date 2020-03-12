@@ -582,6 +582,8 @@ footer > ul > li > h6 {
     justify-content: center;
     border-radius: 3%;
     margin-right: 1vw;
+    /* text-align: center; */
+    padding: 1%;
 }
 
 .review-delete{
@@ -633,9 +635,19 @@ footer > ul > li > h6 {
 }
 
 .write-review {
-    background-color:#F4F1EA;
+    width: 8vw;
+    height: 4vh;
+    border-radius: 3%;
+    background-color: #F4F1EA;
     color: #333333;
     width: 8vw;
     height: 4vh;
     border-radius: 3%;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0em;
+    text-indent: 0px;
+    align-items: flex-start;
+    text-align: center;
+    margin-top: 3%;
 }
