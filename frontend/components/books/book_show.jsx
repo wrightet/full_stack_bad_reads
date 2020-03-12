@@ -141,7 +141,7 @@ class BookShow extends React.Component {
                             } 
                             <div className='review-button-div'>
                                 <button onClick={() => this.handleForward(start, end)} className='review-buttons'>Previous</button>
-                                <button onClick={() => this.handleBack(start, end, book.reviews.length)} className='review-buttons' >Next</button>
+                                <button onClick={() => this.handleBack(start, end, book.reviews.length)} className='review-buttons' >...Next</button>
                             </div>
                             
                     </div>
