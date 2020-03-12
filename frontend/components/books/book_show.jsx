@@ -88,7 +88,7 @@ class BookShow extends React.Component {
         let user = this.props.currentUser;
         let start = this.state.start;
         let end = this.state.end;
-       
+        // let words = book.description.split(' ')
        
         if (!book) {return null;}
        

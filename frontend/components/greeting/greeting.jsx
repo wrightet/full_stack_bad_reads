@@ -14,7 +14,7 @@ const Greeting = ({ currentUser, logout}) => {
             <ul className="header-left">
                 <li className="header-el"><Link to="/">Home</Link></li>
                 {/* <li className="header-el"><Link to="/api/books">Books</Link></li> */}
-                <li ><input type="text" className="books-search" placeholder="Placeholder Search Bar"/></li>
+                {/* <li ><input type="text" className="books-search" placeholder="Placeholder Search Bar"/></li> */}
                 <li className="header-el-name"> 
                       <FontAwesomeIcon icon={faUserCircle} />
                     <ul id="user-dropdown" >
