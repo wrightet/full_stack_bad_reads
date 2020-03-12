@@ -36,7 +36,8 @@ class BookShow extends React.Component {
             count += review.rating
         }
             );
-            return parseFloat(count/length)}
+            let num = parseFloat(count/length);
+            return num.toFixed(2)}
             else{ return null}
        
     }
