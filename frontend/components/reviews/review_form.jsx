@@ -6,10 +6,10 @@ class ReviewForm extends React.Component {
     constructor(props) {
         super(props);
         this.user_id = this.props.userId;
-        this.book_id = this.props.bookId || this.props.match.params.id;
+        this.book_id = this.props.bookId;
         this.state = this.props.review;
         this.handleSubmit = this.handleSubmit.bind(this);
-        console.log(props)
+       
     }
 
     componentDidMount(){
@@ -28,24 +28,43 @@ class ReviewForm extends React.Component {
             .then(
                 () => this.props.requestBook(this.props.review.bookId)
             )
+            
+            this.setState({
+                rating: 3,
+                book_id: this.props.bookId,
+                user_id: this.user_id,
+                body: ''
+            })
             this.props.history.push(`/books/${this.props.review.bookId}`)
         }else{
+            console.log('props',this.props)
+            console.log('state',this.state)
             this.props.action(this.props.match.params.id, this.state).then(
-                book => this.props.requestAllReviews(book.id)
+                () => this.props.requestAllReviews(this.props.match.params.id)
             )
             // .then(window.location.reload())
-            this.props.history.push(`/books/${this.props.match.params.id}`)
-        }
             this.setState({
-            rating: 3,
-            book_id: this.props.bookId || this.props.match.params.id,
-            user_id: this.user_id,
-            body: ''
-        })
+                rating: 3,
+                book_id: this.props.match.params.id,
+                user_id: this.user_id,
+                body: ''
+            })
+            
+            this.props.history.push(`/books/${this.props.match.params.id}`)
+            
+        }
+            
     }
     
     render(){
-        this.state.book_id = this.book_id || this.props.match.params.id;
+        // if (this.bookId){
+        //      this.state.book_id = this.book_id;
+        // } 
+        // else {
+        //     this.state.book_id = this.props.match.params.id
+        // }
+       
+       this.state.book_id = this.book_id || this.props.match.params.id;
         return(
             <div className='reveiw-form-div'>
                 {/* <h1>{this.props.formType}</h1> */}
