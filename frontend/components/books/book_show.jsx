@@ -107,7 +107,7 @@ class BookShow extends React.Component {
         if (!book) {return null;}
        
         else  {
-
+            let words = book.description.split(' ')
         return (
         <div className="book-content">
            
@@ -122,9 +122,9 @@ class BookShow extends React.Component {
                         <h1 className='genre'>Genre: {book.genre}</h1>
                         <h1 className='rating'>Rating {this.avgRating()}/5</h1>
                         <div className='book-description'>
-                            <span className='book-des-start'>{book.description.slice(0, book.description.length/3)}</span>
+                            <span className='book-des-start'>{words.slice(0, words.length/3).join(' ')}</span>
                             
-                                <span className={this.state.name}>{book.description.slice(book.description.length / 3, book.description.length)}</span>
+                                <span className={this.state.name}>{words.slice(words.length / 3, book.description.length).join(' ')}</span>
                                 <button onClick={() => this.showMore()} className='more-less'>...{this.state.name}</button>
                         </div>      
                          {/* <select name="" id="read-selector" >
