@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 class ReviewForm extends React.Component {
     constructor(props) {
         super(props);
@@ -80,7 +80,9 @@ class ReviewForm extends React.Component {
                         className='review-text-area'/>
                     </label>
                     <input type="submit" value={this.props.formType} className='review-submit'/>
+                    <Link to={`/books/${this.state.book_id}`} className='cancel'>Cancel</Link>
                 </form>
+                
             </div>
         )
     }
