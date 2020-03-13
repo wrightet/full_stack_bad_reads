@@ -568,6 +568,15 @@ footer > ul > li > h6 {
 .review-text-area {
     width: 50vw;
     height: 10vh;
+    display: block;
+    font-family: "Merriweather", "Georgia", serif;
+    font-size: 14px;
+    line-height: 21px;
+    border-radius: 2%;
+    border: 1px solid #DCD6CC;
+    color: #666666;
+    cursor: text;
+    
 }
 
 .rating-selector {
