@@ -136,10 +136,11 @@ class BookShow extends React.Component {
                     </div> 
                            
                     <div className='review-content'>
-                        
+                        <Link to={`/books/${book.id}/review/new`}>to container</Link>
                              <button onClick={() => this.setToggle()} className='write-review'>Write a review</button>
                             <div className={this.state.toggle}>
                                 <CreateReviewContainer bookId={book.id} userId={user} />
+                                
                             </div>
                         <h1>Reviews</h1>
                             { book.reviews ? book.reviews.reverse().slice(start,end).map(review => (

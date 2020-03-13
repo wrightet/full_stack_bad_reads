@@ -375,6 +375,7 @@ tr{
  font-family: "Merriweather", "Georgia", serif;
  font-size: 14px;
  line-height: 1em;
+ min-height: 20vh;
 }
 
 .book-des-start{
