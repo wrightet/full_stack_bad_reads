@@ -45,10 +45,10 @@ class ReviewForm extends React.Component {
         this.state.book_id = this.book_id;
         return(
             <div className='reveiw-form-div'>
-                <h1>{this.props.formType}</h1>
+                {/* <h1>{this.props.formType}</h1> */}
                 <form onSubmit={this.handleSubmit} className='review-form'>
-                    <label> Rating
-                        <select value={this.state.rating} id="rating-selector" 
+                    <label className='rating-label'> Rating
+                        <select value={this.state.rating}  
                             onChange={this.update('rating')}
                             className='rating-selector'
                         >

@@ -576,11 +576,26 @@ footer > ul > li > h6 {
     border: 1px solid #DCD6CC;
     color: #666666;
     cursor: text;
-    
+    margin: 0em;
+    padding: 1%;
+
+
+}
+
+.rating-label {
+    margin-right: 1%;
+    vertical-align: middle;
+    cursor: default;
+    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+    font-size: 14px;
+    padding-bottom: 3%;
+    /* width: 720px; */
+
 }
 
 .rating-selector {
     display: flex;
+    padding-top: 3%;
 }
 
 .review-button-div{
