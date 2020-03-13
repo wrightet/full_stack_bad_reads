@@ -136,12 +136,12 @@ class BookShow extends React.Component {
                     </div> 
                            
                     <div className='review-content'>
-                        <Link to={`/books/${book.id}/review/new`}>to container</Link>
-                             <button onClick={() => this.setToggle()} className='write-review'>Write a review</button>
+                        <Link to={`/books/${book.id}/review/new`} className='write-review'>Write a review</Link>
+                             {/* <button onClick={() => this.setToggle()} className='write-review'>Write a review</button>
                             <div className={this.state.toggle}>
                                 <CreateReviewContainer bookId={book.id} userId={user} />
                                 
-                            </div>
+                            </div> */}
                         <h1>Reviews</h1>
                             { book.reviews ? book.reviews.reverse().slice(start,end).map(review => (
                                 <ReviewIndexItem bookId={this.props.book.id} 

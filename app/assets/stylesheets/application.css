@@ -685,6 +685,7 @@ footer > ul > li > h6 {
     align-items: flex-start;
     text-align: center;
     margin-top: 3%;
+    text-decoration: none;
 }
 
 .book-title {

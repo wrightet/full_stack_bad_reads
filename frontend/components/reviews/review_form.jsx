@@ -1,6 +1,4 @@
 import React from 'react';
-import { updateReview } from '../../util/review_util';
-import { Redirect } from 'react-router-dom'
 
 class ReviewForm extends React.Component {
     constructor(props) {
@@ -37,8 +35,7 @@ class ReviewForm extends React.Component {
             })
             this.props.history.push(`/books/${this.props.review.bookId}`)
         }else{
-            console.log('props',this.props)
-            console.log('state',this.state)
+           
             this.props.action(this.props.match.params.id, this.state).then(
                 () => this.props.requestAllReviews(this.props.match.params.id)
             )
@@ -57,14 +54,10 @@ class ReviewForm extends React.Component {
     }
     
     render(){
-        // if (this.bookId){
-        //      this.state.book_id = this.book_id;
-        // } 
-        // else {
-        //     this.state.book_id = this.props.match.params.id
-        // }
-       
-       this.state.book_id = this.book_id || this.props.match.params.id;
+     if (this.props.formType === 'Edit Review'){
+         this.state.book_id = this.book_id
+     }
+        else { this.state.book_id = this.props.match.params.id} ;
         return(
             <div className='reveiw-form-div'>
                 {/* <h1>{this.props.formType}</h1> */}
