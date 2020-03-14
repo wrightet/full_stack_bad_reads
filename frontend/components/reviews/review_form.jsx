@@ -74,7 +74,7 @@ class ReviewForm extends React.Component {
                             <option value="5">5</option>
                         </select>
                     </label>
-                    <label> 
+                    <label> What do you think?
                         <textarea value={this.state.body} placeholder='Write a review' 
                         onChange={this.update('body')}
                         className='review-text-area'/>

@@ -89,9 +89,6 @@ table {
     height: 10vh;
     
 }
-body {
-    background: #EAE7DE;
-}
 
 .header-link{
     align-self: flex-start;
@@ -553,6 +550,7 @@ footer > ul > li > h6 {
     /* margin-top: 50vh; */
     /* padding: 1vw; */
     position: relative;
+    background-color: #ffffff;
 }
 
 .review-form {
@@ -560,15 +558,18 @@ footer > ul > li > h6 {
     flex-direction: column;
     margin-top: 2vh;
     margin-bottom: 2vh;
+    margin-left: 2vw;
     /* border: 1px solid green; */
     /* position: relative; */
     /* padding: 10vh; */
+    background-color: #ffffff;
+    min-height: 85vh;
   
 }
 
 .review-text-area {
     width: 50vw;
-    height: 10vh;
+    height: 40vh;
     display: block;
     font-family: "Merriweather", "Georgia", serif;
     font-size: 14px;
