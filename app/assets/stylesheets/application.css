@@ -373,6 +373,7 @@ tr{
  font-size: 14px;
  line-height: 1em;
  min-height: 20vh;
+ /* margin-bottom: 1vh; */
 }
 
 .book-des-start{
@@ -511,7 +512,7 @@ footer > ul > li > h6 {
     float: left;
     /* padding-top: 15vh; */
     position: relative;
-    margin-top: 5vh;
+    margin-top: 7vh;
     /* border: 1px solid blue; */
 }
 
@@ -654,7 +655,8 @@ footer > ul > li > h6 {
 }
 
 .more{
-    display: none
+    display: none;
+    cursor: pointer;
 }
 
 .less{
@@ -663,7 +665,9 @@ footer > ul > li > h6 {
     font-size: 14px;
     min-height: 10vh;
     margin-bottom: 1vh;
-     line-height: 1.5em;
+    line-height: 1.5em;
+    position: relative;
+    cursor: pointer;
 }  
 
 .more-less {
