@@ -1,7 +1,8 @@
 import React from 'react';
-import EditReviewContainer from './edit_review_container'
+import EditReviewContainer from './edit_review_container';
 import {Link} from 'react-router-dom';
 import { requestAllReviews } from '../../actions/review_actions';
+import { formatDateTime } from '../../util/date_util';
 class ReviewIndexItem extends React.Component{
     constructor(props) {
         super(props);
@@ -24,11 +25,15 @@ class ReviewIndexItem extends React.Component{
         
         let review = this.props.review;
         if(!review) {return null}
+        console.log(review)
         return (
             <div className='indv-review'>
                 <ul className='review-ul'>
                     <li className='review-user'>User: {review.user_id}</li>
-                    <li className='review-li'>Rating: {review.rating}/ 5</li>
+                    <li className='review-rating'>Rated it: {review.rating}/ 5</li>
+                    <li className='review-date'>{formatDateTime(review.created_at).split('(')[0]}</li>
+                </ul>
+                <ul>
                     <li className='review-li'><span>{review.body}</span></li>
                     <li className='review-li'>
                         {this.props.currentUser === review.user_id ? 
