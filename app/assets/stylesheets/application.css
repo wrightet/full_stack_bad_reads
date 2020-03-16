@@ -493,7 +493,7 @@ footer > ul > li > h6 {
     max-height: 55vh;
     min-width: 70%;
     border-bottom: 1px solid #D8D8D8;
-    margin-bottom: 1 vh;
+    margin-bottom: 1vh;
     overflow: auto;
     padding-bottom: 10vh;
 }
@@ -579,13 +579,14 @@ footer > ul > li > h6 {
 }
 
 .review-form-div {
-    height: 15vh;
+    /* height: 15vh;
     width: 1vw;
-    display: block;
+    display: block; */
     /* margin-top: 50vh; */
     /* padding: 1vw; */
-    position: relative;
-    background-color: #ffffff;
+    /* position: relative;
+    background-color: #ffffff; */
+    
 }
 
 .review-form {
@@ -593,7 +594,7 @@ footer > ul > li > h6 {
     flex-direction: column;
     margin-top: 2vh;
     margin-bottom: 2vh;
-    margin-left: 2vw;
+    margin-left: 15vw;
     /* border: 1px solid green; */
     /* position: relative; */
     /* padding: 10vh; */
@@ -601,6 +602,7 @@ footer > ul > li > h6 {
     min-height: 85vh;
   
 }
+
 
 .review-text-area {
     width: 50vw;
@@ -633,6 +635,12 @@ footer > ul > li > h6 {
 .rating-selector {
     display: flex;
     padding-top: 3%;
+}
+
+.review-submit-cancel {
+    display: flex;
+    margin-top: 1vh;
+
 }
 
 .review-button-div{
@@ -689,6 +697,8 @@ footer > ul > li > h6 {
     color: #666666;
     font-size: 1em;
     font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+    margin-left: 1vw;
+    border: 1px solid #d1d1d1;
 }
 
 .more{

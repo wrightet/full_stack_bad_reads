@@ -79,8 +79,11 @@ class ReviewForm extends React.Component {
                         onChange={this.update('body')}
                         className='review-text-area'/>
                     </label>
-                    <input type="submit" value={this.props.formType} className='review-submit'/>
-                    <Link to={`/books/${this.state.book_id}`} className='cancel'>Cancel</Link>
+                    <div className='review-submit-cancel'>
+                        <input type="submit" value={this.props.formType} className='review-submit'/>
+                        <Link to={`/books/${this.state.book_id}`} className='cancel'>Cancel</Link>
+                    </div>
+                    
                 </form>
                 
             </div>
