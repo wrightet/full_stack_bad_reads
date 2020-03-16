@@ -492,6 +492,9 @@ footer > ul > li > h6 {
     position: static;
     max-height: 55vh;
     width: 70%;
+    border-bottom: 1px solid #D8D8D8;
+    margin-bottom: 1 vh;
+    overflow: auto;
 }
 
 .book-show-content > :nth-child(n){
@@ -508,11 +511,12 @@ footer > ul > li > h6 {
     display: inline-flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 55vh;
+    height: 45vh;
     float: left;
     /* padding-top: 15vh; */
     position: relative;
-    margin-top: 7vh;
+    margin-top: 3vh;
+  
 }
 
 .indv-review{
@@ -529,7 +533,12 @@ footer > ul > li > h6 {
 }
 
 .review-date{
-    padding-left: 1vw;
+    padding-left: 8vw;
+   font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
+   color: #bbbbbb;
+   font-size: 14px;
+   display: flex;
+   justify-content: flex-end;
 }
 .review-rating {
     padding-left: 1vw;
