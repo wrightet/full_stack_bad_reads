@@ -28,17 +28,17 @@ class ReviewIndexItem extends React.Component{
 
         return (
             <div className='indv-review'>
-                <ul className='review-ul'>
-                    <li className='review-user'>User: {review.user_id}</li>
-                    <li className='review-rating'>Rated it: {review.rating}/ 5</li>
-                    <li className='review-date'>{formatDateTime(review.created_at).split('(')[0]}</li>
-                </ul>
-                <ul>
+                <div className='review-ul'>
+                    <div className='review-user'>User: {review.user_id}</div>
+                    <div className='review-rating'>Rated it: {review.rating}/ 5</div>
+                    <div className='review-date'>{formatDateTime(review.created_at).split('(')[0]}</div>
+                </div>
+                <ul className='review-body'>
                     <li className='review-li'><span>{review.body}</span></li>
                     <li className='review-li'>
                         {this.props.currentUser === review.user_id ? 
-                        <div>
-                             <Link to={`/books/review/${review.id}/edit`}>Edit</Link>
+                        <div className='review-edit-delete'>
+                             <Link to={`/books/review/${review.id}/edit`} className='review-delete'>Edit</Link>
                             <button onClick={() => this.handleDelete(this.props.bookId, review)} 
                             className='review-delete'>Delete</button>
                         </div>
