@@ -26,11 +26,11 @@ class ReviewIndexItem extends React.Component{
         if(!review) {return null}
         return (
             <div className='indv-review'>
-                <ul>
-                    <li>User: {review.user_id}</li>
-                    <li>Rating: {review.rating}/ 5</li>
-                    <li><span>{review.body}</span></li>
-                    <li>
+                <ul className='review-ul'>
+                    <li className='review-user'>User: {review.user_id}</li>
+                    <li className='review-li'>Rating: {review.rating}/ 5</li>
+                    <li className='review-li'><span>{review.body}</span></li>
+                    <li className='review-li'>
                         {this.props.currentUser === review.user_id ? 
                         <div>
                              <Link to={`/books/review/${review.id}/edit`}>Edit</Link>

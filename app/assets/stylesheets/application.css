@@ -513,21 +513,25 @@ footer > ul > li > h6 {
     /* padding-top: 15vh; */
     position: relative;
     margin-top: 7vh;
-    /* border: 1px solid blue; */
 }
 
 .indv-review{
     display: block;
     padding-top: 1vh;
     float: left;
-    border-bottom: .1em solid #DDDDDD;
 }
 
-.indv-review > ul > li {
+.review-user {
+  list-style-type: none;
+  color: #00635D;
+  font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
+
+}
+.review-li {
   list-style-type: none;
 }
 
-.indv-review > ul {
+.review-ul {
     list-style-type: none;
     margin: auto;
 }
