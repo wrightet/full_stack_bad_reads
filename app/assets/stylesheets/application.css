@@ -490,7 +490,7 @@ footer > ul > li > h6 {
 .book-show-content {
     display: block;
     position: static;
-    max-height: 45vh;
+    max-height: 55vh;
     width: 70%;
 }
 
@@ -664,7 +664,7 @@ footer > ul > li > h6 {
     font-family: "Merriweather", "Georgia", serif;
     font-size: 14px;
     min-height: 10vh;
-    margin-bottom: 1vh;
+    /* margin-bottom: 1vh; */
     line-height: 1.5em;
     position: relative;
     cursor: pointer;
@@ -679,6 +679,7 @@ footer > ul > li > h6 {
   text-decoration: none;
   cursor: pointer;
   font-family: 'Times New Roman', Times, serif;
+  border: 1px solid red;
 }
 
 .shown {
@@ -703,7 +704,7 @@ footer > ul > li > h6 {
     text-indent: 0px;
     align-items: flex-start;
     text-align: center;
-    margin-top: 3%;
+    /* margin-top: 3%; */
     text-decoration: none;
     font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
     padding: 1% 2%;
