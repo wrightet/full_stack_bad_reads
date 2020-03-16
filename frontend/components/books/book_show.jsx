@@ -142,7 +142,7 @@ class BookShow extends React.Component {
                                 <CreateReviewContainer bookId={book.id} userId={user} />
                                 
                             </div> */}
-                        <h1>Reviews</h1>
+                        <h1 className='reviews-h1'>Community Reviews</h1>
                             { book.reviews ? book.reviews.reverse().slice(start,end).map(review => (
                                 <ReviewIndexItem bookId={this.props.book.id} 
                                 review={review} key={review.id} 

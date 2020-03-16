@@ -679,7 +679,6 @@ footer > ul > li > h6 {
   text-decoration: none;
   cursor: pointer;
   font-family: 'Times New Roman', Times, serif;
-  border: 1px solid red;
 }
 
 .shown {
@@ -704,7 +703,7 @@ footer > ul > li > h6 {
     text-indent: 0px;
     align-items: flex-start;
     text-align: center;
-    /* margin-top: 3%; */
+    margin-top: 3%;
     text-decoration: none;
     font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
     padding: 1% 2%;
@@ -732,4 +731,11 @@ footer > ul > li > h6 {
 
 .rating {
     font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+}
+
+.reviews-h1 {
+    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+    padding-top: 1vh;
+    font-size: 12px;
+    color: #382110;
 }
