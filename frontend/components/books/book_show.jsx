@@ -11,15 +11,13 @@ class BookShow extends React.Component {
             props: this.props,
             start: 0,
             end: 6,
-            name: 'more',
-            toggle: 'hidden'
+            name: 'more'
         };
         this.keyFinder = this.keyFinder.bind(this);
         this.handleBack = this.handleBack.bind(this);
         this.handleForward = this.handleForward.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
         this.showMore = this.showMore.bind(this);
-        this.setToggle = this.setToggle.bind(this);
         this.avgRating = this.avgRating.bind(this);
        
     }
@@ -91,18 +89,12 @@ class BookShow extends React.Component {
       return( this.state.name === 'more' ? this.setState({name: 'less'}) :  this.setState({name: 'more'}))
     }
 
-    setToggle(){
-       
-        return(this.state.toggle === 'hidden' ? this.setState({ toggle: 'shown' }) : this.setState({ toggle: 'hidden' }))
-    }
-
     render(){
        
         let book = this.props.book;
         let user = this.props.currentUser;
         let start = this.state.start;
         let end = this.state.end;
-        // let words = book.description.split(' ')
        
         if (!book) {return null;}
        
@@ -137,11 +129,7 @@ class BookShow extends React.Component {
                            
                     <div className='review-content'>
                         <Link to={`/books/${book.id}/review/new`} className='write-review'>Write a review</Link>
-                             {/* <button onClick={() => this.setToggle()} className='write-review'>Write a review</button>
-                            <div className={this.state.toggle}>
-                                <CreateReviewContainer bookId={book.id} userId={user} />
-                                
-                            </div> */}
+              
                         <h1 className='reviews-h1'>Community Reviews</h1>
                             { book.reviews ? book.reviews.reverse().slice(start,end).map(review => (
                                 <ReviewIndexItem bookId={this.props.book.id} 

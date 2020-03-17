@@ -747,15 +747,6 @@ footer > ul > li > h6 {
   font-family: 'Times New Roman', Times, serif;
 }
 
-.shown {
-    display: flex;
-    margin-top: 0vh
-}
-
-.hidden {
-    display: none;
-}
-
 .write-review {
     width: 8vw;
     height: 2vh;
