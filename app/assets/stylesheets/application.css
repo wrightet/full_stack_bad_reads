@@ -586,7 +586,7 @@ footer > ul > li > h6 {
     /* padding: 1vw; */
     /* position: relative;
     background-color: #ffffff; */
-    
+    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
 }
 
 .review-form {
@@ -616,13 +616,15 @@ footer > ul > li > h6 {
     color: #666666;
     cursor: text;
     margin: 0em;
-    padding: 1%;
+    padding: 1% ;
+    margin-top: 2vh;
 
 
 }
 
 .rating-label {
     margin-right: 1%;
+    margin-top: 1vh;
     vertical-align: middle;
     cursor: default;
     font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
@@ -633,14 +635,24 @@ footer > ul > li > h6 {
 }
 
 .rating-selector {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
     display: flex;
     padding-top: 3%;
+    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
 }
+
 
 .review-submit-cancel {
     display: flex;
     margin-top: 1vh;
 
+}
+
+.write-review-label {
+    padding-top: 1vh;
+    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+    font-size: 14px;
 }
 
 .review-button-div{
