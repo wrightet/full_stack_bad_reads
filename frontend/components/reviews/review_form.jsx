@@ -7,7 +7,7 @@ class ReviewForm extends React.Component {
         this.book_id = this.props.bookId;
         this.state = this.props.review;
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.title = this.props.books[this.props.match.params.id];
+     
         console.log(props)
     }
 
@@ -55,14 +55,21 @@ class ReviewForm extends React.Component {
     
     render(){
      if (this.props.formType === 'Edit Review'){
-         this.state.book_id = this.book_id
+         this.state.book_id = this.book_id;
+         this.state.title = this.state.book.title;
+         console.log('title', this.state.book[this.state.bookId] )
+         console.log('book',this.state.book.title)
      }
-        else { this.state.book_id = this.props.match.params.id} ;
-     console.log(this.title)
+        else { 
+            this.state.book_id = this.props.match.params.id;
+            this.state.title = this.props.books[this.props.match.params.id].title;
+        
+        } ;
+     
      
         return(
             <div className='reveiw-form-div'>
-                <h1>{this.title.title}</h1>
+                <h1>{this.state.title}</h1>
                 <form onSubmit={this.handleSubmit} className='review-form'>
                     <label className='rating-label'> Rating
                         <select value={this.state.rating}  
