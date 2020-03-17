@@ -24,7 +24,7 @@ export const fetchReview = (bookId,reviewId) => (
 )
     
 export const updateReview = (review) => {
-    console.log('ajax', review)
+    
     return ($.ajax({
         method:'PATCH',
         url: `/api/reviews/${review.id}`,

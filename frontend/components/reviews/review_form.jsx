@@ -5,6 +5,7 @@ class ReviewForm extends React.Component {
         super(props);
         this.user_id = this.props.userId;
         this.book_id = this.props.bookId;
+        this.title = this.props.title;
         this.state = this.props.review;
         this.handleSubmit = this.handleSubmit.bind(this);
        
@@ -58,9 +59,13 @@ class ReviewForm extends React.Component {
          this.state.book_id = this.book_id
      }
         else { this.state.book_id = this.props.match.params.id} ;
+    
+        // let title = this.props.requestBook(this.state.book_id);
+        // console.log('title',title)
         return(
             <div className='reveiw-form-div'>
                 {/* <h1>{this.props.formType}</h1> */}
+                {/* <h1>{title}</h1> */}
                 <form onSubmit={this.handleSubmit} className='review-form'>
                     <label className='rating-label'> Rating
                         <select value={this.state.rating}  
