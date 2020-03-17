@@ -748,9 +748,8 @@ footer > ul > li > h6 {
 }
 
 .write-review {
-    width: 8vw;
+    width: 25%;
     height: 2vh;
-    border-radius: 3%;
     background-color: #F4F1EA;
     color: #333333;
     border-radius: 3%;
@@ -764,7 +763,8 @@ footer > ul > li > h6 {
     text-decoration: none;
     font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
     padding: 1% 2%;
-    border: 1px solid #D6d0c4
+    border: 1px solid #D6d0c4;
+    overflow: hidden;
 }
 
 
