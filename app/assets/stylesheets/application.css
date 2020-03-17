@@ -647,6 +647,9 @@ footer > ul > li > h6 {
     display: flex;
     padding-top: 3%;
     font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+    width: 3vw;
+    align-items: center;
+    cursor: pointer;
 }
 
 
