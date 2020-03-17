@@ -10,7 +10,7 @@ class BookShow extends React.Component {
         this.state = {
             props: this.props,
             start: 0,
-            end: 6,
+            end: 5,
             name: 'more'
         };
         this.keyFinder = this.keyFinder.bind(this);
@@ -58,11 +58,11 @@ class BookShow extends React.Component {
     }
 
     handleForward(start, end) {
-        let newStart = start - 6;
-        let newEnd = end - 6;
+        let newStart = start - 5;
+        let newEnd = end - 5;
         if (newStart < 0) {
             newStart = 0;
-            newEnd = 6;
+            newEnd = 5;
         }
 
         this.setState({ start: newStart, end: newEnd })
@@ -75,10 +75,10 @@ class BookShow extends React.Component {
     }
 
     handleBack(start, end, length) {
-        let newStart = start + 6;
-        let newEnd = end + 6
+        let newStart = start + 5;
+        let newEnd = end + 5
         if (newStart >= length) {
-            newStart = length - 6;
+            newStart = length - 5;
             newEnd = length;
         }
 
