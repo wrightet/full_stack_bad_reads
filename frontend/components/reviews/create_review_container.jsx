@@ -12,6 +12,7 @@ const mSTP = state => {
         book_id: state.entities.books.id
 
     },
+    books: state.entities.books,
     formType: 'Add Review'
 }}
 
