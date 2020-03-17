@@ -603,6 +603,13 @@ footer > ul > li > h6 {
   
 }
 
+.review-form-title{
+    color: #00635D;
+    font-size: 20px;
+    font-family: 'Merriweather', Georgia, "Times New Roman", serif;
+    padding-left: 15vw;
+}
+
 
 .review-text-area {
     width: 50vw;
