@@ -4,13 +4,13 @@ import { requestBook } from '../../actions/book_actions';
 import ReviewForm from './review_form';
 
 const mSTP = state => {
-    
     return{
     review: {
         rating: 3,
         body: '',
         user_id: state.session.id,
         book_id: state.entities.books.id
+
     },
     formType: 'Add Review'
 }}
