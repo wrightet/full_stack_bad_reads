@@ -669,6 +669,7 @@ footer > ul > li > h6 {
     display: flex;
     padding: 1vh 0vw 1vh 0vw;
     float: left;
+    justify-content: flex-end;
 }
 .review-buttons{
   background: none!important;
