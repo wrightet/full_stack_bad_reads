@@ -19,7 +19,6 @@ class BookShow extends React.Component {
         this.handleDelete = this.handleDelete.bind(this);
         this.showMore = this.showMore.bind(this);
         this.avgRating = this.avgRating.bind(this);
-       
     }
 
     componentDidMount() {
@@ -57,7 +56,7 @@ class BookShow extends React.Component {
 
     }
 
-    handleForward(start, end) {
+    handleBack(start, end, length) {
         let newStart = start - 5;
         let newEnd = end - 5;
         if (newStart < 0) {
@@ -66,7 +65,7 @@ class BookShow extends React.Component {
         }
 
         this.setState({ start: newStart, end: newEnd })
-
+        console.log(this.state)
     }
 
     handleDelete(bookId, review) {
@@ -74,18 +73,21 @@ class BookShow extends React.Component {
 
     }
 
-    handleBack(start, end, length) {
+    handleForward(start, end, length) {
         let newStart = start + 5;
         let newEnd = end + 5
         if (newStart >= length) {
-            newStart = length - 5;
+            newStart = 0;
             newEnd = length;
+            this.setState({ start: newStart, end: newEnd })
         }
 
         this.setState({ start: newStart, end: newEnd })
+        console.log(this.state)
     }
 
     showMore(){
+        console.log('state', this.state)
       return( this.state.name === 'more' ? this.setState({name: 'less'}) :  this.setState({name: 'more'}))
     }
 
@@ -100,6 +102,7 @@ class BookShow extends React.Component {
        
         else  {
             let words = book.description.split(' ')
+            console.log(this.start, this.end)
         return (
         <div className="book-content">
            
@@ -143,8 +146,8 @@ class BookShow extends React.Component {
                             )) : "" 
                             } 
                             <div className='review-button-div'>
-                                <button onClick={() => this.handleForward(start, end)} className='review-buttons'>Previous</button>
-                                <button onClick={() => this.handleBack(start, end, book.reviews.length)} className='review-buttons' >...Next</button>
+                                <button onClick={() => this.handleBack(start, end, book.reviews.length)} className='review-buttons'>Previous</button>
+                                <button onClick={() => this.handleForward(start, end, book.reviews.length)} className='review-buttons' >...Next</button>
                             </div>
                             
                     </div>
