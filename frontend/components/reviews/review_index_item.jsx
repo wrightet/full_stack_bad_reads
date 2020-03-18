@@ -34,7 +34,7 @@ class ReviewIndexItem extends React.Component{
                     <div className='review-date'>{formatDateTime(review.created_at).split('(')[0]}</div>
                 </div>
                 <ul className='review-body'>
-                    <li className='review-li'><span>{review.body}</span></li>
+                    <li className='review-li'><span className='review-body-span'>{review.body}</span></li>
                     <li className='review-li'>
                         {this.props.currentUser === review.user_id ? 
                         <div className='review-edit-delete'>

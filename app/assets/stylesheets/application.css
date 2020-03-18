@@ -553,6 +553,7 @@ footer > ul > li > h6 {
 }
 .review-li {
   list-style-type: none;
+ 
 }
 
 .review-ul {
@@ -707,6 +708,13 @@ footer > ul > li > h6 {
     font-size: .8em;
     font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
 
+}
+
+.review-body-span {
+    overflow: auto;
+   line-height: 21px;
+   font-family: 'Merriweather', 'Georgia', 'Serif';
+   word-wrap: break-word;
 }
 .cancel {
     width: 7vw;
