@@ -39,7 +39,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
 }
 ol, ul {
 	list-style: none;
@@ -491,7 +491,6 @@ footer > ul > li > h6 {
     display: block;
     position: static;
     max-height: 55vh;
-    min-width: 70%;
     border-bottom: 1px solid #D8D8D8;
     margin-bottom: 1vh;
     overflow: auto;
@@ -639,8 +638,6 @@ footer > ul > li > h6 {
     font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
     font-size: 14px;
     padding-bottom: 3%;
-    /* width: 720px; */
-
 }
 
 .rating-selector {
@@ -671,7 +668,7 @@ footer > ul > li > h6 {
     display: flex;
     padding: 1vh 0vw 1vh 0vw;
     float: left;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 .review-buttons{
   background: none!important;
@@ -733,6 +730,9 @@ footer > ul > li > h6 {
     align-items: center;
 }
 
+/* .book-review-combine{
+    max-width: 100%;
+} */
 .more{
     display: none;
     cursor: pointer;
@@ -783,7 +783,6 @@ footer > ul > li > h6 {
 
 .book-title {
     margin-bottom: 0;
-    width: 100%;
     font-weight: bold;
     font-family: "Merriweather", "Georgia", serif;
     font-size: 2em;
