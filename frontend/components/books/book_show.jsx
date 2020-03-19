@@ -59,7 +59,7 @@ class BookShow extends React.Component {
     handleBack(start, end, length) {
         let newStart = start - 5;
         let newEnd = end - 5;
-        if (newStart < 0) {
+        if (newStart < 0 || newEnd <= 0) {
             newStart = 0;
             newEnd = 5;
         }
@@ -76,14 +76,17 @@ class BookShow extends React.Component {
     handleForward(start, end, length) {
         let newStart = start + 5;
         let newEnd = end + 5
-        if (newStart >= length) {
-            newStart = 0;
+        if (newStart >= length || newEnd >= length) {
+            newStart = length - 5;
             newEnd = length;
             this.setState({ start: newStart, end: newEnd })
         }
 
         this.setState({ start: newStart, end: newEnd })
         console.log(this.state)
+        console.log(start)
+        console.log('newStart', newStart)
+        console.log('length', length)
     }
 
     showMore(){
