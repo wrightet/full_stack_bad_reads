@@ -83,14 +83,9 @@ class BookShow extends React.Component {
         }
 
         this.setState({ start: newStart, end: newEnd })
-        console.log(this.state)
-        console.log(start)
-        console.log('newStart', newStart)
-        console.log('length', length)
     }
 
     showMore(){
-        console.log('state', this.state)
       return( this.state.name === 'more' ? this.setState({name: 'less'}) :  this.setState({name: 'more'}))
     }
 
