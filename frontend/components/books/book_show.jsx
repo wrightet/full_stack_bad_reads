@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import ReviewIndexItem from '../reviews/review_index_item';
+import {IndivRating} from '../stars/stars';
 
 class BookShow extends React.Component {
     constructor(props){
@@ -23,6 +24,7 @@ class BookShow extends React.Component {
         this.props.requestBook(this.props.match.params.id);
         this.props.requestAllReviews(this.props.match.params.id);
     }
+
 
     avgRating(){
         if(this.props.book.reviews){ let count = 0;
@@ -108,7 +110,15 @@ class BookShow extends React.Component {
                         <h1 className='book-title'>{book.title}</h1>
                         <h1 className ='author-name'>by {book.author}</h1>
                         <h1 className='genre'>Genre: {book.genre}</h1>
-                        <h1 className='rating'>Rating {this.avgRating()}/5</h1>
+                        <h1 className='rating-num'>Rating {this.avgRating()}/5</h1>
+                        <div>
+                            <IndivRating 
+                                min={1}
+                                max={5}
+                                value={Math.round(this.avgRating())}
+                            />
+                        </div>
+                
                         <div className='book-description'>
                             <span className='book-des-start'>{words.slice(0, words.length/3).join('.') + '.'}</span>
                             
