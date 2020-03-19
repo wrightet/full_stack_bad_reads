@@ -122,11 +122,14 @@ class BookShow extends React.Component {
                             <option value="want_to_read">Want To Read</option>
                         </select>   */}
                     </div> 
-                           
+                           {/* the review content div has a flex direction reverse  */}
                     <div className='review-content'>
-                        <Link to={`/books/${book.id}/review/new`} className='write-review'>Write a review</Link>
+                        <div className='review-button-div'>
+                            <button onClick={() => this.handleBack(start, end, book.reviews.length)} className='review-buttons'>Previous</button>
+                            <button onClick={() => this.handleForward(start, end, book.reviews.length)} className='review-buttons' >...Next</button>
+                        </div>
               
-                        <h1 className='reviews-h1'>Community Reviews</h1>
+                        
                             { book.reviews ? book.reviews.slice(start,end).map(review => (
                                 <ReviewIndexItem bookId={this.props.book.id} 
                                 review={review} key={review.id} 
@@ -138,10 +141,8 @@ class BookShow extends React.Component {
                                 
                             )) : "" 
                             } 
-                            <div className='review-button-div'>
-                                <button onClick={() => this.handleBack(start, end, book.reviews.length)} className='review-buttons'>Previous</button>
-                                <button onClick={() => this.handleForward(start, end, book.reviews.length)} className='review-buttons' >...Next</button>
-                            </div>
+                        <h1 className='reviews-h1'>Community Reviews</h1>
+                        <Link to={`/books/${book.id}/review/new`} className='write-review'>Write a review</Link>
                             
                     </div>
                 </div>

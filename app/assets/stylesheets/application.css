@@ -509,7 +509,7 @@ footer > ul > li > h6 {
 
 .review-content{
     display: inline-flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: flex-end;
     min-height: 45vh;
     float: left;
