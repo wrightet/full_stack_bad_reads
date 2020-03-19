@@ -1,6 +1,4 @@
 import React from 'react';
-import ReviewsContainer from '../reviews/reviews_container';
-import CreateReviewContainer from '../reviews/create_review_container'
 import { Link, withRouter } from 'react-router-dom';
 import ReviewIndexItem from '../reviews/review_index_item';
 
