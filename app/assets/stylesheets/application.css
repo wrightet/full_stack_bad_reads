@@ -804,4 +804,10 @@ footer > ul > li > h6 {
     color: #382110;
 }
 
+.stars {
+    content: "★";
+}
 
+.rating-input {
+    content: "★";
+}
