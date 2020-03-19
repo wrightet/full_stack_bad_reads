@@ -523,7 +523,7 @@ footer > ul > li > h6 {
     display: block;
     padding-top: 1vh;
     float: left;
-    max-width: 35%;
+    /* max-width: 35%; */
 }
 
 .review-user {
