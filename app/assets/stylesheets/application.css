@@ -442,6 +442,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    margin-top: 5vh;
 }
 
 footer > ul > li > a > img{
