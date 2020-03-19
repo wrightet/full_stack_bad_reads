@@ -61,9 +61,7 @@ class BookShow extends React.Component {
             newStart = 0;
             newEnd = 5;
         }
-
         this.setState({ start: newStart, end: newEnd })
-        console.log(this.state)
     }
 
     handleDelete(bookId, review) {
@@ -98,7 +96,6 @@ class BookShow extends React.Component {
        
         else  {
             let words = book.description.split(' ')
-            console.log(this.start, this.end)
         return (
         <div className="book-content">
            

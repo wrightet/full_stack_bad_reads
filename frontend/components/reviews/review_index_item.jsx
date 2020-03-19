@@ -1,7 +1,5 @@
 import React from 'react';
-import EditReviewContainer from './edit_review_container';
 import {Link} from 'react-router-dom';
-import { requestAllReviews } from '../../actions/review_actions';
 import { formatDateTime } from '../../util/date_util';
 class ReviewIndexItem extends React.Component{
     constructor(props) {
