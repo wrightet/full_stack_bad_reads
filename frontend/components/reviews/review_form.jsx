@@ -71,7 +71,8 @@ class ReviewForm extends React.Component {
             <div className='review-form-div'>
                 <h1 className='review-form-title'>{this.state.title}</h1>
                 <form onSubmit={this.handleSubmit} className='review-form'>
-                    <label className='rating-label'> My rating:
+                    <div className='rating-div'>
+                        <label className='rating-label'> My rating:
                         <select value={this.state.rating}  
                             onChange={this.update('rating')}
                             className='rating-selector'
@@ -83,6 +84,8 @@ class ReviewForm extends React.Component {
                             <option value="5">5</option>
                         </select>
                     </label>
+                    </div>
+             
                     <label className='write-review-label'> What do you think?
                         <textarea value={this.state.body} placeholder='Write a review' 
                         onChange={this.update('body')}

@@ -648,7 +648,6 @@ footer > ul > li > h6 {
     padding-top: 1vh;
     font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
     font-size: 14px;
-    border-top: 1px solid #EEEEEE;
     min-width: 30vw;
 }
 
@@ -768,6 +767,12 @@ footer > ul > li > h6 {
     padding: .2% 0 0 0;
     border: 1px solid #D6d0c4;
     overflow: hidden;
+}
+
+.rating-div {
+    border-bottom: 1px solid #EEEEEE;
+    width: 50vw;
+    margin-bottom: 1vh;
 }
 
 
