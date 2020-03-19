@@ -373,7 +373,6 @@ tr{
  font-size: 14px;
  line-height: 1em;
  min-height: 20vh;
- /* margin-bottom: 1vh; */
 }
 
 .book-des-start{
@@ -513,21 +512,14 @@ footer > ul > li > h6 {
     justify-content: flex-end;
     min-height: 45vh;
     float: left;
-    /* padding-top: 15vh; */
     position: relative;
     margin-top: 3vh;
-    /* max-width: 35%; */
-    /* min-width: 90vw; */
-    /* max-width: 95vw; */
-
-  
 }
 
 .indv-review{
     display: block;
     padding-top: 1vh;
     float: left;
-    /* max-width: 35%; */
     word-wrap: break-word;
 }
 
@@ -585,13 +577,7 @@ footer > ul > li > h6 {
 }
 
 .review-form-div {
-    /* height: 15vh;
-    width: 1vw;
-    display: block; */
-    /* margin-top: 50vh; */
-    /* padding: 1vw; */
-    /* position: relative;
-    background-color: #ffffff; */
+    padding-top: 1vh;
     font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
 }
 
@@ -601,12 +587,8 @@ footer > ul > li > h6 {
     margin-top: 2vh;
     margin-bottom: 2vh;
     margin-left: 15vw;
-    /* border: 1px solid green; */
-    /* position: relative; */
-    /* padding: 10vh; */
     background-color: #ffffff;
     min-height: 85vh;
-  
 }
 
 .review-form-title{
@@ -631,8 +613,6 @@ footer > ul > li > h6 {
     margin: 0em;
     padding: 1% ;
     margin-top: 2vh;
-
-
 }
 
 .rating-label {
@@ -647,7 +627,7 @@ footer > ul > li > h6 {
 
 .rating-selector {
     margin-top: 1vh;
-    margin-bottom: 1vh;
+    margin-bottom: 3vh;
     display: flex;
     padding-top: 3%;
     font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
@@ -667,6 +647,8 @@ footer > ul > li > h6 {
     padding-top: 1vh;
     font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
     font-size: 14px;
+    border-top: 1px solid #EEEEEE;
+    min-width: 30vw;
 }
 
 .review-button-div{

@@ -68,10 +68,10 @@ class ReviewForm extends React.Component {
      
      
         return(
-            <div className='reveiw-form-div'>
+            <div className='review-form-div'>
                 <h1 className='review-form-title'>{this.state.title}</h1>
                 <form onSubmit={this.handleSubmit} className='review-form'>
-                    <label className='rating-label'> Rating
+                    <label className='rating-label'> My rating:
                         <select value={this.state.rating}  
                             onChange={this.update('rating')}
                             className='rating-selector'
