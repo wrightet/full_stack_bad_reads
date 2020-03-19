@@ -770,9 +770,9 @@ footer > ul > li > h6 {
 }
 
 .rating-div {
+    border-top: 1px solid #EEEEEE;
     border-bottom: 1px solid #EEEEEE;
     width: 50vw;
-    margin-bottom: 1vh;
 }
 
 
