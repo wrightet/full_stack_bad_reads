@@ -511,7 +511,7 @@ footer > ul > li > h6 {
     display: inline-flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 45vh;
+    min-height: 45vh;
     float: left;
     /* padding-top: 15vh; */
     position: relative;
@@ -526,6 +526,7 @@ footer > ul > li > h6 {
     padding-top: 1vh;
     float: left;
     /* max-width: 35%; */
+    word-wrap: break-word;
 }
 
 .review-user {
