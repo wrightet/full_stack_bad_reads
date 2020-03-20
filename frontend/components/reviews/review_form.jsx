@@ -8,7 +8,6 @@ class ReviewForm extends React.Component {
         this.state = this.props.review;
         this.handleSubmit = this.handleSubmit.bind(this);
         this.keyFinder = this.keyFinder.bind(this);
-        console.log(props)
     }
 
     componentDidMount(){
@@ -74,13 +73,10 @@ class ReviewForm extends React.Component {
      if (this.props.formType === 'Edit Review'){
          this.state.book_id = this.book_id;
          this.state.title = this.state.book.title;
-         console.log('title', this.state.book[this.state.bookId] )
-         console.log('book',this.state.book.title)
      }
         else { 
             this.state.book_id = this.props.match.params.id;
             this.state.title = this.props.books[this.props.match.params.id].title;
-        
         } ;
      
      
@@ -96,10 +92,13 @@ class ReviewForm extends React.Component {
                 <div className="review-form-image">
                     <img src={this.keyFinder(this.props.books[this.props.match.params.id].url)} className='review-form-photo' />
                         <h1 className='review-form-title'>{this.state.title}</h1>
+                        <h1 className='review-form-author'> by {this.props.books[this.props.match.params.id].author}</h1>
                 </div> :
                 <div className="review-form-image">
                     <img src={this.keyFinder(this.props.review.book.url)} className='review-form-photo' />
                         <h1 className='review-form-title'>{this.state.title}</h1>
+                        <h1 className='review-form-author'> by {this.props.review.book.author}</h1>
+                        
                 </div> 
                 }
                
