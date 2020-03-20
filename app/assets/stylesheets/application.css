@@ -86,7 +86,7 @@ table {
     position: relative;
     box-sizing: border-box;
     justify-content: space-between;
-    height: 10vh;
+    height: 8vh;
     
 }
 
@@ -175,7 +175,7 @@ table {
 }
 .logo{
     width: 8vw;
-    height: 9.6vh;
+    height: 7.8vh;
     padding-left: 30%;
 }
 
