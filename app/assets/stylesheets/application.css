@@ -598,7 +598,7 @@ footer > ul > li > h6 {
     font-size: 120%;
     font-weight: bold;
     font-family: 'Merriweather', Georgia, "Times New Roman", serif;
-    padding-left: 15vw;
+
 }
 
 
@@ -834,17 +834,25 @@ footer > ul > li > h6 {
 }
 
 .review-form-image {
-    display: block;
-    float: left;
-    width: 960px;
-    margin-top: 15px;
-    margin-left: 5px;
-    font-size: 12px;
-    min-height: 400px;
-    background: #FFFFFF;
+    padding-left: 15vw;
+    padding-bottom: 1vh;
+    font-size: 20px; 
+    /* font-weight: bold; */
+    line-height: 24px;
+    display: flex;
 }
 
 .review-form-photo {
     height: 10vh;
     width: 5vh;
+    float: left;
+}
+
+.review-form-author {
+    font-family: 'Merriweather', 'Georgia', serif;
+    font-size: 80%;
+    line-height: 1.3em;
+    color: #333333;
+    display: flex;
+  
 }

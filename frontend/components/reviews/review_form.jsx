@@ -90,15 +90,17 @@ class ReviewForm extends React.Component {
                 </div>
                 { this.props.formType === 'Add Review' ? 
                 <div className="review-form-image">
-                    <img src={this.keyFinder(this.props.books[this.props.match.params.id].url)} className='review-form-photo' />
-                        <h1 className='review-form-title'>{this.state.title}</h1>
-                        <h1 className='review-form-author'> by {this.props.books[this.props.match.params.id].author}</h1>
-                </div> :
+                    <img src={this.keyFinder(this.props.books[this.props.match.params.id].url)} className='review-form-photo' /> 
+                    <h1 className='review-form-title'>{this.state.title}</h1>
+                    <h1 className='review-form-author'> by {this.props.books[this.props.match.params.id].author}</h1>
+                  
+                </div> 
+                :
                 <div className="review-form-image">
-                    <img src={this.keyFinder(this.props.review.book.url)} className='review-form-photo' />
-                        <h1 className='review-form-title'>{this.state.title}</h1>
-                        <h1 className='review-form-author'> by {this.props.review.book.author}</h1>
-                        
+                    <img src={this.keyFinder(this.props.review.book.url)} className='review-form-photo' />  
+                    <h1 className='review-form-title'>{this.state.title}</h1>
+                    <h1 className='review-form-author'> by {this.props.review.book.author}</h1>
+                      
                 </div> 
                 }
                
