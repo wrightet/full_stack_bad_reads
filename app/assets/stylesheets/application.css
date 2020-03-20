@@ -861,14 +861,15 @@ footer > ul > li > h6 {
 .review-form-author {
     font-family: 'Merriweather', 'Georgia', serif;
     font-size: 60%;
-    /* line-height: 1.3em; */
     color: #333333;
     display: flex;
-    padding-left: 1vw;
+    font-weight: normal;
+    
   
 }
 
 .by-span {
     font-family: 'Lato', "Helvetica Neue", Helvetica, sans-serif;
     font-size: 14px;
+    margin-right: .5vw;
 }
