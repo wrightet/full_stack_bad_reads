@@ -816,12 +816,10 @@ footer > ul > li > h6 {
     content: "★";
 }
 
-/* .review-form-path {
-    color: #00635D;
-    font-size: 20px;
-    font-family: 'Merriweather', Georgia, "Times New Roman", serif;
-    padding-left: 15vw;
-} */
+.review-form-path {
+   float: left;
+   padding-right: 1vw;
+}
 
 .review-path-div {
     color: #00635D;
@@ -862,13 +860,15 @@ footer > ul > li > h6 {
 
 .review-form-author {
     font-family: 'Merriweather', 'Georgia', serif;
-    font-size: 80%;
+    font-size: 60%;
     /* line-height: 1.3em; */
     color: #333333;
     display: flex;
+    padding-left: 1vw;
   
 }
 
 .by-span {
     font-family: 'Lato', "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 14px;
 }

@@ -85,8 +85,14 @@ class ReviewForm extends React.Component {
             <div className='review-form-div'>
                 <div className='review-path-div'>
                     {this.props.formType === 'Add Review' ?
-                        <div><h1 className='review-form-path'>{this.state.title} </h1><h1 className='review-formpath-words'> > Review </h1></div> :
-                        <div><h1 className='review-form-path'>{this.state.title} </h1><h1 className='review-formpath-words'> > Review > Edit </h1></div> }
+                        <div>
+                            <h1 className='review-form-path'>{this.state.title}</h1>
+                            <h1 className='review-formpath-words'> > Review </h1>
+                        </div> :
+                        <div>
+                            <h1 className='review-form-path'>{this.state.title} </h1>
+                            <h1 className='review-formpath-words'> > Review > Edit </h1>
+                        </div> }
                 </div>
                 { this.props.formType === 'Add Review' ? 
                 <div className="review-form-image">
