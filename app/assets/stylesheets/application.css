@@ -832,3 +832,19 @@ footer > ul > li > h6 {
     font-weight: bold;
     line-height: 24px;
 }
+
+.review-form-image {
+    display: block;
+    float: left;
+    width: 960px;
+    margin-top: 15px;
+    margin-left: 5px;
+    font-size: 12px;
+    min-height: 400px;
+    background: #FFFFFF;
+}
+
+.review-form-photo {
+    height: 10vh;
+    width: 5vh;
+}

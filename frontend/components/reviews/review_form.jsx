@@ -7,7 +7,7 @@ class ReviewForm extends React.Component {
         this.book_id = this.props.bookId;
         this.state = this.props.review;
         this.handleSubmit = this.handleSubmit.bind(this);
-     
+        this.keyFinder = this.keyFinder.bind(this);
         console.log(props)
     }
 
@@ -17,6 +17,23 @@ class ReviewForm extends React.Component {
 
     update(field){
         return e => this.setState({[field]: e.target.value})
+    }
+
+    keyFinder(url) {
+        let val = url.split('.')[0];
+        let keys = Object.keys(window.images)
+        let newKeys = keys.map(key => {
+            return key.split('URL')[0];
+        })
+        let values = Object.values(window.images)
+
+        for (let i = 0; i < keys.length; i++) {
+            if (val === newKeys[i]) {
+                return window.images[keys[i]]
+            }
+        }
+        return window.images.openbookURL;
+
     }
 
     handleSubmit(e){
@@ -68,14 +85,25 @@ class ReviewForm extends React.Component {
      
      
         return(
+            
             <div className='review-form-div'>
                 <div className='review-path-div'>
                     {this.props.formType === 'Add Review' ?
                         <h1 className='review-form-path'>{this.state.title} > Review</h1> :
                         <h1 className='review-form-path'>{this.state.title} > Review > Edit</h1>}
                 </div>
-                
-                <h1 className='review-form-title'>{this.state.title}</h1>
+                { this.props.formType === 'Add Review' ? 
+                <div className="review-form-image">
+                    <img src={this.keyFinder(this.props.books[this.props.match.params.id].url)} className='review-form-photo' />
+                        <h1 className='review-form-title'>{this.state.title}</h1>
+                </div> :
+                <div className="review-form-image">
+                    <img src={this.keyFinder(this.props.review.book.url)} className='review-form-photo' />
+                        <h1 className='review-form-title'>{this.state.title}</h1>
+                </div> 
+                }
+               
+                {/* <h1 className='review-form-title'>{this.state.title}</h1> */}
                 <form onSubmit={this.handleSubmit} className='review-form'>
                     <div className='rating-div'>
                         <label className='rating-label'> My rating:
