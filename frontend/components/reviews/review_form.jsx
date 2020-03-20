@@ -69,6 +69,12 @@ class ReviewForm extends React.Component {
      
         return(
             <div className='review-form-div'>
+                <div className='review-path-div'>
+                    {this.props.formType === 'Add Review' ?
+                        <h1 className='review-form-path'>{this.state.title} > Review</h1> :
+                        <h1 className='review-form-path'>{this.state.title} > Review > Edit</h1>}
+                </div>
+                
                 <h1 className='review-form-title'>{this.state.title}</h1>
                 <form onSubmit={this.handleSubmit} className='review-form'>
                     <div className='rating-div'>
