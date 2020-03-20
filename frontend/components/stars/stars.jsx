@@ -33,7 +33,6 @@ export const Rating = ({ min, max, onChange, value }) => {
     )
 }
 
-// ---------------------- Show Book All Ratings --------------
 
 const IndivRange = (min, max) => Array(max - min + 1).fill().map((_, i) => min + i)
 

@@ -368,7 +368,7 @@ tr{
 
 .book-description{
  display: block;
- width: 100%;
+ max-width: 100%;
  font-family: "Merriweather", "Georgia", serif;
  font-size: 14px;
  line-height: 1em;
@@ -499,6 +499,7 @@ footer > ul > li > h6 {
 
 .book-show-content > :nth-child(n){
     padding-top: 1%;
+    padding-left: 1%;
 }
 
 #read-selector{
@@ -806,8 +807,9 @@ footer > ul > li > h6 {
 
 .stars {
     content: "★";
+    
 }
 
-.rating-input {
+.rating-input .stars:after {
     content: "★";
 }
