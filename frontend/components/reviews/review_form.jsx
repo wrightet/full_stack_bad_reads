@@ -106,9 +106,9 @@ class ReviewForm extends React.Component {
                 :
                 <div className="review-form-image">
                     <img src={this.keyFinder(this.props.review.book.url)} className='review-form-photo' />  
-                    <h1 className='review-form-title'>{this.state.title}</h1>
+                    <h1 className='review-form-title'>{this.state.title}
                     <span className='review-form-author'> <span className='by-span'>by</span> {this.props.review.book.author}</span>
-                      
+                      </h1>
                 </div> 
                 }
                
