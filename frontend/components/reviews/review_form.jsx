@@ -85,21 +85,23 @@ class ReviewForm extends React.Component {
             <div className='review-form-div'>
                 <div className='review-path-div'>
                     {this.props.formType === 'Add Review' ?
-                        <h1 className='review-form-path'>{this.state.title} > Review</h1> :
-                        <h1 className='review-form-path'>{this.state.title} > Review > Edit</h1>}
+                        <div><h1 className='review-form-path'>{this.state.title} </h1><h1 className='review-formpath-words'> > Review </h1></div> :
+                        <div><h1 className='review-form-path'>{this.state.title} </h1><h1 className='review-formpath-words'> > Review > Edit </h1></div> }
                 </div>
                 { this.props.formType === 'Add Review' ? 
                 <div className="review-form-image">
                     <img src={this.keyFinder(this.props.books[this.props.match.params.id].url)} className='review-form-photo' /> 
-                    <h1 className='review-form-title'>{this.state.title}</h1>
-                    <h1 className='review-form-author'> by {this.props.books[this.props.match.params.id].author}</h1>
+                    <h1 className='review-form-title'>{this.state.title}
+                    <span className='review-form-author'> <span className='by-span'>by</span> {this.props.books[this.props.match.params.id].author}</span>
                   
+                    </h1>
+                        
                 </div> 
                 :
                 <div className="review-form-image">
                     <img src={this.keyFinder(this.props.review.book.url)} className='review-form-photo' />  
                     <h1 className='review-form-title'>{this.state.title}</h1>
-                    <h1 className='review-form-author'> by {this.props.review.book.author}</h1>
+                    <span className='review-form-author'> <span className='by-span'>by</span> {this.props.review.book.author}</span>
                       
                 </div> 
                 }

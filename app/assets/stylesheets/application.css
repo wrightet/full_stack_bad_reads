@@ -833,6 +833,15 @@ footer > ul > li > h6 {
     font-weight: bold;
     line-height: 24px;
 }
+.review-formpath-words {
+    color: #000000;
+    font-size: 20px;
+    font-family: 'Merriweather', Georgia, "Times New Roman", serif;
+
+    font-size: 20px; 
+    font-weight: bold;
+    line-height: 24px;
+}
 
 .review-form-image {
     padding-left: 15vw;
@@ -844,16 +853,22 @@ footer > ul > li > h6 {
 }
 
 .review-form-photo {
-    height: 10vh;
+    height: 8vh;
     width: 5vh;
     float: left;
+    padding-right: 1vw;
+    border-radius: 3%;
 }
 
 .review-form-author {
     font-family: 'Merriweather', 'Georgia', serif;
     font-size: 80%;
-    line-height: 1.3em;
+    /* line-height: 1.3em; */
     color: #333333;
     display: flex;
   
+}
+
+.by-span {
+    font-family: 'Lato', "Helvetica Neue", Helvetica, sans-serif;
 }
