@@ -37,11 +37,11 @@ const App = () => (
         <ProtectedRoute exact path="/books/review/:id/edit" component={EditReviewContainer}/>
         <AuthRoute exact path='/' component={Splash}/>
         <footer>
-            <div className='footer-logo-div'>
+            {/* <div className='footer-logo-div'>
                 <Link to="/" className="header-link">
                     <img src={window.images.logoURL} className="footer-logo" />
                 </Link>
-            </div>
+            </div> */}
        
             <ul>
                 <li><a target="_blank" href="https://www.linkedin.com/in/ethan-wright-91a75270/"><img src={window.images.linkedinURL} /></a></li>
