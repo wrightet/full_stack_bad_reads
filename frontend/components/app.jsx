@@ -22,7 +22,10 @@ const App = () => (
 
         <header className="nav-bar">
             <Link to="/" className="header-link">
-                <img src={window.images.logoURL} className="logo" />
+                <div className='logo'>
+                     <h1 classNAme='bad'>Bad</h1><h1 className='reads'>Reads</h1>
+                </div>
+               
             </Link>
             <GreetingContainer />
             <AuthRoute exact path="/" component={LogInFormContainer} className="login" />
@@ -34,6 +37,12 @@ const App = () => (
         <ProtectedRoute exact path="/books/review/:id/edit" component={EditReviewContainer}/>
         <AuthRoute exact path='/' component={Splash}/>
         <footer>
+            <div className='footer-logo-div'>
+                <Link to="/" className="header-link">
+                    <img src={window.images.logoURL} className="footer-logo" />
+                </Link>
+            </div>
+       
             <ul>
                 <li><a target="_blank" href="https://www.linkedin.com/in/ethan-wright-91a75270/"><img src={window.images.linkedinURL} /></a></li>
                 <li><a target="_blank" href="https://github.com/wrightet?tab=repositories"><img src={window.images.githubURL} /></a></li>

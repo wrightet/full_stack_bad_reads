@@ -86,12 +86,14 @@ table {
     position: relative;
     box-sizing: border-box;
     justify-content: space-between;
-    height: 8vh;
+    height: 6vh;
     
 }
 
 .header-link{
     align-self: flex-start;
+    text-decoration: none;
+    color: #000000;
 }
 
 .greeting-header {
@@ -177,6 +179,16 @@ table {
     width: 8vw;
     height: 7.8vh;
     padding-left: 30%;
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    padding-top: 5%;
+   
+}
+
+.bad {
+   font-size: 24px;
+    
 }
 
 .book-fire {
@@ -873,3 +885,4 @@ footer > ul > li > h6 {
     font-size: 14px;
     margin-right: .5vw;
 }
+
