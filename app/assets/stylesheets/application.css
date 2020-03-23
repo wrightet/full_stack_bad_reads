@@ -93,7 +93,8 @@ table {
 .header-link{
     align-self: flex-start;
     text-decoration: none;
-    color: #000000;
+    color: #96897E;
+  
 }
 
 .greeting-header {
@@ -178,17 +179,21 @@ table {
 .logo{
     width: 8vw;
     height: 7.8vh;
-    padding-left: 30%;
-    font-size: 24px;
+    padding-left: 100%;
+    font-size: 35px;
     display: flex;
     flex-direction: row;
     padding-top: 5%;
-   
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .bad {
-   font-size: 24px;
-    
+    color: #E3DFD7;
+}
+
+.reads {
+    color: #362212;
+    font-weight: bold;
 }
 
 .book-fire {
