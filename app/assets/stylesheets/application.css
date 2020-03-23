@@ -106,7 +106,7 @@ table {
 }
 
 .greeting-header > ul > li{
-    padding: 1vh 2vw 1vh 2vw;
+    padding: .5vh 2vw 0vh 2vw;
 }
 
 
@@ -142,7 +142,7 @@ table {
     font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
     display: flex;
     justify-content: center;
-    height: 2vh;
+    height: 1vh;
     margin: 2vh 1vw;
     align-items: center;
     width: 1vw;
