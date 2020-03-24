@@ -58,6 +58,7 @@ class SessionForm extends React.Component {
             <div className="session-form-div">
                 <form onSubmit={this.handleSubmit} >
                     <div>
+                        {this.props.errors.length > 0 ? this.renderErrors() : null}
                         <h2 className="signup-title">New here? Create a free account!</h2>
                         <ul className="session-form-ul">
                             <li> <input type="text"
@@ -99,7 +100,7 @@ class SessionForm extends React.Component {
 
                         
                 </form>
-                    {this.props.errors.length > 0 ? this.renderErrors(): null}
+                    
             </div> 
             
         </div>

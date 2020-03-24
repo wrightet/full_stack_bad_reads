@@ -407,6 +407,8 @@ tr{
     justify-content: flex-end ;
     width: 100%;
     background-color: #f4f2e9;
+    margin: .5vh;
+    margin-left: 1vw;
 }
 
 .books-search {

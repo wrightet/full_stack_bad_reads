@@ -28,13 +28,16 @@ class LoginForm extends React.Component {
     renderErrors() {
 
         return (
-            <ul className='errors'>
-                {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
-                        {error}
-                    </li>
-                ))}
-            </ul>
+            <div classNAme='errors'>
+                 <ul>
+                    {this.props.errors.map((error, i) => (
+                        <li key={`error-${i}`}>
+                            {error}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+           
         );
     }
 
