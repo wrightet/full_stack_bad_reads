@@ -72,7 +72,7 @@ class LoginForm extends React.Component {
                                 
                             </li>
                         </ul> 
-                        {this.renderErrors()}
+                        {/* {this.renderErrors()} */}
                     </div>
 
                 </form>
