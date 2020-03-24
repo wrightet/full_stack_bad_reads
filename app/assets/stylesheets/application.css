@@ -80,7 +80,7 @@ table {
 }
 
 .nav-bar{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #DDDBD8;
     background: #f4f2e9; 
     display:flex;
     position: relative;
@@ -198,7 +198,7 @@ table {
 .book-fire {
     display: flex;
     justify-content: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #DDDBD8;
     background: #f6e7c6;
 }
 
@@ -260,9 +260,9 @@ table {
     width: 20vw;
     background: #f4f2e9;
     position: sticky;
-    border-top: 1px solid #d8d8d8;
+    /* border-top: 1px solid #d8d8d8; */
     padding: 1vw;
-    height: 36.2vh;
+    height: 37.3vh;
     left: 60vw;
 }
 
