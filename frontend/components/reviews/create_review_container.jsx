@@ -10,7 +10,8 @@ const mSTP = state => {
         body: '',
         user_id: state.session.id,
         book_id: state.entities.books.id,
-        user: state.entities.users[state.session.id]
+        user: state.entities.users[state.session.id],
+        name: state.entities.users[state.session.id].firstName
 
     },
     books: state.entities.books,

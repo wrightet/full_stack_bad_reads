@@ -146,6 +146,7 @@ class BookShow extends React.Component {
                                 deleteReview={this.props.deleteReview}
                                 requestAllReviews={this.props.requestAllReviews}
                                 requestBook={this.props.requestBook}
+                                requestUser={this.props.requestUser}
                                 currentUser={this.props.currentUser}
                                 user={user}
                                 />
