@@ -18,6 +18,7 @@ class BookShow extends React.Component {
         this.handleDelete = this.handleDelete.bind(this);
         this.showMore = this.showMore.bind(this);
         this.avgRating = this.avgRating.bind(this);
+        console.log('book',props)
     }
 
     componentDidMount() {
@@ -90,7 +91,7 @@ class BookShow extends React.Component {
     render(){
        
         let book = this.props.book;
-        let user = this.props.currentUser;
+        let user = this.props.user;
         let start = this.state.start;
         let end = this.state.end;
        
@@ -146,7 +147,10 @@ class BookShow extends React.Component {
                                 deleteReview={this.props.deleteReview}
                                 requestAllReviews={this.props.requestAllReviews}
                                 requestBook={this.props.requestBook}
-                                currentUser={this.props.currentUser}/>
+                                currentUser={this.props.currentUser}
+                                user={user}
+                                />
+                              
                                
                                 
                             )) : "" 

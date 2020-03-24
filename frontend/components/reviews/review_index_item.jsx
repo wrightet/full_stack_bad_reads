@@ -9,7 +9,7 @@ class ReviewIndexItem extends React.Component{
             deleted: false
         };
         this.handleDelete = this.handleDelete.bind(this);
-        
+        console.log('review',props)
     }
 
     handleDelete(bookId, review){
@@ -26,7 +26,7 @@ class ReviewIndexItem extends React.Component{
 
         return (
             <div className='indv-review'>
-                <div className='review-ul'>
+                <div className='review-user-info'>
                     <div className='review-user'>User: {review.user_id}</div>
                     <div className='review-rating'>Rated it: {review.rating}/ 5</div>
                     <div className='review-date'>{formatDateTime(review.created_at).split('(')[0]}</div>

@@ -23,7 +23,7 @@ const App = () => (
         <header className="nav-bar">
             <Link to="/" className="header-link">
                 <div className='logo'>
-                     <h1 classNAme='bad'>bad</h1><h1 className='reads'>reads</h1>
+                     <h1 className='bad'>bad</h1><h1 className='reads'>reads</h1>
                 </div>
                
             </Link>
