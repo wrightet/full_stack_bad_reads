@@ -86,7 +86,7 @@ table {
     position: relative;
     box-sizing: border-box;
     justify-content: space-between;
-    height: 6vh;
+    height: 7vh;
     
 }
 
@@ -217,7 +217,7 @@ table {
     font-weight:normal;
     border-radius: 3px;
     width: 5vw;
-    height: 4.5vh;
+    height: 3.5vh;
 }
 
 .logout-button-header{
@@ -240,10 +240,13 @@ table {
 .login-input {
     border-radius: 3px;
     width: 10vw;
-    height: 3.5vh;
-    padding: .3vw;
+    height: 2.5vh;
+    padding: .2vh;
     background-color: white;
     font-size: 13px;
+    margin-right: .5vw;
+    margin-bottom: .2vh;
+   
 }
 
 .login-list {
@@ -472,6 +475,7 @@ footer > ul > li > a > img{
 footer > ul {
     display: flex;
     justify-content: flex-end;
+    padding-right: 1vw;
 }
 
 footer > ul > li > h6 {
