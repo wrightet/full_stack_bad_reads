@@ -4,8 +4,6 @@ import{ requestReviews, requestAllReviews, deleteReview } from '../../actions/re
 import BookShow from './book_show';
 
 const mSTP = (state,ownProps) => {
-    console.log('ownProps',ownProps)
-    console.log('state', state)
     return {
     book: state.entities.books[ownProps.match.params.id],
     currentUser: state.session.id,

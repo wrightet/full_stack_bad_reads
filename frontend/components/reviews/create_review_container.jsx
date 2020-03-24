@@ -4,7 +4,6 @@ import { requestBook } from '../../actions/book_actions';
 import ReviewForm from './review_form';
 
 const mSTP = state => {
-    console.log(state)
     return{
     review: {
         rating: 3,

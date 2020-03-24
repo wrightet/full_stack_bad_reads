@@ -60,7 +60,8 @@ class ReviewForm extends React.Component {
                 rating: 3,
                 book_id: this.props.match.params.id,
                 user_id: this.user_id,
-                body: ''
+                body: '',
+                user: this.user
             })
             
             this.props.history.push(`/books/${this.props.match.params.id}`)

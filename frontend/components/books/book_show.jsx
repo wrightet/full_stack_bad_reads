@@ -18,7 +18,6 @@ class BookShow extends React.Component {
         this.handleDelete = this.handleDelete.bind(this);
         this.showMore = this.showMore.bind(this);
         this.avgRating = this.avgRating.bind(this);
-        console.log('book',props)
     }
 
     componentDidMount() {
