@@ -7,11 +7,15 @@ class ReviewIndexItem extends React.Component{
         this.state = {
             props: this.props.review,
             deleted: false,
-            displayName: ''
+            displayName: '',
+            start: 0,
+            end: 5,
+            displayButton: 'more'
         };
         this.handleDelete = this.handleDelete.bind(this);
         this.handleName = this.handleName.bind(this);
-        console.log(this.props.review.user_id)
+        this.showMore = this.showMore.bind(this);
+       
     }
 
     componentDidMount(){
@@ -33,8 +37,12 @@ class ReviewIndexItem extends React.Component{
         }
            
         )
-    //    console.log(user)
-        // return user.firstName
+
+    }
+
+    showMore(length) {
+        this.state.end === 5 ? this.setState({ end: length}) : this.setState({ end: 5 })
+        this.state.displayButton === 'more' ? this.setState({ displayButton: 'less' }) : this.setState({ displayButton: 'more' })
     }
 
     render(){
@@ -51,7 +59,14 @@ class ReviewIndexItem extends React.Component{
                     <div className='review-date'>{formatDateTime(review.created_at).split('(')[0]}</div>
                 </div>
                 <ul className='review-body'>
-                    <li className='review-li'><span className='review-body-span'>{review.body}</span></li>
+                    <li className='review-li'>
+                        <span className='review-body-span'>
+                            {review.body.split('.').slice(this.state.start, this.state.end).join('')+'.'}
+                            {review.body.split('.').length > 5 ? 
+                            <button  onClick={() => this.showMore(review.body.split('.').length)}
+                            className='more-less'> ...{this.state.displayButton}</button> : ''}
+                        </span>
+                    </li>
                     <li className='review-li'>
                         {this.props.currentUser === review.user_id ? 
                         <div className='review-edit-delete'>
