@@ -10,7 +10,7 @@ class ReviewIndexItem extends React.Component{
         };
         this.handleDelete = this.handleDelete.bind(this);
         this.handleName = this.handleName.bind(this);
-        console.log('review',props)
+        console.log(this.props.user_id)
     }
 
     handleDelete(bookId, review){
@@ -21,8 +21,9 @@ class ReviewIndexItem extends React.Component{
     }
 
     handleName(id) {
-        user = this.props.requestUser(id);
-        return user.firstName;
+       let user = this.props.requestUser(id);
+       console.log(user)
+    return <h1>test</h1>
     }
 
     render(){
@@ -35,7 +36,7 @@ class ReviewIndexItem extends React.Component{
             <div className='indv-review'>
                 <div className='review-user-info'>
                     <div className='review-user'>User: {review.user_id === this.props.user.id ? this.props.user.firstName : review.user_id}</div>
-                    {/* <div>name: {this.handleName(this.props.user_id)}</div> */}
+                   {/* <div>{() => this.handleName(review.user_id)}</div> */}
                     <div className='review-rating'>Rated it: {review.rating}/ 5</div>
                     <div className='review-date'>{formatDateTime(review.created_at).split('(')[0]}</div>
                 </div>
