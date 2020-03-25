@@ -46,8 +46,7 @@ class ReviewIndexItem extends React.Component{
         return (
             <div className='indv-review'>
                 <div className='review-user-info'>
-                    {/* <div className='review-user'>User: {review.user_id === this.props.user.id ? this.props.user.firstName : review.user_id}</div> */}
-                   <div><h1>name: {this.state.displayName}</h1></div>
+                   <div className='review-user'><h1>{this.state.displayName}</h1></div>
                     <div className='review-rating'>Rated it: {review.rating}/ 5</div>
                     <div className='review-date'>{formatDateTime(review.created_at).split('(')[0]}</div>
                 </div>
