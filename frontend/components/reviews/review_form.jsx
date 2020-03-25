@@ -116,8 +116,17 @@ class ReviewForm extends React.Component {
                 {/* <h1 className='review-form-title'>{this.state.title}</h1> */}
                 <form onSubmit={this.handleSubmit} className='review-form'>
                     <div className='rating-div'>
+
                         <label className='rating-label'> My rating:
-                        <select value={this.state.rating}  
+                        <form value={this.state.rating} onChange={this.update('rating')}>
+                            <input type="radio" value="1" /> 1
+                            <input type="radio" value="2" /> 2
+                            <input type="radio" value="3" /> 3
+                            <input type="radio" value="4" /> 4
+                            <input type="radio" value="5" /> 5
+                        </form>
+                
+                        {/* <select value={this.state.rating}  
                             onChange={this.update('rating')}
                             className='rating-selector'
                         >
@@ -126,7 +135,7 @@ class ReviewForm extends React.Component {
                             <option value="3">3</option>
                             <option value="4">4</option>
                             <option value="5">5</option>
-                        </select>
+                        </select> */}
                     </label>
                     </div>
              
