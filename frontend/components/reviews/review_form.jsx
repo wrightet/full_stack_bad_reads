@@ -113,17 +113,16 @@ class ReviewForm extends React.Component {
                 </div> 
                 }
                
-                {/* <h1 className='review-form-title'>{this.state.title}</h1> */}
                 <form onSubmit={this.handleSubmit} className='review-form'>
                     <div className='rating-div'>
 
                         <label className='rating-label'> My rating:
                         <form value={this.state.rating} onChange={this.update('rating')}>
-                            <input type="radio" value="1" /> 1
-                            <input type="radio" value="2" /> 2
-                            <input type="radio" value="3" /> 3
-                            <input type="radio" value="4" /> 4
-                            <input type="radio" value="5" /> 5
+                            <input type="radio" value="1" name='rating' /> 1
+                            <input type="radio" value="2" name='rating'/> 2
+                            <input type="radio" value="3" name='rating'/> 3
+                            <input type="radio" value="4" name='rating'/> 4
+                            <input type="radio" value="5" name='rating'/> 5
                         </form>
                 
                         {/* <select value={this.state.rating}  
