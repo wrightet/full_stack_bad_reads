@@ -123,16 +123,9 @@ class BookShow extends React.Component {
                 
                         <div className='book-description'>
                             <span className='book-des-start'>{words.slice(0, this.state.displayWords).join(" ")+'.'}</span>
-                            
-                                {/* <span className={this.state.name}>{words.slice(100, book.description.length).join(' ') + "."}</span> */}
-                                <button onClick={() => this.showMore(words.length)} className='more-less'>...{this.state.more}</button>
+                             <button onClick={() => this.showMore(words.length)} className='more-less'>...{this.state.more}</button>
                         </div>      
-                         {/* <select name="" id="read-selector" >
-                            <option value="haveNotRead">Have Not Read</option>
-                            <option value="read">Read</option>
-                            <option value="currently_reading">Currently Reading</option>
-                            <option value="want_to_read">Want To Read</option>
-                        </select>   */}
+                
                     </div> 
                            {/* the review content div has a flex direction reverse  */}
                     <div className='review-content'>
