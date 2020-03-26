@@ -9,7 +9,7 @@ class ReviewIndexItem extends React.Component{
             deleted: false,
             displayName: '',
             start: 0,
-            end: 5,
+            end: 300,
             displayButton: 'more'
         };
         this.handleDelete = this.handleDelete.bind(this);
@@ -41,7 +41,7 @@ class ReviewIndexItem extends React.Component{
     }
 
     showMore(length) {
-        this.state.end === 5 ? this.setState({ end: length}) : this.setState({ end: 5 })
+        this.state.end === 300 ? this.setState({ end: length}) : this.setState({ end: 300 })
         this.state.displayButton === 'more' ? this.setState({ displayButton: 'less' }) : this.setState({ displayButton: 'more' })
     }
 
@@ -61,9 +61,9 @@ class ReviewIndexItem extends React.Component{
                 <ul className='review-body'>
                     <li className='review-li'>
                         <span className='review-body-span'>
-                            {review.body.split('.').slice(this.state.start, this.state.end).join('')+'.'}
-                            {review.body.split('.').length > 5 ? 
-                            <button  onClick={() => this.showMore(review.body.split('.').length)}
+                            {review.body.split('').slice(this.state.start, this.state.end).join('')}
+                            {review.body.split('').length > 300 ? 
+                            <button  onClick={() => this.showMore(review.body.split('').length)}
                             className='more-less'> ...{this.state.displayButton}</button> : ''}
                         </span>
                     </li>

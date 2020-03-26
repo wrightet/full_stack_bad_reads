@@ -140,7 +140,7 @@ class BookShow extends React.Component {
                         </div>
               
                         
-                            { book.reviews ? book.reviews.slice(start,end).map(review => (
+                            { book.reviews ? book.reviews.map(review => (
                                 <ReviewIndexItem bookId={this.props.book.id} 
                                 review={review} key={review.id} 
                                 deleteReview={this.props.deleteReview}
