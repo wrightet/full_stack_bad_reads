@@ -122,8 +122,12 @@ class BookShow extends React.Component {
                         </div>
                 
                         <div className='book-description'>
-                            <span className='book-des-start'>{words.slice(0, this.state.displayWords).join(" ")+'.'}</span>
-                             <button onClick={() => this.showMore(words.length)} className='more-less'>...{this.state.more}</button>
+                            <span className='book-des-start'>{words.slice(0, this.state.displayWords).join(" ")}</span>
+                            { words.length > 100 ? 
+                            <button onClick={() => this.showMore(words.length)} className='more-less'>...{this.state.more}</button>
+                            :''
+                            }
+                             
                         </div>      
                 
                     </div> 
