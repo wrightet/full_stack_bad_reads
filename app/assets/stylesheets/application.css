@@ -774,6 +774,11 @@ footer > ul > li > h6 {
   font-family: 'Times New Roman', Times, serif;
 }
 
+.more-less:hover  {
+
+  text-decoration: underline;
+ 
+}
 .write-review {
    max-width: 8vw;
     min-height: 3vh;
