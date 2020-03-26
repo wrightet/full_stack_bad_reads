@@ -11,7 +11,7 @@ require 'faker'
 # include Faker
 I18n.reload!
 ActiveRecord::Base.transaction do
-      Book.destroy_all
+    Book.destroy_all
     Library.destroy_all
     BookShelf.destroy_all
     User.destroy_all
