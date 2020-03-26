@@ -11,7 +11,8 @@ const mSTP = state => {
         user_id: state.session.id,
         book_id: state.entities.books.id,
         user: state.entities.users[state.session.id],
-        name: state.entities.users[state.session.id].firstName
+        name: state.entities.users[state.session.id].firstName,
+        checked: ''
 
     },
     books: state.entities.books,

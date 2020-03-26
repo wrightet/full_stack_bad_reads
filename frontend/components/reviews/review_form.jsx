@@ -8,6 +8,8 @@ class ReviewForm extends React.Component {
         this.state = this.props.review;
         this.handleSubmit = this.handleSubmit.bind(this);
         this.keyFinder = this.keyFinder.bind(this);
+        console.log('state',this.state)
+        console.log('props', this.props)
     }
 
     componentDidMount(){
@@ -15,7 +17,7 @@ class ReviewForm extends React.Component {
     }
 
     update(field){
-        return e => this.setState({[field]: e.target.value})
+        return e => this.setState({ [field]: e.target.value})
     }
 
     keyFinder(url) {
@@ -40,16 +42,17 @@ class ReviewForm extends React.Component {
         if (this.props.formType === 'Edit Review'){
             this.props.action(this.state)
             .then(
-                () => this.props.requestBook(this.props.review.bookId)
+                () => this.props.requestBook(this.props.bookId)
             )
             
             this.setState({
                 rating: 3,
                 book_id: this.props.bookId,
                 user_id: this.user_id,
-                body: ''
+                body: '',
+                checked: 'checked'
             })
-            this.props.history.push(`/books/${this.props.review.bookId}`)
+            this.props.history.push(`/books/${this.props.bookId}`)
         }else{
            
             this.props.action(this.props.match.params.id, this.state).then(
@@ -61,7 +64,8 @@ class ReviewForm extends React.Component {
                 book_id: this.props.match.params.id,
                 user_id: this.user_id,
                 body: '',
-                user: this.user
+                user: this.user,
+                checked:'checked'
             })
             
             this.props.history.push(`/books/${this.props.match.params.id}`)
@@ -80,7 +84,7 @@ class ReviewForm extends React.Component {
             this.state.title = this.props.books[this.props.match.params.id].title;
         } ;
      
-        console.log(this.state.book_id, this.props.bookId)
+      
         let id = this.state.book_id || this.props.bookId;
         return(
             
@@ -119,11 +123,11 @@ class ReviewForm extends React.Component {
 
                         <label className='rating-label'> My rating:
                         <form value={this.state.rating} onChange={this.update('rating')}>
-                            <input type="radio" value="1" name='rating' /> 1
-                            <input type="radio" value="2" name='rating'/> 2
-                            <input type="radio" value="3" name='rating'/> 3
-                            <input type="radio" value="4" name='rating'/> 4
-                            <input type="radio" value="5" name='rating'/> 5
+                            <input type="radio" value="1" name='rating' checked={this.state.checked}/> 1
+                            <input type="radio" value="2" name='rating' checked={this.state.checked}/> 2
+                            <input type="radio" value="3" name='rating' checked={this.state.checked}/> 3
+                            <input type="radio" value="4" name='rating' checked={this.state.checked}/> 4
+                            <input type="radio" value="5" name='rating' checked={this.state.checked}/> 5
                         </form>
                 
                         {/* <select value={this.state.rating}  
