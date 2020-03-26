@@ -96,6 +96,7 @@ table {
   
 }
 
+
 .greeting-header {
    display: block;
    justify-content: flex-end;
@@ -106,7 +107,7 @@ table {
 }
 
 .greeting-header > ul > li{
-    padding: .5vh 2vw 0vh 2vw;
+    padding: 1vh 2vw;
 }
 
 
@@ -318,7 +319,8 @@ table {
  border-spacing: 2px;
  border-color:grey;
  height: 100%;
- padding-bottom: 10vh;  
+ padding-bottom: 10vh; 
+ color: #382110; 
 }
 
 
@@ -338,6 +340,7 @@ table {
 .book-table-header-column-cover{
   vertical-align: bottom;
   float: none;
+  
 }
 
 .book-table-header-column-name{
@@ -365,12 +368,24 @@ tr{
 
 .book-row {
     border-top: 1px solid grey;
+    text-decoration: none;
 }
 
 .book-row > td {
     padding: 2vh 1vw 2vh 0;
     vertical-align: top;
     text-align: center;
+    color: #00635d;
+}
+
+.book-row > td > a {
+   
+    color: #00635d;
+    text-decoration: none;
+}
+
+.book-row > td > a:hover {
+    text-decoration: underline;
 }
 
 .book-photo {
