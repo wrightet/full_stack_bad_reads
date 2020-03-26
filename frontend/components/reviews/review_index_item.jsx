@@ -32,7 +32,6 @@ class ReviewIndexItem extends React.Component{
     handleName(id) {
        let user = this.props.requestUser(id)
         .then( res => {
-             console.log(`${res.user.firstName} ${res.user.lastName}`)
              this.setState({displayName: `${res.user.firstName} ${res.user.lastName}`})
         }
            

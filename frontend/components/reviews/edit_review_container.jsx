@@ -7,6 +7,7 @@ import ReviewForm from './review_form';
 class EditReviewForm extends React.Component {
     constructor(props){
         super(props)
+        console.log('edit',props)
     }
     componentDidMount(){
         
@@ -28,7 +29,7 @@ class EditReviewForm extends React.Component {
                 requestBook={requestBook}
                 requestAllReviews={requestAllReviews}
                 history={this.props.history}
-                // bookId={review.bookId}
+                bookId={review.bookId}
             />
         )
     }

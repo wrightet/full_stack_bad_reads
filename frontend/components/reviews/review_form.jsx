@@ -80,7 +80,8 @@ class ReviewForm extends React.Component {
             this.state.title = this.props.books[this.props.match.params.id].title;
         } ;
      
-     
+        console.log(this.state.book_id, this.props.bookId)
+        let id = this.state.book_id || this.props.bookId;
         return(
             
             <div className='review-form-div'>
@@ -145,7 +146,7 @@ class ReviewForm extends React.Component {
                     </label>
                     <div className='review-submit-cancel'>
                         <input type="submit" value={this.props.formType} className='review-submit'/>
-                        <Link to={`/books/${this.state.book_id}`} className='cancel'>Cancel</Link>
+                        <Link to={`/books/${id}`} className='cancel'>Cancel</Link>
                     </div>
                     
                 </form>
