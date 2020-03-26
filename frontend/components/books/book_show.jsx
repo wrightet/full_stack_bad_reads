@@ -10,7 +10,8 @@ class BookShow extends React.Component {
             props: this.props,
             start: 0,
             end: 5,
-            name: 'more'
+            displayWords: 100,
+            more: 'more'
         };
         this.keyFinder = this.keyFinder.bind(this);
         this.handleBack = this.handleBack.bind(this);
@@ -83,8 +84,9 @@ class BookShow extends React.Component {
         this.setState({ start: newStart, end: newEnd })
     }
 
-    showMore(){
-      return( this.state.name === 'more' ? this.setState({name: 'less'}) :  this.setState({name: 'more'}))
+    showMore(length){
+      this.state.displayWords === 100 ? this.setState({displayWords: length}) :  this.setState({displayWords: 100})
+        this.state.more === 'more' ? this.setState({ more: 'less' }) : this.setState({ more: 'more' })
     }
 
     render(){
@@ -97,7 +99,7 @@ class BookShow extends React.Component {
         if (!book) {return null;}
        
         else  {
-            let words = book.description.split('.')
+            let words = book.description.split(' ')
         return (
         <div className="book-content">
            
@@ -120,10 +122,10 @@ class BookShow extends React.Component {
                         </div>
                 
                         <div className='book-description'>
-                            <span className='book-des-start'>{words.slice(0, words.length/3).join('.') + '.'}</span>
+                            <span className='book-des-start'>{words.slice(0, this.state.displayWords).join(" ")+'.'}</span>
                             
-                                <span className={this.state.name}>{words.slice(words.length / 3, book.description.length).join('.')}</span>
-                                <button onClick={() => this.showMore()} className='more-less'>...{this.state.name}</button>
+                                {/* <span className={this.state.name}>{words.slice(100, book.description.length).join(' ') + "."}</span> */}
+                                <button onClick={() => this.showMore(words.length)} className='more-less'>...{this.state.more}</button>
                         </div>      
                          {/* <select name="" id="read-selector" >
                             <option value="haveNotRead">Have Not Read</option>
