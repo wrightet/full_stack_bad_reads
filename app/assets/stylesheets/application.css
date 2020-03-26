@@ -160,6 +160,9 @@ table {
     color: #ffffff;
 }
 
+#user-icon {
+    height: 3.5vh;
+}
 .header-el:hover {
  background-color: #38210f;
     color: #ffffff;
@@ -333,7 +336,7 @@ table {
 .table-header-row {
     width: 100%;
     border-collapse: collapse;
-    font-size: 20px;
+    font-size: 12px;
     margin: 0vw; 
 }
 
@@ -376,6 +379,7 @@ tr{
     vertical-align: top;
     text-align: center;
     color: #00635d;
+    font-family: 'Lato', "Helvetica Neue", 'Helvetica', 'Arial', sans-serif;
 }
 
 .book-row > td > a {
@@ -389,8 +393,8 @@ tr{
 }
 
 .book-photo {
-    width: 25%;
-    height: 12vh;
+    width: 20%;
+    height: 10vh;
     border-radius: 5%;
 }
 

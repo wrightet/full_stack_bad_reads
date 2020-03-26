@@ -16,7 +16,7 @@ const Greeting = ({ currentUser, logout}) => {
                 {/* <li className="header-el"><Link to="/api/books">Books</Link></li> */}
                 {/* <li ><input type="text" className="books-search" placeholder="Placeholder Search Bar"/></li> */}
                 <li className="header-el-name"> 
-                      <FontAwesomeIcon icon={faUserCircle} />
+                      <FontAwesomeIcon icon={faUserCircle} id='user-icon'/>
                     <ul id="user-dropdown" >
                        
                         <li >Welcome, {currentUser.firstName}</li>
