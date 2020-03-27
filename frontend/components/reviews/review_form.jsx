@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Rating } from '../stars/stars'
+import { Rating, IndivRating } from '../stars/stars'
 class ReviewForm extends React.Component {
     constructor(props) {
         super(props);
@@ -126,17 +126,19 @@ class ReviewForm extends React.Component {
 
                         <label className='rating-label'> My rating:
                         <form value={this.state.rating} onChange={this.update('rating')}>
-                            <input type="radio" value="1" name='rating'  id='rating-1'/> 1
+                            {/* <input type="radio" value="1" name='rating'  id='rating-1'/> 1
                             <input type="radio" value="2" name='rating'  id='rating-2'/> 2
                             <input type="radio" value="3" name='rating'  id='rating-3'/> 3
                             <input type="radio" value="4" name='rating'  id='rating-4'/> 4
-                            <input type="radio" value="5" name='rating'  id='rating-5'/> 5
-                            <Rating 
+                            <input type="radio" value="5" name='rating'  id='rating-5'/> 5 */}
+
+                            <IndivRating 
                             min='1'
                             max='5'
-                            onChange={this.update('rating')}
-                            value={'checked'}
+                            // onChange={this.update('rating')}
+                            value={this.state.rating}
                             />
+
                             {/* <input type="radio" value="1" name='rating' checked={this.state.checked} id='rating-1'/> 1
                             <input type="radio" value="2" name='rating' checked={this.state.checked} id='rating-2'/> 2
                             <input type="radio" value="3" name='rating' checked={this.state.checked} id='rating-3'/> 3

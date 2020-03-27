@@ -1,7 +1,15 @@
 import React from 'react';
 
 const Range = (min, max) => Array(max - min + 1).fill().map((_, i) => min + i)
-
+// const Range = (min, max) => {
+//     let arr = []
+//     let i = min;
+//     while (i <= max) {
+//         arr.push(i);
+//         i += 1;
+//     }
+//     return arr;
+// }
 const RatingItem = ({ checked, colored, onChange, value }) => (
     <label
         className={`rating-item ${colored ? 'rating-item-selected' : ''}`} >
@@ -18,7 +26,7 @@ const RatingItem = ({ checked, colored, onChange, value }) => (
 )
 
 export const Rating = ({ min, max, onChange, value }) => {
-
+    console.log({ min, max, onChange, value })
     return (
         <div className='rating' >
             {Range(min, max).map(item => (
