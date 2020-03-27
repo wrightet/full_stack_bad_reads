@@ -59,13 +59,15 @@ class ReviewForm extends React.Component {
                 () => this.props.requestAllReviews(this.props.match.params.id)
             )
             // .then(window.location.reload())
+        //   let el = document.getElementById(`rating-${this.state.rating}`)
+        //   console.log(el)
             this.setState({
                 rating: 3,
                 book_id: this.props.match.params.id,
                 user_id: this.user_id,
                 body: '',
                 user: this.user,
-                checked:'checked'
+                // checked:'checked'
             })
             
             this.props.history.push(`/books/${this.props.match.params.id}`)
@@ -123,11 +125,16 @@ class ReviewForm extends React.Component {
 
                         <label className='rating-label'> My rating:
                         <form value={this.state.rating} onChange={this.update('rating')}>
-                            <input type="radio" value="1" name='rating' checked={this.state.checked}/> 1
-                            <input type="radio" value="2" name='rating' checked={this.state.checked}/> 2
-                            <input type="radio" value="3" name='rating' checked={this.state.checked}/> 3
-                            <input type="radio" value="4" name='rating' checked={this.state.checked}/> 4
-                            <input type="radio" value="5" name='rating' checked={this.state.checked}/> 5
+                            <input type="radio" value="1" name='rating'  id='rating-1'/> 1
+                            <input type="radio" value="2" name='rating'  id='rating-2'/> 2
+                            <input type="radio" value="3" name='rating'  id='rating-3'/> 3
+                            <input type="radio" value="4" name='rating'  id='rating-4'/> 4
+                            <input type="radio" value="5" name='rating'  id='rating-5'/> 5
+                            {/* <input type="radio" value="1" name='rating' checked={this.state.checked} id='rating-1'/> 1
+                            <input type="radio" value="2" name='rating' checked={this.state.checked} id='rating-2'/> 2
+                            <input type="radio" value="3" name='rating' checked={this.state.checked} id='rating-3'/> 3
+                            <input type="radio" value="4" name='rating' checked={this.state.checked} id='rating-4'/> 4
+                            <input type="radio" value="5" name='rating' checked={this.state.checked} id='rating-5'/> 5 */}
                         </form>
                 
                         {/* <select value={this.state.rating}  
