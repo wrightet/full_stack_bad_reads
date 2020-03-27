@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Rating } from '../stars/stars'
 class ReviewForm extends React.Component {
     constructor(props) {
         super(props);
@@ -130,6 +131,12 @@ class ReviewForm extends React.Component {
                             <input type="radio" value="3" name='rating'  id='rating-3'/> 3
                             <input type="radio" value="4" name='rating'  id='rating-4'/> 4
                             <input type="radio" value="5" name='rating'  id='rating-5'/> 5
+                            <Rating 
+                            min='1'
+                            max='5'
+                            onChange={this.update('rating')}
+                            value={'checked'}
+                            />
                             {/* <input type="radio" value="1" name='rating' checked={this.state.checked} id='rating-1'/> 1
                             <input type="radio" value="2" name='rating' checked={this.state.checked} id='rating-2'/> 2
                             <input type="radio" value="3" name='rating' checked={this.state.checked} id='rating-3'/> 3
