@@ -9,8 +9,6 @@ class ReviewForm extends React.Component {
         this.state = this.props.review;
         this.handleSubmit = this.handleSubmit.bind(this);
         this.keyFinder = this.keyFinder.bind(this);
-        console.log('state',this.state)
-        console.log('props', this.props)
     }
 
     componentDidMount(){
@@ -27,7 +25,6 @@ class ReviewForm extends React.Component {
         let newKeys = keys.map(key => {
             return key.split('URL')[0];
         })
-        let values = Object.values(window.images)
 
         for (let i = 0; i < keys.length; i++) {
             if (val === newKeys[i]) {
@@ -125,17 +122,17 @@ class ReviewForm extends React.Component {
                     <div className='rating-div'>
 
                         <label className='rating-label'> My rating:
-                        <form value={this.state.rating} onChange={this.update('rating')}>
+                         <form value={this.state.rating} onChange={this.update('rating')}>
                             {/* <input type="radio" value="1" name='rating'  id='rating-1'/> 1
                             <input type="radio" value="2" name='rating'  id='rating-2'/> 2
                             <input type="radio" value="3" name='rating'  id='rating-3'/> 3
                             <input type="radio" value="4" name='rating'  id='rating-4'/> 4
-                            <input type="radio" value="5" name='rating'  id='rating-5'/> 5 */}
+                            <input type="radio" value="5" name='rating'  id='rating-5'/> 5 */} 
 
-                            <IndivRating 
-                            min='1'
-                            max='5'
-                            // onChange={this.update('rating')}
+                            <Rating 
+                            min={1}
+                            max={5}
+                            onChange={this.update('rating')}
                             value={this.state.rating}
                             />
 
