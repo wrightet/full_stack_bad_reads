@@ -135,24 +135,8 @@ class ReviewForm extends React.Component {
                             onChange={this.update('rating')}
                             value={this.state.rating}
                             />
-
-                            {/* <input type="radio" value="1" name='rating' checked={this.state.checked} id='rating-1'/> 1
-                            <input type="radio" value="2" name='rating' checked={this.state.checked} id='rating-2'/> 2
-                            <input type="radio" value="3" name='rating' checked={this.state.checked} id='rating-3'/> 3
-                            <input type="radio" value="4" name='rating' checked={this.state.checked} id='rating-4'/> 4
-                            <input type="radio" value="5" name='rating' checked={this.state.checked} id='rating-5'/> 5 */}
                         </form>
                 
-                        {/* <select value={this.state.rating}  
-                            onChange={this.update('rating')}
-                            className='rating-selector'
-                        >
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select> */}
                     </label>
                     </div>
              
