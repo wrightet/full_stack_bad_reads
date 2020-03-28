@@ -16,7 +16,11 @@ class ReviewForm extends React.Component {
     }
 
     update(field){
-        return e => this.setState({ [field]: e.target.value})
+        console.log(field)
+        console.log('rating',this.state.rating)
+      
+        
+       return e => this.setState({ [field]: e.target.value})
     }
 
     keyFinder(url) {
@@ -58,7 +62,7 @@ class ReviewForm extends React.Component {
             )
             // .then(window.location.reload())
         //   let el = document.getElementById(`rating-${this.state.rating}`)
-        //   console.log(el)
+      
             this.setState({
                 rating: 3,
                 book_id: this.props.match.params.id,

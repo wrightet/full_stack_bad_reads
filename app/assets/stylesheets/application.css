@@ -860,8 +860,16 @@ footer > ul > li > h6 {
     
 }
 
+.rating-input {
+    color: gold;
+    content: "★"
+}
 .rating-input .stars:after {
     content: "★";
+}
+
+.rating:hover {
+    color: gold;
 }
 
 .review-form-path {
@@ -922,3 +930,7 @@ footer > ul > li > h6 {
     margin-right: .5vw;
 }
 
+
+.rating {
+    content: '$'
+}
