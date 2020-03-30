@@ -861,11 +861,15 @@ footer > ul > li > h6 {
 }
 
 .rating-input {
-    color: gold;
+    color: #FA604A;
     content: "★"
 }
 .rating-input:after {
     content: "★";
+}
+
+.rating-input:before {
+    content: " "
 }
 
 .rating:hover {
