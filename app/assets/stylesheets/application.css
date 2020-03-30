@@ -864,13 +864,15 @@ footer > ul > li > h6 {
     color: gold;
     content: "★"
 }
-.rating-input .stars:after {
+.rating-input:after {
     content: "★";
 }
 
 .rating:hover {
     color: gold;
 }
+
+
 
 .review-form-path {
    float: left;
