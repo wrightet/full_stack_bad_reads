@@ -904,7 +904,8 @@ footer > ul > li > h6 {
 .stars label:hover:after,
 .stars label:hover ~ label:after {
   background: white!important;
-  color: red;
+  color: white;
+  
 }
 
 .review-form-path {
