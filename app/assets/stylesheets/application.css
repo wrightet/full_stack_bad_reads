@@ -909,6 +909,13 @@ footer > ul > li > h6 {
   color: white;
   
 } */
+
+.rating-item-selected:after {
+    color: gold !important;
+    border-radius: 100%;
+}
+
+
 .rating {
   /* float: left; */
   display: inline-flex;
@@ -947,7 +954,7 @@ footer > ul > li > h6 {
   transition: all 0.25s;
   background: white;
   border-radius: 100%;
-  color: gold;
+  color: grey;
 }
 .rating label:hover:after,
 .rating label:hover ~ label:after {
