@@ -881,7 +881,7 @@ footer > ul > li > h6 {
 }
 .stars:hover input[type=radio]:checked ~ label:after,
 .stars label:after {
-  /* background: green; */
+  color: blue;
 }
 .stars label {
   box-sizing: border-box;
@@ -890,6 +890,7 @@ footer > ul > li > h6 {
   /* height: 120px; */
   /* float: right; */
   cursor: pointer;
+  color: lightgrey;
 }
 .stars label:after {
   display: block;
@@ -902,8 +903,54 @@ footer > ul > li > h6 {
   border-radius: 100%;
   color: #FA604A;
 }
-.stars label:hover:after,
+/* .stars label:hover:after,
 .stars label:hover ~ label:after {
+  background: white!important;
+  color: white;
+  
+} */
+.rating {
+  /* float: left; */
+  display: inline-flex;
+  overflow: hidden;
+  flex-direction: row;
+  /* width: 100%; */
+}
+.rating input[type=radio]:checked ~ label:after {
+  background: blue;
+}
+.rating input[type=radio] {
+  display: none;
+}
+.rating input[type=radio]:first-child + label {
+  padding-right: 0;
+}
+.rating:hover input[type=radio]:checked ~ label:after,
+.rating label:after {
+  /* background: green; */
+}
+.rating label {
+  box-sizing: border-box;
+  /* width: 20%; */
+  padding-right: 2%;
+  /* height: 120px; */
+  /* float: right; */
+  cursor: pointer;
+  color: lightgrey;
+}
+.rating label:after {
+  display: block;
+  content: "★";
+  /* height: 120px; */
+  /* width: 100%; */
+  /* float: right; */
+  transition: all 0.25s;
+  background: white;
+  border-radius: 100%;
+  color: gold;
+}
+.rating label:hover:after,
+.rating label:hover ~ label:after {
   background: white!important;
   color: white;
   

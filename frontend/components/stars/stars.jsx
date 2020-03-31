@@ -20,7 +20,7 @@ const RatingItem = ({ checked, colored, onChange, value }) => (
 export const Rating = ({ min, max, onChange, value }) => {
     console.log({ min, max, onChange, value })
     return (
-        <div className='stars' >
+        <div className='rating' >
             {Range(min, max).map(item => (
                 <RatingItem key={item}
                     colored={value >= item}
