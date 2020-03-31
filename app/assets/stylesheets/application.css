@@ -900,6 +900,7 @@ footer > ul > li > h6 {
   transition: all 0.25s;
   background: white;
   border-radius: 100%;
+  color: #FA604A;
 }
 .stars label:hover:after,
 .stars label:hover ~ label:after {
