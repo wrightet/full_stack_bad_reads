@@ -864,8 +864,38 @@ footer > ul > li > h6 {
     color: #FA604A;
     content: "★";
     font-size: 20px;
+    padding: 2%;
+    visibility: visible;
 }
 
+input[type='radio']:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #d1d3d1;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+        /* content: "★" */
+    }
+
+    input[type='radio']:checked:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #ffa500;
+        content: "★";
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
 
 .rating-item-selected-t::after{
   color: gold;
