@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import { formatDateTime } from '../../util/date_util';
+import { IndivRating } from '../stars/stars';
 class ReviewIndexItem extends React.Component{
     constructor(props) {
         super(props);
@@ -54,7 +55,11 @@ class ReviewIndexItem extends React.Component{
             <div className='indv-review'>
                 <div className='review-user-info'>
                    <div className='review-user'><h1>{this.state.displayName}</h1></div>
-                    <div className='review-rating'>Rated it: {review.rating}/ 5</div>
+                    <div className='review-rating'>Rated it: <IndivRating
+                        min={1}
+                        max={5}
+                        value={this.props.review.rating}
+                    /></div>
                     <div className='review-date'>{formatDateTime(review.created_at).split('(')[0]}</div>
                 </div>
                 <ul className='review-body'>
