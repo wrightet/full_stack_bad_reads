@@ -860,24 +860,16 @@ footer > ul > li > h6 {
     
 }
 
-.rating-input {
-    color: #FA604A;
-    content: "★"
-}
 .rating-input:after {
+    color: #FA604A;
     content: "★";
-}
-
-.rating-input:before {
-    content: " "
-}
-
-.rating:hover {
-    color: gold;
+    font-size: 20px;
 }
 
 
-
+.rating-item-selected-t::after{
+  color: gold;
+}
 .review-form-path {
    float: left;
    padding-right: 1vw;
