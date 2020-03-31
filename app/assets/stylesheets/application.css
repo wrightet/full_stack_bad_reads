@@ -904,7 +904,7 @@ input[type='radio']:checked:after {
   /* float: left; */
   display: inline-flex;
   overflow: hidden;
-  flex-direction: row-reverse;
+  flex-direction: row;
   /* width: 100%; */
 }
 .stars input[type=radio]:checked ~ label:after {
