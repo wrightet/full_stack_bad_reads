@@ -901,7 +901,7 @@ footer > ul > li > h6 {
   transition: all 0.25s;
   background: white;
   border-radius: 100%;
-  color: #FA604A;
+  color: lightgrey;
 }
 /* .stars label:hover:after,
 .stars label:hover ~ label:after {
@@ -915,6 +915,9 @@ footer > ul > li > h6 {
     border-radius: 100%;
 }
 
+.rating-item-selected-t:after {
+    color: #FA604A !important;
+}
 
 .rating {
   /* float: left; */
