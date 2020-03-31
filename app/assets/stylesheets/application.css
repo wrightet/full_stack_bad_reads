@@ -855,10 +855,6 @@ footer > ul > li > h6 {
     color: #382110;
 }
 
-.stars {
-    /* content: "★"; */
-    
-}
 
 .rating-input:after {
     color: blue;
@@ -866,39 +862,6 @@ footer > ul > li > h6 {
     font-size: 1.5em;
     /* visibility: visible; */
 }
-
-/* input[type='radio']:after {
-        width: 15px;
-        height: 15px;
-        border-radius: 15px;
-        top: -2px;
-        left: -1px;
-        position: relative;
-        background-color: lightgrey;
-        content: '';
-        display: inline-block;
-        visibility: visible;
-        border: 2px solid white;  
-}
-
-
-input[type='radio']:checked:after {
-    width: 15px;
-    height: 15px;
-    border-radius: 15px;
-    top: -2px;
-    left: -1px;
-    position: relative;
-    background-color: #ffffff;
-    content: "★";
-    display: inline-block;
-    visibility: visible;
-    border: 2px solid white;
-    align-items: center;
-    
-} */
-
-
 
 .stars {
   /* float: left; */
@@ -935,12 +898,13 @@ input[type='radio']:checked:after {
   /* width: 100%; */
   /* float: right; */
   transition: all 0.25s;
-  background: green;
+  background: white;
   border-radius: 100%;
 }
 .stars label:hover:after,
 .stars label:hover ~ label:after {
-  background: gold !important;
+  background: white!important;
+  color: red;
 }
 
 .review-form-path {
