@@ -856,16 +856,15 @@ footer > ul > li > h6 {
 }
 
 .stars {
-    content: "★";
+    /* content: "★"; */
     
 }
 
 .rating-input:after {
-    color: #FA604A;
-    content: "★";
-    font-size: 20px;
-    padding: 2%;
-    visibility: visible;
+    color: blue;
+    /* content: "★"; */
+    font-size: 1.5em;
+    /* visibility: visible; */
 }
 
 input[type='radio']:after {
@@ -875,12 +874,14 @@ input[type='radio']:after {
         top: -2px;
         left: -1px;
         position: relative;
-        background-color: #d1d3d1;
+        background-color: lightgrey;
         content: '';
         display: inline-block;
         visibility: visible;
         border: 2px solid white;
         /* content: "★" */
+       
+        
     }
 
     input[type='radio']:checked:after {
@@ -890,16 +891,15 @@ input[type='radio']:after {
         top: -2px;
         left: -1px;
         position: relative;
-        background-color: #ffa500;
+        background-color: #ffffff;
         content: "★";
         display: inline-block;
         visibility: visible;
         border: 2px solid white;
+        
     }
 
-.rating-item-selected-t::after{
-  color: gold;
-}
+
 .review-form-path {
    float: left;
    padding-right: 1vw;
