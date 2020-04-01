@@ -983,3 +983,8 @@ footer > ul > li > h6 {
     font-size: 14px;
     margin-right: .5vw;
 }
+
+.index-review > a {
+    background: white;
+    border: none;
+}

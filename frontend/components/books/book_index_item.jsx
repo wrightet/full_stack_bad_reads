@@ -60,6 +60,9 @@ class BookIndexItem extends React.Component {
                     value={Math.round(this.avgRating())}/>
                     {this.avgRating()}
                 </td>
+                <td className='index-review'>
+                    <Link to={`/books/${book.id}/review/new`} className='write-review'>Write a review</Link>
+                </td>
                 <td>{book.genre}</td>
                
                 
