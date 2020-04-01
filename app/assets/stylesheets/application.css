@@ -576,15 +576,15 @@ footer > ul > li > h6 {
     color: #00635D;
     font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
     padding-right: 1vw;
+    float: left;
 }
 
 .review-date{
-   padding-left: 7vw;
    font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
    color: #bbbbbb;
    font-size: 14px;
-   display: flex;
-   justify-content: flex-end;
+   position: absolute;
+   right: 0%;
 }
 .review-rating {
     display: flex;
@@ -911,7 +911,7 @@ footer > ul > li > h6 {
 } */
 
 .rating-item-selected:after {
-    color: gold !important;
+    color: #F5A624 !important;
     border-radius: 100%;
 }
 
@@ -955,14 +955,14 @@ footer > ul > li > h6 {
   /* width: 100%; */
   /* float: right; */
   transition: all 0.25s;
-  background: white;
+  /* background: white; */
   border-radius: 100%;
-  color: grey;
+  color: lightgrey;
 }
 .rating label:hover:after,
 .rating label:hover ~ label:after {
   background: white!important;
-  color: white;
+  color: lightgrey;
   
 }
 

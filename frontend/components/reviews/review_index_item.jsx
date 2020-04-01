@@ -55,12 +55,15 @@ class ReviewIndexItem extends React.Component{
             <div className='indv-review'>
                 <div className='review-user-info'>
                    <div className='review-user'><h1>{this.state.displayName}</h1></div>
-                    <div className='review-rating'>Rated it: <IndivRating
-                        min={1}
-                        max={5}
-                        value={this.props.review.rating}
-                    /></div>
-                    <div className='review-date'>{formatDateTime(review.created_at).split('(')[0]}</div>
+                    <div className='review-rating'>Rated it: 
+                        <IndivRating
+                            min={1}
+                            max={5}
+                            value={this.props.review.rating}
+                        />  
+                        <div className='review-date'>{formatDateTime(review.created_at).split('(')[0]}</div>
+                    </div>
+                  
                 </div>
                 <ul className='review-body'>
                     <li className='review-li'>
