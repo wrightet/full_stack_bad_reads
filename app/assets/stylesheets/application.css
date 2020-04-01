@@ -983,3 +983,7 @@ footer > ul > li > h6 {
     font-size: 14px;
     margin-right: .5vw;
 }
+
+.index-stars > .stars > .rating-item-selected-t:after{
+    color: #F5A624 !important;
+}
