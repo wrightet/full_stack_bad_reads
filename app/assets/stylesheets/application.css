@@ -522,6 +522,7 @@ footer > ul > li > h6 {
     padding-right: 2%;
     padding-left: 2%;
     border-radius: 5%;
+    
 }
 
 .book-show-photo {
@@ -846,6 +847,7 @@ footer > ul > li > h6 {
 
 .rating-num {
     font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+    font-size: 14px;
 }
 
 .reviews-h1 {

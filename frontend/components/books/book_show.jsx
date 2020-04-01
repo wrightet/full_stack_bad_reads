@@ -103,22 +103,25 @@ class BookShow extends React.Component {
         return (
         <div className="book-content">
            
-            <div className="book-show-image">
-            <img src={this.keyFinder(book.url)} className='book-show-photo'/>
-            </div>
+                 <div className="book-show-image">
+                        <img src={this.keyFinder(book.url)} className='book-show-photo'/>
+                    </div>
            
-                <div className='book-review-combine'>
+                <div className='book-review-combine'>    
+
+           
+
                     <div className="book-show-content">
                         <h1 className='book-title'>{book.title}</h1>
                         <h1 className ='author-name'>by {book.author}</h1>
                         <h1 className='genre'>Genre: {book.genre}</h1>
-                        <h1 className='rating-num'>Rating {this.avgRating()}/5</h1>
-                        <div>
+                      
+                        <div className='rating-num'>
                             <IndivRating 
                                 min={1}
                                 max={5}
                                 value={Math.round(this.avgRating())}
-                            />
+                            /> {this.avgRating()}
                         </div>
                 
                         <div className='book-description'>
