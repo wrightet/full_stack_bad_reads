@@ -22,7 +22,8 @@ class BookIndex extends React.Component {
                         <th className="book-table-header-column-cover">Cover</th>
                         <th className="book-table-header-column-name">Title</th>
                         <th className="book-table-header-column-name">Author</th>
-                            <th className="book-table-header-column-rating">Rating</th>
+                        <th className="book-table-header-column-rating">Rating</th>
+                        <th className="book-table-header-column-review">Review</th>
                         <th className="book-table-header-column-genre">Genre</th>
                        
 
