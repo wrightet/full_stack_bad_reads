@@ -16,10 +16,6 @@ class ReviewForm extends React.Component {
     }
 
     update(field){
-        console.log(field)
-        console.log('rating',this.state.rating)
-      
-        
        return e => this.setState({ [field]: e.target.value})
     }
 

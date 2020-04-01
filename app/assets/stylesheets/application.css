@@ -857,60 +857,34 @@ footer > ul > li > h6 {
     color: #382110;
 }
 
-
-.rating-input:after {
-    color: blue;
-    /* content: "★"; */
-    font-size: 1.5em;
-    /* visibility: visible; */
-}
-
 .stars {
-  /* float: left; */
   display: inline-flex;
   overflow: hidden;
   flex-direction: row;
-  /* width: 100%; */
 }
-.stars input[type=radio]:checked ~ label:after {
-  background: blue;
-}
+
 .stars input[type=radio] {
   display: none;
 }
+
 .stars input[type=radio]:first-child + label {
   padding-right: 0;
 }
-.stars:hover input[type=radio]:checked ~ label:after,
-.stars label:after {
-  color: blue;
-}
+
 .stars label {
   box-sizing: border-box;
-  /* width: 20%; */
   padding-right: 2%;
-  /* height: 120px; */
-  /* float: right; */
-  cursor: pointer;
   color: lightgrey;
 }
+
 .stars label:after {
   display: block;
   content: "★";
-  /* height: 120px; */
-  /* width: 100%; */
-  /* float: right; */
   transition: all 0.25s;
   background: white;
   border-radius: 100%;
   color: lightgrey;
 }
-/* .stars label:hover:after,
-.stars label:hover ~ label:after {
-  background: white!important;
-  color: white;
-  
-} */
 
 .rating-item-selected:after {
     color: #F5A624 !important;
@@ -922,50 +896,37 @@ footer > ul > li > h6 {
 }
 
 .rating {
-  /* float: left; */
   display: inline-flex;
   overflow: hidden;
   flex-direction: row;
-  /* width: 100%; */
 }
-.rating input[type=radio]:checked ~ label:after {
-  background: blue;
-}
+
 .rating input[type=radio] {
   display: none;
 }
+
 .rating input[type=radio]:first-child + label {
   padding-right: 0;
 }
-.rating:hover input[type=radio]:checked ~ label:after,
-.rating label:after {
-  /* background: green; */
-}
+
 .rating label {
   box-sizing: border-box;
-  /* width: 20%; */
   padding-right: 2%;
-  /* height: 120px; */
-  /* float: right; */
   cursor: pointer;
   color: lightgrey;
 }
 .rating label:after {
   display: block;
   content: "★";
-  /* height: 120px; */
-  /* width: 100%; */
-  /* float: right; */
   transition: all 0.25s;
-  /* background: white; */
   border-radius: 100%;
   color: lightgrey;
 }
+
 .rating label:hover:after,
 .rating label:hover ~ label:after {
   background: white!important;
   color: lightgrey;
-  
 }
 
 .review-form-path {
@@ -997,7 +958,6 @@ footer > ul > li > h6 {
     padding-left: 15vw;
     padding-bottom: 1vh;
     font-size: 20px; 
-    /* font-weight: bold; */
     line-height: 24px;
     display: flex;
 }
@@ -1016,8 +976,6 @@ footer > ul > li > h6 {
     color: #333333;
     display: flex;
     font-weight: normal;
-    
-  
 }
 
 .by-span {
@@ -1025,5 +983,3 @@ footer > ul > li > h6 {
     font-size: 14px;
     margin-right: .5vw;
 }
-
-

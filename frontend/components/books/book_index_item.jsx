@@ -1,11 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import { IndivRating } from '../stars/stars';
 
 
 class BookIndexItem extends React.Component {
     constructor(props){
-        super(props)
-        this.keyFinder = this.keyFinder.bind(this)
+        super(props);
+        this.keyFinder = this.keyFinder.bind(this);
+        this.avgRating = this.avgRating.bind(this);
+        // console.log(props)
     }
 
     keyFinder(url){
@@ -24,6 +27,24 @@ class BookIndexItem extends React.Component {
         return window.images.openbookURL;
        
     }
+
+    avgRating() {
+        let reviews = this.props.book.reviews
+       
+        if (reviews) {
+            let count = 0;
+            let length = reviews.length;
+            reviews.map(review => {
+                count += review.rating
+            }
+            );
+            let num = parseFloat(count / length);
+            return num.toFixed(2)
+        }
+        else { return null }
+
+    }
+
     render(){
        
         let book = this.props.book
@@ -32,7 +53,16 @@ class BookIndexItem extends React.Component {
                 <td><Link to={`/books/${book.id}`}><img src={this.keyFinder(book.url)} alt="" className="book-photo" /></Link></td>
                 <td><Link to={`/books/${book.id}`}>{book.title}</Link></td>
                 <td><Link to={`/books/${book.id}`}>{book.author}</Link></td>
+                <td>     
+                    <IndivRating
+                    min={1}
+                    max={5}
+                    value={Math.round(this.avgRating())}/>
+                    {this.avgRating()}
+                </td>
                 <td>{book.genre}</td>
+               
+                
             </tr>
         )
     }

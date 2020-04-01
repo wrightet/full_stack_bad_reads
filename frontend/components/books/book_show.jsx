@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import ReviewIndexItem from '../reviews/review_index_item';
 import {IndivRating} from '../stars/stars';
 
+
 class BookShow extends React.Component {
     constructor(props){
         super(props);
@@ -102,7 +103,7 @@ class BookShow extends React.Component {
             let words = book.description.split(' ')
         return (
         <div className="book-content">
-           
+        
                  <div className="book-show-image">
                         <img src={this.keyFinder(book.url)} className='book-show-photo'/>
                     </div>

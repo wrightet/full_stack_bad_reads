@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom'
 class BookIndex extends React.Component {
     constructor(props){
         super(props)
+    
     }
     componentDidMount(){
         this.props.requestAllBooks();
@@ -13,7 +14,6 @@ class BookIndex extends React.Component {
     render(){
         const {books} = this.props;
         if (!books){return null;}
-       
         return(
         <div className="book-table-div">
             <table className="books-table">
@@ -22,7 +22,10 @@ class BookIndex extends React.Component {
                         <th className="book-table-header-column-cover">Cover</th>
                         <th className="book-table-header-column-name">Title</th>
                         <th className="book-table-header-column-name">Author</th>
+                            <th className="book-table-header-column-rating">Rating</th>
                         <th className="book-table-header-column-genre">Genre</th>
+                       
+
                     </tr>
                 </thead> 
                  <tbody className='books-list-body'>
@@ -31,6 +34,7 @@ class BookIndex extends React.Component {
                                 <BookIndexItem
                                 book = {book}
                                 key = {book.id}
+                                requestAllReviews = {this.props.requestAllReviews}
                                />
                             ))
                         }
