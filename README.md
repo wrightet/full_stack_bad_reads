@@ -1,14 +1,13 @@
 # README
 ![alt text](https://github.com/wrightet/full_stack_bad_reads/blob/master/app/assets/images/logo.png "Logo Title Text 1")
 
-Welcome to Bad Reads, a website thats allows you to find the baddest books out there. It allows users to see a wide varity of books.
+Welcome to Bad Reads, a website thats allows you to find the baddest books out there. Bad reads can help you find some of the worst books out there. Then once you've found one you hate, leave a review!
 
 ## Users can:
 
 * Browse through an index of books.
-* Click on a book and see its information.
-* Experience a selector that allows you choose between read, currently reading, want to read, and haven't read. This selector currently accomplihes nothing.
-* Hit the words home to go back to the index.
+* Click on a book and see its information. 
+* Rate books and leave a review. The review can also be edited or deleted if left by the current user.
 * Hover over the User Icon to and click log out to sign out.
 
 ## Link to the live site
@@ -26,16 +25,16 @@ Welcome to Bad Reads, a website thats allows you to find the baddest books out t
 * Jquery-rails
 * Jbuilder v 2.5
 * Node v 10.13.0
+* Faker v 2.10.1
 
 ## Discussion of Technologies Used
-* Bad Reads uses Ruby on Rails for its back end and React Redux for its front end. Jquery is used to get information from the backend to the frontend. 
+* Bad Reads uses Ruby on Rails for its back end and React Redux for its front end. Jquery is used to get information from the backend to the frontend. JBuilder takes the place of Ruby on Rails's usual view files, and gets the information to React which actually handles the view. The Faker Gem is used to populate most of the website's information. The first nine books were put in manually but faker handled the other hundred to show scalability.
 
 ## Features
  * One feature that was a bit of a challange was accomplishing a demo log in. I did this by creating a seed demo user in my data base and writing a function that allows that user to be signed in on click.
  
- * Another feature that I am proud of is the show page for each book. Though it is bare bones, I had to do some careful mapping to make sure I could get the correct book to be shown. The main issue I had was labeling the wild card incorrectly in map state to props of my container. After I fixed it, the page works like its straight out of 2003.
+ * Another feature that I am proud of is the review form. It is a partial and took a lot of work because the information it needs is different on create and edit. As a result I had to get creative with the submit function, but the result end result works great.
+ 
+ 
 
-## Future direction of the site
-* Allow users to create book selves.
-* Review and rate books.
-* See all reviews on each book.
+
