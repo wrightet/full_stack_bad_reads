@@ -6,9 +6,15 @@ Welcome to Bad Reads, a website thats allows you to find the baddest books out t
 ## Users can:
 
 * Browse through an index of books.
+![alt text](https://github.com/wrightet/full_stack_bad_reads/blob/master/app/assets/images/index_photo.png "Logo Title Text 1")
 * Click on a book and see its information. 
+![alt text](https://github.com/wrightet/full_stack_bad_reads/blob/master/app/assets/images/book_info.png "Logo Title Text 1")
 * Rate books and leave a review. The review can also be edited or deleted if left by the current user.
+![alt text](https://github.com/wrightet/full_stack_bad_reads/blob/master/app/assets/images/create_form.png "Logo Title Text 1")
+![alt text](https://github.com/wrightet/full_stack_bad_reads/blob/master/app/assets/images/edit_form.png "Logo Title Text 1")
 * Hover over the User Icon to and click log out to sign out.
+![alt text](https://github.com/wrightet/full_stack_bad_reads/blob/master/app/assets/images/logout.png "Logo Title Text 1")
+
 
 ## Link to the live site
 * http://bad-reads.herokuapp.com/#/
