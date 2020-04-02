@@ -137,10 +137,10 @@ class BookShow extends React.Component {
                     </div> 
                            {/* the review content div has a flex direction reverse  */}
                     <div className='review-content'>
-                        <div className='review-button-div'>
+                        {/* <div className='review-button-div'>
                             <button onClick={() => this.handleBack(start, end, book.reviews.length)} className='review-buttons'>Previous</button>
                             <button onClick={() => this.handleForward(start, end, book.reviews.length)} className='review-buttons' >...Next</button>
-                        </div>
+                        </div> */}
               
                         
                             { book.reviews ? book.reviews.map(review => (
