@@ -42,7 +42,6 @@ class ReviewForm extends React.Component {
             .then(
                 () => this.props.requestBook(this.props.bookId)
             )
-            
             this.setState({
                 rating: 3,
                 book_id: this.props.bookId,
@@ -52,26 +51,18 @@ class ReviewForm extends React.Component {
             })
             this.props.history.push(`/books/${this.props.bookId}`)
         }else{
-           
             this.props.action(this.props.match.params.id, this.state).then(
                 () => this.props.requestAllReviews(this.props.match.params.id)
             )
-            // .then(window.location.reload())
-        //   let el = document.getElementById(`rating-${this.state.rating}`)
-      
             this.setState({
                 rating: 3,
                 book_id: this.props.match.params.id,
                 user_id: this.user_id,
                 body: '',
                 user: this.user,
-                // checked:'checked'
             })
-            
             this.props.history.push(`/books/${this.props.match.params.id}`)
-            
-        }
-            
+        }      
     }
     
     render(){
