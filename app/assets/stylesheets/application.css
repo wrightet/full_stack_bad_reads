@@ -181,18 +181,17 @@ table {
     align-items: center;
 }
 .logo{
-    width: 8vw;
-    height: 7.8vh;
-    padding-left: 100%;
+    margin-top: 1vh;
+    margin-left: 5vw;
     font-size: 35px;
     display: flex;
     flex-direction: row;
-    padding-top: 5%;
     font-family: 'Open Sans Condensed', sans-serif;
+    align-items: center;
 }
 
 .bad {
-    color: #E3DFD7;
+    color: rgb(112, 69, 34);
 }
 
 .reads {
