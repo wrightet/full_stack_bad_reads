@@ -8,11 +8,12 @@ Welcome to Bad Reads, a website thats allows you to find the baddest books out t
 
 
 ## Technologies used
-* Ruby v 2.5.1
-* React v 16.12.0
-* Ruby on Rails v 5.2.3
-* Redux v 4.0.5
-* Node v 10.13.0
+* Ruby
+* Javascript
+* React
+* Ruby on Rails
+* Redux
+* Node
 
 ## Discussion of Technologies Used
 * Bad Reads uses Ruby on Rails for its back end and React Redux for its front end. Jquery is used to get information from the backend to the frontend. JBuilder takes the place of Ruby on Rails's usual view files, and gets the information to React which actually handles the view. The Faker Gem is used to populate most of the website's information. The first nine books were put in manually but faker handled the other hundred to show scalability.
