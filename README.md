@@ -1,11 +1,9 @@
 # README
+
 ![alt text](https://github.com/wrightet/full_stack_bad_reads/blob/master/app/assets/images/logo.png "Logo Title Text 1")
-
-Welcome to Bad Reads, a website thats allows you to find the baddest books out there. Bad reads can help you find some of the worst books out there. Then once you've found one you hate, leave a review!
-
 ## Link to the live site
 * http://bad-reads.herokuapp.com/#/
-
+Welcome to Bad Reads, a website thats allows you to find the baddest books out there. Bad reads can help you find some of the worst books out there. Then once you've found one you hate, leave a review!
 
 ## Technologies used
 * Ruby
