@@ -31,7 +31,7 @@ Welcome to Bad Reads, a website thats allows you to find the baddest books out t
 * Rate books and leave a review. The review can also be edited or deleted if left by the current user.
 ![alt text](https://github.com/wrightet/full_stack_bad_reads/blob/master/app/assets/images/create_form.png "Logo Title Text 1")
 ![alt text](https://github.com/wrightet/full_stack_bad_reads/blob/master/app/assets/images/edit_form.png "Logo Title Text 1")
-`
+````
  {this.props.currentUser === review.user_id ? 
                         <div className='review-edit-delete'>
                              <Link to={`/books/review/${review.id}/edit`} className='review-delete'>Edit</Link>
@@ -40,7 +40,7 @@ Welcome to Bad Reads, a website thats allows you to find the baddest books out t
                         </div>
                         
                          :''}
-`
+````
 * Hover over the User Icon to and click log out to sign out.
 ![alt text](https://github.com/wrightet/full_stack_bad_reads/blob/master/app/assets/images/logout.png "Logo Title Text 1")
 
