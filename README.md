@@ -28,9 +28,9 @@ Welcome to Bad Reads, a website thats allows you to find the baddest books out t
                             ))`
 * Click on a book and see its information. 
 ![alt text](https://github.com/wrightet/full_stack_bad_reads/blob/master/app/assets/images/book_info.png "Logo Title Text 1")
-`
+````
  <td><Link to={`/books/${book.id}`}><img src={this.keyFinder(book.url)} alt="" className="book-photo" /></Link></td>
-`
+````
 * Rate books and leave a review. The review can also be edited or deleted if left by the current user.
 ![alt text](https://github.com/wrightet/full_stack_bad_reads/blob/master/app/assets/images/create_form.png "Logo Title Text 1")
 ![alt text](https://github.com/wrightet/full_stack_bad_reads/blob/master/app/assets/images/edit_form.png "Logo Title Text 1")
