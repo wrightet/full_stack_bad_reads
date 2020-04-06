@@ -19,13 +19,15 @@ Welcome to Bad Reads, a website thats allows you to find the baddest books out t
 ## Features
 * Browse through an index of books.
 ![alt text](https://github.com/wrightet/full_stack_bad_reads/blob/master/app/assets/images/index_photo.png "Logo Title Text 1")
-```Javascript    books.map(book => (
-                                <BookIndexItem
-                                book = {book}
-                                key = {book.id}
-                                requestAllReviews = {this.props.requestAllReviews}
-                               />
-                            ))```
+```Javascript    
+books.map(book => (
+    <BookIndexItem
+    book = {book}
+    key = {book.id}
+    requestAllReviews = {this.props.requestAllReviews}
+    />
+))
+   ```
 * Click on a book and see its information. 
 ![alt text](https://github.com/wrightet/full_stack_bad_reads/blob/master/app/assets/images/book_info.png "Logo Title Text 1")
 ```Javascript
@@ -48,7 +50,8 @@ Welcome to Bad Reads, a website thats allows you to find the baddest books out t
 ![alt text](https://github.com/wrightet/full_stack_bad_reads/blob/master/app/assets/images/logout.png "Logo Title Text 1")
 
  * One feature that was a bit of a challange was accomplishing a demo log in. I did this by creating a seed demo user in my data base and writing a function that allows that user to be signed in on click.
- ``` Javascript this.props.login({ first_name:'Demo', last_name:'Demo', email: 'demo', password: '123456' })
+ ``` Javascript 
+ this.props.login({ first_name:'Demo', last_name:'Demo', email: 'demo', password: '123456' })
         .then(() => this.props.history.push('/') );
  ```
  
