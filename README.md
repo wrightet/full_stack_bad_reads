@@ -48,12 +48,6 @@ books.map(book => (
 ```
 * Hover over the User Icon to and click log out to sign out.
 ![alt text](https://github.com/wrightet/full_stack_bad_reads/blob/master/app/assets/images/logout.png "Logo Title Text 1")
-
- * One feature that was a bit of a challange was accomplishing a demo log in. I did this by creating a seed demo user in my data base and writing a function that allows that user to be signed in on click.
- ``` Javascript 
- this.props.login({ first_name:'Demo', last_name:'Demo', email: 'demo', password: '123456' })
-        .then(() => this.props.history.push('/') );
- ```
  
  * A feature that I am proud of is the review form. It is a partial and took a lot of work because the information it needs is different on create and edit. The end result was dryier code that works as intended.
  
