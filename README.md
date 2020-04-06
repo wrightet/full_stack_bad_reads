@@ -19,22 +19,22 @@ Welcome to Bad Reads, a website thats allows you to find the baddest books out t
 ## Features
 * Browse through an index of books.
 ![alt text](https://github.com/wrightet/full_stack_bad_reads/blob/master/app/assets/images/index_photo.png "Logo Title Text 1")
-`    books.map(book => (
+```Javascript    books.map(book => (
                                 <BookIndexItem
                                 book = {book}
                                 key = {book.id}
                                 requestAllReviews = {this.props.requestAllReviews}
                                />
-                            ))`
+                            ))```
 * Click on a book and see its information. 
 ![alt text](https://github.com/wrightet/full_stack_bad_reads/blob/master/app/assets/images/book_info.png "Logo Title Text 1")
-````
+```Javascript
  <td><Link to={`/books/${book.id}`}><img src={this.keyFinder(book.url)} alt="" className="book-photo" /></Link></td>
-````
+```
 * Rate books and leave a review. The review can also be edited or deleted if left by the current user.
 ![alt text](https://github.com/wrightet/full_stack_bad_reads/blob/master/app/assets/images/create_form.png "Logo Title Text 1")
 ![alt text](https://github.com/wrightet/full_stack_bad_reads/blob/master/app/assets/images/edit_form.png "Logo Title Text 1")
-````
+```Javascript
  {this.props.currentUser === review.user_id ? 
                         <div className='review-edit-delete'>
                              <Link to={`/books/review/${review.id}/edit`} className='review-delete'>Edit</Link>
@@ -43,13 +43,14 @@ Welcome to Bad Reads, a website thats allows you to find the baddest books out t
                         </div>
                         
                          :''}
-````
+```
 * Hover over the User Icon to and click log out to sign out.
 ![alt text](https://github.com/wrightet/full_stack_bad_reads/blob/master/app/assets/images/logout.png "Logo Title Text 1")
 
  * One feature that was a bit of a challange was accomplishing a demo log in. I did this by creating a seed demo user in my data base and writing a function that allows that user to be signed in on click.
- ` this.props.login({ first_name:'Demo', last_name:'Demo', email: 'demo', password: '123456' })
-        .then(() => this.props.history.push('/') );`
+ ``` Javascript this.props.login({ first_name:'Demo', last_name:'Demo', email: 'demo', password: '123456' })
+        .then(() => this.props.history.push('/') );
+ ```
  
  * A feature that I am proud of is the review form. It is a partial and took a lot of work because the information it needs is different on create and edit. The end result was dryier code that works as intended.
  
