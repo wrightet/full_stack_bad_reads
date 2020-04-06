@@ -51,7 +51,7 @@ Welcome to Bad Reads, a website thats allows you to find the baddest books out t
  ` this.props.login({ first_name:'Demo', last_name:'Demo', email: 'demo', password: '123456' })
         .then(() => this.props.history.push('/') );`
  
- * Another feature that I am proud of is the review form. It is a partial and took a lot of work because the information it needs is different on create and edit. The end result was dryier code that works as intended.
+ * A feature that I am proud of is the review form. It is a partial and took a lot of work because the information it needs is different on create and edit. The end result was dryier code that works as intended.
  
  
 
