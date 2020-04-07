@@ -48,6 +48,27 @@ books.map(book => (
 ```
 * Hover over the User Icon to and click log out to sign out.
 ![alt text](https://github.com/wrightet/full_stack_bad_reads/blob/master/app/assets/images/logout.png "Logo Title Text 1")
+
+* The average rating of each book is acheived with this function. Then value is passed to the stars component which then selects the correct star.
+
+``` Javascript
+ avgRating() {
+        let reviews = this.props.book.reviews
+       
+        if (reviews) {
+            let count = 0;
+            let length = reviews.length;
+            reviews.map(review => {
+                count += review.rating
+            }
+            );
+            let num = parseFloat(count / length);
+            return num.toFixed(2)
+        }
+        else { return null }
+
+    }
+    ```
  
  * A feature that I am proud of is the review form. It is a partial and took a lot of work because the information it needs is different on create and edit. The end result was dryier code that works as intended.
  
