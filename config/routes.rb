@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :books, only: [:create, :show, :index, :update] do
       resources :reviews, only: [:create, :index,:destroy, :show]
     end
-    resources :library
+    resources :library, only: [:create, :destroy, :show]
     resources :book_shelves
     resources :reviews, only: [:update]
   end
