@@ -50,7 +50,7 @@ books.map(book => (
 ![alt text](https://github.com/wrightet/full_stack_bad_reads/blob/master/app/assets/images/logout.png "Logo Title Text 1")
 
 * The average rating of each book is acheived with this function. Then value is passed to the stars component which then selects the correct star.
-
+![alt text](https://github.com/wrightet/full_stack_bad_reads/blob/master/app/assets/images/stars.png "Logo Title Text 1")
 ``` Javascript
  avgRating() {
         let reviews = this.props.book.reviews
