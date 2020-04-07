@@ -25,8 +25,6 @@ class Api::BooksController < ApplicationController
         else
              render json: @book.errors.full_messages, status: 422
         end
-
-
     end
 
 
