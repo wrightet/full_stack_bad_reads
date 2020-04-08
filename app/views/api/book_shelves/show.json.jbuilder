@@ -1,0 +1,1 @@
+json.extract! @book_shelf, :id, :book_id, :user_id, :name
