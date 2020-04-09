@@ -1,5 +1,5 @@
-@book_shelves.each do |shelf|
-    json.set! shelf.id do 
-        json.extract! shelf, :id, :user_id, :book_id, :name
+ @libraries.each do |library|
+    json.set! library.id do
+        json.extract! library, :book_id, :shelf_id
     end
 end
