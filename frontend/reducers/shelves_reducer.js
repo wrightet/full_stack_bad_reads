@@ -8,7 +8,7 @@ const shelfReducer = (oldState = {}, action) => {
             return action.shelves;
         case RECEIVE_SHELF:
             return Object.assign({}, oldState, {[action.shelf.id]: action.shelf});
-        case REMOVE_SHELF:
+        case DELETE_SHELF:
             delete Object.assign({}, oldState, [action.shelfId])
             return Object.assign({}, oldState)
         default:
