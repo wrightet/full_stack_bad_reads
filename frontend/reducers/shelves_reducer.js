@@ -1,4 +1,4 @@
-import {RECEIVE_ALL_SHELVES, RECEIVE_SHELF, REMOVE_SHELF} from '../actions/shelf_actions';
+import {RECEIVE_ALL_SHELVES, RECEIVE_SHELF, DELETE_SHELF} from '../actions/shelf_actions';
 
 const shelfReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
