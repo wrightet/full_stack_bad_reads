@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom'
 class ShelfIndexItem extends React.Component {
     constructor(props){
         super(props);
@@ -7,6 +7,6 @@ class ShelfIndexItem extends React.Component {
     }
 
     render(){
-        return null
+        <Link to=''>{this.props.name}</Link>
     }
 }

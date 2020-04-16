@@ -1,7 +1,6 @@
 import React from 'react';
 import BookIndexItem from './book_index_item';
-import BookIndexContainer from './book_index_container'
-import {Link} from 'react-router-dom'
+// import ShelfIndexContainer from '../shelves/shelf_index_container';
 class BookIndex extends React.Component {
     constructor(props){
         super(props)
@@ -16,6 +15,7 @@ class BookIndex extends React.Component {
         if (!books){return null;}
         return(
         <div className="book-table-div">
+           
             <table className="books-table">
                 <thead className="book-index-column-list">
                     <tr className="table-header-row">

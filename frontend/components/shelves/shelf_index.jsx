@@ -1,6 +1,6 @@
 import React from 'React';
 import ShelfIndexItem from './shelf_index_item';
-import ShelfIndexContainer from './shelf_index_continer'
+import ShelfIndexContainer from './shelf_index_container'
 
 class ShelfIndex extends React.Component {
     constructor(props){
@@ -8,6 +8,17 @@ class ShelfIndex extends React.Component {
     }
 
     render(){
-        return null
+        <div>
+            {
+                this.props.shelves.map(shelf => (
+                    <ShelfIndexItem
+                    shelf={shelf}
+                    key={shelf.id}
+                    />
+                ))
+            }
+        </div>
     }
 }
+
+export default ShelfIndex;
