@@ -20,8 +20,8 @@ const removeShelf = (shelfId) => ({
 
 })
 
-export const requestAllShelves = shelfId => dispatch => {
-    return APIUtil.fetchAllShelves(shelfId).then(shelves => 
+export const requestAllShelves = () => dispatch => {
+    return APIUtil.fetchAllShelves().then(shelves => 
         dispatch(receiveShelves(shelves)))
 };
 
