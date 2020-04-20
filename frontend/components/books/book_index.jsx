@@ -48,9 +48,11 @@ class BookIndex extends React.Component {
         const { books } = this.props;
        if (!books){return null;}
        return (
-           <div>
-               <div>
-                   {books.map(book => (
+           <div className='book-index'>
+               <div className='book-index-row'>
+                   {
+                   
+                   books.map(book => (
                        <BookIndexItem
                        book={book}
                        key={book.id}

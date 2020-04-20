@@ -394,11 +394,11 @@ tr{
     text-decoration: underline;
 }
 
-.book-photo {
+/* .book-photo {
     width: 30%;
     height: 10vh;
     border-radius: 5%;
-}
+} */
 
 .book-show-photo{
     width: 70%;
@@ -994,4 +994,20 @@ footer > ul > li > h6 {
 .index-review > a {
     background: white;
     border: none;
+}
+
+
+.book-index-photo > a > img{
+    height: 25vh;
+    width: 15vw;
+
+}
+.book-index-row{
+    grid-column-start: 1;
+   grid-column-end: span 5;
+}
+.book-index{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
 }
