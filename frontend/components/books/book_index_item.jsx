@@ -49,24 +49,33 @@ class BookIndexItem extends React.Component {
        
         let book = this.props.book
         return (
-            <tr className="book-row">
-                <td><Link to={`/books/${book.id}`}><img src={this.keyFinder(book.url)} alt="" className="book-photo" /></Link></td>
-                <td><Link to={`/books/${book.id}`}>{book.title}</Link></td>
-                <td><Link to={`/books/${book.id}`}>{book.author}</Link></td>
-                <td className='index-stars'>     
-                    <IndivRating
+            // <tr className="book-row">
+            //     <td><Link to={`/books/${book.id}`}><img src={this.keyFinder(book.url)} alt="" className="book-photo" /></Link></td>
+            //     <td><Link to={`/books/${book.id}`}>{book.title}</Link></td>
+            //     <td><Link to={`/books/${book.id}`}>{book.author}</Link></td>
+            //     <td className='index-stars'>     
+            //         <IndivRating
+            //         min={1}
+            //         max={5}
+            //         value={Math.round(this.avgRating())}/>
+            //         {this.avgRating()}
+            //     </td>
+            //     <td className='index-review'>
+            //         <Link to={`/books/${book.id}/review/new`} className='write-review'>Write a review</Link>
+            //     </td>
+            //     <td>{book.genre}</td>
+               
+                
+            // </tr>
+            <div>
+                <Link to={`/books/${book.id}`}><img src={this.keyFinder(book.url)} alt="" className="book-photo" /></Link>
+                <IndivRating
                     min={1}
                     max={5}
                     value={Math.round(this.avgRating())}/>
                     {this.avgRating()}
-                </td>
-                <td className='index-review'>
-                    <Link to={`/books/${book.id}/review/new`} className='write-review'>Write a review</Link>
-                </td>
-                <td>{book.genre}</td>
-               
-                
-            </tr>
+            </div>
+
         )
     }
 }
