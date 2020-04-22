@@ -9,9 +9,11 @@ class User < ApplicationRecord
     has_many :books,
         through: :shelves,
         source: :books
+
     has_many :reviews
+
     has_many :book_shelves,
-        foreign_key: :shelf_id,
+        foreign_key: :user_id,
         class_name: 'BookShelf'
 
     def self.find_by_credentials(email, password)

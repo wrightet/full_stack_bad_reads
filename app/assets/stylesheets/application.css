@@ -998,21 +998,38 @@ footer > ul > li > h6 {
 
 
 .book-index-photo > a > img{
-    height: 25vh;
-    width: 15vw;
+   height: 180px;
+   width: 115px;
 
 }
 
 .book-index{
-
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    /* padding-left: 100px;
+    padding-right: 100px; */
+    align-items: center;
 }
 .book-index-row{
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    /* display: grid;
+    grid-template-columns: 40% 40% 40% 40% 40%;
+    grid-template-rows: 40% 40% 40% 40% 40%; */
+    
 
 }
 .book-index-item{
-   height:10vh;
-   width:5vw;
+   /* height:30vh;
+   width:5vw; */
+   margin: 5px;
+}
+
+.App{
+    position: relative;
+    /* display: flex; */
+    justify-content: center;
+   
 }

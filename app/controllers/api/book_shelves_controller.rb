@@ -1,7 +1,8 @@
 class Api::BookShelvesController < ApplicationController
 
     def index
-        @book_shelves = BookShelf.all
+        @book_shelves = current_user.book_shelves
+        
     end
 
     def show

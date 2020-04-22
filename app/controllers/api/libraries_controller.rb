@@ -10,10 +10,6 @@ class Api::LibrariesController < ApplicationController
         end 
     end
 
-    def show
-        @library = Library.find(params[:id])
-    end
-
     def destroy
         @library = Library.find(params[:id])
         @library.destroy
@@ -22,5 +18,6 @@ class Api::LibrariesController < ApplicationController
 
     private
     def library_params
+        params.require(:library).permit(:book_id, :shelf_id)
     end
 end

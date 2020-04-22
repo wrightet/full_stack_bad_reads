@@ -6,12 +6,13 @@ class Book < ApplicationRecord
    has_many :reviews,
         foreign_key: :book_id,
         class_name: 'Review'
+
    has_many :libraries,
         foreign_key: :book_id,
         class_name: 'Library'
 
    has_many :book_shelves,
-    through: :library,
+    through: :libraries,
     source: :book_shelf
 
     

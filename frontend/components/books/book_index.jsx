@@ -1,5 +1,6 @@
 import React from 'react';
 import BookIndexItem from './book_index_item';
+import { Link } from 'react-router-dom';
 // import ShelfIndexContainer from '../shelves/shelf_index_container';
 class BookIndex extends React.Component {
     constructor(props){
@@ -46,20 +47,42 @@ class BookIndex extends React.Component {
     // }
     render(){
         const { books } = this.props;
+        let groupedBooks = [];
+        for (let i = 0; i < books.length; i+=5) {
+            groupedBooks.push(books.slice(i, i+5))
+            
+        }
        if (!books){return null;}
        return (
            <div className='book-index'>
-               <div className='book-index-row'>
-                   {
-                   
-                   books.map(book => (
-                       <BookIndexItem
-                       book={book}
-                       key={book.id}
-                       requestAllReviews={this.props.requestAllReviews}
-                       />
-                   ))}
-               </div>
+                <div>
+                    {/* <ul>
+                           {this.props.requestAllShelves().map(shelf =>{
+                               <li><Link to={`/shelf/${shelf.id}`}>{shelf.name}</Link></li>})
+                       
+                    }
+                    </ul> */}
+                 
+                </div>
+                {
+                    groupedBooks.map(row => (
+                          
+                        <div className='book-index-row'>
+                            {
+                            
+                            row.map(book => (
+                                <BookIndexItem
+                                book={book}
+                                key={book.id}
+                                requestAllReviews={this.props.requestAllReviews}
+                                />
+                            ))}
+                        </div>
+                    ))
+                        
+                    
+             
+                }
            </div>
        )
     }
