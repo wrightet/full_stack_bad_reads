@@ -1,7 +1,7 @@
 import React from 'react';
 import BookIndexItem from './book_index_item';
 import { Link } from 'react-router-dom';
-// import ShelfIndexContainer from '../shelves/shelf_index_container';
+import ShelfIndexContainer from '../shelves/shelf_index_container';
 class BookIndex extends React.Component {
     constructor(props){
         super(props)
@@ -9,6 +9,7 @@ class BookIndex extends React.Component {
     }
     componentDidMount(){
         this.props.requestAllBooks();
+        this.props.requestAllShelves();
     }
     
     // render(){
@@ -47,23 +48,27 @@ class BookIndex extends React.Component {
     // }
     render(){
         const { books } = this.props;
+        const { shelves } = this.props.requestAllShelves;
         let groupedBooks = [];
         for (let i = 0; i < books.length; i+=5) {
             groupedBooks.push(books.slice(i, i+5))
             
         }
        if (!books){return null;}
+    //    if (!shelves){return null;}
        return (
            <div className='book-index'>
-                <div>
-                    {/* <ul>
-                           {this.props.requestAllShelves().map(shelf =>{
-                               <li><Link to={`/shelf/${shelf.id}`}>{shelf.name}</Link></li>})
-                       
-                    }
-                    </ul> */}
+                {/* <div className='shelf-index'>
+                    <ShelfIndexContainer/>
                  
-                </div>
+                </div> */}
+                {/* <ul className='shelf-links'>
+                    { 
+                        shelves.map( shelf => (
+                            <li><Link to={`/shelf/${shelf.id}`}>{shelf.name}</Link></li>
+                        ))
+                    }
+                </ul> */}
                 {
                     groupedBooks.map(row => (
                           
@@ -79,9 +84,6 @@ class BookIndex extends React.Component {
                             ))}
                         </div>
                     ))
-                        
-                    
-             
                 }
            </div>
        )

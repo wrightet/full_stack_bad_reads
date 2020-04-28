@@ -33,7 +33,7 @@ class ShelfIndex extends React.Component {
                     <tbody className='books-list-body'>
                         { 
                                 books.map(book => (
-                                    <BookIndexItem
+                                    <ShelfIndexItem
                                     book = {book}
                                     key = {book.id}
                                     requestAllReviews = {this.props.requestAllReviews}
