@@ -48,7 +48,7 @@ class BookIndex extends React.Component {
     // }
     render(){
         const { books } = this.props;
-        const { shelves } = this.props.requestAllShelves;
+        const { shelves } = this.props.requestAllShelves();
         let groupedBooks = [];
         for (let i = 0; i < books.length; i+=5) {
             groupedBooks.push(books.slice(i, i+5))
@@ -62,13 +62,13 @@ class BookIndex extends React.Component {
                     <ShelfIndexContainer/>
                  
                 </div> */}
-                {/* <ul className='shelf-links'>
+                {/* <div className='shelf-links'>
                     { 
                         shelves.map( shelf => (
-                            <li><Link to={`/shelf/${shelf.id}`}>{shelf.name}</Link></li>
+                            <Link to={`/shelf/${shelf.id}`}>{shelf.name}</Link>
                         ))
                     }
-                </ul> */}
+                </div> */}
                 {
                     groupedBooks.map(row => (
                           

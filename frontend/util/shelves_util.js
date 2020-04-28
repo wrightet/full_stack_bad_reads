@@ -1,8 +1,9 @@
 export const fetchAllShelves = () => (
     $.ajax({
         method: 'GET',
-        url: '/api/book_shelves'
+        url: `/api/users/${currentUser.id}/book_shelves`
     })
+   
 )
 
 export const fetchShelf = id => (

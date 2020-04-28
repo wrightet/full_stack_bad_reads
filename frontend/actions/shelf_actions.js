@@ -22,7 +22,7 @@ const removeShelf = (shelfId) => ({
 
 export const requestAllShelves = () => dispatch => {
     return APIUtil.fetchAllShelves().then(shelves => 
-        dispatch(receiveShelves(shelves)))
+        dispatch(receiveALLShelves(shelves)))
 };
 
 export const requestShelf = shelfId => dispatch => {
