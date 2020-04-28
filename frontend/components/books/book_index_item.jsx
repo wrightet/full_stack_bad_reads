@@ -71,7 +71,7 @@ class BookIndexItem extends React.Component {
                 <div className='book-index-photo'>
                     <Link to={`/books/${book.id}`}><img src={this.keyFinder(book.url)} alt="" className="book-photo" /></Link>
                 </div>
-                
+              
                 <IndivRating
                     min={1}
                     max={5}
