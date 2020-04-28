@@ -15,6 +15,7 @@ import GreetingContainer from './greeting/greeting_container';
 import BookShowContainer from './books/book_show_container';
 import EditReviewContainer from './reviews/edit_review_container';
 import CreateReviewContainer from './reviews/create_review_container';
+import ShelfIndexContainer from './shelves/shelf_index_container';
 import Splash from './splash/splash';
 
 const App = () => (
@@ -35,7 +36,7 @@ const App = () => (
         <ProtectedRoute exact path="/books/:id" component={BookShowContainer}/>
         <ProtectedRoute exact path="/books/:id/review/new" component={CreateReviewContainer}/>
         <ProtectedRoute exact path="/books/review/:id/edit" component={EditReviewContainer}/>
-        
+        {/* <ProtectedRoute exact path="/shelves/:id" component={ShelfIndexContainer}/> */}
         <AuthRoute exact path='/' component={Splash}/>
         <footer>
             {/* <div className='footer-logo-div'>

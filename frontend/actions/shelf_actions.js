@@ -4,7 +4,7 @@ export const RECEIVE_ALL_SHELVES = 'RECEIVE_ALL_SHELVES';
 export const RECEIVE_SHELF = 'RECEIVE_SHELF';
 export const DELETE_SHELF = 'DELETE_SHELF';
 
-const receiveAllShelves = (shelves) => ({
+const receiveALLShelves = (shelves) => ({
     type: RECEIVE_ALL_SHELVES,
     shelves
 });
