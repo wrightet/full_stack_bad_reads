@@ -1,8 +1,10 @@
 class Api::BookShelvesController < ApplicationController
 
     def index
-        @book_shelves = current_user.book_shelves
-        
+        # @book_shelves = current_user.book_shelves
+        @book_shelves = BookShelf.all
+        p @book_shelves
+        p 'What is good my dudes?'
     end
 
     def show
@@ -32,6 +34,27 @@ class Api::BookShelvesController < ApplicationController
         @book_shelf = BookShelf.find(params[:id])
         @book_shelf.destroy
         render :show
+    end
+
+    def add_book
+        book_shelf = BookShelf.new(
+            book_id: params[:book_id],
+            shelf_id: params[:shelf_id]
+        )
+        if book_shelf.save
+            render json: book_shelf, status: :created
+        else
+            render json: book_shelf.errors.full_messages, status: :unprocssable_entity
+        end
+    end
+
+    def remove_book
+        shelf = BookShelf.find_by(
+            book_id: params[:book_id],
+            shelf_id: params[:shelf_id]
+        )
+        shelf.destroy
+        render json: shelf
     end
 
     private
