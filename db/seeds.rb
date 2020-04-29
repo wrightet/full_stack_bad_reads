@@ -17,6 +17,23 @@ ActiveRecord::Base.transaction do
     User.destroy_all
     Review.destroy_all
 
+    10.times do
+        User.create(
+            first_name: Faker::Name.unique.first_name,
+            last_name: Faker::Name.unique.last_name,
+            email: Faker::Internet.email,
+            password: '123456'
+        )
+    end
+    
+    demo = User.create(
+        first_name: 'Demo',
+        last_name: 'Demo',
+        email: 'demo',
+        password: '123456')
+        
+    user_ids = User.all.map {|user| user.id}
+
     book_1 = Book.create!(
         title: 'Romeo and Juliet',
         author: 'William Shakespeare',
@@ -30,15 +47,7 @@ ActiveRecord::Base.transaction do
 
     )
 
-        5.times do 
-            Review.create(
-            user_id: rand(1..10),
-            book_id: book_1.id,
-            rating: rand(1..5),
-            body: Faker::Quote.most_interesting_man_in_the_world,
-            
-        )
-        end
+    
 
     book_2 = Book.create!(
         title: 'The Tempest',
@@ -55,15 +64,7 @@ ActiveRecord::Base.transaction do
 
     )
 
-            5.times do 
-            Review.create(
-            user_id: rand(1..10),
-            book_id: book_2.id,
-            rating: rand(1..5),
-            body: Faker::Quote.most_interesting_man_in_the_world,
-            
-        )
-        end
+        
 
     book_3 = Book.create!(
         title: 'A Midsummer Nights Dream',
@@ -249,15 +250,18 @@ ActiveRecord::Base.transaction do
         that will obsess you, possess you, and stay with you forever."
 
     )
-    10.times do
-        User.create(
-            first_name: Faker::Name.unique.first_name,
-            last_name: Faker::Name.unique.last_name,
-            email: Faker::Internet.email,
-            password: '123456'
-        )
-    end
+  
 
+   
+    # User.create(first_name: 'Todd', last_name: 'McTodd', email: 'toddsonoftodd@todd.com', password: '123456')
+    # Book.create(title: 'Harry Potter', author: 'J.K. Rowling', genre: 'Fantasy', read: true, currently_reading: false, want_to_read: false )
+    # Review.create(user_id: 1, book_id: 1, rating: 3, body: 'An ok book about a wizard boy with no parents ')
+    
+    # BookShelf.create(user_id: 1, book_id: 1, name: "read")
+  
+    # all users must be created above this line
+    
+    
     100.times do 
        book = Book.create(
             title: Faker::Book.title,
@@ -269,44 +273,34 @@ ActiveRecord::Base.transaction do
             url: 'book.jpeg',
             description: Faker::Hipster.paragraph
         )
-        id = book.id  
-        5.times do 
-            Review.create(
-            user_id: rand(1..10),
-            book_id: id,
-            rating: rand(1..5),
-            body: Faker::Quote.most_interesting_man_in_the_world,
-            
-        )
-        end
+
     end
 
-    50.times do
-        Review.create(
-            user_id: rand(1..10),
-            book_id: rand(1..10),
-            rating: rand(1..5),
-            body: Faker::Quote.most_interesting_man_in_the_world,
-            
-        )
-    end
-    # User.create(first_name: 'Todd', last_name: 'McTodd', email: 'toddsonoftodd@todd.com', password: '123456')
-    # Book.create(title: 'Harry Potter', author: 'J.K. Rowling', genre: 'Fantasy', read: true, currently_reading: false, want_to_read: false )
-    # Review.create(user_id: 1, book_id: 1, rating: 3, body: 'An ok book about a wizard boy with no parents ')
+    book_ids = Book.all.map{|book| book.id}
+
     Book.all.each do |book|
         
        shelf = BookShelf.create(
-            user_id: rand(1..10),
+            user_id: user_ids[rand(0..user_ids.length - 1 )],
             book_id: book.id,
             name: ["read", "want_to_read", "currently_reading"].shuffle.first
         )
         Library.create(book_id: book.id, shelf_id: shelf.id)
     end
-    # BookShelf.create(user_id: 1, book_id: 1, name: "read")
-    demo = User.create(
-            first_name: 'Demo',
-            last_name: 'Demo',
-            email: 'demo',
-            password: '123456')
+    
+    book_ids.each do |book_id|
+        5.times do
+            Review.create(
+                book_id: book_id,
+                user_id: user_ids[rand(0..user_ids.length - 1 )],
+                rating: rand(1..5),
+                body: Faker::Quote.most_interesting_man_in_the_world,
+                
+            )
+        end
+    end
+
+    
+
 
 end

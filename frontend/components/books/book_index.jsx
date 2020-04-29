@@ -5,11 +5,13 @@ import ShelfIndexContainer from '../shelves/shelf_index_container';
 class BookIndex extends React.Component {
     constructor(props){
         super(props)
-    
+        this.state = {
+            shelves: null,
+        }
     }
     componentDidMount(){
         this.props.requestAllBooks();
-        this.props.requestAllShelves();
+        // this.props.requestAllShelves();
     }
     
     // render(){
@@ -48,7 +50,10 @@ class BookIndex extends React.Component {
     // }
     render(){
         const { books } = this.props;
-        const { shelves } = this.props.requestAllShelves();
+        console.log('hello')
+        // shelves = this.props.requestAllShelves().then((data)=>{
+        //     console.log(data)
+        // });
         let groupedBooks = [];
         for (let i = 0; i < books.length; i+=5) {
             groupedBooks.push(books.slice(i, i+5))
@@ -56,19 +61,20 @@ class BookIndex extends React.Component {
         }
        if (!books){return null;}
     //    if (!shelves){return null;}
+        // console.log(shelves)
        return (
            <div className='book-index'>
                 {/* <div className='shelf-index'>
                     <ShelfIndexContainer/>
                  
                 </div> */}
-                {/* <div className='shelf-links'>
-                    { 
-                        shelves.map( shelf => (
+                <div className='shelf-links'>
+                    {/* { 
+                        shelves && shelves.map( shelf => (
                             <Link to={`/shelves/${shelf.id}`}>{shelf.name}</Link>
                         ))
-                    }
-                </div> */}
+                    } */}
+                </div>
                 {
                     groupedBooks.map(row => (
                           
