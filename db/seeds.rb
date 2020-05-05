@@ -17,15 +17,15 @@ ActiveRecord::Base.transaction do
     User.destroy_all
     Review.destroy_all
 
-      Book.all.each do |book|
+    #   Book.all.each do |book|
         
-       shelf = BookShelf.create(
-            user_id: user_ids[rand(0..user_ids.length - 1 )],
-            book_id: book.id,
-            name: ["read", "want_to_read", "currently_reading"].shuffle.first
-        )
-        Library.create(book_id: book.id, shelf_id: shelf.id)
-    end
+    #    shelf = BookShelf.create(
+    #         user_id: user_ids[rand(0..user_ids.length - 1 )],
+    #         book_id: book.id,
+    #         name: ["read", "want_to_read", "currently_reading"].shuffle.first
+    #     )
+    #     Library.create(book_id: book.id, shelf_id: shelf.id)
+    # end
     10.times do
         User.create(
             first_name: Faker::Name.unique.first_name,
@@ -42,6 +42,21 @@ ActiveRecord::Base.transaction do
         password: '123456')
         
     user_ids = User.all.map {|user| user.id}
+
+    user_ids.each do |id|
+        BookShelf.create(
+            user_id:id,
+            name: 'read'
+        )
+        BookShelf.create(
+            user_id:id,
+            name: 'want to read'
+        )
+        BookShelf.create(
+            user_id:id,
+            name: 'currently reading'
+        )
+    end
 
     book_1 = Book.create!(
         title: 'Romeo and Juliet',
@@ -287,15 +302,14 @@ ActiveRecord::Base.transaction do
 
     book_ids = Book.all.map{|book| book.id}
 
-    Book.all.each do |book|
+    # Book.all.each do |book|
         
-       shelf = BookShelf.create(
-            user_id: user_ids[rand(0..user_ids.length - 1 )],
-            book_id: book.id,
-            name: ["read", "want_to_read", "currently_reading"].shuffle.first
-        )
-        Library.create(book_id: book.id, shelf_id: shelf.id)
-    end
+    #    shelf = BookShelf.create(
+    #         user_id: user_ids[rand(0..user_ids.length - 1 )],
+    #         name: ["read", "want_to_read", "currently_reading"].shuffle.first
+    #     )
+    #     Library.create(book_id: book.id, shelf_id: shelf.id)
+    # end
     
     book_ids.each do |book_id|
         5.times do
