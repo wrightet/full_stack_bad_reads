@@ -6,12 +6,14 @@ class BookIndex extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            shelves: null,
+            shelves: this.props.requestAllShelves()
         }
     }
     componentDidMount(){
         this.props.requestAllBooks();
-        // this.props.requestAllShelves();
+        this.props.requestAllShelves().then(shelves => {
+            this.setState({shelves: shelves})
+        });
     }
     
     // render(){
@@ -48,20 +50,20 @@ class BookIndex extends React.Component {
     //     </div>
     //     )
     // }
-    render(){
+    render(){    
         const { books } = this.props;
-        console.log('hello')
-        // shelves = this.props.requestAllShelves().then((data)=>{
-        //     console.log(data)
-        // });
+        // console.log(this.state.shelves.shelves)
+        const shelves = this.state.shelves.shelves;
+        // console.log('shelves',shelves)
+        
+        // console.log(shelves)
         let groupedBooks = [];
         for (let i = 0; i < books.length; i+=5) {
             groupedBooks.push(books.slice(i, i+5))
             
         }
+        
        if (!books){return null;}
-    //    if (!shelves){return null;}
-        // console.log(shelves)
        return (
            <div className='book-index'>
                 {/* <div className='shelf-index'>
@@ -69,11 +71,12 @@ class BookIndex extends React.Component {
                  
                 </div> */}
                 <div className='shelf-links'>
-                    {/* { 
-                        shelves && shelves.map( shelf => (
-                            <Link to={`/shelves/${shelf.id}`}>{shelf.name}</Link>
-                        ))
-                    } */}
+                    { 
+                    //   shelves &&  shelves.map(shelf => (
+                    //         <Link to={`/shelves/${shelf.id}`}>{shelf.name}</Link>
+                    //         // console.log('shelf',shelf)
+                    //     ))
+                    }
                 </div>
                 {
                     groupedBooks.map(row => (

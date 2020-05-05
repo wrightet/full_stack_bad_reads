@@ -63,3 +63,5 @@ class ShelfIndexItem extends React.Component {
             </tr>
     }
 }
+
+export default ShelfIndexItem;

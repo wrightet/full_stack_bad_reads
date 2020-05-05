@@ -6,6 +6,8 @@ import {requestAllShelves } from '../../actions/shelf_actions';
 
 const mSTP = state => ({
     books: Object.values(state.entities.books)
+    // shelves: Object.values(state.entities.shelves)
+    
 });
 
 const mDTP = dispatch => ({
