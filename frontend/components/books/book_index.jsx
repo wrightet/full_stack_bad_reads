@@ -6,7 +6,7 @@ class BookIndex extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            shelves: this.props.requestAllShelves()
+            shelves: {}
         }
     }
     componentDidMount(){
@@ -54,15 +54,13 @@ class BookIndex extends React.Component {
         const { books } = this.props;
         // console.log(this.state.shelves.shelves)
         const shelves = this.state.shelves.shelves;
-        // console.log('shelves',shelves)
-        
-        // console.log(shelves)
+        console.log('shelves',shelves)
         let groupedBooks = [];
         for (let i = 0; i < books.length; i+=5) {
             groupedBooks.push(books.slice(i, i+5))
             
         }
-        
+ 
        if (!books){return null;}
        return (
            <div className='book-index'>
@@ -72,10 +70,10 @@ class BookIndex extends React.Component {
                 </div> */}
                 <div className='shelf-links'>
                     { 
-                    //   shelves &&  shelves.map(shelf => (
-                    //         <Link to={`/shelves/${shelf.id}`}>{shelf.name}</Link>
-                    //         // console.log('shelf',shelf)
-                    //     ))
+                    //   shelves &&  shelves.map(shelf => {
+                    //         // <Link to={`/shelves/${shelf.id}`}>{shelf.name}</Link>
+                    //         console.log('shelf',shelf)
+                    //   })
                     }
                 </div>
                 {

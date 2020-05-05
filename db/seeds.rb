@@ -17,6 +17,15 @@ ActiveRecord::Base.transaction do
     User.destroy_all
     Review.destroy_all
 
+      Book.all.each do |book|
+        
+       shelf = BookShelf.create(
+            user_id: user_ids[rand(0..user_ids.length - 1 )],
+            book_id: book.id,
+            name: ["read", "want_to_read", "currently_reading"].shuffle.first
+        )
+        Library.create(book_id: book.id, shelf_id: shelf.id)
+    end
     10.times do
         User.create(
             first_name: Faker::Name.unique.first_name,
