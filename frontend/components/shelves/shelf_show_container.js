@@ -1,11 +1,12 @@
 import { connect } from 'react-redux';
 import{ requestAllBooks } from '../../actions/book_actions';
-import ShelfIndex from './shelf_index';
+import ShelfShow from './shelf_show';
 import {requestAllShelves, requestShelf} from '../../actions/shelf_actions';
 
-const mSTP = state => ({
-    shelves: Object.values(state.entities.shelves)
-});
+const mSTP = (state, ownProps) => {
+    return{
+    shelf: state.entities.shelves[ownProps.match.params.id]
+}};
 
 const mDTP = dispatch => ({
     requestAllShelves: () => dispatch(requestAllShelves()),
@@ -13,4 +14,4 @@ const mDTP = dispatch => ({
     requestShelf: shelfId => dispatch(requestShelf(shelfId))
 })
 
-export default connect(mSTP, mDTP)(ShelfIndex)
+export default connect(mSTP, mDTP)(ShelfShow)

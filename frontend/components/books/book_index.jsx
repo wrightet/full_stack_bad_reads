@@ -1,7 +1,7 @@
 import React from 'react';
 import BookIndexItem from './book_index_item';
 import { Link } from 'react-router-dom';
-import ShelfIndexContainer from '../shelves/shelf_index_container';
+import ShelfIndexContainer from '../shelves/shelf_show_container';
 class BookIndex extends React.Component {
     constructor(props){
         super(props)
@@ -53,7 +53,7 @@ class BookIndex extends React.Component {
     render(){    
         const { books } = this.props;
         // console.log(this.state.shelves.shelves)
-        const shelves = this.state.shelves.shelves;
+        const shelves = this.state.shelves.shelves? Object.values(this.state.shelves.shelves) : [] ;
         console.log('shelves',shelves)
         let groupedBooks = [];
         for (let i = 0; i < books.length; i+=5) {
@@ -70,10 +70,10 @@ class BookIndex extends React.Component {
                 </div> */}
                 <div className='shelf-links'>
                     { 
-                    //   shelves &&  shelves.map(shelf => {
-                    //         // <Link to={`/shelves/${shelf.id}`}>{shelf.name}</Link>
-                    //         console.log('shelf',shelf)
-                    //   })
+                        shelves.map(shelf => (
+                            <Link to={`/shelves/${shelf.id}`}>{shelf.name}</Link>
+    
+                        ))
                     }
                 </div>
                 {
