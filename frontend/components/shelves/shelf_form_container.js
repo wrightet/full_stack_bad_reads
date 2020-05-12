@@ -21,7 +21,7 @@ const mDTP = dispatch => ({
     requestAllShelves: () => dispatch(requestAllShelves()),
     createShelf: shelf => dispatch(createShelf(shelf)),
     placeOnShelf: book => dispatch(placeOnShelf(book)),
-    takeFromShelf: book => dispatch(takeFromShelf(book)
+    takeFromShelf: book => dispatch(takeFromShelf(book))
 })
 
 export default connect(mSTP,mDTP)(ShelfForm);
