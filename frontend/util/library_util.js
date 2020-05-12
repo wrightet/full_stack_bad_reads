@@ -15,7 +15,7 @@ export const fetchBookInLibrary = (shelved) => (
 export const removeShlevedBook = (shelved) => (
     $.ajax({
         method: 'DELETE',
-        url: `/api/libary/${shelved.id}`
+        url: `/api/library/${shelved.id}`
     })
 )
 // export const removeShlevedBook = (shelved) => (
