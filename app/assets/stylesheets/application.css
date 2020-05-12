@@ -1033,3 +1033,20 @@ footer > ul > li > h6 {
     justify-content: center;
    
 }
+
+.shelf-links{
+    float: left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+}
+.shelf-links > ul > li > a{
+    background: none!important;
+    border: none;
+    padding-left: 1%;
+    color: #00635D;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+}
