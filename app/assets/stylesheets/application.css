@@ -1040,8 +1040,8 @@ footer > ul > li > h6 {
     position: relative;
 }
 .shelf-links{
-    display: flex;
-    justify-content: flex-start;
+    display: block;
+    align-items: flex-start;
     float: left;
     position: relative;
 }
@@ -1057,5 +1057,9 @@ footer > ul > li > h6 {
     font-size: 14px;
     text-decoration: none;
     cursor: pointer;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.shelf-links >label > ul > li > a:hover{
+    text-decoration: underline;
 }
