@@ -7,6 +7,7 @@ class ShelfForm extends React.Component {
 
     render(){
         let shelves = this.props.shelves
+        console.log('shelves', this.props)
         if(!shelves){return null}
         return(
              <div className='shelf-dropdown'>
