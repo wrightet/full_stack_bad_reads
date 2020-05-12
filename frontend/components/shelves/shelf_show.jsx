@@ -28,7 +28,7 @@ class ShelfShow extends React.Component {
                     </tr>
                 </thead>
                 <tbody className='books-list-body'>
-                    {/* {
+                    {
                         books.map(book => (
                             <ShelfIndexItem
                                 book={book}
@@ -36,7 +36,7 @@ class ShelfShow extends React.Component {
                                 requestAllReviews={this.props.requestAllReviews}
                             />
                         ))
-                    } */}
+                    }
                 </tbody>
             </table>
         </div>
