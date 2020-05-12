@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import { IndivRating } from '../stars/stars';
+import ShelfForm from '../shelves/shleves_form';
 
 
 class BookIndexItem extends React.Component {
@@ -76,7 +77,10 @@ class BookIndexItem extends React.Component {
                     min={1}
                     max={5}
                     value={Math.round(this.avgRating())}/>
-                    {this.avgRating()}
+                {this.avgRating()}
+                <ShelfForm
+                    book={book}
+                />
             </div>
 
         )
