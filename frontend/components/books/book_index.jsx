@@ -64,24 +64,22 @@ class BookIndex extends React.Component {
        if (!books){return null;}
        return (
            <div className='book-index'>
-                {/* <div className='shelf-index'>
-                    <ShelfIndexContainer/>
-                 
-                </div> */}
-                <div className='shelf-links'>
-                   <ul>
-                    { 
-                        shelves.map(shelf => (
-                            <li><Link to={`/shelves/${shelf.id}`}>{shelf.name}</Link></li>
-                        ))
-                    }
-                   </ul>
-              
-                </div>
+       
+            
                 {
                     groupedBooks.map(row => (
                           
                         <div className='book-index-row'>
+                            <div className='shelf-links'>
+                                <ul>
+                                    {
+                                        shelves.map(shelf => (
+                                            <li><Link to={`/shelves/${shelf.id}`}>{shelf.name}</Link></li>
+                                        ))
+                                    }
+                                </ul>
+
+                            </div>
                             {
                             
                             row.map(book => (

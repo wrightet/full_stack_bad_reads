@@ -1035,10 +1035,9 @@ footer > ul > li > h6 {
 }
 
 .shelf-links{
-    float: left;
     display: flex;
-    justify-content: flex-start;
-    align-items: left;
+    justify-content: flex-end;
+    
 }
 .shelf-links > ul > li > a{
     background: none!important;
