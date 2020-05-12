@@ -11,6 +11,7 @@ const mSTP = (state, ownProps) => {
     console.log(state)
     return ({
         book: book,
+        user: user,
         shelves: Object.values(state.entities.shelves),
         addedBooks = addedBooks
     })
