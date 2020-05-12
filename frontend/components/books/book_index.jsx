@@ -66,15 +66,16 @@ class BookIndex extends React.Component {
            <div className='book-index'>
                <div className='content'>
                    <div className='shelf-links'>
-                    <ul>
-                        {
-                            shelves.map(shelf => (
-                                <li><Link to={`/shelves/${shelf.id}`}>{shelf.name}</Link></li>
-                            ))
-                        }
-                    </ul>
-
-                </div>
+                       <label htmlFor=""> Bookshelves
+                            <ul>
+                                {
+                                    shelves.map(shelf => (
+                                        <li><Link to={`/shelves/${shelf.id}`}>{shelf.name}</Link></li>
+                                    ))
+                                }
+                            </ul>
+                        </label>
+                    </div>
                 <div className='book-container-right'>
                     {
                         groupedBooks.map(row => (
