@@ -64,34 +64,38 @@ class BookIndex extends React.Component {
        if (!books){return null;}
        return (
            <div className='book-index'>
-       
-            
-                {
-                    groupedBooks.map(row => (
-                          
-                        <div className='book-index-row'>
-                            <div className='shelf-links'>
-                                <ul>
-                                    {
-                                        shelves.map(shelf => (
-                                            <li><Link to={`/shelves/${shelf.id}`}>{shelf.name}</Link></li>
-                                        ))
-                                    }
-                                </ul>
+               <div className='content'>
+                   <div className='shelf-links'>
+                    <ul>
+                        {
+                            shelves.map(shelf => (
+                                <li><Link to={`/shelves/${shelf.id}`}>{shelf.name}</Link></li>
+                            ))
+                        }
+                    </ul>
 
-                            </div>
-                            {
+                </div>
+                <div className='book-container-right'>
+                    {
+                        groupedBooks.map(row => (
                             
-                            row.map(book => (
-                                <BookIndexItem
-                                book={book}
-                                key={book.id}
-                                requestAllReviews={this.props.requestAllReviews}
-                                />
-                            ))}
-                        </div>
-                    ))
-                }
+                            <div className='book-index-row'>
+                            
+                                {
+                                row.map(book => (
+                                    <BookIndexItem
+                                    book={book}
+                                    key={book.id}
+                                    requestAllReviews={this.props.requestAllReviews}
+                                    />
+                                ))}
+                            </div>
+                        ))
+                    }
+                </div>
+               </div>
+               
+                
            </div>
        )
     }

@@ -1010,6 +1010,7 @@ footer > ul > li > h6 {
     /* padding-left: 100px;
     padding-right: 100px; */
     align-items: center;
+    /* flex-direction:row; */
 }
 .book-index-row{
     display: flex;
@@ -1033,11 +1034,20 @@ footer > ul > li > h6 {
     justify-content: center;
    
 }
-
+.book-container-right{
+    float:right;
+    display:block;
+    position: relative;
+}
 .shelf-links{
     display: flex;
-    justify-content: flex-end;
-    
+    justify-content: flex-start;
+    float: left;
+    position: relative;
+}
+
+.content{
+    flex-direction: row;
 }
 .shelf-links > ul > li > a{
     background: none!important;
