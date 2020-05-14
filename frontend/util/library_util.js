@@ -12,7 +12,7 @@ export const fetchBookInLibrary = (shelved) => (
 //         date:{shelved}
 //     })
 // )
-export const removeShlevedBook = (shelved) => (
+export const removeShelvedBook = (shelved) => (
     $.ajax({
         method: 'DELETE',
         url: `/api/library/${shelved.id}`

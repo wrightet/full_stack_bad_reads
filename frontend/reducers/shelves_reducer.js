@@ -1,6 +1,6 @@
 import {RECEIVE_ALL_SHELVES, RECEIVE_SHELF, DELETE_SHELF} from '../actions/shelf_actions';
 
-const shelfReducer = (oldState = {}, action) => {
+const shelvesReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
 
     switch (action.type) {
@@ -16,4 +16,4 @@ const shelfReducer = (oldState = {}, action) => {
     }
 }
 
-export default shelfReducer;
+export default shelvesReducer;

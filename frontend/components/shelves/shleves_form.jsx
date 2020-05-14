@@ -7,15 +7,16 @@ class ShelfForm extends React.Component {
 
     render(){
         let shelves = this.props.shelves
-        console.log('shelves', this.props)
+        // console.log('shelves', shelves)
         if(!shelves){return null}
         return(
              <div className='shelf-dropdown'>
                 <select name="" id="">
                     {
-                       shelves && shelves.map(shelf => {
-                            <option value={`${shelf.id}`}>{shelf.name}</option>
-                        })
+                       shelves.map(shelf => (
+                           
+                            <option value={`${shelf.name}`}>{shelf.name}</option>
+                        ))
                     }
                 </select>
             </div>

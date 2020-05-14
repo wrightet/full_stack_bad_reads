@@ -8,9 +8,11 @@ class ShelfShow extends React.Component {
 
     componentDidMount() {
         this.props.requestAllBooks();
-        this.props.requestAllShelves();
+        // this.props.requestAllShelves();
     }
     render(){
+        let {books} = this.props
+        console.log(books)
     return (
         <div className="book-table-div">
 
@@ -29,7 +31,7 @@ class ShelfShow extends React.Component {
                 </thead>
                 <tbody className='books-list-body'>
                     {
-                        books.map(book => (
+                        books && books.map(book => (
                             <ShelfIndexItem
                                 book={book}
                                 key={book.id}

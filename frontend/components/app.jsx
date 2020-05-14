@@ -31,13 +31,17 @@ const App = () => (
             <GreetingContainer />
             <AuthRoute exact path="/" component={LogInFormContainer} className="login" />
         </header>
-        <AuthRoute exact path="/" component={SignUpFormContainer} className="signup" />
-        <ProtectedRoute exact path="/" component={BookIndexContainer}/>
-        <ProtectedRoute exact path="/books/:id" component={BookShowContainer}/>
-        <ProtectedRoute exact path="/books/:id/review/new" component={CreateReviewContainer}/>
-        <ProtectedRoute exact path="/books/review/:id/edit" component={EditReviewContainer}/>
-        <ProtectedRoute exact path="/shelves/:id" component={ShelfShowContainer}/>
-        <AuthRoute exact path='/' component={Splash}/>
+      
+            <AuthRoute exact path="/" component={SignUpFormContainer} className="signup" />
+            <AuthRoute exact path='/' component={Splash} />
+            <Switch>
+                <ProtectedRoute exact path="/" component={BookIndexContainer}/>
+                <ProtectedRoute exact path="/books/:id" component={BookShowContainer}/>
+                <ProtectedRoute exact path="/books/:id/review/new" component={CreateReviewContainer}/>
+                <ProtectedRoute exact path="/books/review/:id/edit" component={EditReviewContainer}/>
+                <ProtectedRoute exact path="/shelves/:id" component={ShelfShowContainer}/>
+            </Switch>
+        
         <footer>
             {/* <div className='footer-logo-div'>
                 <Link to="/" className="header-link">
