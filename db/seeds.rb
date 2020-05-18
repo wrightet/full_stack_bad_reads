@@ -310,6 +310,14 @@ ActiveRecord::Base.transaction do
     #     )
     #     Library.create(book_id: book.id, shelf_id: shelf.id)
     # end
+
+    Book.all.each_with_index do |book,idx|
+        if idx % 2 == 0
+            Library.create!(book_id: book.id, shelf_id: BookShelf.first.id)
+        else
+            Library.create!(book_id: book.id, shelf_id: BookShelf.last.id)
+        end
+    end
     
     book_ids.each do |book_id|
         5.times do

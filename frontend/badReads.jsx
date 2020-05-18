@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
         store = configureStore();
     } 
     window.store = store;
-    window.state = store.getState();
     window.dispatch = store.dispatch;
     window.requestAllBooks = requestAllBooks;
     window.fetchAllBooks = fetchAllBooks;

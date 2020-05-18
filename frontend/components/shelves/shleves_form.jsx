@@ -11,6 +11,8 @@ class ShelfForm extends React.Component {
         if(!shelves){return null}
         return(
              <div className='shelf-dropdown'>
+                 <form action="
+                 ">
                 <select name="" id="">
                     {
                        shelves.map(shelf => (
@@ -19,6 +21,7 @@ class ShelfForm extends React.Component {
                         ))
                     }
                 </select>
+                </form>
             </div>
         
         )

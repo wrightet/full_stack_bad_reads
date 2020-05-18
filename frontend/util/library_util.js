@@ -18,7 +18,7 @@ export const removeShelvedBook = (shelved) => (
         url: `/api/library/${shelved.id}`
     })
 )
-// export const removeShlevedBook = (shelved) => (
+// export const removeShelvedBook = (shelved) => (
 //     $.ajax({
 //         method: 'DELETE',
 //         url: `/api/book_shelves/${shelved.id}`

@@ -4,6 +4,7 @@ import ShelfIndexItem from './shelf_index_item';
 class ShelfShow extends React.Component {
     constructor(props){
         super(props)
+        console.log('props', props)
     }
 
     componentDidMount() {
@@ -11,8 +12,8 @@ class ShelfShow extends React.Component {
         // this.props.requestAllShelves();
     }
     render(){
-        let {books} = this.props
-        console.log(books)
+        let books = this.props.requestAllBooks();
+        console.log('books',books)
     return (
         <div className="book-table-div">
 

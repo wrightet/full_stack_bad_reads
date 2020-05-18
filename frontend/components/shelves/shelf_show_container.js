@@ -1,9 +1,10 @@
 import { connect } from 'react-redux';
-import{ requestAllBooks } from '../../actions/book_actions';
+ 
 import ShelfShow from './shelf_show';
 import {requestAllShelves, requestShelf} from '../../actions/shelf_actions';
 
 const mSTP = (state, ownProps) => {
+    console.log('state', state, 'ownprops', ownProps)
     return{
     shelf: state.entities.shelves[ownProps.match.params.id]
 }};
