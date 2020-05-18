@@ -1,5 +1,6 @@
 class Api::BooksController < ApplicationController
     def index
+        p 'this is the books controller index'
         @books = Book.all
     end
 

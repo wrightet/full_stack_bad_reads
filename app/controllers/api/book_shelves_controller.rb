@@ -1,13 +1,12 @@
 class Api::BookShelvesController < ApplicationController
 
     def index
+        p 'shelves index'
         @book_shelves = current_user.book_shelves
-        # @book_shelves = BookShelf.all
-        p @book_shelves
-        p 'What is good my dudes?'
     end
 
     def show
+        p 'you are hitting the show route'
         @book_shelf = BookShelf.find(params[:id])
     end
 

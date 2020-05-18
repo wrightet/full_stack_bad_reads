@@ -9,12 +9,17 @@ class ShelfShow extends React.Component {
 
     componentDidMount() {
         this.props.requestAllBooks();
-        // this.props.requestAllShelves();
+        this.props.requestShelf(this.props.match.params.id);
     }
     render(){
-        let books = this.props.requestAllBooks();
-        console.log('books',books)
+        if(!this.props.shelf){return null}
+       let {books} = this.props.shelf
+       console.log('books',books)
+        
+    //     console.log('books',books)
+    //     console.log('shelf',shelf)
     return (
+        // <div>hello</div>
         <div className="book-table-div">
 
             <table className="books-table">
