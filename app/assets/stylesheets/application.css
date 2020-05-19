@@ -310,7 +310,7 @@ table {
 
 .book-table-div {
     /* float: right; */
-    height: 50%;
+    min-height: 90vh;
     width:  80%;
     margin-top: 2%;
     display: block;
@@ -394,11 +394,11 @@ tr{
     text-decoration: underline;
 }
 
-/* .book-photo {
+.book-photo {
     width: 30%;
     height: 10vh;
     border-radius: 5%;
-} */
+}
 
 .book-show-photo{
     width: 70%;

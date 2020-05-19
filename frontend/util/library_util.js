@@ -5,6 +5,22 @@ export const fetchBookInLibrary = (shelved) => (
         date:{shelved}
     })
 )
+
+export const createLibrary = (library) => (
+    $.ajax({
+        method: 'POST',
+        url:'/api/library',
+        data: {library}
+    })
+)
+
+export const updateLibrary = (id, library) => (
+    $.ajax({
+        method:'PATCH',
+        url:`/api/library/${id}`,
+        data:{library}
+    })
+)
 // export const fetchBookInLibrary = (shelved) => (
 //     $.ajax({
 //         method: 'POST',

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import {IndivRating} from '../stars/stars';
+import {Rating} from '../stars/stars';
 
 class ShelfIndexItem extends React.Component {
     constructor(props) {
@@ -55,7 +55,7 @@ class ShelfIndexItem extends React.Component {
                 <td><Link to={`/books/${book.id}`}>{book.title}</Link></td>
                 <td><Link to={`/books/${book.id}`}>{book.author}</Link></td>
                 <td className='index-stars'>     
-                    <IndivRating
+                    <Rating
                     min={1}
                     max={5}
                     value={Math.round(this.avgRating())}/>

@@ -10,6 +10,15 @@ class Api::LibrariesController < ApplicationController
         end 
     end
 
+    def update
+        @library = Library.find(params[:id])
+        if @library.update(library_params)
+            render :show
+        else
+            render json: @libary.error.full_messages, status: 422
+        end
+    end
+    
     def destroy
         @library = Library.find(params[:id])
         @library.destroy
