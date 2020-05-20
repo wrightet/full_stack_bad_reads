@@ -17,7 +17,7 @@ class ShelfForm extends React.Component {
                     {
                        shelves.map(shelf => (
                            
-                            <option value={`${shelf.name}`}>{shelf.name}</option>
+                            <option key={shelf.id} value={`${shelf.name}`}>{shelf.name}</option>
                         ))
                     }
                 </select>
