@@ -16,7 +16,6 @@ class ShelfShow extends React.Component {
         if(!this.props.shelf){return null}
         else {
              let {books} = this.props.shelf
-             console.log('shelf books', books)
             return(books.length !== 0 ?   
                 <div className="book-table-div">
                     <table className="books-table">
@@ -43,14 +42,11 @@ class ShelfShow extends React.Component {
                         </tbody>
                     </table>
                 </div>
-                : <div>
-                    <h1>This Book Shelf is empty</h1>
-                    <Link to='/'>Continue browsing books</Link>
+                : 
+                <div className='empty-shelf-div'>
+                    <h1 className='no-items'>No matching items!</h1>
                 </div>
-
-             
             )
-            
         }
    
     }
