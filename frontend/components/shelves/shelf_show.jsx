@@ -1,5 +1,6 @@
 import React from 'React';
 import ShelfIndexItem from './shelf_index_item';
+import {Link} from 'react-router-dom'
 
 class ShelfShow extends React.Component {
     constructor(props){
@@ -13,43 +14,46 @@ class ShelfShow extends React.Component {
     }
     render(){
         if(!this.props.shelf){return null}
-       let {books} = this.props.shelf
-       console.log('books',books)
-        
-    //     console.log('books',books)
-    //     console.log('shelf',shelf)
-    return (
-        // <div>hello</div>
-        <div className="book-table-div">
+        else {
+             let {books} = this.props.shelf
+             console.log('shelf books', books)
+            return(books.length !== 0 ?   
+                <div className="book-table-div">
+                    <table className="books-table">
+                        <thead className="book-index-column-list">
+                            <tr className="table-header-row">
+                                <th className="book-table-header-column-cover">Cover</th>
+                                <th className="book-table-header-column-name">Title</th>
+                                <th className="book-table-header-column-name">Author</th>
+                                <th className="book-table-header-column-rating">Rating</th>
+                                <th className="book-table-header-column-review">Review</th>
+                                <th className="book-table-header-column-genre">Genre</th>
+                            </tr>
+                        </thead>
+                        <tbody className='books-list-body'>
+                            {
+                                books && books.map(book => (
+                                    <ShelfIndexItem
+                                        book={book}
+                                        key={book.id}
+                                        requestAllReviews={this.props.requestAllReviews}
+                                    />
+                                ))
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                : <div>
+                    <h1>This Book Shelf is empty</h1>
+                    <Link to='/'>Continue browsing books</Link>
+                </div>
 
-            <table className="books-table">
-                <thead className="book-index-column-list">
-                    <tr className="table-header-row">
-                        <th className="book-table-header-column-cover">Cover</th>
-                        <th className="book-table-header-column-name">Title</th>
-                        <th className="book-table-header-column-name">Author</th>
-                        <th className="book-table-header-column-rating">Rating</th>
-                        <th className="book-table-header-column-review">Review</th>
-                        <th className="book-table-header-column-genre">Genre</th>
-
-
-                    </tr>
-                </thead>
-                <tbody className='books-list-body'>
-                    {
-                        books && books.map(book => (
-                            <ShelfIndexItem
-                                book={book}
-                                key={book.id}
-                                requestAllReviews={this.props.requestAllReviews}
-                            />
-                        ))
-                    }
-                </tbody>
-            </table>
-        </div>
-)
-                }
+             
+            )
+            
+        }
+   
+    }
 }
 
 export default ShelfShow;
