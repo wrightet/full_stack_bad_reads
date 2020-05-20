@@ -24,7 +24,6 @@ class BookIndex extends React.Component {
             groupedBooks.push(books.slice(i, i+5))
             
         }
- 
        if (!books){return null;}
        return (
            <div className='book-index'>
@@ -34,7 +33,7 @@ class BookIndex extends React.Component {
                             <ul>
                                 {
                                     shelves.map(shelf => (
-                                        <li><Link to={`/shelves/${shelf.id}`}>{shelf.name}</Link></li>
+                                        <li key={shelf.id}><Link to={`/shelves/${shelf.id}`}>{shelf.name}</Link></li>
                                     ))
                                 }
                             </ul>
@@ -44,7 +43,7 @@ class BookIndex extends React.Component {
                     {
                         groupedBooks.map(row => (
                             
-                            <div className='book-index-row'>
+                            <div className='book-index-row' key={groupedBooks.indexOf(row)}>
                             
                                 {
                                 row.map(book => (
