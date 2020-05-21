@@ -18,7 +18,6 @@ class BookIndex extends React.Component {
     render(){    
         const { books } = this.props;
         const shelves = this.state.shelves.shelves? Object.values(this.state.shelves.shelves) : [] ;
-        // console.log('shelves',shelves)
         let groupedBooks = [];
         for (let i = 0; i < books.length; i+=5) {
             groupedBooks.push(books.slice(i, i+5))

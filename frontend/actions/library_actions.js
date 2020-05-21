@@ -1,4 +1,5 @@
 import * as APIUtil from '../util/library_util';
+import { createShelf } from '../util/shelves_util';
 
 export const REMOVE_BOOK_FROM_SHELF = 'REMOVE_BOOK_FROM_SHELF';
 export const ADD_BOOK_TO_SHELF = 'ADD_BOOK_TO_SHELF';
@@ -17,8 +18,14 @@ export const placeOnShelf = (book) => dispatch => (
     APIUtil.placeOnShelf(book).then(shelved => dispatch(addToShelf(shelved)))
 )
 
-export const createLibrary = () => dispatch => (
-    APIUtil.createLibrary().then()
+export const createLibrary = (library) => dispatch => (
+    APIUtil.createLibrary(library).then(book => dispatch(addToShelf(book)))
+)
+
+export const updateLibrary = (library_id, library) => (
+   APIUtil.updateLibrary(library_id,library)
+   .then(book => dispatch(removeFromShelf(book.id)))
+   .then(book => dispatch(addToShelf(book)))
 )
 
 export const takeFromShelf = book => dispatch => (

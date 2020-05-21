@@ -46,10 +46,7 @@ class ShelfIndexItem extends React.Component {
 
     render(){
         let book = this.props.book;
-        console.log(book)
         return(
-        
-        
         <tr className="book-row">
                 <td><Link to={`/books/${book.id}`}><img src={this.keyFinder(book.url)} alt="" className="book-photo" /></Link></td>
                 <td><Link to={`/books/${book.id}`}>{book.title}</Link></td>

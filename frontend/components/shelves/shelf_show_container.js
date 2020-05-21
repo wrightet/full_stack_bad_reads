@@ -4,13 +4,8 @@ import ShelfShow from './shelf_show';
 import {requestAllShelves, requestShelf} from '../../actions/shelf_actions';
 
 const mSTP = (state, ownProps) => {
-    console.log(ownProps.match.params.id)
-    console.log('shelves',state.entities.shelves)
-    
     return{
     shelf: state.entities.shelves[ownProps.match.params.id]
-    // shelf: state.entities.shelves
-    
 }
 };
 
