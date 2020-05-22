@@ -3,19 +3,32 @@ import React from 'react'
 class ShelfForm extends React.Component {
     constructor(props){
         super(props)
-        this.state = this.props
+        this.state = {
+            book_id:this.props.book.id,
+            id: null
+        }
         this.handleSubmit = this.handleSubmit.bind(this);
+        // this.props.createLibrary = this.props.createLibrary.bind(this);
         console.log('shelf_form',props)
     }
 
     update(field){
-        return e => this.setState({[field]: e.target.value})
+       
+        return e => {
+        //     console.log('e',e.target.value)
+        //     console.log('book',this.props.book)
+        //    console.log('field',field)
+            this.setState({ [field]: e.target.value })
+          
+            
+           
+        }
     }
 
     handleSubmit(e){
         e.preventDefault();
-        let {book} = this.props;
-        console.log('book',book)
+        console.log('state', this.state)
+        this.props.createLibrary(this.state)
         // this.props.takeFromShelf()
         
     }
@@ -24,15 +37,15 @@ class ShelfForm extends React.Component {
         if(!shelves){return null}
         return(
              <div className='shelf-dropdown'>
-                <form onSubmit={this.handleSubmit} onChange={this.update('name')}>
+                <form onSubmit={this.handleSubmit} onChange={this.update('id')}>
                 <select >
                     {
                        shelves.map(shelf => (
-                           
-                            <option key={shelf.id} value={`${shelf.name}`}>{shelf.name}</option>
+                            <option key={shelf.id} value={`${shelf.id}`}>{shelf.name}</option>
                         ))
                     }
                 </select>
+                <input type="submit" />
                 </form>
             </div>
         

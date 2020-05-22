@@ -1,7 +1,7 @@
 export const fetchBookInLibrary = (shelved) => (
     $.ajax({
         method: 'POST',
-        url:`/api/library/${shelved.id}`,
+        url:`/api/libraries/${shelved.id}`,
         date:{shelved}
     })
 )
@@ -9,7 +9,7 @@ export const fetchBookInLibrary = (shelved) => (
 export const createLibrary = (library) => (
     $.ajax({
         method: 'POST',
-        url:'/api/library',
+        url:'/api/libraries',
         data: {library}
     })
 )
@@ -17,7 +17,7 @@ export const createLibrary = (library) => (
 export const updateLibrary = (id, library) => (
     $.ajax({
         method:'PATCH',
-        url:`/api/library/${id}`,
+        url:`/api/libraries/${id}`,
         data:{library}
     })
 )
@@ -31,7 +31,7 @@ export const updateLibrary = (id, library) => (
 export const removeShelvedBook = (shelved) => (
     $.ajax({
         method: 'DELETE',
-        url: `/api/library/${shelved.id}`
+        url: `/api/libraries/${shelved.id}`
     })
 )
 // export const removeShelvedBook = (shelved) => (

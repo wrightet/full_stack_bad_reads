@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :books, only: [:create, :show, :index, :update] do
       resources :reviews, only: [:create, :index,:destroy, :show]
     end
-    resources :library, only: [:create, :destroy, :show, :update]
+    resources :libraries, only: [:create, :destroy, :show, :update]
     resources :book_shelves, except: [:index]
     resources :reviews, only: [:update]
   end

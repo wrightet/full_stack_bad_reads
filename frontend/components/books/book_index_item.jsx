@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import { IndivRating } from '../stars/stars';
-import ShelfForm from '../shelves/shelves_form';
+import ShelfForm from '../shelves/shelf_form';
 
 
 class BookIndexItem extends React.Component {
