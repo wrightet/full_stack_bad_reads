@@ -7,6 +7,7 @@ class BookIndex extends React.Component {
         this.state = {
             shelves: {}
         }
+       
     }
     componentDidMount(){
         this.props.requestAllBooks();
@@ -51,6 +52,7 @@ class BookIndex extends React.Component {
                                     key={book.id}
                                     shelves={shelves}
                                     requestAllReviews={this.props.requestAllReviews}
+                                    createLibrary={this.props.createLibrary}
                                     />
                                 ))}
                             </div>

@@ -3,6 +3,7 @@ import {requestAllBooks} from '../../actions/book_actions';
 import ShelfShow from './shelf_show';
 import {requestAllShelves, requestShelf} from '../../actions/shelf_actions';
 
+
 const mSTP = (state, ownProps) => {
     return{
     shelf: state.entities.shelves[ownProps.match.params.id]

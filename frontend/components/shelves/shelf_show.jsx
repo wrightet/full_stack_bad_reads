@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom'
 class ShelfShow extends React.Component {
     constructor(props){
         super(props)
+        console.log(props)
     }
 
     componentDidMount() {

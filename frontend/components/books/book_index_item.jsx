@@ -9,7 +9,7 @@ class BookIndexItem extends React.Component {
         super(props);
         this.keyFinder = this.keyFinder.bind(this);
         this.avgRating = this.avgRating.bind(this);
-
+        // console.log('book item', props)
     }
 
     keyFinder(url){
@@ -81,6 +81,7 @@ class BookIndexItem extends React.Component {
                 <ShelfForm
                     book={book}
                     shelves={this.props.shelves}
+                    createLibrary={this.props.createLibrary}
                 />
             </div>
 

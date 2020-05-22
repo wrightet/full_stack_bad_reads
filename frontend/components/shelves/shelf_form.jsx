@@ -9,7 +9,7 @@ class ShelfForm extends React.Component {
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         // this.props.createLibrary = this.props.createLibrary.bind(this);
-        console.log('shelf_form',props)
+        // console.log('shelf_form',props)
     }
 
     update(field){
@@ -19,6 +19,7 @@ class ShelfForm extends React.Component {
         //     console.log('book',this.props.book)
         //    console.log('field',field)
             this.setState({ [field]: e.target.value })
+            this.props.createLibrary({book_id: this.state.book_id, shelf_id: e.target.value})
           
             
            
@@ -27,8 +28,10 @@ class ShelfForm extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
+        setTimeout(this.update('id'),1).then(() => this.props.createLibrary(this.state))
+        
         console.log('state', this.state)
-        this.props.createLibrary(this.state)
+        // this.props.createLibrary(this.state)
         // this.props.takeFromShelf()
         
     }
@@ -37,7 +40,7 @@ class ShelfForm extends React.Component {
         if(!shelves){return null}
         return(
              <div className='shelf-dropdown'>
-                <form onSubmit={this.handleSubmit} onChange={this.update('id')}>
+                <form  onChange={this.update('id')}>
                 <select >
                     {
                        shelves.map(shelf => (
