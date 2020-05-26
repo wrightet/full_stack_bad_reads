@@ -8,6 +8,20 @@ class ShelfShow extends React.Component {
         console.log('shelf show', props)
     }
 
+    uniqueBooks(books){
+        // anticipating that if duplicates are in a shelf the 
+        // dup will appear when the first is removed
+        let uniq = [];
+        let ids = [];
+        books.forEach(book => {
+            if (!ids.includes(book.id)){
+                uniq.push(book);
+                ids.push(book.id);
+            }
+        })
+        return uniq;
+    }
+
     componentDidMount() {
         this.props.requestAllBooks();
         this.props.requestShelf(this.props.match.params.id);
@@ -16,7 +30,10 @@ class ShelfShow extends React.Component {
         if(!this.props.shelf){return null}
         else {
              let {books} = this.props.shelf
-            return(books.length !== 0 ?   
+             console.log('books', books)
+             let new_books = this.uniqueBooks(books);
+             console.log(new_books)
+            return(new_books.length !== 0 ?   
                 <div className="book-table-div">
                     <table className="books-table">
                         <thead className="book-index-column-list">
@@ -31,7 +48,7 @@ class ShelfShow extends React.Component {
                         </thead>
                         <tbody className='books-list-body'>
                             {
-                                books && books.map(book => (
+                                new_books && new_books.map(book => (
                                     <ShelfIndexItem
                                         book={book}
                                         key={book.id}
