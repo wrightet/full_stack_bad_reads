@@ -1,8 +1,7 @@
-export const fetchBookInLibrary = (shelved) => (
+export const fetchBookInLibrary = (id) => (
     $.ajax({
-        method: 'POST',
-        url:`/api/libraries/${shelved.id}`,
-        date:{shelved}
+        method: 'GET',
+        url:`/api/libraries/${id}`,
     })
 )
 

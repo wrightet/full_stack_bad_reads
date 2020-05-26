@@ -3,11 +3,16 @@ import { createShelf } from '../util/shelves_util';
 
 export const REMOVE_BOOK_FROM_SHELF = 'REMOVE_BOOK_FROM_SHELF';
 export const ADD_BOOK_TO_SHELF = 'ADD_BOOK_TO_SHELF';
-
+export const RECEIVE_LIBRARY = 'RECEIVE_LIBRARY'
 const addToShelf = (book) => ({
     type: ADD_BOOK_TO_SHELF,
     book
 });
+
+const findLibrary = libraryId => ({
+    type: RECEIVE_LIBRARY,
+    libraryId
+})
 
 const removeFromShelf = bookId => ({
     type: REMOVE_BOOK_FROM_SHELF,
@@ -17,7 +22,9 @@ const removeFromShelf = bookId => ({
 // export const placeOnShelf = (book) => dispatch => (
 //     APIUtil.placeOnShelf(book).then(shelved => dispatch(addToShelf(shelved)))
 // )
-
+export const fetchLibrary = (id) => (
+    APIUtil.fetchLibrary(id).then(id => dispatch(findLibrary(id)))
+)
 // adding book to shelf
 export const createLibrary = (library) => dispatch => (
     APIUtil.createLibrary(library).then(book => dispatch(addToShelf(book)))

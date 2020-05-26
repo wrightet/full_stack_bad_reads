@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 class ShelfShow extends React.Component {
     constructor(props){
         super(props)
-        console.log(props)
+        console.log('shelf show', props)
     }
 
     componentDidMount() {
@@ -36,6 +36,9 @@ class ShelfShow extends React.Component {
                                         book={book}
                                         key={book.id}
                                         requestAllReviews={this.props.requestAllReviews}
+                                        updateLibrary={this.props.updateLibrary}
+                                        removeLibrary={this.props.removeLibrary}
+                                        fetchLibrary={this.props.fetchLibrary}
                                     />
                                 ))
                             }
