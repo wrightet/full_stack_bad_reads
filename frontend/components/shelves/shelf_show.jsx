@@ -12,11 +12,12 @@ class ShelfShow extends React.Component {
         this.props.requestAllBooks();
         this.props.requestShelf(this.props.match.params.id);
     }
-    
+
     render(){
         if(!this.props.shelf){return null}
         else {
              let {books} = this.props.shelf
+             let shelf = this.props.shelf
         
             return(books.length !== 0 ?   
                 <div className="book-table-div">
@@ -36,6 +37,7 @@ class ShelfShow extends React.Component {
                                 books && books.map(book => (
                                     <ShelfIndexItem
                                         book={book}
+                                        shelf={shelf}
                                         key={book.id}
                                         requestAllReviews={this.props.requestAllReviews}
                                         updateLibrary={this.props.updateLibrary}

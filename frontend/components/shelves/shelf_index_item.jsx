@@ -8,6 +8,7 @@ class ShelfIndexItem extends React.Component {
         this.keyFinder = this.keyFinder.bind(this);
         this.avgRating = this.avgRating.bind(this);
         this.removeBook = this.removeBook.bind(this);
+        // this.libraryFinder = this.libraryFinder.bind(this);
         
     }
 
@@ -46,11 +47,24 @@ class ShelfIndexItem extends React.Component {
     }
 
     removeBook(){
-        // this.props.fetchLibrary(this.props)
-        // .then(library => {
-        //     this.props.removeLibrary(library)
-        // })
-        console.log(this.props)
+        let id = this.libraryFinder(this.props.book.id, this.props.shelf.id);
+        this.props.removeLibrary(id);
+        window.location.reload();
+        console.log('id',id)
+      
+    }
+
+    libraryFinder(bookId, shelfId){
+        let id = null;
+        this.props.shelf.libraries.forEach(library => {
+            console.log(library.book_id, library.shelf_id, library.id)
+            if ((library.book_id === bookId) && (library.shelf_id === shelfId)){
+                console.log(library.id)
+                id = library.id
+            }
+        })
+        console.log('inside',id)
+        return id
     }
 
     render(){
