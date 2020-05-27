@@ -8,7 +8,7 @@ class ShelfIndexItem extends React.Component {
         this.keyFinder = this.keyFinder.bind(this);
         this.avgRating = this.avgRating.bind(this);
         this.removeBook = this.removeBook.bind(this);
-        console.log('shelf index',props)
+        
     }
 
     keyFinder(url) {
@@ -46,11 +46,11 @@ class ShelfIndexItem extends React.Component {
     }
 
     removeBook(){
+        // this.props.fetchLibrary(this.props)
+        // .then(library => {
+        //     this.props.removeLibrary(library)
+        // })
         console.log(this.props)
-        this.props.fetchLibrary(this.props)
-        .then(library => this.props.removeLibrary(library))
-      
-        
     }
 
     render(){

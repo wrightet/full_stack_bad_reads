@@ -1,4 +1,4 @@
-export const fetchBookInLibrary = (id) => (
+export const fetchLibrary = (id) => (
     $.ajax({
         method: 'GET',
         url:`/api/libraries/${id}`,
@@ -20,22 +20,10 @@ export const updateLibrary = (id, library) => (
         data:{library}
     })
 )
-// export const fetchBookInLibrary = (shelved) => (
-//     $.ajax({
-//         method: 'POST',
-//         url:`/api/book_shelves`,
-//         date:{shelved}
-//     })
-// )
-export const removeShelvedBook = (shelved) => (
+
+export const removeShelvedBook = (libraryId) => (
     $.ajax({
         method: 'DELETE',
-        url: `/api/libraries/${shelved.id}`
+        url: `/api/libraries/${libraryId}`
     })
 )
-// export const removeShelvedBook = (shelved) => (
-//     $.ajax({
-//         method: 'DELETE',
-//         url: `/api/book_shelves/${shelved.id}`
-//     })
-// )

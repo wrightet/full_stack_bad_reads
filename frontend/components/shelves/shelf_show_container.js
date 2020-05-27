@@ -16,7 +16,7 @@ const mDTP = dispatch => ({
     requestShelf: (id) => dispatch(requestAllShelves(id)),
     requestAllBooks: () => dispatch(requestAllBooks()),
     requestShelf: shelfId => dispatch(requestShelf(shelfId)),
-    removeLibrary: book => dispatch(removeLibrary(book)),
+    removeLibrary: libraryId => dispatch(removeLibrary(libraryId)),
     updateLibrary: (id, library) => dispatch(updateLibrary(id, library)),
     fetchLibrary: id => dispatch(fetchLibrary(id))
 

@@ -4,30 +4,34 @@ import { createShelf } from '../util/shelves_util';
 export const REMOVE_BOOK_FROM_SHELF = 'REMOVE_BOOK_FROM_SHELF';
 export const ADD_BOOK_TO_SHELF = 'ADD_BOOK_TO_SHELF';
 export const RECEIVE_LIBRARY = 'RECEIVE_LIBRARY'
-const addToShelf = (book) => ({
+const addToShelf = (library) => ({
     type: ADD_BOOK_TO_SHELF,
-    book
+    library
 });
 
-const findLibrary = libraryId => ({
+const receiveLibrary = libraryId => ({
     type: RECEIVE_LIBRARY,
     libraryId
 })
 
-const removeFromShelf = bookId => ({
+const removeFromShelf = libraryId => ({
     type: REMOVE_BOOK_FROM_SHELF,
-    bookId
+    libraryId
 })
 
 // export const placeOnShelf = (book) => dispatch => (
 //     APIUtil.placeOnShelf(book).then(shelved => dispatch(addToShelf(shelved)))
 // )
 export const fetchLibrary = (id) => (
-    APIUtil.fetchLibrary(id).then(id => dispatch(findLibrary(id)))
+    APIUtil.fetchLibrary(id).then(id => dispatch(receiveLibrary(id)))
 )
 // adding book to shelf
 export const createLibrary = (library) => dispatch => (
-    APIUtil.createLibrary(library).then(book => dispatch(addToShelf(book)))
+    APIUtil.createLibrary(library).then(library => {
+       
+        dispatch(addToShelf(library))
+    })
+        
 )
 
 export const updateLibrary = (library_id, library) => (
@@ -37,6 +41,6 @@ export const updateLibrary = (library_id, library) => (
 )
 
 // equal to removing book from shelf
-export const removeLibrary = book => dispatch => (
-    APIUtil.removeLibrary(book).then(book => dispatch(removeFromShelf(book.id)))
+export const removeLibrary = libraryId => dispatch => (
+    APIUtil.removeShelvedBook(libraryId).then(library => dispatch(removeFromShelf(library.id)))
 )
