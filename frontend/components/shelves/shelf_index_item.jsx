@@ -49,7 +49,7 @@ class ShelfIndexItem extends React.Component {
     removeBook(){
         let id = this.libraryFinder(this.props.book.id, this.props.shelf.id);
         this.props.removeLibrary(id);
-        window.location.reload();
+        window.location.reload(true);
         console.log('id',id)
       
     }
