@@ -50,20 +50,15 @@ class ShelfIndexItem extends React.Component {
         let id = this.libraryFinder(this.props.book.id, this.props.shelf.id);
         this.props.removeLibrary(id);
         window.location.reload(true);
-        console.log('id',id)
-      
     }
 
     libraryFinder(bookId, shelfId){
         let id = null;
         this.props.shelf.libraries.forEach(library => {
-            console.log(library.book_id, library.shelf_id, library.id)
             if ((library.book_id === bookId) && (library.shelf_id === shelfId)){
-                console.log(library.id)
                 id = library.id
             }
         })
-        console.log('inside',id)
         return id
     }
 

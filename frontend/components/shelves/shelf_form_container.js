@@ -9,7 +9,6 @@ const mSTP = (state, ownProps) => {
     const book = state.entities.books[ownProps.match.params.id];
     const user = state.entities.users[state.session.id];
     const addedBooks = {};
-    console.log(state)
     return ({
         book: book,
         user: user,

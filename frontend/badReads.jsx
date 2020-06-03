@@ -4,6 +4,7 @@ import configureStore from './store/store'
 import Root from './components/root'
 import {createLibrary, removeLibrary} from  './actions/library_actions';
 import{ requestBook } from './actions/book_actions';
+import{createShelf} from './actions/shelf_actions';
 document.addEventListener('DOMContentLoaded', () => {
     let store;
    
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.requestBook = requestBook;
     window.createLibrary = createLibrary;
     window.removeLibrary = removeLibrary;
+    window.createShelf =  createShelf;
     const root = document.getElementById('root');
     ReactDOM.render(<Root store={store} />, root);
 });

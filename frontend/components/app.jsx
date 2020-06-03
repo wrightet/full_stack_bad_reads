@@ -28,7 +28,7 @@ const App = () => (
                 </div>
                
             </Link>
-            <GreetingContainer />
+            <GreetingContainer/>
             <AuthRoute exact path="/" component={LogInFormContainer} className="login" />
         </header>
       

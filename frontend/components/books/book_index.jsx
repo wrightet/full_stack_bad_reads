@@ -1,5 +1,6 @@
 import React from 'react';
 import BookIndexItem from './book_index_item';
+import MakeShelfFormContainer from '../shelves/make_shelf_form';
 import { Link } from 'react-router-dom';
 class BookIndex extends React.Component {
     constructor(props){
@@ -36,6 +37,12 @@ class BookIndex extends React.Component {
                                         <li key={shelf.id}><Link to={`/shelves/${shelf.id}`}>{shelf.name}</Link></li>
                                     ))
                                 }
+                                <li>
+                                    <MakeShelfFormContainer 
+                                    user={this.props.user} 
+                                    createShelf={this.props.createShelf}
+                                    />
+                                </li>
                             </ul>
                         </label>
                     </div>

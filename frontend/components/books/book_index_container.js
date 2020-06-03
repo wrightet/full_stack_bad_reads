@@ -4,9 +4,11 @@ import { requestAllBooks, requestBook } from '../../actions/book_actions';
 import {requestAllReviews } from '../../actions/review_actions';
 import {requestAllShelves } from '../../actions/shelf_actions';
 import{createLibrary} from '../../actions/library_actions';
+import{createShelf} from '../../actions/shelf_actions';
 
 const mSTP = state => ({
-    books: Object.values(state.entities.books)
+    books: Object.values(state.entities.books),
+    user: state.entities.users[state.session.id]
     // shelves: Object.values(state.entities.shelves)
     
 });
@@ -16,7 +18,9 @@ const mDTP = dispatch => ({
     requestBook: id => dispatch(requestBook(id)),
     requestAllReviews: id => dispatch(requestAllReviews(id)),
     requestAllShelves: () => dispatch(requestAllShelves()),
-    createLibrary:library => dispatch(createLibrary(library))
+    createLibrary:library => dispatch(createLibrary(library)),
+    createShelf:shelf => dispatch(createShelf)
+
 })
 
 export default connect(mSTP, mDTP)(BookIndex);
