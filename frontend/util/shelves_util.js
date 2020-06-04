@@ -15,7 +15,7 @@ export const fetchShelf = id => (
 
 export const createShelf = (shelf) => (
     $.ajax({
-        method:'POST',
+        method: 'POST',
         url: '/api/book_shelves',
         data: {shelf}
     })

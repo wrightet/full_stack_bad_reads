@@ -41,6 +41,7 @@ class BookIndex extends React.Component {
                                     <MakeShelfFormContainer 
                                     user={this.props.user} 
                                     createShelf={this.props.createShelf}
+                                    requestAllShelves={this.props.requestAllShelves}
                                     />
                                 </li>
                             </ul>

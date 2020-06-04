@@ -30,6 +30,7 @@ export const requestShelf = shelfId => dispatch => {
 };
 
 export const createShelf = shelf => dispatch => {
+    // debugger
     return APIUtil.createShelf(shelf).then(shelf => dispatch(createShelf(shelf)))
 };
 

@@ -11,6 +11,10 @@ class MakeShelfForm extends React.Component{
 
     }
 
+    // componentDidMount(){
+    //     this.props.requestAllShelves()
+    // }
+
     update(field){
         return e => this.setState({[field]: e.target.value})
     }
@@ -20,7 +24,7 @@ class MakeShelfForm extends React.Component{
         console.log(this.props)
         console.log(this.state)
         this.props.createShelf(this.state)
-        // window.location.reload()
+        window.location.reload()
             // this.setState({name: shelf.name, user_id:shelf.user_id})
            
             
