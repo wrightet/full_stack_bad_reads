@@ -8,6 +8,7 @@ class BookIndex extends React.Component {
         this.state = {
             shelves: {}
         }
+        this.shelfRemover = this.shelfRemover.bind(this);
        
     }
     componentDidMount(){
@@ -15,6 +16,11 @@ class BookIndex extends React.Component {
         this.props.requestAllShelves().then(shelves => {
             this.setState({shelves: shelves})
         });
+    }
+
+    shelfRemover(shelfId){
+        this.props.deleteShelf(shelfId);
+        window.location.reload();
     }
   
     render(){    
@@ -34,7 +40,10 @@ class BookIndex extends React.Component {
                             <ul>
                                 {
                                     shelves.map(shelf => (
-                                        <li key={shelf.id}><Link to={`/shelves/${shelf.id}`}>{shelf.name}</Link></li>
+                                        <li key={shelf.id}>
+                                            <a className='remove-shelf-button' onClick={() => this.shelfRemover(shelf.id)}>x</a>
+                                            <Link to={`/shelves/${shelf.id}`}>{shelf.name}</Link> 
+                                        </li>
                                     ))
                                 }
                                 <li>

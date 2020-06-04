@@ -1080,3 +1080,8 @@ footer > ul > li > h6 {
 .shelf-links >label > ul > li > a:hover{
     text-decoration: underline;
 }
+
+.remove-shelf-button{
+    color: #00635D;
+    text-decoration:none;
+}
