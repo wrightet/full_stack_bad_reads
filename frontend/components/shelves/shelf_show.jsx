@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 import ShelfIndexItem from './shelf_index_item';
 import {Link} from 'react-router-dom'
 
