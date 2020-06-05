@@ -20,12 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         store = configureStore();
     } 
-    window.store = store;
-    window.dispatch = store.dispatch;
-    window.requestBook = requestBook;
-    window.createLibrary = createLibrary;
-    window.removeLibrary = removeLibrary;
-    window.createShelf =  createShelf;
+    // window.store = store;
+    // window.dispatch = store.dispatch;
+    // window.requestBook = requestBook;
+    // window.createLibrary = createLibrary;
+    // window.removeLibrary = removeLibrary;
+    // window.createShelf =  createShelf;
     const root = document.getElementById('root');
     ReactDOM.render(<Root store={store} />, root);
 });
