@@ -21,13 +21,8 @@ class MakeShelfForm extends React.Component{
 
     handleSubmit(e){
         e.preventDefault();
-        console.log(this.props)
-        console.log(this.state)
         this.props.createShelf(this.state)
-        window.location.reload()
-            // this.setState({name: shelf.name, user_id:shelf.user_id})
-           
-            
+        window.location.reload()    
     }
     render(){
         return( 
