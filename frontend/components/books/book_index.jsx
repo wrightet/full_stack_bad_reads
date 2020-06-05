@@ -6,9 +6,12 @@ class BookIndex extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            shelves: {}
+            shelves: {},
+            edit: false
         }
         this.shelfRemover = this.shelfRemover.bind(this);
+        this.changeEdit = this.changeEdit.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
        
     }
     componentDidMount(){
@@ -21,6 +24,23 @@ class BookIndex extends React.Component {
     shelfRemover(shelfId){
         this.props.deleteShelf(shelfId);
         window.location.reload();
+    }
+
+    changeEdit(e){
+        debugger
+        e.preventDefault();
+        if (this.state.edit === false){
+            this.state.edit = true;
+        }else{
+            this.state.edit = false;
+        }
+    }
+
+    handleSubmit(e, shelf){
+        e.preventDefault();
+        this.props.updateShelf(shelf);
+        // window.location.reload();
+
     }
   
     render(){    
@@ -39,10 +59,22 @@ class BookIndex extends React.Component {
                        <label htmlFor=""> Bookshelves
                             <ul>
                                 {
-                                    shelves.map(shelf => (
+                                    shelves.map((shelf, index) => (
                                         <li key={shelf.id}>
-                                            <a className='remove-shelf-button' onClick={() => this.shelfRemover(shelf.id)}>x</a>
-                                            <Link to={`/shelves/${shelf.id}`}>{shelf.name}</Link> 
+                                            
+                                    <a className='remove-shelf-button' onClick={() => this.shelfRemover(shelf.id)}>{index > 2 ?
+                                    //  <div>
+                                     
+                                    //    {/* <button onClick={(e) => this.changeEdit(e)}>edit</button>    */}
+                                    //  {/* </div> */}
+                                     'x'
+                                        
+                                     : ''}</a>
+                                            <Link to={`/shelves/${shelf.id}`}>{this.state.edit === false ? shelf.name : 
+                                            <form onSubmit={(e) => this.handleSubmit(e, shelf)}>
+                                                <input type="text" placeholder={shelf.name} value={shelf.name}/>
+                                                <input type="submit" value='edit shelf name'/>
+                                            </form>}</Link> 
                                         </li>
                                     ))
                                 }

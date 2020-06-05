@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import BookIndex from './book_index';
 import { requestAllBooks, requestBook } from '../../actions/book_actions';
 import {requestAllReviews } from '../../actions/review_actions';
-import {requestAllShelves,createShelf,deleteShelf } from '../../actions/shelf_actions';
+import {requestAllShelves,createShelf,deleteShelf,updateShelf } from '../../actions/shelf_actions';
 import{createLibrary} from '../../actions/library_actions';
 
 const mSTP = state => ({
@@ -19,7 +19,8 @@ const mDTP = dispatch => ({
     requestAllShelves: () => dispatch(requestAllShelves()),
     createLibrary:library => dispatch(createLibrary(library)),
     createShelf:shelf => dispatch(createShelf(shelf)),
-    deleteShelf: shelfId => dispatch(deleteShelf(shelfId))
+    deleteShelf: shelfId => dispatch(deleteShelf(shelfId)),
+    updateShelf: shelf => dispatch(updateShelf(shelf))
 
 })
 

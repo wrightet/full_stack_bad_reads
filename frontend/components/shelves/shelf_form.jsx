@@ -30,7 +30,7 @@ class ShelfForm extends React.Component {
         return(
              <div className='shelf-dropdown'>
                 <form  onChange={this.update('id')}>
-                <select >
+                <select className='shelf-selector'>
                     <option value=''>- -</option>
                     {
                        shelves.map(shelf => (

@@ -1085,3 +1085,24 @@ footer > ul > li > h6 {
     color: #00635D;
     text-decoration:none;
 }
+
+.shelf-selector > option{
+    background-color:#419D6A !important;
+    color:white;
+}
+.shelf-dropdown{
+    background-color: #00635d;
+}
+
+.demo-button{
+    background-color: #382110;
+    color: white;
+    margin-left: 30%;
+    padding: 1vh;
+    border: 0px;
+    border-radius: 4px;
+    font-size: 1em;
+    line-height: 3vh;
+    width: 6vw;
+    cursor: pointer;
+}

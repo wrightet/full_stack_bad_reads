@@ -30,8 +30,11 @@ class Api::BookShelvesController < ApplicationController
 
     def destroy
         @book_shelf = BookShelf.find(params[:id])
-        @book_shelf.destroy
-        render :show
+        names = ['read', 'want to read', 'currently reading']
+        if !names.include?(@book_shelf.name)
+            @book_shelf.destroy
+            render :show
+        end
     end
 
     private
