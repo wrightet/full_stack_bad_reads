@@ -1061,6 +1061,7 @@ footer > ul > li > h6 {
     align-items: flex-start;
     float: left;
     position: relative;
+    padding-right: 25px;
 }
 
 .content{
@@ -1089,9 +1090,6 @@ footer > ul > li > h6 {
 .shelf-selector > option{
     background-color:#419D6A !important;
     color:white;
-}
-.shelf-dropdown{
-    background-color: #00635d;
 }
 
 .demo-button{

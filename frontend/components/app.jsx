@@ -34,13 +34,13 @@ const App = () => (
       
             <AuthRoute exact path="/" component={SignUpFormContainer} className="signup" />
             <AuthRoute exact path='/' component={Splash} />
-            <Switch>
+            {/* <Switch> */}
                 <ProtectedRoute exact path="/" component={BookIndexContainer}/>
                 <ProtectedRoute exact path="/books/:id" component={BookShowContainer}/>
                 <ProtectedRoute exact path="/books/:id/review/new" component={CreateReviewContainer}/>
                 <ProtectedRoute exact path="/books/review/:id/edit" component={EditReviewContainer}/>
                 <ProtectedRoute exact path="/shelves/:id" component={ShelfShowContainer}/>
-            </Switch>
+            {/* </Switch> */}
         
         <footer>
             {/* <div className='footer-logo-div'>
