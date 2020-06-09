@@ -498,6 +498,7 @@ tr{
     margin: 20px 0 10px 0;
     color: #000;
     font-size: 18px;
+    font-weight: 700;
 }
 
 .intro-des{
@@ -510,6 +511,7 @@ tr{
 .book-list-label{
     padding-left:8%;
     font-size:18px;
+    font-weight: 700;
 }
 .books-list-splash{
     display: inline-flex;
