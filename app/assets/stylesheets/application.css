@@ -473,19 +473,55 @@ tr{
 .splash-content {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
     padding-top: 2vh;
 }
 
 .splash-book {
     padding: 5vw;
-    width: 20vw;
-    height: 45vh;
+    width: 10vw;
+    height: 35vh;
+    background-size:cover;
+}
+.splash-intro{
+    display:flex;
+    flex-direction: column;
+    padding-bottom: 10%;
+    width: 400px;
+    padding-right:30%;
+   
 }
 
+.intro-label{
+    clear: both;
+    margin: 20px 0 10px 0;
+    color: #000;
+    font-size: 18px;
+}
+
+.intro-des{
+    color: #333333;
+    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.book-list-label{
+    padding-left:8%;
+    font-size:18px;
+}
 .books-list-splash{
     display: inline-flex;
     flex-direction: row;
     height: 50%;
+    background-size:cover;
+    
+}
+
+.books-splash-master{
+    background-color: #F4F2E9;
+    padding-top: 3%;
 }
 
 .books-list-splash > li {

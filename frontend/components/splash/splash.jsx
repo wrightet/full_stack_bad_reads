@@ -11,7 +11,17 @@ class Splash extends React.Component {
      
                
                 <div className="splash-content">
-                    <ul>
+                    <div className='splash-intro'>
+                        <h2 className='intro-label'> Deciding what not to read next? </h2>
+                            <p className='intro-des'>
+                                You are in the right place! Browse titles that users like you have rated. See a book you don't like? 
+                                Give it a review, so others won't have to read it. 
+                            </p>
+                       
+                        
+                    </div>
+                    <ul className='books-splash-master'>
+                        <li className='book-list-label'>What will you discover?</li>
                         <li>
                             <ul className="books-list-splash">
                                 <li><img src={window.images.romeoURL} className="splash-book"  /></li>
