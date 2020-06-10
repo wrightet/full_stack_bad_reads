@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import SingleShelf from './single_shelf';
+import MakeShelfForm from './make_shelf_form';
 class AllShelves extends React.Component {
     constructor(props) {
         super(props);
@@ -9,6 +9,7 @@ class AllShelves extends React.Component {
             edit: false
         }
         // this.handleEdit = this.handleEdit.bind(this);
+        console.log(props)
     }
     componentDidMount(){
         this.props.requestAllShelves().then(shelves => {
@@ -19,12 +20,19 @@ class AllShelves extends React.Component {
     render(){
         const shelves = this.state.shelves.shelves ? Object.values(this.state.shelves.shelves) : [];
 
-        console.log('shelves', shelves)
+        
         if(!shelves){
             return (<h1>No Shelves</h1>)
         }
             return (
                 <div className='all-shelves'>
+                    <div className='all-shelf-form'>
+                           <MakeShelfForm
+                    user={{id: this.props.user}}
+                    createShelf={this.props.createShelf}
+                    />
+                    </div>
+                 
                     <ul className='all-shelf-list'>
                     {shelves && shelves.map(shelf => (
                        
@@ -33,16 +41,14 @@ class AllShelves extends React.Component {
                             shelf={shelf}
                             updateShelf={this.props.updateShelf}
                             requestShelf={this.props.requestShelf}
+                            deleteShelf={this.props.deleteShelf}
                            />
                        
                     ))} 
                     </ul>
                 </div>
             )
-        
-    
     }
-    
 }
 
 export default AllShelves;

@@ -1151,10 +1151,12 @@ footer > ul > li > h6 {
 
 .all-shelves{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     min-height: 100vh;
     min-width: 50vw;
-    padding-top: 10vh;
+    /* padding-top: 10vh; */
+    flex-direction: column;
+    align-items: center;
 }
 
 .all-shelf-list{
@@ -1177,4 +1179,27 @@ footer > ul > li > h6 {
 
 .all-shelf-items > a:hover {
     text-decoration:underline;
+}
+
+.all-shelf-form{
+    display: flex;
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+    align-self: center;
+    padding-right: 13%;
+}
+
+.rename-shelf{
+    background: none!important;
+    border: none;
+    padding-left: 1%;
+    color: #00635D;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.rename-shelf:hover {
+    text-decoration: underline;
 }

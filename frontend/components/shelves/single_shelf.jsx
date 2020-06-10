@@ -10,6 +10,7 @@ class SingleShelf extends React.Component{
         }
         this.handleEdit = this.handleEdit.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.shelfRemover = this.shelfRemover.bind(this);
     }
 
     componentDidMount(){
@@ -30,15 +31,21 @@ class SingleShelf extends React.Component{
         // window.location.reload()
     }
 
+    shelfRemover(shelfId) {
+        this.props.deleteShelf(shelfId);
+        window.location.reload();
+    }
+
     render(){
         const shelf =  this.props.shelf;
         const arr = ['currently reading', 'read', 'want to read'];
         return (
             <li className='all-shelf-items' key={shelf.id}>
+                {!arr.includes(shelf.name) ? <a className='remove-shelf-button' onClick={() => this.shelfRemover(shelf.id)}>x</a> : ''}
                 <Link to={`/shelves/${shelf.id}`}>
                     {shelf.name}
                 </Link>
-                {this.state.edit === false && !arr.includes(shelf.name) ? <button onClick={() => this.handleEdit()}>rename</button> : ''}
+                {this.state.edit === false && !arr.includes(shelf.name) ? <button className='rename-shelf' onClick={() => this.handleEdit()}>rename</button> : ''}
                 {this.state.edit === true ?
                     <div>
                         <form value={this.state.name} onSubmit={(e) => this.handleSubmit(e, shelf)}>

@@ -4,11 +4,10 @@ import AllShelves from './all_shelves';
 
 
 const mSTP = (state) => {
-    // const user = state.entities.user[state.session.id];
-    console.log(state)
+   
     return({
-        // user: state.entities.user[state.session.id],
-        shelves: Object.values(state.entities.shelves)
+        shelves: Object.values(state.entities.shelves),
+        user: state.session.id
     })
 }
 
