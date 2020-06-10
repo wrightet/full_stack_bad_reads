@@ -1148,3 +1148,33 @@ footer > ul > li > h6 {
     width: 6vw;
     cursor: pointer;
 }
+
+.all-shelves{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 50vw;
+    padding-top: 10vh;
+}
+
+.all-shelf-list{
+    width: 30%;
+}
+.all-shelf-items{
+    margin-bottom: 2vh;
+}
+
+.all-shelf-items > a{
+    background: none!important;
+    border: none;
+    padding-left: 1%;
+    color: #00635D;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.all-shelf-items > a:hover {
+    text-decoration:underline;
+}

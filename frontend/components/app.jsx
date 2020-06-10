@@ -16,7 +16,9 @@ import BookShowContainer from './books/book_show_container';
 import EditReviewContainer from './reviews/edit_review_container';
 import CreateReviewContainer from './reviews/create_review_container';
 import ShelfShowContainer from './shelves/shelf_show_container';
+import AllShelvesContainer from './shelves/all_shelves_container';
 import Splash from './splash/splash';
+
 
 const App = () => (
     <div className="App">
@@ -40,6 +42,7 @@ const App = () => (
                 <ProtectedRoute exact path="/books/:id/review/new" component={CreateReviewContainer}/>
                 <ProtectedRoute exact path="/books/review/:id/edit" component={EditReviewContainer}/>
                 <ProtectedRoute exact path="/shelves/:id" component={ShelfShowContainer}/>
+                <ProtectedRoute exact path="/shelves" component={AllShelvesContainer}/>
             {/* </Switch> */}
         
         <footer>
