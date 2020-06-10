@@ -1183,10 +1183,12 @@ footer > ul > li > h6 {
 
 .all-shelf-form{
     display: flex;
-    padding-bottom: 5vh;
-    padding-top: 5vh;
+   padding: 1vh 1vh 1vh 1vh;
     align-self: center;
     padding-right: 13%;
+    background-color: lightgray;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
 }
 
 .rename-shelf{
@@ -1202,4 +1204,8 @@ footer > ul > li > h6 {
 
 .rename-shelf:hover {
     text-decoration: underline;
+}
+
+.make-shelf-submit{
+    margin-left: 5vw;
 }
