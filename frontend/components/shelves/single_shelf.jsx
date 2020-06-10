@@ -32,12 +32,13 @@ class SingleShelf extends React.Component{
 
     render(){
         const shelf =  this.props.shelf;
+        const arr = ['currently reading', 'read', 'want to read'];
         return (
             <li className='all-shelf-items' key={shelf.id}>
                 <Link to={`/shelves/${shelf.id}`}>
                     {shelf.name}
                 </Link>
-                {this.state.edit === false ? <button onClick={() => this.handleEdit()}>rename</button> : ''}
+                {this.state.edit === false && !arr.includes(shelf.name) ? <button onClick={() => this.handleEdit()}>rename</button> : ''}
                 {this.state.edit === true ?
                     <div>
                         <form value={this.state.name} onSubmit={(e) => this.handleSubmit(e, shelf)}>
