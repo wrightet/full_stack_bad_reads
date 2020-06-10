@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SingleShelf from './single_shelf';
 class AllShelves extends React.Component {
     constructor(props) {
         super(props);
@@ -7,26 +8,12 @@ class AllShelves extends React.Component {
             shelves: {},
             edit: false
         }
-        this.handleEdit = this.handleEdit.bind(this);
+        // this.handleEdit = this.handleEdit.bind(this);
     }
     componentDidMount(){
         this.props.requestAllShelves().then(shelves => {
             this.setState({ shelves: shelves })
         });
-    }
-
-    handleEdit(){
-        return this.state.edit === false ? this.setState({edit:true}) : this.setState({edit:false})
-    }
-
-    update(field) {
-        return e => this.setState({ [field]: e.target.value })
-    }
-
-    handleSubmit(e) {
-        e.preventDefault();
-        this.props.createShelf(this.state)
-        window.location.reload()
     }
 
     render(){
@@ -41,22 +28,12 @@ class AllShelves extends React.Component {
                     <ul className='all-shelf-list'>
                     {shelves && shelves.map(shelf => (
                        
-                            <li className='all-shelf-items' key={shelf.id}>
-                                <Link to={`/shelves/${shelf.id}`}>
-                                    {shelf.name}
-                                </Link>
-                            {this.state.edit === false ? <button onClick={() => this.handleEdit()}>rename</button> : ''}
-                            {this.state.edit === true ? 
-                                <div>
-                                    <form value={this.state.name} onSubmit={this.handleSubmit}>
-                                        <label htmlFor="">
-                                            <input type="text" value={this.state.name} onChange={this.update('name')} />
-                                        </label>
-                                        <input type="submit" value='add' />
-                                    </form>
-                                </div>
-                            :''}
-                            </li>
+                           <SingleShelf
+                            key={shelf.id}
+                            shelf={shelf}
+                            updateShelf={this.props.updateShelf}
+                            requestShelf={this.props.requestShelf}
+                           />
                        
                     ))} 
                     </ul>
