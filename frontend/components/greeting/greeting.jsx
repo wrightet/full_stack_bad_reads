@@ -47,7 +47,7 @@ const Greeting = ({ currentUser, logout}) => {
         <div className="greeting-header">
             <ul className="header-left">
                 <li className="header-el"><Link to="/">Home</Link></li>
-                <li className="header-el"><Link to="/shelves">My Books</Link></li>
+                <li className="header-el"><Link to="/shelves">Shelves</Link></li>
                 {/* <li className="header-el"><Link to={`/shelves/${requestAllShelves()}`}>My Books</Link></li> */}
                 {/* <li ><input type="text" className="books-search" placeholder="Placeholder Search Bar"/></li> */}
                 <li className="header-el-name"> 

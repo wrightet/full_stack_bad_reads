@@ -26,7 +26,9 @@ class AllShelves extends React.Component {
         }
             return (
                 <div className='all-shelves'>
+                    {/* <h1>My Bookshelves</h1> */}
                     <div className='all-shelf-form'>
+                        
                            <MakeShelfForm
                     user={{id: this.props.user}}
                     createShelf={this.props.createShelf}

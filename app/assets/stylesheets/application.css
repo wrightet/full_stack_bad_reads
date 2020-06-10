@@ -1206,6 +1206,14 @@ footer > ul > li > h6 {
     text-decoration: underline;
 }
 
+.make-shelf-form{
+    display:flex;
+    flex-direction: row;
+}
 .make-shelf-submit{
-    margin-left: 5vw;
+    /* display:flex;
+    justify-content: flex-end; */
+}
+.make-shelf-input{
+    width: 20vw;
 }
