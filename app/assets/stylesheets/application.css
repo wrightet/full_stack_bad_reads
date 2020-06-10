@@ -1125,10 +1125,16 @@ footer > ul > li > h6 {
     text-decoration:none;
 }
 
-.shelf-selector > option{
+/* .shelf-options{
+    background-color:#419D6A !important;
+    color:white;
+} */
+
+.shelf-options:after{
     background-color:#419D6A !important;
     color:white;
 }
+
 
 .demo-button{
     background-color: #382110;

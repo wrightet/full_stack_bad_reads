@@ -31,10 +31,10 @@ class ShelfForm extends React.Component {
              <div className='shelf-dropdown'>
                 <form  onChange={this.update('id')}>
                 <select className='shelf-selector'>
-                    <option value=''>- -</option>
+                    <option className='shelf-options' value=''>- -</option>
                     {
                        shelves.map(shelf => (
-                            <option key={shelf.id} value={`${shelf.id}`}>{shelf.name}</option>
+                           <option className='shelf-options' key={shelf.id} value={`${shelf.id}`}>{shelf.name}</option>
                         ))
                     }
                 </select>
