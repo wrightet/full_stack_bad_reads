@@ -1215,8 +1215,12 @@ footer > ul > li > h6 {
     justify-content: flex-end; */
     float: right;
     margin-left: 10vw;
+    background-color: #F4F1EA;
+    border-radius: .25vw;;
 }
 .make-shelf-input{
     /* width: 80%; */
     float: left;
+    
+    
 }
