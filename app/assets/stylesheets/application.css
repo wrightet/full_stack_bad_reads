@@ -1183,9 +1183,9 @@ footer > ul > li > h6 {
 
 .all-shelf-form{
     display: flex;
-   padding: 1vh 1vh 1vh 1vh;
+   padding: 1vh 5vw 1vh 5vw;
     align-self: center;
-    padding-right: 13%;
+    
     background-color: lightgray;
     margin-top: 5vh;
     margin-bottom: 2vh;
@@ -1213,7 +1213,10 @@ footer > ul > li > h6 {
 .make-shelf-submit{
     /* display:flex;
     justify-content: flex-end; */
+    float: right;
+    margin-left: 10vw;
 }
 .make-shelf-input{
-    width: 20vw;
+    /* width: 80%; */
+    float: left;
 }

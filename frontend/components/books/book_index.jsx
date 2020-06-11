@@ -42,6 +42,10 @@ class BookIndex extends React.Component {
         // window.location.reload();
 
     }
+
+    triggerEdit(){
+        this.state.edit === false ? this.setState({edit: true}) : this.setState({edit: false})
+    }
   
     render(){    
         const { books } = this.props;
@@ -70,20 +74,21 @@ class BookIndex extends React.Component {
                                      'x'
                                         
                                      : ''}</a>
-                                            <Link to={`/shelves/${shelf.id}`}>{this.state.edit === false ? shelf.name : 
-                                            <form onSubmit={(e) => this.handleSubmit(e, shelf)}>
-                                                <input type="text" placeholder={shelf.name} value={shelf.name}/>
-                                                <input type="submit" value='edit shelf name'/>
-                                            </form>}</Link> 
+                                            <Link to={`/shelves/${shelf.id}`}> {shelf.name}
+                                           </Link> 
                                         </li>
                                     ))
                                 }
                                 <li>
-                                    <MakeShelfFormContainer 
-                                    user={this.props.user} 
-                                    createShelf={this.props.createShelf}
-                                    requestAllShelves={this.props.requestAllShelves}
-                                    />
+                                    {this.state.edit === false ? <button onClick={() => this.triggerEdit()}>add</button>
+                                    :
+                                       <MakeShelfFormContainer
+                                           user={this.props.user}
+                                           createShelf={this.props.createShelf}
+                                           requestAllShelves={this.props.requestAllShelves}
+                                       />
+                                    }
+                                  
                                 </li>
                             </ul>
                         </label>
