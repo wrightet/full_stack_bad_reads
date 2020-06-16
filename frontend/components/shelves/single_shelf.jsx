@@ -6,11 +6,15 @@ class SingleShelf extends React.Component{
         super(props);
         this.state = {
             edit: false,
-            shelf: null
+            // shelf: this.props.shelf,
+            name: '',
+            user_id: this.props.user_id,
+            id: this.props.shelf.id
         }
         this.handleEdit = this.handleEdit.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.shelfRemover = this.shelfRemover.bind(this);
+        console.log('single', props)
     }
 
     componentDidMount(){
@@ -22,7 +26,8 @@ class SingleShelf extends React.Component{
     }
 
     update(field) {
-        return e => this.setState({ [field]: e.target.value })
+        console.log(field)
+        return e => this.setState({[field]: e.target.value })
     }
 
     handleSubmit(e, shelf) {
@@ -48,7 +53,7 @@ class SingleShelf extends React.Component{
                 {this.state.edit === false && !arr.includes(shelf.name) ? <button className='rename-shelf' onClick={() => this.handleEdit()}>rename</button> : ''}
                 {this.state.edit === true ?
                     <div>
-                        <form value={this.state.name} onSubmit={(e) => this.handleSubmit(e, shelf)}>
+                        <form value={this.state.name} onSubmit={(e) => this.handleSubmit(e, this.state)}>
                             <label htmlFor="">
                                 <input type="text" value={this.state.name} onChange={this.update('name')} />
                             </label>
