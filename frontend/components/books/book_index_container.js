@@ -8,8 +8,6 @@ import{createLibrary} from '../../actions/library_actions';
 const mSTP = state => ({
     books: Object.values(state.entities.books),
     user: state.entities.users[state.session.id]
-    // shelves: Object.values(state.entities.shelves)
-    
 });
 
 const mDTP = dispatch => ({

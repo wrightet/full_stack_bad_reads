@@ -39,7 +39,7 @@ class BookIndex extends React.Component {
     handleSubmit(e, shelf){
         e.preventDefault();
         this.props.updateShelf(shelf);
-        // window.location.reload();
+        window.location.reload();
 
     }
 

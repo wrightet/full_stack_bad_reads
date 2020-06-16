@@ -25,9 +25,7 @@ class ReviewIndexItem extends React.Component{
 
     handleDelete(bookId, review){
         this.props.deleteReview(bookId, review)
-        // .then(res => this.setState({res: null}))
         window.location.reload() 
-        // this.setState({}) 
     }
 
     handleName(id) {

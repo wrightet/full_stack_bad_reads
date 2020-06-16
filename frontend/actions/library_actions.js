@@ -19,12 +19,11 @@ const removeFromShelf = libraryId => ({
     libraryId
 })
 
-// export const placeOnShelf = (book) => dispatch => (
-//     APIUtil.placeOnShelf(book).then(shelved => dispatch(addToShelf(shelved)))
-// )
+
 export const fetchLibrary = (id) => (
     APIUtil.fetchLibrary(id).then(id => dispatch(receiveLibrary(id)))
 )
+
 // adding book to shelf
 export const createLibrary = (library) => dispatch => (
     APIUtil.createLibrary(library).then(library => {

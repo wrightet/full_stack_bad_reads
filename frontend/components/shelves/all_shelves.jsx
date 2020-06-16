@@ -8,8 +8,6 @@ class AllShelves extends React.Component {
             shelves: {},
             edit: false
         }
-        // this.handleEdit = this.handleEdit.bind(this);
-        console.log(props)
     }
     componentDidMount(){
         this.props.requestAllShelves().then(shelves => {
@@ -26,7 +24,6 @@ class AllShelves extends React.Component {
         }
             return (
                 <div className='all-shelves'>
-                    {/* <h1>My Bookshelves</h1> */}
                     <div className='all-shelf-form'>
                         
                            <MakeShelfForm
