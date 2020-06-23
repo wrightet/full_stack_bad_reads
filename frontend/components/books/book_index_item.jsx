@@ -49,11 +49,12 @@ class BookIndexItem extends React.Component {
     render(){
        
         let book = this.props.book
+        console.log(book)
         return (
        
             <div className='book-index-item'>
                 <div className='book-index-photo'>
-                    <Link to={`/books/${book.id}`}><img src={this.keyFinder(book.url)} alt="" className="book-photo" /></Link>
+                    <Link to={`/books/${book.id}`}><img src={book.photoURL} alt="" className="book-photo" /></Link>
                 </div>
               
                 <IndivRating
