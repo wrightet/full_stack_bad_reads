@@ -20,9 +20,9 @@ export const requestAllBooks = () => dispatch => {
 }
 
 export const requestBook = id => dispatch => {
-    // debugger
+   
     return APIUtil.fetchBook(id).then(book => {
-        // debugger; 
+       
         dispatch(receiveBook(book))});
    
 }

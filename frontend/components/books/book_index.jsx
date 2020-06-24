@@ -27,7 +27,7 @@ class BookIndex extends React.Component {
     }
 
     changeEdit(e){
-        debugger
+        
         e.preventDefault();
         if (this.state.edit === false){
             this.state.edit = true;

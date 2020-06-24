@@ -49,7 +49,7 @@ class BookIndexItem extends React.Component {
     render(){
        
         let book = this.props.book
-        console.log('single book',this.props)
+       
         return (
        
             <div className='book-index-item'>

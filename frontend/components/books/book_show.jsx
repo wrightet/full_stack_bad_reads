@@ -23,9 +23,9 @@ class BookShow extends React.Component {
     }
 
     componentDidMount() {
-        console.log('yo', this.props)
+       
         this.props.requestBook(this.props.match.params.id);
-        // debugger
+       
         this.props.requestAllReviews(this.props.match.params.id);
     }
 
@@ -103,8 +103,7 @@ class BookShow extends React.Component {
        
         else  {
             let words = book.description.split(' ')
-            // console.log('show', book.photoURL)
-            // debugger
+            
         return (
         <div className="book-content">
         
