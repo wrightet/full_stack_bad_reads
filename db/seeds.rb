@@ -70,7 +70,7 @@ ActiveRecord::Base.transaction do
         The play follows two star crossed lovers who belong to rival families.'
 
     )
-    book_1.photo.attach(io: File.open("/Users/ethanwright/Documents/badreads_project_images/romeo.jpg"), filename:"romeo.jpg")
+    book_1.photo.attach(io: File.open("https://badreads-seeds.s3-us-west-1.amazonaws.com/romeo.jpg"), filename:"romeo.jpg")
     
 
     book_2 = Book.create!(
@@ -88,7 +88,7 @@ ActiveRecord::Base.transaction do
 
     )
 
-    book_2.photo.attach(io: File.open("/Users/ethanwright/Documents/badreads_project_images/tempest.jpeg"), filename:"tempest.jpeg")
+    book_2.photo.attach(io: File.open("https://badreads-seeds.s3-us-west-1.amazonaws.com/tempest.jpeg"), filename:"tempest.jpeg")
 
     book_3 = Book.create!(
         title: 'A Midsummer Nights Dream',
@@ -115,7 +115,7 @@ ActiveRecord::Base.transaction do
 
     )
 
-    book_3.photo.attach(io: File.open("/Users/ethanwright/Documents/badreads_project_images/midsummer.jpeg"), filename:"midsummer.jpeg")
+    book_3.photo.attach(io: File.open("https://badreads-seeds.s3-us-west-1.amazonaws.com/midsummer.jpeg"), filename:"midsummer.jpeg")
 
     book_4 = Book.create!(
         title: 'The Great Gatsby',
@@ -135,7 +135,7 @@ ActiveRecord::Base.transaction do
         The Great Gatsby is one of the great classics of twentieth-century literature."
 
     )
-    book_4.photo.attach(io: File.open("/Users/ethanwright/Documents/badreads_project_images/gatsby.jpeg"), filename:"gatsby.jpeg")
+    book_4.photo.attach(io: File.open("https://badreads-seeds.s3-us-west-1.amazonaws.com/gatsby.jpeg"), filename:"gatsby.jpeg")
 
     book_5 = Book.create!(
         title: 'Moby Dick',
@@ -170,7 +170,7 @@ ActiveRecord::Base.transaction do
         Includes unique illustrations"
 
     )
-    book_5.photo.attach(io: File.open("/Users/ethanwright/Documents/badreads_project_images/moby.jpeg"), filename:"moby.jpeg")
+    book_5.photo.attach(io: File.open("https://badreads-seeds.s3-us-west-1.amazonaws.com/moby.jpeg"), filename:"moby.jpeg")
 
       book_6 = Book.create!(
         title: 'The Catcher in the Rye',
@@ -205,7 +205,7 @@ ActiveRecord::Base.transaction do
         1950's and 60's it was the novel that every teenage boy wants to read."
 
     )
-    book_6.photo.attach(io: File.open("/Users/ethanwright/Documents/badreads_project_images/catcher.jpeg"), filename:"catcher.jpeg")
+    book_6.photo.attach(io: File.open("https://badreads-seeds.s3-us-west-1.amazonaws.com/catcher.jpeg"), filename:"catcher.jpeg")
      book_7 = Book.create!(
         title: 'Twilight',
         author: 'Stephenie Meyer',
@@ -221,7 +221,7 @@ ActiveRecord::Base.transaction do
         Deeply seductive and extraordinarily suspenseful, Twilight is a love story with bite."
 
     )
-    book_7.photo.attach(io: File.open("/Users/ethanwright/Documents/badreads_project_images/twilight.jpeg"), filename:"twilight.jpeg")
+    book_7.photo.attach(io: File.open("https://badreads-seeds.s3-us-west-1.amazonaws.com/twilight.jpeg"), filename:"twilight.jpeg")
 
       book_8 = Book.create!(
         title: 'Eragon',
@@ -251,7 +251,7 @@ ActiveRecord::Base.transaction do
         The fate of the Empire may rest in his hands."
 
     )
-    book_8.photo.attach(io: File.open("/Users/ethanwright/Documents/badreads_project_images/eragon.jpeg"), filename:"eragon.jpeg")
+    book_8.photo.attach(io: File.open("https://badreads-seeds.s3-us-west-1.amazonaws.com/eragon.jpeg"), filename:"eragon.jpeg")
 
       book_9 = Book.create!(
         title: 'Fifty Shades of Grey',
@@ -280,7 +280,7 @@ ActiveRecord::Base.transaction do
         that will obsess you, possess you, and stay with you forever."
 
     )
-    book_9.photo.attach(io: File.open("/Users/ethanwright/Documents/badreads_project_images/fifty.jpeg"), filename:"fifty.jpeg")
+    book_9.photo.attach(io: File.open("https://badreads-seeds.s3-us-west-1.amazonaws.com/fifty.jpeg"), filename:"fifty.jpeg")
   
 
    
@@ -304,7 +304,7 @@ ActiveRecord::Base.transaction do
             url: 'book.jpeg',
             description: Faker::Hipster.paragraph
         )
-        book.photo.attach(io: File.open("/Users/ethanwright/Documents/badreads_project_images/book.jpeg"), filename:"book.jpeg")
+        book.photo.attach(io: File.open("https://badreads-seeds.s3-us-west-1.amazonaws.com/book.jpeg"), filename:"book.jpeg")
 
     end
 
