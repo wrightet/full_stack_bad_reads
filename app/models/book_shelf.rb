@@ -11,4 +11,8 @@ class BookShelf < ApplicationRecord
     has_many :books,
         through: :libraries,
         source: :book
+
+    has_many :photos,
+        through: :books,
+        source: :photo_blob
 end

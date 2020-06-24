@@ -20,7 +20,10 @@ export const requestAllBooks = () => dispatch => {
 }
 
 export const requestBook = id => dispatch => {
-    return APIUtil.fetchBook(id).then(book => dispatch(receiveBook(book)));
+    // debugger
+    return APIUtil.fetchBook(id).then(book => {
+        // debugger; 
+        dispatch(receiveBook(book))});
    
 }
 export const createBook = book => dispatch => {

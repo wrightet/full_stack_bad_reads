@@ -5,12 +5,14 @@ import {Rating} from '../stars/stars';
 class ShelfIndexItem extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {book: this.props.book}
         this.keyFinder = this.keyFinder.bind(this);
         this.avgRating = this.avgRating.bind(this);
         this.removeBook = this.removeBook.bind(this);
         // this.libraryFinder = this.libraryFinder.bind(this);
         
     }
+    componentDidMount(){}
 
     keyFinder(url) {
         let val = url.split('.')[0];
@@ -64,9 +66,10 @@ class ShelfIndexItem extends React.Component {
 
     render(){
         let book = this.props.book;
+        console.log(book)
         return(
         <tr className="book-row">
-                <td><Link to={`/books/${book.id}`}><img src={this.keyFinder(book.url)} alt="" className="book-photo" /></Link></td>
+                <td><Link to={`/books/${book.id}`}><img src={book.photoURL} alt="" className="book-photo" /></Link></td>
                 <td><Link to={`/books/${book.id}`}>{book.title}</Link></td>
                 <td><Link to={`/books/${book.id}`}>{book.author}</Link></td>
                 <td className='index-stars'>     

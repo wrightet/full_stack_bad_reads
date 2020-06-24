@@ -17,6 +17,7 @@ class ShelfShow extends React.Component {
         else {
              let {books} = this.props.shelf
              let shelf = this.props.shelf
+             console.log('books', this.props)
         
             return(books.length !== 0 ?   
                 <div className="book-table-div">

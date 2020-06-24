@@ -8,4 +8,7 @@ class Library < ApplicationRecord
         foreign_key: :shelf_id,
         class_name: 'BookShelf'
         
+    # has_one :photo,
+    #     through: :book,
+    #     source: :photo
 end
