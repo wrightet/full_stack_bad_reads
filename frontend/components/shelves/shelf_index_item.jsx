@@ -66,7 +66,7 @@ class ShelfIndexItem extends React.Component {
 
     render(){
         let book = this.props.book;
-   
+        console.log(this.props)
         return(
         <tr className="book-row">
                 <td><Link to={`/books/${book.id}`}><img src={book.photoURL} alt="" className="book-photo" /></Link></td>
