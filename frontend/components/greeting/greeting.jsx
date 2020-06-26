@@ -40,6 +40,9 @@ const Greeting = ({ currentUser, logout}) => {
         <div></div>
     )
         window.currentUser = currentUser
+        // window.requestAllShelves = requestAllShelves
+      
+        // let shelves = requestAllShelves();
       const personalGreeting = () => (
         <div className="greeting-header">
             <ul className="header-left">

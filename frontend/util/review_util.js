@@ -29,6 +29,8 @@ export const updateReview = (review) => {
         method:'PATCH',
         url: `/api/reviews/${review.id}`,
         data: {review},
+        // contentType: false,
+        // processType: false 
     }))
 }
 

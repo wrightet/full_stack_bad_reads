@@ -8,7 +8,13 @@ class MakeShelfForm extends React.Component{
             user_id: this.props.user.id
         }
         this.handleSubmit = this.handleSubmit.bind(this);
+        console.log('form state', this.state)
+        console.log('form props', props)
     }
+
+    // componentDidMount(){
+    //     this.props.requestAllShelves()
+    // }
 
     update(field){
         return e => this.setState({[field]: e.target.value})

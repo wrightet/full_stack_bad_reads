@@ -114,6 +114,12 @@ class ReviewForm extends React.Component {
 
                         <label className='rating-label'> My rating:
                          <form value={this.state.rating} onChange={this.update('rating')}>
+                            {/* <input type="radio" value="1" name='rating'  id='rating-1'/> 1
+                            <input type="radio" value="2" name='rating'  id='rating-2'/> 2
+                            <input type="radio" value="3" name='rating'  id='rating-3'/> 3
+                            <input type="radio" value="4" name='rating'  id='rating-4'/> 4
+                            <input type="radio" value="5" name='rating'  id='rating-5'/> 5 */} 
+
                             <Rating 
                             min={1}
                             max={5}
