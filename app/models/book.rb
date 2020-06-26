@@ -22,7 +22,7 @@ class Book < ApplicationRecord
      through: :libraries,
      source: :book_shelf
 
-     has_one_attached :photo
+     # has_one_attached :photo
 
     
     
