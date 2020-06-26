@@ -256,8 +256,8 @@ ActiveRecord::Base.transaction do
         The fate of the Empire may rest in his hands."
 
     )
-    file8 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/eragon.jpeg")
-    book_8.photo.attach(io: file8, filename:"eragon.jpeg")
+    # file8 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/eragon.jpeg")
+    # book_8.photo.attach(io: file8, filename:"eragon.jpeg")
 
       book_9 = Book.create!(
         title: 'Fifty Shades of Grey',
