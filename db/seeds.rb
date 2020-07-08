@@ -70,8 +70,8 @@ ActiveRecord::Base.transaction do
         The play follows two star crossed lovers who belong to rival families.'
 
     )
-    # file1 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/romeo.jpg")
-    # book_1.photo.attach(io: file1, filename:"romeo.jpg")
+    file1 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/romeo.jpg")
+    book_1.photo.attach(io: file1, filename:"romeo.jpg")
     
 
     book_2 = Book.create!(
@@ -88,8 +88,8 @@ ActiveRecord::Base.transaction do
         retelling, illustrated in rich detail."
 
     )
-    # file2 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/tempest.jpeg")
-    # book_2.photo.attach(io: file2, filename:"tempest.jpeg")
+    file2 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/tempest.jpeg")
+    book_2.photo.attach(io: file2, filename:"tempest.jpeg")
 
     book_3 = Book.create!(
         title: 'A Midsummer Nights Dream',
@@ -115,8 +115,8 @@ ActiveRecord::Base.transaction do
         Titania for a lover by Puck) and the complications become fantastically funny."
 
     )
-    # file3 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/midsummer.jpeg")
-    # book_3.photo.attach(io: file3, filename:"midsummer.jpeg")
+    file3 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/midsummer.jpeg")
+    book_3.photo.attach(io: file3, filename:"midsummer.jpeg")
 
     book_4 = Book.create!(
         title: 'The Great Gatsby',
@@ -136,8 +136,8 @@ ActiveRecord::Base.transaction do
         The Great Gatsby is one of the great classics of twentieth-century literature."
 
     )
-    # file4 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/gatsby.jpeg")
-    # book_4.photo.attach(io: file4, filename:"gatsby.jpeg")
+    file4 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/gatsby.jpeg")
+    book_4.photo.attach(io: file4, filename:"gatsby.jpeg")
 
     book_5 = Book.create!(
         title: 'Moby Dick',
@@ -172,8 +172,8 @@ ActiveRecord::Base.transaction do
         Includes unique illustrations"
 
     )
-    # file5 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/moby.jpeg")
-    # book_5.photo.attach(io: file5, filename:"moby.jpeg")
+    file5 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/moby.jpeg")
+    book_5.photo.attach(io: file5, filename:"moby.jpeg")
 
       book_6 = Book.create!(
         title: 'The Catcher in the Rye',
@@ -208,8 +208,8 @@ ActiveRecord::Base.transaction do
         1950's and 60's it was the novel that every teenage boy wants to read."
 
     )
-    # file6 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/catcher.jpeg")
-    # book_6.photo.attach(io: file6, filename:"catcher.jpeg")
+    file6 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/catcher.jpeg")
+    book_6.photo.attach(io: file6, filename:"catcher.jpeg")
      book_7 = Book.create!(
         title: 'Twilight',
         author: 'Stephenie Meyer',
@@ -225,8 +225,8 @@ ActiveRecord::Base.transaction do
         Deeply seductive and extraordinarily suspenseful, Twilight is a love story with bite."
 
     )
-    # file7 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/twilight.jpeg")
-    # book_7.photo.attach(io: file7, filename:"twilight.jpeg")
+    file7 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/twilight.jpeg")
+    book_7.photo.attach(io: file7, filename:"twilight.jpeg")
 
       book_8 = Book.create!(
         title: 'Eragon',
@@ -256,8 +256,8 @@ ActiveRecord::Base.transaction do
         The fate of the Empire may rest in his hands."
 
     )
-    # file8 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/eragon.jpeg")
-    # book_8.photo.attach(io: file8, filename:"eragon.jpeg")
+    file8 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/eragon.jpeg")
+    book_8.photo.attach(io: file8, filename:"eragon.jpeg")
 
       book_9 = Book.create!(
         title: 'Fifty Shades of Grey',
@@ -286,16 +286,10 @@ ActiveRecord::Base.transaction do
         that will obsess you, possess you, and stay with you forever."
 
     )
-    # file9 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/fifty.jpeg")
-    # book_9.photo.attach(io: file9, filename:"fifty.jpeg")
+    file9 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/fifty.jpeg")
+    book_9.photo.attach(io: file9, filename:"fifty.jpeg")
   
 
-   
-    # User.create(first_name: 'Todd', last_name: 'McTodd', email: 'toddsonoftodd@todd.com', password: '123456')
-    # Book.create(title: 'Harry Potter', author: 'J.K. Rowling', genre: 'Fantasy', read: true, currently_reading: false, want_to_read: false )
-    # Review.create(user_id: 1, book_id: 1, rating: 3, body: 'An ok book about a wizard boy with no parents ')
-    
-    # BookShelf.create(user_id: 1, book_id: 1, name: "read")
   
     # all users must be created above this line
     
@@ -311,8 +305,8 @@ ActiveRecord::Base.transaction do
             url: 'book.jpeg',
             description: Faker::Hipster.paragraph
         )
-        # file = open("https://bad-seeds.s3-us-west-1.amazonaws.com/book.jpeg")
-        # book.photo.attach(io: file, filename:"book.jpeg")
+        file = open("https://bad-seeds.s3-us-west-1.amazonaws.com/book.jpeg")
+        book.photo.attach(io: file, filename:"book.jpeg")
 
     end
 

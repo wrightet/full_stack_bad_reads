@@ -12,7 +12,7 @@ class BookShelf < ApplicationRecord
         through: :libraries,
         source: :book
 
-    # has_many :photos,
-    #     through: :books,
-    #     source: :photo_blob
+    has_many :photos,
+        through: :books,
+        source: :photo_blob
 end
