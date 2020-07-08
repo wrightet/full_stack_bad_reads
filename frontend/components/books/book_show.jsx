@@ -108,8 +108,8 @@ class BookShow extends React.Component {
         <div className="book-content">
         
                  <div className="book-show-image">
-                        {/* <img src={book.photoURL} className='book-show-photo'/> */}
-                    <img src={this.keyFinder(book.url)} className='book-show-photo'/>
+                        <img src={book.photoURL} className='book-show-photo'/>
+                    {/* <img src={this.keyFinder(book.url)} className='book-show-photo'/> */}
                     </div>
            
                 <div className='book-review-combine'>    
