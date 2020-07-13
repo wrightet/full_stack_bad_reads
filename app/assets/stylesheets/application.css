@@ -1099,7 +1099,7 @@ footer > ul > li > h6 {
     align-items: flex-start;
     float: left;
     position: relative;
-    padding-right: 25px;
+    padding-right: 10em;
 }
 
 .content{
