@@ -1105,7 +1105,13 @@ footer > ul > li > h6 {
 .content{
     flex-direction: row;
 }
-.shelf-links >label > ul > li > a{
+.shelf-links > label > ul{
+    width: 10vw;
+}
+.shelf-links > label > ul > li{
+    width: 100%;
+}
+.shelf-links > label > ul > li > a{
     background: none!important;
     border: none;
     padding-left: 1%;
@@ -1114,11 +1120,16 @@ footer > ul > li > h6 {
     text-decoration: none;
     cursor: pointer;
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width:100%;
 }
 
 .shelf-links >label > ul > li > a:hover{
     text-decoration: underline;
 }
+
+/* .shelf-links > label {
+    width: 100%;
+} */
 
 .remove-shelf-button{
     color: #00635D;
