@@ -14,7 +14,7 @@ class SingleShelf extends React.Component{
         this.handleEdit = this.handleEdit.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.shelfRemover = this.shelfRemover.bind(this);
-        console.log('single', props)
+       
     }
 
     componentDidMount(){
@@ -26,7 +26,7 @@ class SingleShelf extends React.Component{
     }
 
     update(field) {
-        console.log(field)
+        
         return e => this.setState({[field]: e.target.value })
     }
 

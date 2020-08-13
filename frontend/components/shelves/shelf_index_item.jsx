@@ -10,10 +10,10 @@ class ShelfIndexItem extends React.Component {
         this.avgRating = this.avgRating.bind(this);
         this.removeBook = this.removeBook.bind(this);
         // this.libraryFinder = this.libraryFinder.bind(this);
-        console.log(props)
+        
         
     }
-    componentDidMount(){console.log('yo')}
+   
 
     keyFinder(url) {
         let val = url.split('.')[0];

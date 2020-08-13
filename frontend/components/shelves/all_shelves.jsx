@@ -9,7 +9,7 @@ class AllShelves extends React.Component {
             edit: false
         }
         // this.handleEdit = this.handleEdit.bind(this);
-        console.log(props)
+      
     }
     componentDidMount(){
         this.props.requestAllShelves().then(shelves => {
