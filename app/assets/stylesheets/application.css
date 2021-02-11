@@ -1084,7 +1084,9 @@ footer > ul > li > h6 {
 .book-index-item{
    /* height:30vh;
    width:5vw; */
-   margin: 2vw;
+   margin-left: 2vw;
+   margin-bottom: 2vw;
+   margin-right: 2vw;
 }
 
 .App{
