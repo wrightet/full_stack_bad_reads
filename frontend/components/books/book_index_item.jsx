@@ -79,7 +79,7 @@ class BookIndexItem extends React.Component {
                     min={1}
                     max={5}
                     value={Math.round(this.avgRating())}/>
-                {this.avgRating()}
+                <div>{this.avgRating()}</div>
                 <ShelfForm
                     book={book}
                     shelves={this.props.shelves}

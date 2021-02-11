@@ -919,6 +919,10 @@ footer > ul > li > h6 {
   display: inline-flex;
   overflow: hidden;
   flex-direction: row;
+  margin-left: .2vw;
+  margin-right: .2vw;
+  margin-bottom: .2vw;
+  min-width: 10vw;
 }
 
 .stars input[type=radio] {
