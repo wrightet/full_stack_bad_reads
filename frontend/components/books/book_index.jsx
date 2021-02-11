@@ -60,11 +60,11 @@ class BookIndex extends React.Component {
            <div className='book-index'>
                <div className='content'>
                    <div className='shelf-links'>
-                       <label htmlFor=""> Bookshelves
-                            <ul>
+                       <label className='book-shelf-label' htmlFor=""> Bookshelves
+                            <ul className='book-shelves-ul'>
                                 {
                                     shelves.map((shelf, index) => (
-                                        <li key={shelf.id}>
+                                        <li className='single-shelf' key={shelf.id}>
                                             
                                     <a className='remove-shelf-button' onClick={() => this.shelfRemover(shelf.id)}>{index > 2 ?
                                     //  <div>
