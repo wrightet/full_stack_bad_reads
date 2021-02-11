@@ -80,7 +80,7 @@ class BookIndex extends React.Component {
                                     ))
                                 }
                                 <li className='single-shelf'>
-                                    {this.state.edit === false ? <button onClick={() => this.triggerEdit()}>add</button>
+                                    {this.state.edit === false ? <button className='add-shelf-button' onClick={() => this.triggerEdit()}>add</button>
                                     :
                                        <MakeShelfFormContainer
                                            user={this.props.user}

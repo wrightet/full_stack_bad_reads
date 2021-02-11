@@ -1122,6 +1122,10 @@ footer > ul > li > h6 {
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     width:100%;
 }
+
+.add-shelf-button {
+    margin-top: 2vh;
+}
 .remove-shelf-button{
     background: none!important;
     border: none;
@@ -1232,6 +1236,7 @@ footer > ul > li > h6 {
 }
 
 .make-shelf-form{
+    margin-top: 2vh;
     display:flex;
     flex-direction: row;
 }
@@ -1242,6 +1247,7 @@ footer > ul > li > h6 {
     /* margin-left: 10vw; */
     background-color: #F4F1EA;
     border-radius: .25vw;;
+    margin-top: 2vh;
 }
 .make-shelf-input{
     /* width: 80%; */
