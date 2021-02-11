@@ -64,7 +64,7 @@ class BookIndex extends React.Component {
                             <ul className='book-shelves-ul'>
                                 {
                                     shelves.map((shelf, index) => (
-                                        <li className='single-shelf' key={shelf.id}>
+                                        <li className='shelf' key={shelf.id}>
                                             
                                     <a className='remove-shelf-button' onClick={() => this.shelfRemover(shelf.id)}>{index > 2 ?
                                     //  <div>
@@ -74,12 +74,12 @@ class BookIndex extends React.Component {
                                      'x'
                                         
                                      : ''}</a>
-                                            <Link to={`/shelves/${shelf.id}`}> {shelf.name}
+                                            <Link className='single-shelf' to={`/shelves/${shelf.id}`}> {shelf.name}
                                            </Link> 
                                         </li>
                                     ))
                                 }
-                                <li>
+                                <li className='single-shelf'>
                                     {this.state.edit === false ? <button onClick={() => this.triggerEdit()}>add</button>
                                     :
                                        <MakeShelfFormContainer
