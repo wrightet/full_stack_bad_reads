@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle} from '@fortawesome/free-solid-svg-icons';
@@ -50,14 +50,7 @@ const Greeting = ({ currentUser, logout}) => {
                 <li className="header-el"><Link to="/shelves">Shelves</Link></li>
                 {/* <li className="header-el"><Link to={`/shelves/${requestAllShelves()}`}>My Books</Link></li> */}
                 {/* <li ><input type="text" className="books-search" placeholder="Placeholder Search Bar"/></li> */}
-                <li className="header-el-name"> 
-                      <FontAwesomeIcon icon={faUserCircle} id='user-icon'/>
-                    <ul id="user-dropdown" >
-                       
-                        <li >Welcome, {currentUser.firstName}</li>
-                        <li ><button className="logout-button-header" onClick={logout}>Log out</button></li>
-                    </ul>
-                </li>
+                <DropDown currentUser={currentUser} logout={logout}/>
             </ul>
             
             
@@ -66,8 +59,30 @@ const Greeting = ({ currentUser, logout}) => {
 
     return currentUser ? personalGreeting() : sessionLinks();
     
-}
+};
 
+function DropDown ({currentUser, logout}) {
+    const [class, setClass] = useState('drop-down-none');
+    const openDrop = () => {
+        if (class === "drop-down-none"){
+            setClass("drop-down-show");
+        }
+        else
+        {
+            setClass("drop-down-show")
+        }
+    }
+    return (
+        <li className="header-el-name">
+            <FontAwesomeIcon icon={faUserCircle} id='user-icon' />
+            <ul id={class} >
+
+                <li >Welcome, {currentUser.firstName}</li>
+                <li ><button className="logout-button-header" onClick={logout}>Log out</button></li>
+            </ul>
+        </li>
+    )
+}
 export default Greeting;
 
 
