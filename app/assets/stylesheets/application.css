@@ -125,10 +125,12 @@ table {
     box-shadow: 0 5px 10px rgba(0,0,0,0.15);
     border-radius: 0% 0% 2% 2%;
     top: 76%;
+    z-index:1;
 }
 
 #donotshow{
     display:none;
+    z-index:1;
 }
 
 #user-dropdown:hover  {
