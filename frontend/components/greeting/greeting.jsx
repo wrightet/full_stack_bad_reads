@@ -48,6 +48,14 @@ const Greeting = ({ currentUser, logout}) => {
             <ul className="header-left">
                 <li className="header-el"><Link to="/">Home</Link></li>
                 <li className="header-el"><Link to="/shelves">Shelves</Link></li>
+                <li className="header-el-name">
+                {/* <FontAwesomeIcon icon={faUserCircle} id='user-icon' /> */}
+                    {/* <ul id='user-dropdown' >
+
+                        <li >Welcome, {currentUser.firstName}</li>
+                        <li ><button className="logout-button-header" onClick={logout}>Log out</button></li>
+                    </ul> */}
+                </li>
                 {/* <li className="header-el"><Link to={`/shelves/${requestAllShelves()}`}>My Books</Link></li> */}
                 {/* <li ><input type="text" className="books-search" placeholder="Placeholder Search Bar"/></li> */}
                 <DropDown currentUser={currentUser} logout={logout}/>
@@ -62,20 +70,20 @@ const Greeting = ({ currentUser, logout}) => {
 };
 
 function DropDown ({currentUser, logout}) {
-    const [class, setClass] = useState('drop-down-none');
+    const [class_name, setClass] = useState('user-dropdown');
     const openDrop = () => {
-        if (class === "drop-down-none"){
-            setClass("drop-down-show");
+        if (class_name === "user-dropdown"){
+            setClass("donotshow");
         }
         else
         {
-            setClass("drop-down-show")
+            setClass("user-dropdown")
         }
-    }
+    };
     return (
-        <li className="header-el-name">
+        <li className="header-el-name " onClick={openDrop}>
             <FontAwesomeIcon icon={faUserCircle} id='user-icon' />
-            <ul id={class} >
+            <ul id={class_name} >
 
                 <li >Welcome, {currentUser.firstName}</li>
                 <li ><button className="logout-button-header" onClick={logout}>Log out</button></li>
