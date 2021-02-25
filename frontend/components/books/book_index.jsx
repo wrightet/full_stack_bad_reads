@@ -2,6 +2,8 @@ import React from 'react';
 import BookIndexItem from './book_index_item';
 import MakeShelfFormContainer from '../shelves/make_shelf_form';
 import { Link } from 'react-router-dom';
+import Loader from '../loading_wheel.jsx';
+
 class BookIndex extends React.Component {
     constructor(props){
         super(props)
@@ -55,9 +57,10 @@ class BookIndex extends React.Component {
             groupedBooks.push(books.slice(i, i+5))
             
         }
-       if (!books){return null;}
+        if (!books) { return <Loader />;}
        return (
            <div className='book-index'>
+               {/* <Loader/> */}
                <div className='content'>
                    <div className='shelf-links'>
                        <label className='book-shelf-label' htmlFor=""> Bookshelves
@@ -94,8 +97,9 @@ class BookIndex extends React.Component {
                         </label>
                     </div>
                 <div className='book-container-right'>
+                  
                     {
-                        groupedBooks.map(row => (
+                           !groupedBooks ? <Loader /> :groupedBooks.map(row => (
                             
                             <div className='book-index-row' key={groupedBooks.indexOf(row)}>
                             
