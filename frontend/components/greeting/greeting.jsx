@@ -68,7 +68,7 @@ const Greeting = ({ currentUser, logout}) => {
 };
 
 function DropDown ({currentUser, logout}) {
-    const [class_name, setClass] = useState('user-dropdown');
+    const [class_name, setClass] = useState('donotshow');
     const openDrop = () => {
         if (class_name === "user-dropdown"){
             setClass("donotshow");

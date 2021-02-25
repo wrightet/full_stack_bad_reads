@@ -27,9 +27,10 @@ class MakeShelfForm extends React.Component{
     render(){
         return( 
             <div className='make-shelf-form'>
-                <form value={this.state.name} onSubmit={this.handleSubmit}>
+                <form value={this.state.name} onSubmit={this.handleSubmit}  className='shelf-form'>
                     <label htmlFor="">
-                        <input type="text" className="make-shelf-input" value={this.state.name} placeholder='add shelf' onChange={this.update('name')}/>
+                        <input type="text" className="make-shelf-input" value={this.state.name} 
+                        placeholder='Add a shelf' onChange={this.update('name')}/>
                     </label>
                     <input type="submit" value='add' className='make-shelf-submit'/>
                 </form>
