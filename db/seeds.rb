@@ -296,7 +296,7 @@ ActiveRecord::Base.transaction do
         read: false,
         currently_reading: false, 
         want_to_read: false,
-        url: 'golden_compass.jpg',
+        url: 'golden_compass.jpeg',
         description: 'The Golden Compass is a young-adult fantasy novel by Philip Pullman, published 
         in 1995 by Scholastic UK. Set in a parallel universe, it features the journey 
         of Lyra Belacqua to the Arctic in search of her missing friend, Roger Parslow, 
@@ -304,6 +304,8 @@ ActiveRecord::Base.transaction do
         with a mysterious substance known as "Dust".'
     )
   
+    file_10 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/golden_compass.jpeg")
+    book_10.photo.attach(io: file_10, filename:"golden_compass.jpeg")
     # all users must be created above this line
     
     
