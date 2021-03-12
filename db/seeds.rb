@@ -356,32 +356,51 @@ ActiveRecord::Base.transaction do
     book_12.photo.attach(io: file_12, filename:"wrinkle_in_time.jpeg")
 
     book_13 = Book.create!(
-        title: '',
-        author: '',
-        genre:'',
+        title: 'Ulysses',
+        author: 'James Joyce',
+        genre:'Modernist',
         read: false,
         currently_reading: false, 
         want_to_read: false,
-        url: '',
-        description: ''
+        url: 'ulysses.jpeg',
+        description: 'Loosely based on the Odyssey, this landmark of modern
+        literature follows ordinary Dubliners in 1904. Capturing a single day
+        in the life of Dubliner Leopold Bloom, his friends Buck Mulligan and 
+        Stephen Dedalus, his wife Molly, and a scintillating cast of supporting
+         characters, Joyce pushes Celtic lyricism and vulgarity to splendid 
+         extremes. Captivating experimental techniques range from interior 
+         monologues to exuberant wordplay and earthy humor. A major achievement 
+         in 20th century literature'
     )
   
-    file_13 = open("")
-    book_13.photo.attach(io: file_13, filename:"")
+    file_13 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/ulysses.jpeg")
+    book_13.photo.attach(io: file_13, filename:"ulysses.jpeg")
 
     book_14 = Book.create!(
-        title: '',
-        author: '',
-        genre:'',
+        title: 'The Awakening',
+        author: 'Kate Chopin',
+        genre:'Novel',
         read: false,
         currently_reading: false, 
         want_to_read: false,
-        url: '',
-        description: ''
+        url: 'awakening.jpeg',
+        description: "When first published in 1899, The Awakening shocked readers 
+        with its honest treatment of female marital infidelity. Audiences accustomed 
+        to the pieties of late Victorian romantic fiction were taken aback by Chopin's 
+        daring portrayal of a woman trapped in a stifling marriage, who seeks and finds 
+        passionate physical love outside the confines of her domestic situation.
+
+        Aside from its unusually frank treatment of a then-controversial subject, 
+        the novel is widely admired today for its literary qualities. Edmund Wilson 
+        characterized it as a work 
+        ""quite uninhibited and beautifully written, which anticipates D. H. Lawrence in its treatment of infidelity."" 
+        Although the theme of marital infidelity no longer shocks, few novels have plumbed the psychology of 
+        a woman involved in an illicit relationship with the perception, artistry, and honesty that Kate Chopin brought 
+        to The Awakening."
     )
   
-    file_14 = open("")
-    book_14.photo.attach(io: file_14, filename:"")
+    file_14 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/awakening.jpeg")
+    book_14.photo.attach(io: file_14, filename:"awakening.jpeg")
 
     book_15 = Book.create!(
         title: '',
