@@ -403,32 +403,49 @@ ActiveRecord::Base.transaction do
     book_14.photo.attach(io: file_14, filename:"awakening.jpeg")
 
     book_15 = Book.create!(
-        title: '',
-        author: '',
-        genre:'',
+        title: 'The Cursed Child',
+        author: 'J.K. Rowling',
+        genre:'Fantasy',
         read: false,
         currently_reading: false, 
         want_to_read: false,
-        url: '',
+        url: 'cursed_child.jpeg',
         description: ''
     )
   
-    file_15 = open("")
-    book_15.photo.attach(io: file_15, filename:"")
+    file_15 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/cursed_child.jpeg")
+    book_15.photo.attach(io: file_15, filename:"curse_child.jpeg")
 
     book_16 = Book.create!(
-        title: '',
-        author: '',
-        genre:'',
+        title: 'The Outsider',
+        author: 'Stphen King',
+        genre:'Horror',
         read: false,
         currently_reading: false, 
         want_to_read: false,
-        url: '',
-        description: ''
+        url: 'outsider.jpeg',
+        description: "An unspeakable crime. A confounding investigation. At a 
+        time when the King brand has never been stronger, he has delivered one 
+        of his most unsettling and compulsively readable stories.
+
+        An eleven-year-old boy’s violated corpse is found in a town park. 
+        Eyewitnesses and fingerprints point unmistakably to one of Flint City’s 
+        most popular citizens. He is Terry Maitland, Little League coach, English 
+        teacher, husband, and father of two girls. Detective Ralph Anderson, 
+        whose son Maitland once coached, orders a quick and very public arrest. 
+        Maitland has an alibi, but Anderson and the district attorney soon add 
+        DNA evidence to go with the fingerprints and witnesses. Their case seems 
+        ironclad.
+
+        As the investigation expands and horrifying answers begin to emerge, 
+        King’s propulsive story kicks into high gear, generating strong tension 
+        and almost unbearable suspense. Terry Maitland seems like a nice guy, 
+        but is he wearing another face? When the answer comes, it will shock 
+        you as only Stephen King can."
     )
   
-    file_16 = open("")
-    book_16.photo.attach(io: file_16, filename:"")
+    file_16 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/outsider.jpeg")
+    book_16.photo.attach(io: file_16, filename:"outsider.jpeg")
 
     book_17 = Book.create!(
         title: '',
