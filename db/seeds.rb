@@ -306,6 +306,132 @@ ActiveRecord::Base.transaction do
   
     file_10 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/golden_compass.jpeg")
     book_10.photo.attach(io: file_10, filename:"golden_compass.jpeg")
+
+     book_11 = Book.create!(
+        title: '',
+        author: '',
+        genre:'',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: '',
+        description: ''
+    )
+  
+    file_11 = open("")
+    book_11.photo.attach(io: file_11, filename:"")
+
+    book_12 = Book.create!(
+        title: '',
+        author: '',
+        genre:'',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: '',
+        description: ''
+    )
+  
+    file_12 = open("")
+    book_12.photo.attach(io: file_12, filename:"")
+
+    book_13 = Book.create!(
+        title: '',
+        author: '',
+        genre:'',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: '',
+        description: ''
+    )
+  
+    file_13 = open("")
+    book_13.photo.attach(io: file_13, filename:"")
+
+    book_14 = Book.create!(
+        title: '',
+        author: '',
+        genre:'',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: '',
+        description: ''
+    )
+  
+    file_14 = open("")
+    book_14.photo.attach(io: file_14, filename:"")
+
+    book_15 = Book.create!(
+        title: '',
+        author: '',
+        genre:'',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: '',
+        description: ''
+    )
+  
+    file_15 = open("")
+    book_15.photo.attach(io: file_15, filename:"")
+
+    book_16 = Book.create!(
+        title: '',
+        author: '',
+        genre:'',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: '',
+        description: ''
+    )
+  
+    file_16 = open("")
+    book_16.photo.attach(io: file_16, filename:"")
+
+    book_17 = Book.create!(
+        title: '',
+        author: '',
+        genre:'',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: '',
+        description: ''
+    )
+
+    file_17 = open("")
+    book_17.photo.attach(io: file_17, filename:"")
+
+    book_18 = Book.create!(
+        title: '',
+        author: '',
+        genre:'',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: '',
+        description: ''
+    )
+  
+    file_18 = open("")
+    book_18.photo.attach(io: file_18, filename:"")
+
+    book_19 = Book.create!(
+        title: '',
+        author: '',
+        genre:'',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: '',
+        description: ''
+    )
+  
+    file_19 = open("")
+    book_19.photo.attach(io: file_19, filename:"")
     # all users must be created above this line
     
     
