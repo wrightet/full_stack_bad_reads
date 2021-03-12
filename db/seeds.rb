@@ -336,18 +336,24 @@ ActiveRecord::Base.transaction do
     book_11.photo.attach(io: file_11, filename:"first_steps.jpeg")
 
     book_12 = Book.create!(
-        title: '',
-        author: '',
-        genre:'',
+        title: 'A Wrinkle in Time',
+        author: "Madeleine L'Engle",
+        genre:'Young Adult',
         read: false,
         currently_reading: false, 
         want_to_read: false,
-        url: '',
-        description: ''
+        url: 'wrinkle_in_time.jpeg',
+        description: "Out of this wild night, a strange visitor comes to the Murry 
+        house and beckons Meg, her brother Charles Wallace, and their friend Calvin 
+        O'Keefe on a most dangerous and extraordinary adventure—one that will threaten 
+        their lives and our universe.
+
+        Winner of the 1963 Newbery Medal, A Wrinkle in Time is the first book in 
+        Madeleine L'Engle's classic Time Quintet."
     )
   
-    file_12 = open("")
-    book_12.photo.attach(io: file_12, filename:"")
+    file_12 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/wrinkle_in_time.jpeg")
+    book_12.photo.attach(io: file_12, filename:"wrinkle_in_time.jpeg")
 
     book_13 = Book.create!(
         title: '',
