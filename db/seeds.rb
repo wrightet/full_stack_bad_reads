@@ -289,7 +289,20 @@ ActiveRecord::Base.transaction do
     file9 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/fifty.jpeg")
     book_9.photo.attach(io: file9, filename:"fifty.jpeg")
   
-
+    book_10 = Book.create!(
+        title: 'The Golden Compass',
+        author: 'Philip Pullman',
+        genre:'Fantasy',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: 'golden_compass.jpg',
+        description: 'The Golden Compass is a young-adult fantasy novel by Philip Pullman, published 
+        in 1995 by Scholastic UK. Set in a parallel universe, it features the journey 
+        of Lyra Belacqua to the Arctic in search of her missing friend, Roger Parslow, 
+        and her imprisoned uncle, Lord Asriel, who has been conducting experiments 
+        with a mysterious substance known as "Dust".'
+    )
   
     # all users must be created above this line
     
