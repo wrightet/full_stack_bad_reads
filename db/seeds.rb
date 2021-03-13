@@ -635,8 +635,8 @@ ActiveRecord::Base.transaction do
             the visionary we need and the satirist we deserve.'
     )
   
-    file_24 = open("")
-    book_24.photo.attach(io: file_24, filename:"")
+    file_24 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/choke.jpeg")
+    book_24.photo.attach(io: file_24, filename:"choke.jpeg")
 
 
     book_25 = Book.create!(
@@ -655,8 +655,8 @@ ActiveRecord::Base.transaction do
          life that only Vonnegut has the courage to tell."
     )
   
-    file_25 = open("")
-    book_25.photo.attach(io: file_25, filename:"")
+    file_25 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/sirens.jpeg")
+    book_25.photo.attach(io: file_25, filename:"sirens.jpeg")
 
 
     book_25 = Book.create!(
@@ -683,8 +683,8 @@ ActiveRecord::Base.transaction do
         first."
     )
   
-    file_25 = open("")
-    book_25.photo.attach(io: file_25, filename:"")
+    file_25 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/artemis.jpeg")
+    book_25.photo.attach(io: file_25, filename:"artemis.jpeg")
 
 
     book_26 = Book.create!(
@@ -718,23 +718,36 @@ ActiveRecord::Base.transaction do
         Rhone-Poulenc Prize, and the Commonwealth Club of California's Gold Medal"
     )
   
-    file_26 = open("")
-    book_26.photo.attach(io: file_26, filename:"")
+    file_26 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/germs.jpeg")
+    book_26.photo.attach(io: file_26, filename:"germs.jpeg")
 
 
     book_27 = Book.create!(
-        title: '',
-        author: '',
-        genre:'',
+        title: 'The Da Vinci Code',
+        author: 'Dan Brown',
+        genre:'Fiction',
         read: false,
         currently_reading: false, 
         want_to_read: false,
-        url: '',
-        description: ''
+        url: 'da_vinci.jpeg',
+        description: "While in Paris, Harvard symbologist Robert Langdon is 
+        awakened by a phone call in the dead of the night. The elderly curator 
+        of the Louvre has been murdered inside the museum, his body covered in 
+        baffling symbols. As Langdon and gifted French cryptologist Sophie 
+        Neveu sort through the bizarre riddles, they are stunned to discover a 
+        trail of clues hidden in the works of Leonardo da Vinci—clues visible 
+        for all to see and yet ingeniously disguised by the painter.
+
+        Even more startling, the late curator was involved in the Priory of Sion—a 
+        secret society whose members included Sir Isaac Newton, Victor Hugo, and Da
+        Vinci—and he guarded a breathtaking historical secret. Unless Langdon and 
+        Neveu can decipher the labyrinthine puzzle—while avoiding the faceless 
+        adversary who shadows their every move—the explosive, ancient truth will 
+        be lost forever"
     )
   
-    file_27 = open("")
-    book_27.photo.attach(io: file_27, filename:"")
+    file_27 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/da_vinci.jpeg")
+    book_27.photo.attach(io: file_27, filename:"da_vinci.jpeg")
 
 
     book_28 = Book.create!(
@@ -760,8 +773,8 @@ ActiveRecord::Base.transaction do
         Around the world in eighty days."
             )
   
-    file_28 = open("")
-    book_28.photo.attach(io: file_28, filename:"")
+    file_28 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/leagues.jpeg")
+    book_28.photo.attach(io: file_28, filename:"leagues.jpeg")
 
 
     book_29 = Book.create!(
