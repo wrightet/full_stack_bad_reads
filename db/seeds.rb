@@ -522,8 +522,8 @@ ActiveRecord::Base.transaction do
         friends, lovers, and families.'
     )
   
-    file_19 = open("")
-    book_19.photo.attach(io: file_19, filename:"")
+    file_19 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/alone_together.jpeg")
+    book_19.photo.attach(io: file_19, filename:"alone_together.jpeg")
 
     book_20 = Book.create!(
         title: 'Extremely Loud & Incredibly Close',
@@ -544,8 +544,8 @@ ActiveRecord::Base.transaction do
         journey which brings him ever closer to some kind of peace."
     )
   
-    file_20 = open("")
-    book_20.photo.attach(io: file_20, filename:"")
+    file_20 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/loud.jpeg")
+    book_20.photo.attach(io: file_20, filename:"loud.jpeg")
 
     book_21 = Book.create!(
         title: 'Advanced Engineering Mathematics',
@@ -565,8 +565,8 @@ ActiveRecord::Base.transaction do
              and computer scientists, as well as members of other disciplines."
     )
   
-    file_21 = open("")
-    book_21.photo.attach(io: file_21, filename:"")
+    file_21 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/engineering.jpeg")
+    book_21.photo.attach(io: file_21, filename:"engineering.jpeg")
 
     book_22 = Book.create!(
         title: 'Old Man and the Sea',
@@ -583,8 +583,8 @@ ActiveRecord::Base.transaction do
          1954."
     )
   
-    file_22 = open("")
-    book_22.photo.attach(io: file_22, filename:"")
+    file_22 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/old_man.jpeg")
+    book_22.photo.attach(io: file_22, filename:"old_man.jpeg")
 
     book_23 = Book.create!(
         title: 'Persuasion',
@@ -612,8 +612,8 @@ ActiveRecord::Base.transaction do
         her final finished work. "
     )
 
-    file_23 = open("")
-    book_23.photo.attach(io: file_23, filename:"")
+    file_23 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/persuasion.jpeg")
+    book_23.photo.attach(io: file_23, filename:"persuasion.jpeg")
 
     book_24 = Book.create!(
         title: 'Choke',
@@ -863,22 +863,22 @@ ActiveRecord::Base.transaction do
 
     # all users must be created above this line
     
-    
-    100.times do 
-       book = Book.create(
-            title: Faker::Book.title,
-            author: Faker::Book.author,
-            genre: Faker::Book.genre,
-            read: false, 
-            currently_reading: false, 
-            want_to_read: false,
-            url: 'book.jpeg',
-            description: Faker::Hipster.paragraph
-        )
-        file = open("https://bad-seeds.s3-us-west-1.amazonaws.com/book.jpeg")
-        book.photo.attach(io: file, filename:"book.jpeg")
+    #faked in books. add if necessary 
+    # 100.times do 
+    #    book = Book.create(
+    #         title: Faker::Book.title,
+    #         author: Faker::Book.author,
+    #         genre: Faker::Book.genre,
+    #         read: false, 
+    #         currently_reading: false, 
+    #         want_to_read: false,
+    #         url: 'book.jpeg',
+    #         description: Faker::Hipster.paragraph
+    #     )
+    #     file = open("https://bad-seeds.s3-us-west-1.amazonaws.com/book.jpeg")
+    #     book.photo.attach(io: file, filename:"book.jpeg")
 
-    end
+    # end
 
     book_ids = Book.all.map{|book| book.id}
 
