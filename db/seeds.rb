@@ -782,8 +782,8 @@ ActiveRecord::Base.transaction do
         guilt."
     )
   
-    file_29 = open("")
-    book_29.photo.attach(io: file_29, filename:"")
+    file_29 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/scarlet.jpeg")
+    book_29.photo.attach(io: file_29, filename:"scarlet.jpeg")
 
 
     book_30 = Book.create!(
@@ -822,8 +822,8 @@ ActiveRecord::Base.transaction do
                 "
     )
   
-    file_30 = open("")
-    book_30.photo.attach(io: file_30, filename:"")
+    file_30 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/crucible.jpeg")
+    book_30.photo.attach(io: file_30, filename:"crucible.jpeg")
 
 
     book_31 = Book.create!(
@@ -845,8 +845,8 @@ ActiveRecord::Base.transaction do
           of redemption."
     )
   
-    file_31 = open("")
-    book_31.photo.attach(io: file_31, filename:"")
+    file_31 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/crime.jpeg")
+    book_31.photo.attach(io: file_31, filename:"crime.jpeg")
 
     # all users must be created above this line
     
