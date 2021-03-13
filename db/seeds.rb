@@ -640,14 +640,19 @@ ActiveRecord::Base.transaction do
 
 
     book_25 = Book.create!(
-        title: '',
-        author: '',
-        genre:'',
+        title: 'The Sirens of Titan',
+        author: 'Kurt Vonnegut Jr.',
+        genre:'Science Fiction',
         read: false,
         currently_reading: false, 
         want_to_read: false,
-        url: '',
-        description: ''
+        url: 'sirens.jpeg',
+        description: "The Sirens of Titan is an outrageous romp through space,
+         time, and morality. The richest, most depraved man on Earth, Malachi 
+         Constant, is offered a chance to take a space journey to distant 
+         worlds with a beautiful woman at his side. Of course there's a catch 
+         to the invitation—and a prophetic vision about the purpose of human 
+         life that only Vonnegut has the courage to tell."
     )
   
     file_25 = open("")
@@ -655,14 +660,27 @@ ActiveRecord::Base.transaction do
 
 
     book_25 = Book.create!(
-        title: '',
-        author: '',
-        genre:'',
+        title: 'Artemis',
+        author: 'Andy Weir',
+        genre:'Science Fiction',
         read: false,
         currently_reading: false, 
         want_to_read: false,
-        url: '',
-        description: ''
+        url: 'artemis.jpeg',
+        description: "Jazz Bashara is a criminal.
+
+        Well, sort of. Life on Artemis, the first and only city on the moon, is 
+        tough if you're not a rich tourist or an eccentric billionaire. So
+         smuggling in the occasional harmless bit of contraband barely counts, 
+         right? Not when you've got debts to pay and your job as a porter barely 
+         covers the rent.
+
+        Everything changes when Jazz sees the chance to commit the perfect crime, 
+        with a reward too lucrative to turn down. But pulling off the impossible 
+        is just the start of her problems, as she learns that she's stepped 
+        square into a conspiracy for control of Artemis itself—and that now, 
+        her only chance at survival lies in a gambit even riskier than the 
+        first."
     )
   
     file_25 = open("")
