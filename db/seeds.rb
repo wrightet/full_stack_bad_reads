@@ -587,28 +587,52 @@ ActiveRecord::Base.transaction do
     book_22.photo.attach(io: file_22, filename:"")
 
     book_23 = Book.create!(
-        title: '',
-        author: '',
-        genre:'',
+        title: 'Persuasion',
+        author: 'Jane Austen',
+        genre:'Fiction',
         read: false,
         currently_reading: false, 
         want_to_read: false,
-        url: '',
-        description: ''
+        url: 'persuasion.jpeg',
+        description: "Twenty-seven-year old Anne Elliot is Austen's most adult 
+        heroine. Eight years before the story proper begins, she is happily
+         betrothed to a naval officer, Frederick Wentworth, but she precipitously 
+         breaks off the engagement when persuaded by her friend Lady Russell that 
+         such a match is unworthy. The breakup produces in Anne a deep and 
+         long-lasting regret. When later Wentworth returns from sea a rich and 
+         successful captain, he finds Anne's family on the brink of financial 
+         ruin and his own sister a tenant in Kellynch Hall, the Elliot estate. 
+         All the tension of the novel revolves around one question: Will Anne 
+         and Wentworth be reunited in their love?
+
+        Jane Austen once compared her writing to painting on a little bit of ivory, 2 
+        inches square. Readers of Persuasion will discover that neither her skill for 
+        delicate, ironic observations on social custom, love, and marriage nor her ability 
+        to apply a sharp focus lens to English manners and morals has deserted her in 
+        her final finished work. "
     )
 
     file_23 = open("")
     book_23.photo.attach(io: file_23, filename:"")
 
     book_24 = Book.create!(
-        title: '',
-        author: '',
-        genre:'',
+        title: 'Choke',
+        author: 'Chuck Palahnuik',
+        genre:'Fiction',
         read: false,
         currently_reading: false, 
         want_to_read: false,
-        url: '',
-        description: ''
+        url: 'choke.jpeg',
+        description: 'Victor Mancini, a medical-school dropout, is an antihero 
+        for our deranged times. Needing to pay elder care for his mother, Victor 
+            has devised an ingenious scam: he pretends to choke on pieces of 
+            food while dining in upscale restaurants. He then allows himself 
+            to be “saved” by fellow patrons who, feeling responsible for 
+            Victor’s life, go on to send checks to support him. When he’s not 
+            pulling this stunt, Victor cruises sexual addiction recovery 
+            workshops for action, visits his addled mom, and spends his days 
+            working at a colonial theme park. His creator, Chuck Palahniuk, is 
+            the visionary we need and the satirist we deserve.'
     )
   
     file_24 = open("")
