@@ -738,29 +738,48 @@ ActiveRecord::Base.transaction do
 
 
     book_28 = Book.create!(
-        title: '',
-        author: '',
-        genre:'',
+        title: '20,000 Leagues Under the Sea',
+        author: 'Jules Verne',
+        genre:'Classics',
         read: false,
         currently_reading: false, 
         want_to_read: false,
-        url: '',
-        description: ''
-    )
+        url: 'leagues.jpeg',
+        description: "Writing in France in the nineteenth century, Jules Verne
+         captured his era's fascination with adventure and exploration in a 
+         series of novels he referred to as his Voyages extraordinaries. This
+          book collects six of Verne's best-known novels that extrapolate 
+          developing technology and scientific inquisitiveness into rousing 
+        adventures.
+
+        Five weeks in a balloon --
+        Journey to the center of the earth --
+        From the earth to the moon --
+        Round the moon --
+        Twenty thousand leagues under the sea --
+        Around the world in eighty days."
+            )
   
     file_28 = open("")
     book_28.photo.attach(io: file_28, filename:"")
 
 
     book_29 = Book.create!(
-        title: '',
-        author: '',
-        genre:'',
+        title: 'The Scarlet Letter',
+        author: 'Nathaniel Hawthorne',
+        genre:'Classics',
         read: false,
         currently_reading: false, 
         want_to_read: false,
-        url: '',
-        description: ''
+        url: 'scarlet.jpeg',
+        description: "Set in 17th-century Puritan Boston, Massachusetts, during 
+        the years 1642 to 1649, it tells the story of Hester Prynne, who conceives 
+        a daughter through an affair and will not reveal her lover’s identity. 
+        The scarlet letter A (for adultery) she has to wear on her clothes, 
+        along with her public shaming, is her punishment for her sin and her 
+        secrecy. She struggles to create a new life of repentance and dignity. 
+        Throughout the book, Hawthorne explores themes of legalism, sin, and 
+        guilt."
     )
   
     file_29 = open("")
@@ -768,14 +787,39 @@ ActiveRecord::Base.transaction do
 
 
     book_30 = Book.create!(
-        title: '',
-        author: '',
-        genre:'',
+        title: 'The Crucible',
+        author: 'Arthur Miller',
+        genre:'Classics',
         read: false,
         currently_reading: false, 
         want_to_read: false,
-        url: '',
-        description: ''
+        url: 'crucible.jpeg',
+        description: "
+        ""I believe that the reader will discover here the essential nature of 
+        one of the strangest and most awful chapters in human history,"" Arthur 
+        Miller wrote of his classic play about the witch-hunts and trials in 
+        seventeenth-century Salem, Massachusetts. Based on historical people 
+        and real events, Miller's drama is a searing portrait of a community 
+        engulfed by hysteria. In the rigid theocracy of Salem, rumors that 
+        women are practicing witchcraft galvanize the town's most basic fears 
+        and suspicions; and when a young girl accuses Elizabeth Proctor of 
+        being a witch, self-righteous church leaders and townspeople insist 
+        that Elizabeth be brought to trial. The ruthlessness of the prosecutors
+         and the eagerness of neighbor to testify against neighbor brilliantly 
+         illuminates the destructive power of socially sanctioned violence.
+
+        Written in 1953, The Crucible is a mirror Miller uses to reflect the 
+        anti-communist hysteria inspired by Senator Joseph McCarthy's 
+        ""witch-hunts"" in the United States. Within the text itself, 
+        Miller contemplates the parallels, writing, 
+        ""Political opposition... is given an inhumane overlay, which then 
+        justifies the abrogation 
+        of all normally applied customs of civilized behavior. 
+        A political policy is equated with moral right, and opposition to it with 
+        diabolical malevolence.""
+
+        With an introduction by Christopher Bigsby.
+                "
     )
   
     file_30 = open("")
@@ -783,48 +827,27 @@ ActiveRecord::Base.transaction do
 
 
     book_31 = Book.create!(
-        title: '',
-        author: '',
-        genre:'',
+        title: 'Crime and Punishment',
+        author: 'Fyodor Dosoyevsky',
+        genre:'Classics',
         read: false,
         currently_reading: false, 
         want_to_read: false,
-        url: '',
-        description: ''
+        url: 'crime.jpeg',
+        description: "Raskolnikov, a destitute and desperate former student, 
+        wanders through the slums of St Petersburg and commits a random murder 
+        without remorse or regret. He imagines himself to be a great man, a 
+        Napoleon: acting for a higher purpose beyond conventional moral law.
+         But as he embarks on a dangerous game of cat and mouse with a suspicious
+          police investigator, Raskolnikov is pursued by the growing voice of 
+          his conscience and finds the noose of his own guilt tightening around 
+          his neck. Only Sonya, a downtrodden prostitute, can offer the chance 
+          of redemption."
     )
   
     file_31 = open("")
     book_31.photo.attach(io: file_31, filename:"")
 
-
-    book_32 = Book.create!(
-        title: '',
-        author: '',
-        genre:'',
-        read: false,
-        currently_reading: false, 
-        want_to_read: false,
-        url: '',
-        description: ''
-    )
-  
-    file_32 = open("")
-    book_32.photo.attach(io: file_32, filename:"")
-
-
-    book_33 = Book.create!(
-        title: '',
-        author: '',
-        genre:'',
-        read: false,
-        currently_reading: false, 
-        want_to_read: false,
-        url: '',
-        description: ''
-    )
-  
-    file_33 = open("")
-    book_33.photo.attach(io: file_33, filename:"")
     # all users must be created above this line
     
     
