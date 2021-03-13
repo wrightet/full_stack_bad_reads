@@ -480,32 +480,285 @@ ActiveRecord::Base.transaction do
     book_17.photo.attach(io: file_17, filename:"water_for_elephants.jpeg")
 
     book_18 = Book.create!(
-        title: '',
-        author: '',
-        genre:'',
+        title: 'On the Road',
+        author: 'Jack Kerouac',
+        genre:'Beat Generation',
         read: false,
         currently_reading: false, 
         want_to_read: false,
-        url: '',
-        description: ''
+        url: 'on_the_road.jpeg',
+        description: "A quintessential novel of America & the Beat Generation On 
+        the Road chronicles Jack Kerouac's years traveling the N. American continent 
+        with his friend Neal Cassady, ""a sideburned hero of the snowy West."" As 
+        ""Sal Paradise"" & ""Dean Moriarty,"" the two roam the country in a quest 
+        for self-knowledge & experience. Kerouac's love of America, compassion for 
+            humanity & sense of language as jazz combine to make On the Road an 
+            inspirational work of lasting importance. This classic novel of 
+            freedom & longing defined what it meant to be ""Beat"" & has inspired 
+            every generation since its initial publication"
     )
   
-    file_18 = open("")
-    book_18.photo.attach(io: file_18, filename:"")
+    file_18 = open("https://bad-seeds.s3-us-west-1.amazonaws.com/on_the_road.jpeg")
+    book_18.photo.attach(io: file_18, filename:"on_the_road.jpeg")
 
     book_19 = Book.create!(
-        title: '',
-        author: '',
-        genre:'',
+        title: 'Alone Together: Why We Expect MOre from Technology and Less from Each Other',
+        author: 'Sherry Turkle',
+        genre:'Psychology',
         read: false,
         currently_reading: false, 
         want_to_read: false,
-        url: '',
-        description: ''
+        url: 'alone_together.jpeg',
+        description: 'A groundbreaking book by one of the most important thinkers 
+        of our time shows how technology is warping our social lives and our inner ones
+
+        Technology has become the architect of our intimacies. Online, we fall prey to 
+        the illusion of companionship, gathering thousands of Twitter and Facebook friends,
+        and confusing tweets and wall posts with authentic communication. But this 
+        relentless connection leads to a deep solitude. MIT professor Sherry Turkle
+        argues that as technology ramps up, our emotional lives ramp down. Based on 
+        hundreds of interviews and with a new introduction taking us to the present
+        day, Alone Together describes changing, unsettling relationships between 
+        friends, lovers, and families.'
     )
   
     file_19 = open("")
     book_19.photo.attach(io: file_19, filename:"")
+
+    book_20 = Book.create!(
+        title: 'Extremely Loud & Incredibly Close',
+        author: 'Jonathan Safran Foer',
+        genre:'Fiction',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: 'loud.jpeg',
+        description: "Nine-year-old Oskar Schell is an inventor, amateur entomologist, 
+        Francophile, letter writer, pacifist, natural historian, percussionist, 
+        romantic, Great Explorer, jeweller, detective, vegan, and collector of 
+        butterflies. When his father is killed in the September 11th attacks on 
+        the World Trade Centre, Oskar sets out to solve the mystery of a key he 
+        discovers in his father's closet. It is a search which leads him into 
+        the lives of strangers, through the five boroughs of New York, into 
+        history, to the bombings of Dresden and Hiroshima, and on an inward 
+        journey which brings him ever closer to some kind of peace."
+    )
+  
+    file_20 = open("")
+    book_20.photo.attach(io: file_20, filename:"")
+
+    book_21 = Book.create!(
+        title: 'Advanced Engineering Mathematics',
+        author: 'Erwin Kreyszig',
+        genre:'Engineering',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: 'engineering.jpeg',
+        description: "Advanced Engineering Mathematics, 10th Edition is known 
+        for its comprehensive coverage, careful and correct mathematics, 
+            outstanding exercises, and self-contained subject matter parts for 
+            maximum flexibility. The new edition continues with the tradition of
+             providing instructors and students with a comprehensive and up-to-date 
+             resource for teaching and learning engineering mathematics, that is, 
+             applied mathematics for engineers and physicists, mathematicians 
+             and computer scientists, as well as members of other disciplines."
+    )
+  
+    file_21 = open("")
+    book_21.photo.attach(io: file_21, filename:"")
+
+    book_22 = Book.create!(
+        title: '',
+        author: '',
+        genre:'',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: '',
+        description: ''
+    )
+  
+    file_22 = open("")
+    book_22.photo.attach(io: file_22, filename:"")
+
+    book_23 = Book.create!(
+        title: '',
+        author: '',
+        genre:'',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: '',
+        description: ''
+    )
+
+    file_23 = open("")
+    book_23.photo.attach(io: file_23, filename:"")
+
+    book_24 = Book.create!(
+        title: '',
+        author: '',
+        genre:'',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: '',
+        description: ''
+    )
+  
+    file_24 = open("")
+    book_24.photo.attach(io: file_24, filename:"")
+
+
+    book_25 = Book.create!(
+        title: '',
+        author: '',
+        genre:'',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: '',
+        description: ''
+    )
+  
+    file_25 = open("")
+    book_25.photo.attach(io: file_25, filename:"")
+
+
+    book_25 = Book.create!(
+        title: '',
+        author: '',
+        genre:'',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: '',
+        description: ''
+    )
+  
+    file_25 = open("")
+    book_25.photo.attach(io: file_25, filename:"")
+
+
+    book_26 = Book.create!(
+        title: '',
+        author: '',
+        genre:'',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: '',
+        description: ''
+    )
+  
+    file_26 = open("")
+    book_26.photo.attach(io: file_26, filename:"")
+
+
+    book_27 = Book.create!(
+        title: '',
+        author: '',
+        genre:'',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: '',
+        description: ''
+    )
+  
+    file_27 = open("")
+    book_27.photo.attach(io: file_27, filename:"")
+
+
+    book_28 = Book.create!(
+        title: '',
+        author: '',
+        genre:'',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: '',
+        description: ''
+    )
+  
+    file_28 = open("")
+    book_28.photo.attach(io: file_28, filename:"")
+
+
+    book_29 = Book.create!(
+        title: '',
+        author: '',
+        genre:'',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: '',
+        description: ''
+    )
+  
+    file_29 = open("")
+    book_29.photo.attach(io: file_29, filename:"")
+
+
+    book_30 = Book.create!(
+        title: '',
+        author: '',
+        genre:'',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: '',
+        description: ''
+    )
+  
+    file_30 = open("")
+    book_30.photo.attach(io: file_30, filename:"")
+
+
+    book_31 = Book.create!(
+        title: '',
+        author: '',
+        genre:'',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: '',
+        description: ''
+    )
+  
+    file_31 = open("")
+    book_31.photo.attach(io: file_31, filename:"")
+
+
+    book_32 = Book.create!(
+        title: '',
+        author: '',
+        genre:'',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: '',
+        description: ''
+    )
+  
+    file_32 = open("")
+    book_32.photo.attach(io: file_32, filename:"")
+
+
+    book_33 = Book.create!(
+        title: '',
+        author: '',
+        genre:'',
+        read: false,
+        currently_reading: false, 
+        want_to_read: false,
+        url: '',
+        description: ''
+    )
+  
+    file_33 = open("")
+    book_33.photo.attach(io: file_33, filename:"")
     # all users must be created above this line
     
     
