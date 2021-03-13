@@ -569,14 +569,18 @@ ActiveRecord::Base.transaction do
     book_21.photo.attach(io: file_21, filename:"")
 
     book_22 = Book.create!(
-        title: '',
-        author: '',
-        genre:'',
+        title: 'Old Man and the Sea',
+        author: 'Ernest Hemmingway',
+        genre:'Fiction',
         read: false,
         currently_reading: false, 
         want_to_read: false,
-        url: '',
-        description: ''
+        url: 'old_man.jpeg',
+        description: "This short novel, already a modern classic, is the 
+        superbly told, tragic story of a Cuban fisherman in the Gulf Stream 
+        and the giant Marlin he kills and loses—specifically referred to in
+        the citation accompanying the author's Nobel Prize for literature in
+         1954."
     )
   
     file_22 = open("")
